@@ -77,9 +77,14 @@ function splitByH1(text) {
  *  生成时直接换成 HTML 标签。母本 391 对 `**` 全部同行成对、无嵌套，替换是无损的。 */
 const strong = s => s.replace(/\*\*([^*]+?)\*\*/g, '<strong>$1</strong>');
 
-/** 正文清洗：去分节线、粗体转 HTML、收拢连续空行、去掉首尾空白 */
+const ZHUANTI = '/2026/02/05/shizheng-zhuanti/';
+/** 母本有三处「详见本页【专题一】」——拆成独立文章后「本页」不成立了，改成指向专题篇的链接。
+ *  这是唯一允许的文字改写；自检时两侧套用同一条规则，所以别处丢了照样报。 */
+const xref = s => s.replace(/详见本页【(专题[一二三])】/g, `详见[时政三大专题 · $1](${ZHUANTI})`);
+
+/** 正文清洗：去分节线、粗体转 HTML、同页引用改链接、收拢连续空行、去掉首尾空白 */
 function cleanBody(lines) {
-  const kept = lines.map(strong).filter(l => !SEP.test(l));
+  const kept = lines.map(l => xref(strong(l))).filter(l => !SEP.test(l));
   const out = [];
   for (const l of kept) {
     if (l.trim() === '' && (out.length === 0 || out[out.length - 1].trim() === '')) continue;
@@ -114,7 +119,8 @@ for (const b of blocks) {
       categories: ['时政要点', `${y}年`],
       tags: ['时政', `${y}年${+mo}月`, ...keys],
       description: keywords,
-      lead: `> **本月主线**：${keywords}`,
+      // 关键词串已经是 front-matter 的 description，NexT 会显示在标题下方，正文里不再重复一遍
+      lead: '',
     };
   } else if (b.heading === '三大专题') {
     meta = {
@@ -163,7 +169,7 @@ const allow = new Set(dropped.map(l => l.trim()).filter(Boolean));
 
 const missing = [];
 for (const raw of readFileSync(SRC, 'utf8').split(/\r?\n/)) {
-  const l = strong(raw.trim());                      // 比对两侧都用替换后的写法
+  const l = xref(strong(raw.trim()));              // 比对两侧都用替换后的写法
   if (!l || SEP.test(l) || /^# /.test(l) && !/^##/.test(l)) continue;   // 分节线和 h1 是刻意不要的
   if (allow.has(l) || emitted.has(l)) continue;
   missing.push(raw.trim());
