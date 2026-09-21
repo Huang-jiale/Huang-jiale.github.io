@@ -72,7 +72,7 @@ categories:
 
 `source/_posts/申论知识库/` 下的 259 篇是脚本生成的，改它们等于白改（`--clean` 会整目录重建）；要修内容就改清洗规则或 `data/shenlun-raw/` 里的副本。
 
-## 知识库导入流水线（申论知识库 259 篇）
+## 申论知识库导入流水线（第一版 259 篇，已撤回）
 
 > **当前状态：生成物已撤回。** 2026-09-21 第一版 259 篇文章和 `data/shenlun-manifest.json` 移进了
 > `_废弃/申论知识库-2026-09-21/`（等重新整理的母本，见该目录的 README），`data/shenlun-raw/` 副本和
@@ -113,9 +113,27 @@ python tools/audit-coverage.py      # 安全网：有没有正文真的没了
 
 已知的 OCR 固有缺陷（两份母本都缺，脚本猜不回来）：① 少数题干的前半句在印页上就丢了，`## 题目` 从半句开始（`guandian-008`、`dazhu-001` 等约十余篇）；② 文章写作题的给定资料印在 `答题演示` 的 `### 资料N` 里，那 11 篇没有独立 `资料原文` 小节；③ 思维导图是双栏图形，OCR 出来是打乱顺序的短语，只按原样保留；④ 答题演示里「话题梳理/要点总结」两个文本框交替出现，接行时会偶发跨框粘连，文字不缺但语序怪；⑤ 跨页的那一行接不上（页码、页眉、分隔页横在句子中间），书本 117 篇里还剩约 550 处半句，脚本不敢猜下一行是不是同一段。
 
-## 评论（默认关闭，二选一）
+## 时政要点导入流水线（6 篇）
 
-两者都不需要自建后台，数据存在你自己的 GitHub 仓库里。
+母本是一份人写的干净 markdown（`时政要点汇总 · 2025年11月 — 2026年2月`，来自 Qoder 会话目录，**只复制不修改**）：
+
+```
+C:\Users\lenovo\Documents\Qoder\...\shizheng-summary.md   ← 原件，永远不动
+        ↓ cp（复制后核对 md5 一致）
+D:\blog\data\shizheng-raw\shizheng-summary.md             ← 转换输入（data/ 已 gitignore）
+        ↓ node tools/import-shizheng.mjs --clean
+D:\blog\source\_posts\时政要点\shizheng-*.md              ← 生成的文章
+```
+
+切法：母本一个 `#` 是一两个月块（`# 2025年11月　关键词 · 关键词`），**一月一篇**（slug `shizheng-YYYY-MM`，`date` 落在当月 1 号，归档按月排序）；末尾的「三大专题」「跨月速查表」不属于单月，各成一篇。开头的汇总首页只留两行引言（解释 ★ 与「易错」的来历，抄进每篇开头），`## 目录` 的锚点在拆分后会失效，整段丢弃。
+
+脚本自带**逐行自检**：除声明丢弃的行外，母本每一行都必须在某篇文章里原样出现，否则非零退出。这份母本不需要 OCR 那套清洗，但「静默丢内容」的风险一样，所以留着它。
+
+一个坑：`**粗体**` 夹在中文字符里会被 CommonMark 判成非边界（`纳入**「四个全面」战略布局**` 会把星号原样印到页面上），所以生成时统一换成 `<strong>` 标签——母本 391 对 `**` 全部同行成对，替换无损。
+
+## 评论（决定不启用）
+
+2026-09-21 用户决定不开评论：`comments.active` 留空、`utterances.enable: false`，`utterances.repo` 指向的 `Huang-jiale/comment-storage` 因此也没建。以下两种方案留档备用。
 
 **Utterances**（主题内置，数据存 Issues）：到 <https://github.com/apps/utterances> 授权仓库，然后在 `_config.next.yml` 把 `utterances.enable` 改 `true`、填好 `repo`，并把 `comments.active` 设为 `utterances`。
 
