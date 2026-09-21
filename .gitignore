@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+_multiconfig.yml
+
+# OCR 母本不入库：体积大、且内容与生成的文章重复，只在本地 data/ 下保留
+data/
+tools/_*.txt
+
+# 本地废弃备份，纯留档用，不进仓库
+_废弃/

@@ -1,0 +1,3 @@
+allowBuilds:
+  # hexo-util ships highlight_alias.json in its tarball; the postinstall only regenerates it
+  hexo-util: false

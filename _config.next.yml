@@ -1,0 +1,105 @@
+# NexT 主题配置（站点根目录的替代配置 / Alternate Theme Config）
+# 由 Hexo 核心读取并覆盖主题包内 _config.yml 的同名项。
+# 升级主题不会覆盖本文件。文档: https://theme-next.js.org/docs/getting-started/configuration
+# 以下键名均按本机 hexo-theme-next 8.29.0 的默认配置核对过。
+
+# ---------------------------------------------------------------
+# 布局与外观
+# ---------------------------------------------------------------
+# Muse（经典双栏，侧栏在左）| Mist | Pisces（侧栏在右）| Gemini
+scheme: Muse
+
+# 深色模式切换按钮
+darkmode: true
+
+# ---------------------------------------------------------------
+# 菜单：需在 source/ 下建对应页面（见 README「第二步」）
+# 图标为 Font Awesome（本主题固定 7.x），沿用主题的 `fa fa-*` 写法
+# ---------------------------------------------------------------
+menu:
+  home: / || fa fa-home
+  archives: /archives/ || fa fa-archive
+  categories: /categories/ || fa fa-th
+  tags: /tags/ || fa fa-tags
+  about: /about/ || fa fa-user
+
+menu_settings:
+  icons: true
+  badges: true
+
+# ---------------------------------------------------------------
+# 侧栏
+# ---------------------------------------------------------------
+sidebar:
+  position: left
+  # post（仅文章页展开）| always（所有页面展开）| hide | remove
+  display: always
+
+# 头像：把图片放到 source/images/avatar.png 后取消注释
+avatar:
+  #url: /images/avatar.png
+  rounded: true
+
+# 侧栏的文章/分类/标签计数
+site_state: true
+
+# 社交链接
+social:
+  GitHub: https://github.com/Huang-jiale || fab fa-github
+
+social_icons:
+  enable: true
+  # true = 只显示图标不显示文字
+  icons_only: false
+
+# ---------------------------------------------------------------
+# 站内搜索
+# 依赖 hexo-generator-searchdb，已装进 package.json 的 devDependencies
+# ---------------------------------------------------------------
+local_search:
+  enable: true
+  top_n_per_article: 1
+  preload: false
+
+# ---------------------------------------------------------------
+# 代码块：复制按钮 + 深浅色配色
+# ---------------------------------------------------------------
+codeblock:
+  theme:
+    light: default
+    dark: stackoverflow-dark
+  copy_button:
+    enable: true
+    style: default
+
+# ---------------------------------------------------------------
+# 文章侧栏目录
+# ---------------------------------------------------------------
+toc:
+  enable: true
+  number: false
+  max_depth: 3
+
+# ---------------------------------------------------------------
+# 评论：默认关闭，二选一填好后把 comments.active 写上名字
+# ---------------------------------------------------------------
+comments:
+  # 可选值：disqus | disqusjs | livere | gitalk | utterances | isso
+  # 用下面的 Giscus 插件时填 giscus
+  active:
+  lazyload: true
+
+# 方案 A · Utterances（主题内置，数据存 GitHub Issues）
+# 先在 https://github.com/apps/utterances 把 app 授权到存放评论的仓库
+# 注意：comment-storage 这个仓库还不存在。要启用评论，先建它、授权 app，
+#      再把上面的 comments.active 填 utterances、下面的 enable 改 true。
+utterances:
+  enable: false
+  repo: Huang-jiale/comment-storage
+  issue_term: pathname
+  theme: github-light
+
+# 方案 B · Giscus（数据存 GitHub Discussions）
+# 非主题内置，需装社区插件：pnpm add hexo-next-giscus
+# 装好后在 source/_data/ 下按插件 README 建 giscus.yml，并把上面 comments.active 设为 giscus
+# 仓库需先在 Settings 里开启 Discussions
