@@ -1,14 +1,17 @@
 # -*- coding: utf-8 -*-
-"""构建产物体检：只看 public/，任何一步采样为空也算失败。
+"""构建产物体检：拿 `source/_posts/` 对账 `public/`，任何一步采样为空也算失败。
 
-跑法：`pnpm hexo generate && python tools/check-build.py`
-期望值（文章数/图片数/题量）写死在下面，导完新内容记得同步；
-它们的意义是「探针确实取到了样本」，取到 0 条时一律判失败，不许绿灯放过。
+跑法：`pnpm hexo clean && pnpm hexo generate && python tools/check-build.py`
+期望值全部从 source 现算，所以导完新内容不用改这个脚本；它只管一件事：
+**构建有没有把源里的东西弄丢/弄坏**（页面数、图片、题数==答案数、分类页收全、死链、渲染残留）。
+每一步都先断言「确实取到了样本」，正则写错匹配到 0 个时一律判失败，不许假绿。
+
+2026-09-22 首导人工核对过的量：74 时政 + 38 行测 = 112 篇；行测 541 题、92 张图。
 """
 import io, sys, os, re, glob
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-
 import urllib.parse
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 fail = []
 
@@ -23,81 +26,114 @@ def norm(p):
     return p.replace('\\', '/')
 
 
-# 1. 文章页样本非空
-posts = [p for p in glob.glob('source/_posts/**/*.md', recursive=True)]
-xc_src = [p for p in posts if '/xc-' in norm(p)]
-pages = sorted(glob.glob('public/2026/09/22/xc-*/index.html'))
-check(len(posts) == 106, f'文章总数 {len(posts)}', '期望 74 时政 + 32 行测')
-check(len(xc_src) == 32 and len(pages) == 32, f'行测文章源 {len(xc_src)} 篇，构建出 {len(pages)} 个页面')
+def fm_categories(text):
+    """取 front-matter 里的 categories 列表（和 tags 用同一套 `  - "x"` 写法，所以要在 tags: 处收口）"""
+    m = re.search(r'^categories:\n((?:  - .*\n)+)', text, re.M)
+    return [re.sub(r'^\s*-\s*["\']?(.*?)["\']?\s*$', r'\1', l) for l in m.group(1).splitlines()] if m else []
 
-bodies = {}
-for f in pages:
-    slug = norm(f).split('/22/')[1].split('/')[0]
-    bodies[slug] = open(f, encoding='utf-8').read().split('post-body', 1)[1]
-check(len(bodies) == 32, '成功读到 32 篇正文')
 
-# 2. 渲染残留
-star = [s for s, b in bodies.items() if '**' in b]
-check(not star, '正文没有残留的 **', str(star[:5]))
-assets = [s for s, b in bodies.items() if 'assets/' in b]
-check(not assets, '正文没有残留的 assets/ 相对路径', str(assets[:5]))
-empty = [s for s, b in bodies.items() if len(re.sub(r'<[^>]+>', '', b).strip()) < 100]
-check(not empty, '没有近乎空白的文章页', str(empty[:5]))
+def fm_slug(text):
+    m = re.search(r'^slug:\s*(\S+)', text, re.M)
+    return m.group(1) if m else None
 
-# 3. 图片全部落盘
-imgs = set()
+
+# ---------- 1. 源与产物的数量对得上 ----------
+
+src = {}
+for p in glob.glob('source/_posts/**/*.md', recursive=True):
+    t = open(p, encoding='utf-8').read()
+    src[norm(p)] = t
+check(len(src) >= 100, f'源文章 {len(src)} 篇')
+xc_src = {k: v for k, v in src.items() if '/xc-' in k}
+check(len(xc_src) >= 30, f'其中行测 {len(xc_src)} 篇')
+
+pages = {}
+for f in glob.glob('public/[0-9]*/[0-9][0-9]/[0-9][0-9]/*/index.html'):   # 文章 URL 形如 /2026/09/22/<slug>/
+    slug = norm(f).split('/')[-2]
+    pages[slug] = open(f, encoding='utf-8').read().split('post-body', 1)[1]
+check(len(pages) >= 30, f'构建出的行测以外页面 {len(pages)} 个（含按日期目录铺的全部文章页）')
+
+src_slugs = {fm_slug(v) for v in xc_src.values()}
+check(len(src_slugs) == len(xc_src), f'行测 slug 无重复：{len(src_slugs)}')
+lost = sorted(s for s in src_slugs if s not in pages)
+check(not lost, f'{len(src_slugs)} 篇行测都构建出了页面', str(lost[:5]))
+
+# ---------- 2. 渲染残留 ----------
+
+bodies = {s: pages[s] for s in src_slugs}
+check(len(bodies) == len(src_slugs), '取到全部行测正文')
+for cond, msg, bad in [
+    (not [s for s, b in bodies.items() if '**' in b], '正文没有残留的 **', [s for s, b in bodies.items() if '**' in b]),
+    (not [s for s, b in bodies.items() if 'assets/' in b], '正文没有残留的 assets/ 相对路径', [s for s, b in bodies.items() if 'assets/' in b]),
+    (not [s for s, b in bodies.items() if len(re.sub(r'<[^>]+>', '', b).strip()) < 100], '没有近乎空白的文章页',
+     [s for s, b in bodies.items() if len(re.sub(r'<[^>]+>', '', b).strip()) < 100]),
+]:
+    check(cond, msg, str(bad[:5]))
+
+# ---------- 3. 图片：源里引用几张，产物里就得有几张 ----------
+
+src_imgs = set()
+for v in xc_src.values():
+    src_imgs.update(re.findall(r'/images/xingce/[^)\s"]+', v))
+page_imgs = set()
 for b in bodies.values():
-    imgs.update(re.findall(r'<img[^>]+src="(/images/xingce/[^"]+)"', b))
-missing = [p for p in sorted(imgs) if not os.path.exists(os.path.join('public', *p.lstrip('/').split('/')))]
-check(len(imgs) == 84, f'正文引用图片 {len(imgs)} 张（去重）')
+    page_imgs.update(re.findall(r'<img[^>]+src="(/images/xingce/[^"]+)"', b))
+check(len(src_imgs) >= 50, f'行测源里引用图片 {len(src_imgs)} 张')
+check(src_imgs == page_imgs, '页面里的图片集合与源完全一致', str(sorted(src_imgs ^ page_imgs)[:3]))
+missing = [p for p in sorted(src_imgs) if not os.path.exists(os.path.join('public', *p.lstrip('/').split('/')))]
 check(not missing, '引用的图片在构建产物里都存在', str(missing[:3]))
 on_disk = glob.glob('public/images/xingce/*/*')
-check(len(on_disk) == 84, f'构建产物里实际有 {len(on_disk)} 张图片')
+check(len(on_disk) == len(src_imgs), f'产物里的图片 {len(on_disk)} 张 = 源引用的 {len(src_imgs)} 张（没漏搬也没多搬）')
+# 反过来：源 data 目录里没被引用的图不该进仓库
+raw_imgs = glob.glob('data/xingce-raw/assets/*/*')
+check(len(raw_imgs) > len(on_disk), f'母本图片 {len(raw_imgs)} 张，只把引用到的 {len(on_disk)} 张入库')
 
-# 4. 题量对得上母本
-tot = sum(len(re.findall(r'答案：([A-D])', b)) for b in bodies.values())
-check(tot == 451, f'页面里的「答案」共 {tot} 处', '母本合计 451 题')
-cnt_ans = {s: len(re.findall(r'答案：([A-D])', b)) for s, b in bodies.items()}
-cnt_q = {s: len(re.findall(r'<strong>\d+\.[（(]', b)) for s, b in bodies.items()}
-mismatch = {s: (cnt_q[s], cnt_ans[s]) for s in bodies if cnt_q[s] != cnt_ans[s]}
-check(not mismatch, '每篇题数与答案数相等', str(list(mismatch.items())[:3]))
+# ---------- 4. 题量：源里数一遍，页面里数一遍 ----------
 
-# 5. 分类页齐全（嵌套分类在 public/categories/行测/27考季/… 下，按目录名收）
+src_ans = sum(len(re.findall(r'<strong>答案：([A-D])</strong>', v)) for v in xc_src.values())
+src_q = sum(len(re.findall(r'^<strong>\d+\.[（(]', v, re.M)) for v in xc_src.values())
+page_ans = {s: len(re.findall(r'答案：([A-D])', b)) for s, b in bodies.items()}
+page_q = {s: len(re.findall(r'<strong>\d+\.[（(]', b)) for s, b in bodies.items()}
+check(src_q == src_ans and src_q >= 400, f'行测源：{src_q} 道题、{src_ans} 个答案')
+check(sum(page_ans.values()) == src_ans, f'页面里的答案合计 {sum(page_ans.values())} 处 = 源 {src_ans}')
+mismatch = {s: (page_q[s], page_ans[s]) for s in bodies if page_q[s] != page_ans[s]}
+check(not mismatch, '每篇页面题数与答案数相等', str(list(mismatch.items())[:3]))
+bad_ans = [m for b in bodies.values() for m in re.findall(r'答案：([^<\s]{2,})', b) if not re.fullmatch(r'[A-D]', m)]
+check(not bad_ans, '答案都是单个 A–D', str(bad_ans[:5]))
+
+# ---------- 5. 分类页收全（分页合并后，每个分类的篇数 = 源里挂这个分类的篇数） ----------
+
 catpages = {}
 for root, dirs, fs in os.walk('public/categories'):
     if 'index.html' in fs:
-        key = norm(root).replace('public/categories', '(root)').strip('/')
-        key = re.sub(r'/page/\d+$', '', key)          # 同一分类的分页并进来数
+        key = re.sub(r'/page/\d+$', '', norm(root).replace('public/categories', '(root)').strip('/'))
         catpages.setdefault(key, []).append(os.path.join(root, 'index.html'))
-check(len(catpages) >= 15, f'发现 {len(catpages)} 个分类目录', str(sorted(catpages)))
-want = {'行测': 32, '27考季': 32, '判断推理': 12, '数量关系': 5, '言语理解': 6, '资料分析': 8,
-        '答案键': 1, '定义判断': 3, '类比推理': 3, '逻辑判断': 3, '图形推理': 3, '逻辑填空': 5, '语句表达': 1}
-slugs_by_cat = {}
-for name, n in want.items():
-    dirs_ = [p for key, pages_ in catpages.items() if key.split('/')[-1] == name for p in pages_]
-    if not dirs_:
-        check(False, f'分类页 {name} 存在')
+check(len(catpages) >= 15, f'发现 {len(catpages)} 个分类目录')
+
+want = {}
+for k, v in xc_src.items():
+    for c in fm_categories(v):
+        want[c] = want.get(c, 0) + 1
+check(len(want) >= 12, f'源里的行测分类 {len(want)} 个', str(sorted(want)))
+for name, n in sorted(want.items()):
+    files = [p for key, ps in catpages.items() if key.split('/')[-1] == name for p in ps]
+    if not files:
+        check(False, f'分类页 {name} 存在', f'源里有 {n} 篇')
         continue
     links = set()
-    for p in dirs_:
+    for p in files:
         links.update(re.findall(r'href="[^"]*?/(xc-[a-z0-9-]+)/"', open(p, encoding='utf-8').read()))
-    slugs_by_cat[name] = links
-    check(len(links) == n, f'分类页 {name} 翻页合起来 {len(links)} 篇', f'期望 {n}')
+    check(links == src_slugs if name == '行测' else len(links) == n,
+          f'分类页 {name} 合起来 {len(links)} 篇', f'期望 {n}')
 
-check(sum(1 for s in slugs_by_cat.get('行测', ()) if s.startswith('xc-')) == 32, '行测分类页收全 32 篇')
-union = set().union(*slugs_by_cat.get('判断推理', set()), slugs_by_cat.get('数量关系', set()),
-                    slugs_by_cat.get('言语理解', set()), slugs_by_cat.get('资料分析', set()),
-                    slugs_by_cat.get('答案键', set()))
-check(len(union) == 32, f'四个模块 + 答案键 的分类页并集 = {len(union)} 篇（= 全部行测）')
+# ---------- 6. 首页文章流与死链 ----------
 
-# 6. 每个 xc slug 都在首页流里（有分页，合起来看）
 idx = [open(f, encoding='utf-8').read() for f in glob.glob('public/index.html') + glob.glob('public/page/*/index.html')]
-check(len(idx) >= 11, f'首页 + 分页共 {len(idx)} 页')
+check(len(idx) >= len(src) // 10, f'首页 + 分页共 {len(idx)} 页（{len(src)} 篇文章）')
 joined = '\n'.join(idx)
-lost = [s for s in bodies if f'/{s}/' not in joined]
-check(not lost, '每篇行测文章都进了首页文章流', str(lost[:5]))
+lost_idx = [s for s in src_slugs if f'/{s}/' not in joined]
+check(not lost_idx, '每篇行测文章都进了首页文章流', str(lost_idx[:5]))
 
-# 7. 文章里除了图片没有别的死链（站内 href 都要能落到 public 里的文件）
 dead = set()
 for s, b in bodies.items():
     for href in re.findall(r'<a[^>]+href="(/[^"#]+)"', b):
