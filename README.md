@@ -72,6 +72,19 @@ categories:
 
 `source/_posts/申论知识库/` 下的 259 篇是脚本生成的，改它们等于白改（`--clean` 会整目录重建）；要修内容就改清洗规则或 `data/shenlun-raw/` 里的副本。
 
+## 外观（布局与留白）
+
+`_config.next.yml` 里 `scheme: Pisces` —— 双栏卡片布局，≥992px 时左侧栏 240px（`sidebar.width_dual_column` 可调），正文列宽 `calc(100% - 252px)`。之前的 `Muse` 是单栏宽体，正文列最宽只有 900px，在 1920 屏上两侧各留 ~510px 空白。
+
+NexT 把整块容器宽度写死在主题包里（`$content-desktop-large = 1160px`，≥1600px 时改为视口的 73%），改配置改不动。真要再放宽，只能在 `_config.next.yml` 开启：
+
+```yaml
+custom_file_path:
+  variable: source/_data/variables.styl
+```
+
+然后在该文件里重写 `$content-desktop-large`。这样升级主题不会被覆盖。
+
 ## 申论知识库导入流水线（第一版 259 篇，已撤回）
 
 > **当前状态：生成物已撤回。** 2026-09-21 第一版 259 篇文章和 `data/shenlun-manifest.json` 移进了
