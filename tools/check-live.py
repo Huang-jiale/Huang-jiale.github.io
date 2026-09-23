@@ -81,6 +81,10 @@ for slug, (st, html) in res:
     check('**' not in b and 'assets/' not in b, f'{slug} 无渲染残留')
     imgs.update(re.findall(r'src="(/images/[^"]+)"', b))
 
+src_imgs = set()
+for _, (_, t, _) in posts.items():
+    src_imgs.update(re.findall(r'/images/[^\s")\]]+', t))
+
 imgs = sorted(imgs)
 limit = int(os.environ.get('IMG_LIMIT', '0'))          # IMG_LIMIT=12 只抽查一部分（公网抽风时用）
 sampled = imgs[::max(1, len(imgs) // limit)][:limit] if limit else imgs   # 跨目录均匀取样，别只抽到前几张
@@ -88,7 +92,11 @@ with ThreadPoolExecutor(8) as ex:
     codes = list(ex.map(lambda u: (u, safe(u.lstrip('/'))[0]), sampled))
 never = [u for u, c in codes if c is None]
 bad = [u for u, c in codes if c is not None and c != 200]
-check(len(imgs) >= 20, f'页面里出现图片 {len(imgs)} 张' + (f'，本次抽查 {len(sampled)} 张' if limit else ''))
+if src_imgs:                       # 时政那种纯文字模块本来就没图，别把 0 当失败
+    check(len(imgs) >= len(src_imgs) * 0.8, f'页面里出现图片 {len(imgs)} 张（源里引用 {len(src_imgs)} 张）'
+          + (f'，本次抽查 {len(sampled)} 张' if limit else ''))
+else:
+    check(not imgs, '源里没有图片引用，页面里也不该冒出来', str(imgs[:3]))
 check(not bad, '抽查的图片线上全部 200', str(bad[:3]))
 check(not never, '抽查没有因网络超时而漏掉', str(never[:3]))
 
