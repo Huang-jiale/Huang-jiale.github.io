@@ -117,9 +117,11 @@ cd /d/blog && git add -A && git commit -m "…" && git push
 
 GitHub Actions 约 40 秒建完 → https://huang-jiale.github.io。回滚用 `git revert <sha> && git push`，不要 `reset --hard`。
 
+Actions 成功不等于内容上线（404 常见于 CDN 传播延迟）。跑 `python tools/check-live.py` 从公网核对：文章页按 front-matter 拼 URL 逐个取，正文查 `**`/`assets/` 残留，图片按 `IMG_LIMIT` 跨目录抽样（默认全取，站点图多时设 24），分类页带分页合起来比 slug 集合。网络抖动只重试不算内容错误，404 立即返回。
+
 ### 每次导完必须自己看一遍（脚本全绿不算完）
 
-1. `python tools/check-build.py` —— 把下面 1~3 条机器化：文章数、渲染残留 `**`、图片是否落盘、题数==答案数、每个分类页合起来的篇数、站内死链。**它自己先断言采样非空**，改了内容记得同步里面的期望值。
+1. `python tools/check-build.py` —— 把下面 1~3 条机器化：文章数、渲染残留 `**`、图片是否落盘、题数==答案数、每个分类页合起来的篇数、站内死链。**它自己先断言采样非空**；期望值全部从 `source/_posts` 现算，导完新内容不用改这个脚本。
 2. 抽查 2~3 篇渲染后的正文：有没有露出的 `**`、`<br>` 把句子切碎、正文比母本少一段。
 3. 分类页：`/categories/<模块>/<子分类>/` 打开，条数对不对、分页能翻到最后一项。
 4. 引用：文内链接的目标页 `curl` 一下是不是 200（中文路径要百分号编码）。
@@ -224,6 +226,8 @@ D:\blog\source\_posts\行测题库\<模块>\xc-*.md   +   source\images\xingce\<
 python tools/sync-xingce-raw.py        # 源→ data/xingce-raw 的差集复制，逐个核 md5，只报改了哪几个文件
 node tools/import-xingce.mjs --clean   # 全量重切（不是打补丁：切法/顺序/slug 都按母本当前状态重来）
 pnpm hexo clean && pnpm hexo generate && python tools/check-build.py
+git add -A && git commit -m "…" && git push   # Actions 绿了以后
+IMG_LIMIT=24 python tools/check-live.py       # 从公网再核一遍：文章页 200、图片能取到、分类页收全
 ```
 
 `import-xingce.mjs` 是幂等的（`--clean` 先清空输出目录和图库），所以补件不需要维护 diff——直接重跑，再用 `git status` 看落了多少新文件。这一轮的结果：32 篇 → 38 篇、451 题 → 541 题、84 图 → 92 图，`⚠` 缺口提示全部消失。
@@ -234,6 +238,14 @@ pnpm hexo clean && pnpm hexo generate && python tools/check-build.py
 
 - 母本 152 张图里只有 92 张被正文引用，未引用的 60 张（判断上 23、判断下 19、数量上 6、数量下 4、资料上 4、资料下 4）留在 `data/xingce-raw/assets/`，不入库。
 - 图片是 PDF 整页截图（1457×2048，单张 ~700KB），一篇资料分析要加载 15~20MB。要瘦身就转 WebP/压宽度，URL 后缀由脚本统一改，重跑即可。
+
+## 言语理解母本（已入场，尚未导入）
+
+`D:\blog\data\yanyu-raw\yanyu-982-final.md` ← 复制自 `D:\AI跑数据\学习项目\刷题\言语理解_最终版.md`（1.9MB / 982 题 / 799 条【解析】，md5 `dc866972`）。
+
+那份母本同内容有 6 个近似版本、md5 各不相同（`言语理解_最终版` / `_清理版` 都是 982 题 799 解析，只差排版；`_按知识点分类*` 三个变体只有 79 题；`知识库\言语理解与表达_完整版.md` 也是 982 题但**解析为零**）。用户 2026-09-23 选定「最终版」这一份，其余重复版本不入 `data/`。文件名已改成 ASCII（`data/` 不进仓库，但保持和 slug 同一套命名习惯）。
+
+导入前先定分类：982 题按什么切（真题来源 `（2021北京区级56）`？考点？题号区间？）——行测那套「一个难题组一篇」在这里不成立，母本没有组标题，只有 `### 🎯 第N题`。另外 799 条解析对 982 题，缺的 183 条要如实报出来，别默认题目没答案就是错题。
 
 ## 评论（决定不启用）
 
