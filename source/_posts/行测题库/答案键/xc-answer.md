@@ -4,7 +4,6 @@ slug: xc-answer
 date: 2026-09-22 10:00:00
 categories:
   - "行测"
-  - "27考季"
   - "答案键"
 tags:
   - "刷题"

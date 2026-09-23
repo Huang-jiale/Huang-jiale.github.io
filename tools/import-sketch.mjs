@@ -6,7 +6,9 @@
  *       原件只读；course/ 是 30 课一课一个 MD，basics/ 是入门总览那篇）
  * 切法：**一个阶段一篇**（用户 2026-09-23 要求：按大模块分类、不要太多篇、方便后面更新）
  *       → sk-stage1..sk-stage6 六篇 + sk-intro 一篇总览 = 7 篇
- *       分类两级：`素描 / 阶段N 名称`；课与课的边界靠 `## NN 课名` 保住，重跑不改内容
+ *       分类只到二级：`素描 / 基础与造型 | 静物写生 | 人物与创作`（三大类，用户 2026-09-23 选的），
+ *       阶段名进标题和标签；课与课的边界靠 `## NN 课名` 保住，重跑不改内容
+ *       另外生成一张横向课程总览页 source/sketch-map/index.md（大类 → 阶段 → 30 课，课名直接链到锚点）
  * 允许的改写只有三处：段落软换行合并、`**x**`→`<strong>x</strong>`（紧贴汉字的星号 CommonMark 不认）、
  *                    图片路径 `images/…` → `/images/sketch/<组>/<文件名>`
  * 两道自检：① 母本每一行（同规则归一后）必须原样出现在生成的文章里；
@@ -117,6 +119,17 @@ function lessonBody(md, group, baseDir, where) {
 }
 
 const arts = [];
+// 分类只到二级（用户 2026-09-23：「分类太多了……到二级类就够了，剩下等点进去，看左边的自由选择」）
+const GROUPS = [
+  { name: '基础与造型', stages: ['stage1', 'stage2'], note: '线条、透视、明暗这套底层功夫，加上把平面画成立体' },
+  { name: '静物写生', stages: ['stage3', 'stage4'], note: '从石膏落到真实物体，再回到体块与结构' },
+  { name: '人物与创作', stages: ['stage5', 'stage6'], note: '头像与速写，以及怎么画完整、画成自己的' },
+];
+const groupOf = (id) => GROUPS.find((g) => g.stages.includes(id)) || die(`阶段 ${id} 没归进任何二级分类`);
+const MAP = [];                             // 课程总览页的一行 = 一个阶段
+const anchorOf = (no, title) => `${no}-${title.replace(/\s+/g, '-')}`;   // Hexo 给标题加的 id：空格换成 -
+const postUrl = (slug) => `/2026/09/23/${slug}/`;
+
 for (const st of STAGES) {
   const files = [];
   for (const les of st.lessons) {
@@ -140,13 +153,19 @@ for (const st of STAGES) {
     if (x.body.fm.desc) bodyLines.push(`<strong>这一课练什么</strong>：${x.body.fm.desc}`, '');
     bodyLines.push(...x.body.lines, '');
   }
+  const slug = `sk-stage${STAGES.indexOf(st) + 1}`;
+  MAP.push({
+    group: groupOf(st.id), cn: st.cn, name: st.name, slug, url: postUrl(slug),
+    goal: st.goal, weeks: st.weeks,
+    lessons: files.map((x) => ({ n: x.les.n, title: x.les.title, href: `${postUrl(slug)}#${anchorOf(x.les.n, x.les.title)}` })),
+  });
   arts.push({
-    slug: `sk-stage${STAGES.indexOf(st) + 1}`,
+    slug,
     cat1: '素描',
-    cat2: `阶段${st.cn} ${st.name}`,
+    cat2: groupOf(st.id).name,
     title: `素描阶段${st.cn} · ${st.name}`,
     desc: `${st.goal}。${st.weeks}，${files.length} 课。`,
-    tags: ['素描', st.name],
+    tags: ['素描', `阶段${st.cn}`, st.name],
     date: `2026-09-23 12:0${n}:00`,
     lines: bodyLines,
     lessonCount: files.length,
@@ -159,10 +178,10 @@ for (const st of STAGES) {
   const { fm, body } = readFm(fs.readFileSync(path.join(RAW, 'basics', 'intro-overview.md'), 'utf8'));
   const lines = normalize(body, 'intro', RAWBASIC, 'intro', false).filter((l) => !l.startsWith('# '));
   arts.push({
-    slug: 'sk-intro', cat1: '素描', cat2: '入门总览',
+    slug: 'sk-intro', cat1: '素描', cat2: '基础与造型',
     title: '素描入门总览 · 六节课与四周计划',
     desc: fm.desc || '从握笔、排线、透视到明暗五大面，含四周练习计划与常见毛病自查。',
-    tags: ['素描', '绘画入门'], date: '2026-09-23 12:10:00', lines, lessonCount: 1,
+    tags: ['素描', '入门总览', '绘画入门'], date: '2026-09-23 12:10:00', lines, lessonCount: 1,
   });
 }
 
@@ -188,6 +207,40 @@ for (const [w, src] of wanted) {
   fs.copyFileSync(src, path.join(IMG, group, name));
   copied++;
 }
+
+// ---------- 课程总览页（横向树：大类 → 阶段 → 30 课，一格一个可点的课） ----------
+if (MAP.length !== 6) die(`课程总览页要 6 个阶段，只攒到 ${MAP.length} 个`);
+if (MAP.reduce((s, m) => s + m.lessons.length, 0) !== 30) die(`课程总览页要 30 课，只攒到 ${MAP.reduce((s, m) => s + m.lessons.length, 0)} 课`);
+const mapLines = [
+  '---',
+  'title: 素描课程总览 · 6 个阶段 30 课',
+  'date: 2026-09-23 12:00:00',
+  'description: 一张横向的课程树：三大类 → 六个阶段 → 三十课，点课名直接跳到那一课的开头。',
+  '---',
+  '',
+  '<strong>怎么用</strong>：三大类对应侧栏的三个分类页；每个阶段一行，行末那一串就是这一阶段的所有课，点进去落在该课的标题上（也可以用文章左侧的「文章目录」在同一篇里前后翻）。顺序学就从上往下，只想补某一项就按大类进去挑。',
+  '',
+  `[入门总览：工具、握笔、四周练习计划 →](${postUrl('sk-intro')})`,
+  '',
+];
+for (const g of GROUPS) {
+  const rows = MAP.filter((m) => m.group.name === g.name);
+  mapLines.push(
+    `## ${g.name}`, '',
+    `<strong>这一类管什么</strong>：${g.note}。共 ${rows.length} 个阶段 ${rows.reduce((s, r) => s + r.lessons.length, 0)} 课 → 分类页 [/categories/素描/${g.name}/](/categories/素描/${g.name}/)。`, '',
+  );
+  for (const r of rows) {
+    mapLines.push(
+      `**[阶段${r.cn} ${r.name}](${r.url})** ｜ ${r.goal}（${r.weeks}，${r.lessons.length} 课）`,
+      '',
+      r.lessons.map((l) => `[${l.n} ${l.title}](${l.href})`).join(' ｜ '),
+      '',
+    );
+  }
+}
+fs.mkdirSync(path.join(ROOT, 'source', 'sketch-map'), { recursive: true });
+fs.writeFileSync(path.join(ROOT, 'source', 'sketch-map', 'index.md'), mapLines.join('\n') + '\n');
+console.log(`课程总览页 ${MAP.length} 个阶段 / ${MAP.reduce((s, m) => s + m.lessons.length, 0)} 课 -> source/sketch-map/index.md`);
 
 // ---------- 自检 ①：母本逐行都要在文章里 ----------
 const gen = new Map(arts.map((a) => [a.slug, fs.readFileSync(path.join(POSTS, `${a.slug}.md`), 'utf8')]));

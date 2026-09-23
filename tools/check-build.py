@@ -114,7 +114,7 @@ want = {}
 for k, v in xc_src.items():
     for c in fm_categories(v):
         want[c] = want.get(c, 0) + 1
-check(len(want) >= 12, f'源里的行测分类 {len(want)} 个', str(sorted(want)))
+check(len(want) >= 5, f'源里的行测分类 {len(want)} 个', str(sorted(want)))
 for name, n in sorted(want.items()):
     files = [p for key, ps in catpages.items() if key.split('/')[-1] == name for p in ps]
     if not files:
@@ -187,7 +187,7 @@ sk_cat = {}
 for s, v in sk_src.items():
     for c in fm_categories(v):
         sk_cat.setdefault(c, []).append(s)
-check(len(sk_cat) == 8, f'素描分类 {len(sk_cat)} 个（素描 + 6 阶段 + 总览）', str(sorted(sk_cat)))
+check(len(sk_cat) == 4, f'素描分类 {len(sk_cat)} 个（素描 + 3 个二级大类）', str(sorted(sk_cat)))
 for name, slugs_ in sk_cat.items():
     # Hexo 把分类名 slug 化后才做目录：空格变成 `-`（页面标题里还是空格），所以两边要先归一
     dir_ = name.replace(' ', '-')
@@ -211,6 +211,23 @@ for s, b in sk_bodies.items():
     for href in re.findall(r'href="([^"]+\.html)"', b):
         html_dead.add(f'{s} -> {href}')
 check(not html_dead, '素描里没有残留的 .html 链接（母本是 HTML 课程，跨课引用要改成锚点）', str(sorted(html_dead)[:3]))
+
+# ---------- 8. 课程总览页：30 个课链接必须真的落到目标页的标题上 ----------
+
+mapf = 'public/sketch-map/index.html'
+check(os.path.exists(mapf), '课程总览页构建出来了', mapf)
+if os.path.exists(mapf):
+    mh = open(mapf, encoding='utf-8').read().split('</h1>', 1)[-1]
+    links = re.findall(r'<a[^>]+href="(/2026/09/23/(sk-stage\d)/#([^"]+))"', mh)
+    check(len(links) == 30, f'总览页上 {len(links)} 个课链接', '应该是 30 课一格不少')
+    check(len({(s, a) for _, s, a in links}) == len(links), '总览页没有重复的课', f'{len(links)} 个链接 / {len({(s, a) for _, s, a in links})} 种目标')
+    target_ids = {}
+    for s in {s for _, s, _ in links}:
+        target_ids[s] = set(re.findall(r'<h[1-6][^>]*\bid="([^"]+)"', sk_bodies.get(s, '')))
+    bad_anchor = [f'{s}#{a}' for _, s, a in links if urllib.parse.unquote(a) not in target_ids.get(s, set())]
+    check(not bad_anchor, '总览页每个链接指的锚点都在目标页里存在', str(bad_anchor[:4]))
+    stage_links = {s for _, s, _ in links}
+    check(stage_links == {f'sk-stage{i}' for i in range(1, 7)}, '六个阶段都被总览页指向', str(sorted(stage_links)))
 
 print('\n%s' % ('全部通过' if not fail else f'{len(fail)} 项失败：' + '；'.join(fail)))
 sys.stdout.flush()          # stdout 被我换成 TextIOWrapper 了，sys.exit 时不一定帮你刷管道

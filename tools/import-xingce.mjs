@@ -10,8 +10,8 @@
  * 切法：**一个难题组一篇**（31 篇）+ 答案键总表 1 篇。
  *   - 为什么不是一册一篇：一册里混着 2~3 个题型（判断上册就有定义和类比），按册分类等于没分类
  *   - 为什么不是一题一篇：题目本身要连着材料/图表看，且组的题号是从 1 编号的，答案键也按组给
- *   - 分类四级：行测 / 27考季 / 模块 / 题型（题型与模块同名时只到三级，不重复一层）
- *   - 标签：刷题 / 27考季 / 模块 / 上册或下册 / 第 N 组
+ *   - 分类只到两级：行测 / 模块（用户 2026-09-23：「分类太多了……到二级类就够了，剩下等点进去，看左边的自由选择」）
+ *   - 标签：刷题 / 27考季 / 模块 / 题型（与模块同名时不重复）/ 上册或下册 / 第 N 组
  *   - 图片只把正文引用到的复制进 `source/images/xingce/<ascii>/`（84 张，仓库里不放没用的图），路径同步改写；
  *     母本副本 `data/xingce-raw/assets/` 是完整的 152 张（gitignore，不入库），脚本按题数报出「引用不到」和
  *     「说了有图却一张都没有」两种缺口，供人工决定是否补图
@@ -156,8 +156,8 @@ for (const f of books) {
       slug: `xc-${MODULES[mod].code}${VOL[vol]}-${p2(cur.n)}`,
       title: cur.type === mod ? `${mod} · 高分必刷难题（${cur.cn}）` : `${mod} · ${cur.type} 高分必刷难题（${cur.cn}）`,
       date: new Date(2026, 8, 22, 9, seqAll, 0),
-      categories: ['行测', '27考季', mod, ...(cur.type === mod ? [] : [cur.type])],
-      tags: ['刷题', '27考季', mod, VOL_NAME[vol], `第 ${cur.n} 组`],
+      categories: ['行测', mod],
+      tags: ['刷题', '27考季', mod, ...(cur.type === mod ? [] : [cur.type]), VOL_NAME[vol], `第 ${cur.n} 组`],
       description: `${mod}${cur.type === mod ? '' : ` · ${cur.type}`} 第 ${cur.n} 组，共 ${q} 题（题号 1–${q}），答案随题给出，末尾附答案速览。`,
       questions: q, answers: a, figWords, imgs,
       missingKey: !key,
@@ -203,7 +203,7 @@ for (const f of books) {
     slug: 'xc-answer',
     title: '行测难题精刷 · 全模块答案键（27 考季）',
     date: new Date(2026, 8, 22, 10, 0, 0),
-    categories: ['行测', '27考季', '答案键'],
+    categories: ['行测', '答案键'],
     tags: ['刷题', '27考季', '答案键'],
     description: `各册「答案速览」页的汇总，题号在每个难题组内从 1 重新编号。${note ? '末尾列出尚未导入母本的组。' : ''}`,
     questions: 0, answers: 0, missingKey: false,
@@ -240,7 +240,7 @@ const orphan = [...onDisk].filter(w => !wanted.has(w));
 
 if (cleanArg && existsSync(OUT)) rmSync(OUT, { recursive: true });
 for (const p of posts) {
-  const dir = join(OUT, p.categories[2]);
+  const dir = join(OUT, p.categories[1]);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, `${p.slug}.md`), frontMatter(p) + p.content, 'utf8');
 }
@@ -284,7 +284,7 @@ const lostFigs = arts.filter(p => p.figWords > 0 && p.imgs === 0);
 
 console.log(`生成文章 ${posts.length} 篇 -> ${relative(ROOT, OUT)}；图片 ${copied} 张 -> ${relative(ROOT, IMG)}`);
 const byCat = {};
-for (const p of posts) { const k = p.categories.slice(2).join(' / '); byCat[k] = (byCat[k] || 0) + 1; }
+for (const p of posts) { const k = p.categories.slice(1).join(' / '); byCat[k] = (byCat[k] || 0) + 1; }
 for (const [k, v] of Object.entries(byCat)) console.log(`  ${k}: ${v} 篇`);
 console.log(`题目合计 ${arts.reduce((s, p) => s + p.questions, 0)} 题；答案键 ${keyAll.length} 组，其中 ${usedKeys.size} 组对上了文章${keyGap ? `，${keyGap} 组没有题目可对` : ''}`);
 if (keyGap) console.log(`⚠ 答案键里有 ${keyGap} 组在母本里没有对应题目（已写进「答案键」那篇的对账，需要补题）`);

@@ -22,6 +22,7 @@ menu:
   archives: /archives/ || fa fa-archive
   categories: /categories/ || fa fa-th
   tags: /tags/ || fa fa-tags
+  素描课程: /sketch-map/ || fa fa-pencil-alt
   about: /about/ || fa fa-user
 
 menu_settings:
