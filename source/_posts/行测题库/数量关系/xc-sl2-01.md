@@ -3,6 +3,7 @@ title: "数量关系 · 高分必刷难题（四）"
 slug: xc-sl2-01
 date: 2026-09-22 09:16:00
 categories:
+  - "学习"
   - "行测"
   - "数量关系"
 tags:
@@ -11,7 +12,7 @@ tags:
   - "数量关系"
   - "下册"
   - "第 1 组"
-description: "数量关系 第 1 组，共 12 题（题号 1–12），答案随题给出，末尾附答案速览。"
+description: "数量关系 第 1 组，共 12 题（题号 1–12），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【数量关系】下册 · 数量关系高分必刷难题（四）
 
@@ -26,7 +27,14 @@ B. 3600
 C. 4000
 D. 4800
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>2.（2022 联考）</strong> 某疫苗共需接种 2 剂次方可达到最佳效果。A 市的接种人数占比统计如下图所示，其中，区域”0”表示尚未接种，区域”1”表示只接种 1 剂次，区域”2”表示已接种 2 剂次。假设 ABC 是四分之一圆面，D、E 是中点，BDFE 是正方形，则该市某疫苗只接种 1 剂次的人数占比：
 
@@ -37,7 +45,14 @@ B. 刚好 50%
 C. 超过 50% 但不到 60%
 D. 超过 60%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>3.（2023 联考）</strong> 下图所示是一种帐篷屋顶的示意图，底面是一个长 4 米、宽 3 米的长方形，屋顶高 1 米，上棱长 2 米且平行于底面，那么该帐篷屋顶的体积是：
 
@@ -48,7 +63,14 @@ B. 11 立方米
 C. 12 立方米
 D. 24 立方米
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>4.（2024 江苏）</strong> 某品牌奶茶所用纸杯均为圆台型。已知 M 型纸杯的上、下口直径分别为 70 毫米、50 毫米，高为 80 毫米；N 型纸杯的上、下口直径分别为 60 毫米、45 毫米，高为 60 毫米。则 M 型纸杯与 N 型纸杯的侧面积之比为：
 
@@ -57,7 +79,14 @@ B. 32：21
 C. 48：35
 D. 64：49
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>5.（2024 联考）</strong> 一个半径 300 米的圆形湖泊中有一个半径 100 米的圆形人工岛，该人工岛的中心在湖泊中心的正西方 150 米处。甲从湖正北的 A 点开船出发，绕行人工岛西侧到达正南的 B 点。如果保持最短路线行驶，那么行驶多少米后甲到达人工岛的岸边？
 
@@ -68,7 +97,14 @@ B. 300
 C. 50√41
 D. 200√3
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>6.（2026 吉林）</strong> 某风力发电机的三片风叶之间两两所成的角度为 120°，当其中一片风叶 OB 与塔杆叠合时，一位身高 1.8 米的技术人员站在另一片风叶 OA 端头的正下方，测得塔杆顶部仰角为 60°（如下左图所示）；若该技术人员站在离塔杆 60 米处，则测得塔杆顶部仰角为 45°（如下右图所示）。那么风叶转动时叶片顶端最高离地面：
 
@@ -79,7 +115,14 @@ B. 89.8 米
 C. 95.8 米
 D. 101.8 米
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>7.（2024 国考）</strong> 甲、乙两个联络站相距 10 千米。一条道路与甲、乙联络站连线相平行，且与两联络站连线的垂直距离为 12 千米。现需紧邻该道路建一个工作站，问工作站距离甲、乙联络站距离之和最小为多少千米？
 
@@ -88,7 +131,14 @@ B. 22
 C. 24
 D. 26
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>8.（2022 广东）</strong> 楼道上方有一盏灯，小刘径直走向这盏灯。一开始，他发现自己影子的长度为 3.2 米，前进 1 米后，发现影子缩短为 1.6 米。已知小刘身高为 1.6 米，则这盏灯的高度约为多少米？
 
@@ -99,7 +149,14 @@ B. 2.8
 C. 3.2
 D. 3.4
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>9.（2025 国考）</strong> 一个容器的下部分为高 12 厘米的倒立圆锥体，上部分为圆柱体，且圆锥和圆柱的底面半径相等。现匀速向容器中注入水，1 分钟后液面高 6 厘米，又过 30 分钟后注满。问整个容器的高度为多少厘米？
 
@@ -108,7 +165,14 @@ B. 22.5
 C. 23
 D. 23.5
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>10.（2025 国考）</strong> 某厂区如图所示，其中 ABCD 为矩形，ABEF 为直角梯形，AB 与 DE 相交于 G 点，其中阴影区域 ADGF 为涉密区域。已知 AD、AF、AB 长度分别为 240 米、150 米、100 米，问涉密区域的面积为多少万平方米？
 
@@ -119,7 +183,14 @@ B. 1.3
 C. 1.4
 D. 1.5
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>11.（2023 国考）</strong> 公园里有一片四边形草坪，沿对角线修建的小道相交于 O 点，O 到四个顶点 A、B、C、D 的距离之比正好为 1：2：3：4，一名工人花费 1 天正好完成 AOB 区域的修剪，问第二天至少需要额外增加多少名效率相同的工人一起工作，才能在当天内完成剩余草坪的修剪？
 
@@ -130,7 +201,14 @@ B. 10
 C. 11
 D. 12
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>12.（2017 国考）</strong> 一块种植花卉的矩形土地如图所示，AD 边长是 AB 的 2 倍，E 是 CD 的中点，甲、乙、丙、丁、戊区域分别种植白花、红花、黄花、紫花、白花。则种植白花的面积占矩形土地面积的：
 
@@ -141,9 +219,23 @@ B. 2/3
 C. 7/12
 D. 1/2
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 数量(四): 1-5 ACABC | 6-10 DDADA | 11-12 BC
+
+</div>
+</details>

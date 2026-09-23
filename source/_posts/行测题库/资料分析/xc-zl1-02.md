@@ -3,6 +3,7 @@ title: "资料分析 · 高分必刷难题（二）"
 slug: xc-zl1-02
 date: 2026-09-22 09:31:00
 categories:
+  - "学习"
   - "行测"
   - "资料分析"
 tags:
@@ -11,7 +12,7 @@ tags:
   - "资料分析"
   - "上册"
   - "第 2 组"
-description: "资料分析 第 2 组，共 15 题（题号 1–15），答案随题给出，末尾附答案速览。"
+description: "资料分析 第 2 组，共 15 题（题号 1–15），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【资料分析】上册 · 资料分析高分必刷难题（二）
 
@@ -29,7 +30,14 @@ B. 1.8 倍
 C. 2.8 倍
 D. 3.2 倍
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料二
 
@@ -44,7 +52,14 @@ B. −3%
 C. 1%
 D. 3%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料三
 
@@ -57,7 +72,14 @@ B. 减少了 5% 以上
 C. 增加了不到 5%
 D. 减少了不到 5%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料四
 
@@ -72,7 +94,14 @@ B. 4.8%
 C. 6.2%
 D. 7.8%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料五
 
@@ -85,7 +114,14 @@ B. 低 4% 以上
 C. 高不到 4%
 D. 低不到 4%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料六
 
@@ -100,7 +136,14 @@ B. 低不到 10 个百分点
 C. 高 10 个百分点以上
 D. 低 10 个百分点以上
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料七
 
@@ -113,7 +156,14 @@ B. 少了 10.5%
 C. 多了 11.2%
 D. 少了 11.2%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料八
 
@@ -128,7 +178,14 @@ B. 5
 C. 4
 D. 3
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料九
 
@@ -141,7 +198,14 @@ B. 3
 C. 4
 D. 5
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料十
 
@@ -156,7 +220,14 @@ B. （折线图，见原页图）
 C. （折线图，见原页图）
 D. （折线图，见原页图）
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十一
 
@@ -171,7 +242,14 @@ B. 10 万～ 20 万元
 C. 20 万～ 30 万元
 D. 30 万元以上
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料十二
 
@@ -184,7 +262,14 @@ B. 2015 年
 C. 2014 年
 D. 2012 年
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十三
 
@@ -197,7 +282,14 @@ B. 6—9 月
 C. 7—10 月
 D. 8—11 月
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料十四
 
@@ -212,7 +304,14 @@ B. 白酒、第三季度
 C. 啤酒、第二季度
 D. 啤酒、第三季度
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料十五
 
@@ -225,9 +324,23 @@ B. （折线图，见原页图）
 C. （折线图，见原页图）
 D. （折线图，见原页图）
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 资料分析(二): 1-5 BBDCD | 6-10 DABCB | 11-15 ABDDA
+
+</div>
+</details>

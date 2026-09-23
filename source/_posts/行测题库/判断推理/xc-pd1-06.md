@@ -3,6 +3,7 @@ title: "判断推理 · 类比推理 高分必刷难题（三）"
 slug: xc-pd1-06
 date: 2026-09-22 09:06:00
 categories:
+  - "学习"
   - "行测"
   - "判断推理"
 tags:
@@ -12,7 +13,7 @@ tags:
   - "类比推理"
   - "上册"
   - "第 6 组"
-description: "判断推理 · 类比推理 第 6 组，共 15 题（题号 1–15），答案随题给出，末尾附答案速览。"
+description: "判断推理 · 类比推理 第 6 组，共 15 题（题号 1–15），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【判断推理】上册 · 类比高分必刷难题（三）
 
@@ -25,7 +26,14 @@ B. 实词：虚词：词汇种类
 C. 主场：客场：比赛场地
 D. 盈利：亏损：经营状态
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>2.（2023 国考）</strong> 匿名投票：实名投票：现场投票
 
@@ -34,7 +42,14 @@ B. 战国文字：象形文字：古代汉字
 C. 金融危机：粮食危机：生态危机
 D. 油料作物：糖料作物：经济作物
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>3.（2024 浙江）</strong> 外资企业：国有企业：集体企业
 
@@ -43,7 +58,14 @@ B. 水力发电：火力发电：潮汐发电
 C. 多程机票：单程机票：往返机票
 D. 巾帼英雄：民族英雄：抗日英雄
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>4.（2023 浙江）</strong> 声东：击西
 
@@ -52,7 +74,14 @@ B. 张冠：李戴
 C. 安居：乐业
 D. 说东：道西
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>5.（2021 湖北选调）</strong> 抗疫情：稳经济：保民生
 
@@ -61,7 +90,14 @@ B. 数字化：网络化：智能化
 C. 信仰坚：能力强：作风硬
 D. 集民智：聚人心：共事业
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>6.（2023 福建）</strong> 国家发展：民族进步：社会和谐
 
@@ -70,7 +106,14 @@ B. 榜样力量：鼓舞人心：引导征程
 C. 智慧增长：信心增强：干劲增大
 D. 传统习惯：文化底蕴：历史传承
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>7.（2026 辽宁）</strong> 算法偏见 对于 （ ） 相当于 （ ） 对于 动脉堵塞
 
@@ -79,7 +122,14 @@ B. 信息茧房 心梗
 C. 数据污染 肺功能
 D. 不公平 血栓脱落
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>8.（2026 事业单位）</strong> 法律 之于 （ ） 相当于 （ ） 之于 社区
 
@@ -88,7 +138,14 @@ B. 法官 地域
 C. 法案 城市
 D. 法制 居民
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>9.（2026 江西）</strong> 照相机：凸透镜：照相
 
@@ -97,7 +154,14 @@ B. 潜水艇：鱼鳔：潜水
 C. 飞机：起落架：飞行
 D. 微波炉：磁控管：烹饪
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>10.（2021 浙江）</strong> 大米：大米粥
 
@@ -106,7 +170,14 @@ B. 玻璃：玻璃水
 C. 马尾：马尾辫
 D. 图书：图书馆
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>11.（2025 天津）</strong> 搜索引擎：互联网：检索技术
 
@@ -115,7 +186,14 @@ B. 子网掩码：主机地址：符号
 C. 劳动合同：劳动关系：契约
 D. 工业船舶：工业港口：交通
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>12.（2024 宁夏）</strong> 信息科技：生物科技：科技
 
@@ -124,7 +202,14 @@ B. 纺织产业：物流产业：产业
 C. 公共交通：城市交通：交通
 D. 商品住房：保障住房：住房
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>13.（2025 江苏）</strong> 购物：货币：购物车
 
@@ -133,7 +218,14 @@ B. 垂钓：鱼竿：鱼钩
 C. 写作：文字：电脑
 D. 旅游：景点：导游
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>14.（2021 浙江）</strong> 亏损率：收益率
 
@@ -142,7 +234,14 @@ B. 死亡率：出生率
 C. 升学率：辍学率
 D. 月利率：年利率
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>15.（2022 江苏）</strong> 新教师：老教师
 
@@ -151,9 +250,23 @@ B. 序言：结尾
 C. 草稿：定稿
 D. 初赛：决赛
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 类比(三): 1-5 BAAAD | 6-10 CDDDD | 11-15 CACAC
+
+</div>
+</details>

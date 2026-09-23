@@ -3,6 +3,7 @@ title: "资料分析 · 高分必刷难题（八）"
 slug: xc-zl2-04
 date: 2026-09-22 09:37:00
 categories:
+  - "学习"
   - "行测"
   - "资料分析"
 tags:
@@ -11,7 +12,7 @@ tags:
   - "资料分析"
   - "下册"
   - "第 4 组"
-description: "资料分析 第 4 组，共 15 题（题号 1–15），答案随题给出，末尾附答案速览。"
+description: "资料分析 第 4 组，共 15 题（题号 1–15），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【资料分析】下册 · 资料分析高分必刷难题（八）
 
@@ -29,7 +30,14 @@ B. 3
 C. 4
 D. 5
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料二
 
@@ -44,7 +52,14 @@ B. 2015
 C. 2016
 D. 2017
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料三
 
@@ -57,7 +72,14 @@ B. 高 3.9 元
 C. 低 2.2 元
 D. 低 3.9 元
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料四
 
@@ -74,7 +96,14 @@ B. 减少了 1000 元以上
 C. 增加了不到 1000 元
 D. 增加了 1000 元以上
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料五
 
@@ -91,7 +120,14 @@ B. 低 10 千瓦时以上
 C. 高不到 10 千瓦时
 D. 高 10 千瓦时以上
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料六
 
@@ -108,7 +144,14 @@ B. 73%
 C. 78%
 D. 81%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料七
 
@@ -121,7 +164,14 @@ B. 少 35%
 C. 多 27%
 D. 多 35%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料八
 
@@ -138,7 +188,14 @@ B. 下降 3.9%
 C. 上升 2.6%
 D. 上升 7.2%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料九
 
@@ -151,7 +208,14 @@ B. 中国金融期货交易所，上海国际能源交易中心
 C. 上海期货交易所，广州期货交易所
 D. 上海期货交易所，上海国际能源交易中心
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料十
 
@@ -166,7 +230,14 @@ B. ③②①④
 C. ④③②①
 D. ④①②③
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料十一
 
@@ -181,7 +252,14 @@ B. 1.7
 C. 0.8
 D. 1.1
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料十二
 
@@ -194,7 +272,14 @@ B. 2
 C. 3
 D. 4
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料十三
 
@@ -207,7 +292,14 @@ B. 10.7 个百分点
 C. 10.3 个百分点
 D. 9.8 个百分点
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十四
 
@@ -224,7 +316,14 @@ B. 37.0%
 C. 37.7%
 D. 38.5%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料十五
 
@@ -239,9 +338,23 @@ B. 24522 万人
 C. 34795 万人
 D. 96592 万人
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 资料分析(八): 1-5 DCAAC | 6-10 ABDCC | 11-15 AABDA
+
+</div>
+</details>

@@ -7,6 +7,8 @@
 每一步都先断言「确实取到了样本」，正则写错匹配到 0 个时一律判失败，不许假绿。
 
 2026-09-23 人工核对过的量：74 时政 + 38 行测 + 7 素描 = 119 篇；行测 541 题、92 图；素描 30 课、159 图。
+分类从 2026-09-23 起是三层：一级只有 工作 / 学习 / 生活（现有 119 篇全在「学习」下），
+二级是模块（行测 / 时政要点 / 素描），三级是子分类（判断推理 / 2025年11月 / 基础与造型 …）。
 """
 import io, sys, os, re, glob
 import urllib.parse
@@ -57,6 +59,30 @@ src_slugs = {fm_slug(v) for v in xc_src.values()}
 check(len(src_slugs) == len(xc_src), f'行测 slug 无重复：{len(src_slugs)}')
 lost = sorted(s for s in src_slugs if s not in pages)
 check(not lost, f'{len(src_slugs)} 篇行测都构建出了页面', str(lost[:5]))
+
+# ---------- 1b. 分类三层：一级只能出现 工作 / 学习 / 生活 ----------
+
+TOPS_OK = {'工作', '学习', '生活'}
+tops = {}
+bad_cat = []
+for k, v in src.items():
+    cats = fm_categories(v)
+    if len(cats) != 3 or cats[0] not in TOPS_OK:
+        bad_cat.append(f'{norm(k)} -> {cats}')
+    tops[cats[0]] = tops.get(cats[0], 0) + 1
+check(not bad_cat, f'{len(src)} 篇都是三层分类（一级 ∈ 工作/学习/生活）', str(bad_cat[:3]))
+check(tops.get('学习') == len(src), f'现有文章都挂在「学习」下：{tops}', '其余两个模块暂时应为空')
+# 二、三级不能撞名（撞了分类页会混在一起，篇数对不上）
+path_seen = {}
+for k, v in src.items():
+    key = ' / '.join(fm_categories(v)[1:])
+    path_seen.setdefault(key, []).append(norm(k))
+check(len(path_seen) >= 12, f'学习下的「模块 / 子分类」共 {len(path_seen)} 种', str(sorted(path_seen)[:4]))
+dup_top = [m for m in {p.split(' / ')[0] for p in path_seen} if m in {'工作', '生活'}]
+check(not dup_top, '二级没有出现与工作/生活撞名的模块', str(dup_top))
+for name in ('学习',):
+    ok = os.path.isdir(os.path.join('public', 'categories', name))
+    check(ok, f'一级分类页 /categories/{name}/ 构建出来了', '' if ok else '目录不在产物里')
 
 # ---------- 2. 渲染残留 ----------
 
@@ -126,13 +152,20 @@ for name, n in sorted(want.items()):
     check(links == src_slugs if name == '行测' else len(links) == n,
           f'分类页 {name} 合起来 {len(links)} 篇', f'期望 {n}')
 
-# ---------- 6. 首页文章流与死链 ----------
+# ---------- 6. 归档页收全 + 死链 ----------
 
+# 首页从 2026-09-23 起是 Bento 卡片（scripts/bento-home.js），不再逐篇铺文章流，
+# 「文章翻得到翻不到」这件事改由归档页承担：翻遍 /archives/ 的分页，每篇都要出现一次。
 idx = [open(f, encoding='utf-8').read() for f in glob.glob('public/index.html') + glob.glob('public/page/*/index.html')]
 check(len(idx) >= len(src) // 10, f'首页 + 分页共 {len(idx)} 页（{len(src)} 篇文章）')
-joined = '\n'.join(idx)
-lost_idx = [s for s in src_slugs if f'/{s}/' not in joined]
-check(not lost_idx, '每篇行测文章都进了首页文章流', str(lost_idx[:5]))
+all_slugs = {fm_slug(v) or norm(k)[:-3].rsplit('/', 1)[1] for k, v in src.items()}
+check(len(all_slugs) == len(src), f'全站 slug/文件名 {len(all_slugs)} 个，与文章数一致')
+arch = [open(f, encoding='utf-8').read() for f in
+        glob.glob('public/archives/index.html') + glob.glob('public/archives/page/*/index.html')]
+check(len(arch) >= 2, f'归档页 + 分页共 {len(arch)} 页')
+arch_joined = '\n'.join(arch)
+lost_arch = [s for s in sorted(all_slugs) if f'/{s}/' not in arch_joined]
+check(not lost_arch, f'{len(all_slugs)} 篇全都出现在归档页里', str(lost_arch[:5]))
 
 dead = set()
 for s, b in bodies.items():
@@ -187,7 +220,7 @@ sk_cat = {}
 for s, v in sk_src.items():
     for c in fm_categories(v):
         sk_cat.setdefault(c, []).append(s)
-check(len(sk_cat) == 4, f'素描分类 {len(sk_cat)} 个（素描 + 3 个二级大类）', str(sorted(sk_cat)))
+check(len(sk_cat) == 5, f'素描分类 {len(sk_cat)} 个（学习 + 素描 + 3 个二级大类）', str(sorted(sk_cat)))
 for name, slugs_ in sk_cat.items():
     # Hexo 把分类名 slug 化后才做目录：空格变成 `-`（页面标题里还是空格），所以两边要先归一
     dir_ = name.replace(' ', '-')
@@ -197,8 +230,8 @@ for name, slugs_ in sk_cat.items():
         links.update(re.findall(r'href="[^"]*?/(sk-[a-z0-9-]+)/"', open(p, encoding='utf-8').read()))
     check(links == set(slugs_), f'分类页 {name} 收全 {len(slugs_)} 篇', f'实际 {sorted(links)[:3]}')
 
-lost_idx = [s for s in sk_src if f'/{s}/' not in joined]
-check(not lost_idx, '每篇素描都进了首页文章流', str(lost_idx[:5]))
+lost_idx = [s for s in sk_src if f'/{s}/' not in arch_joined]
+check(not lost_idx, '每篇素描都在归档页里翻得到', str(lost_idx[:5]))
 sk_dead = set()
 for s, b in sk_bodies.items():
     for href in re.findall(r'<a[^>]+href="(/[^"#]+)"', b):
@@ -228,6 +261,139 @@ if os.path.exists(mapf):
     check(not bad_anchor, '总览页每个链接指的锚点都在目标页里存在', str(bad_anchor[:4]))
     stage_links = {s for _, s, _ in links}
     check(stage_links == {f'sk-stage{i}' for i in range(1, 7)}, '六个阶段都被总览页指向', str(sorted(stage_links)))
+
+# ---------- 9. 前端改造：换皮 CSS / 首页 Bento / 行测答案折叠 ----------
+
+css = open('public/css/main.css', encoding='utf-8').read()
+for token, why in [('--radius-pill', '自定义 token 层进了产物'),
+                   ('-apple-system', '系统字体栈覆盖生效'),
+                   ('font-size: 1.0625em', '正文 17px 生效'),
+                   ('.bento-card', '首页卡片样式在'),
+                   ('details.answer', '答案折叠样式在'),
+                   ('prefers-reduced-motion', '减少动效的兜底在')]:
+    check(token in css, f'CSS：{why}', token)
+# 自定义层必须排在主题自己那套之后，否则同优先级规则会输：主题的 .post-eof 有背景色，
+# 我们那条只是 display:none，谁在后面谁说了算。
+check(css.rindex('.post-eof') > css.index('.post-eof {'), 'CSS：自定义层在主题层之后（后写才赢）')
+# 折叠写成显式的 display:none / [open] display:block：Chrome 默认用 ::details-content 的
+# content-visibility 隐藏，盒子还在、老内核或不支持该伪元素时更会直接把答案画出来。
+check(re.search(r'details\.answer\s*>\s*\.answer-body\s*\{\s*display:\s*none', css),
+      'CSS：折叠是显式规则，不只信浏览器的默认隐藏')
+check(re.search(r'details\.answer\[open\]\s*>\s*\.answer-body\s*\{\s*display:\s*block', css),
+      'CSS：展开态把答案放回来')
+
+home = open('public/index.html', encoding='utf-8').read()
+body_home = home.split('main-inner', 1)[1]
+check('post-block' not in body_home, '首页已经不再逐篇铺文章卡')
+check('bento-lede' not in body_home and 'bento-cover' not in body_home,
+      '首页没有「三个知识库」标题块，也没有素描范画卡')
+cards_raw = ['<article class="bento-card' + c for c in body_home.split('<article class="bento-card')[1:]]
+card_cls = [re.match(r'<article class="bento-card([^"]*)"', c).group(1) for c in cards_raw]
+check(len([c for c in card_cls if 'heat' in c]) == 1, '首页 1 张热力图卡', str(card_cls))
+check(len([c for c in card_cls if 'feed' in c]) == 1, '首页 1 张「最近更新」卡')
+mod_raw = [c for c, k in zip(cards_raw, card_cls) if 'heat' not in k and 'feed' not in k]
+mod_cls = [k for k in card_cls if 'heat' not in k and 'feed' not in k]
+check(len(mod_raw) == 3, f'首页 {len(mod_raw)} 张模块卡', str(card_cls))
+card_names = [re.search(r'<h3 class="bento-name">(?:<a href="[^"]*">)?([^<]+)', c).group(1) for c in mod_raw]
+check(sorted(card_names) == sorted(['工作', '学习', '生活']), f'三张卡是 工作/学习/生活', str(card_names))
+# 空模块也要在（占位卡），篇数为 0 的那些挂「还没有内容」
+want_empty = sum(1 for n in ('工作', '生活') if not tops.get(n))
+got_empty = [n for n, c in zip(card_names, mod_cls) if 'empty' in c]
+check(len(got_empty) == want_empty, f'空模块占位卡 {len(got_empty)} 张', f'源里没文章的模块有 {want_empty} 个')
+
+# 热力图：52 列 × 7 格，带悬停文本的格子 = 窗口内真正有发文的日期
+heat_card = [c for c, k in zip(cards_raw, card_cls) if 'heat' in k][0]
+# 只数网格里的格子：图例那 5 个小方块也是 .heat-cell，别混进来当数据格
+heat_grid = heat_card.split('heat-cols', 1)[1].split('heat-foot', 1)[0]
+heat_cols = len(re.findall(r'<div class="heat-col">', heat_grid))
+heat_cells = len(re.findall(r'class="heat-cell', heat_grid))
+check(heat_cols == 52, f'热力图 {heat_cols} 列（一列一周）', '应该 52 周')
+check(heat_cells == 52 * 7, f'热力图 {heat_cells} 格', '应该 364 格 = 52 × 7')
+titles = re.findall(r'<span class="heat-cell heat-l[1-4]" title="([^"]+)"', heat_grid)
+check(len(titles) >= 1, f'有发文的格子 {len(titles)} 个，都带悬停文本', str(titles[:2]))
+heat_days = {t.split(' · ')[0] for t in titles}
+check(len(heat_days) == len(titles), '悬停文本里的日期不重复', f'{len(titles)} 格 / {len(heat_days)} 个日期')
+check(all(re.fullmatch(r'\d{4}-\d\d-\d\d', d) for d in heat_days), '悬停文本以完整日期开头', str(sorted(heat_days)[:2]))
+rng = re.search(r'<span class="heat-range">(\d{4}-\d\d-\d\d) → (\d{4}-\d\d-\d\d)</span>', body_home)
+check(bool(rng), '热力图标了起止日期', rng.group(0) if rng else '')
+if rng:
+    src_dates = []
+    for v in src.values():
+        m = re.search(r'^date:\s*(\d{4}-\d\d-\d\d)', v, re.M)
+        if m:
+            src_dates.append(m.group(1))
+    in_win = [d for d in src_dates if rng.group(1) <= d <= rng.group(2)]
+    heat_sum = sum(int(m.group(1)) for m in re.finditer(r'·\s*(\d+) 篇', ' '.join(titles)))
+    check(heat_sum == len(in_win), f'热力图格子里的篇数合计 {heat_sum} = 起止区间内的文章数 {len(in_win)}',
+          f'{rng.group(1)} → {rng.group(2)}')
+    check(len(heat_days) == len(set(in_win)), f'有格子的天数 {len(heat_days)} = 窗口内有发文的日期数 {len(set(in_win))}')
+
+# 模块卡的篇数是从 source 现算的，两边必须一致
+learn_card = dict(zip(card_names, mod_raw))['学习']
+learn_kicker = re.search(r'<p class="bento-kicker">(.*?)</p>', learn_card).group(1)
+check(f'{tops.get("学习", 0)} 篇' in learn_kicker, '学习卡的篇数 = 源里挂在学习下的文章数', f'{learn_kicker} vs {tops}')
+kid_want = {}
+for v in src.values():
+    cats = fm_categories(v)
+    if len(cats) > 1:
+        kid_want[cats[1]] = kid_want.get(cats[1], 0) + 1
+kid_got = dict(re.findall(r'<a href="[^"]*">([^<]+)<span class="bento-count">(\d+)</span>', learn_card))
+check({k: int(n) for k, n in kid_got.items()} == kid_want,
+      f'学习卡上的子分类胶囊 = 源里 {len(kid_want)} 个模块的篇数', f'{kid_got} vs {kid_want}')
+
+# 首页上每个站内链接与封面图都要存在
+home_dead = set()
+for ref in re.findall(r'(?:href|src)="(/[^"#]+)"', body_home):
+    p = os.path.join('public', *urllib.parse.unquote(ref).lstrip('/').split('/'))
+    if not (os.path.exists(p) or os.path.isdir(p)):
+        home_dead.add(ref)
+check(not home_dead, '首页上的站内链接和图片都指向真实页面', str(sorted(home_dead)[:4]))
+
+# 「最近更新」必须是全站按 date 最新的 6 篇
+dated = []
+for k, v in src.items():
+    m = re.search(r'^date:\s*(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)', v, re.M)
+    if m:
+        dated.append((m.group(1), fm_slug(v) or norm(k)[:-3].rsplit('/', 1)[1]))
+want6 = [s for _, s in sorted(dated, reverse=True)[:6]]
+got6 = re.findall(r'<a class="bento-feed-title" href="/[0-9/]+/([a-z0-9-]+)/"', body_home)
+check(len(got6) == 6, f'最近更新列出 {len(got6)} 条')
+check(got6 == want6, '最近更新的 6 条 = 全站日期最新的 6 篇', f'{got6[:2]} vs {want6[:2]}')
+
+# 第 2 页起落回主题原来的文章流，老分页链接不坏
+p2 = 'public/page/2/index.html'
+check(os.path.exists(p2) and 'post-block' in open(p2, encoding='utf-8').read(),
+      '第 2 页仍是主题原来的文章列表（分页没坏）', p2)
+
+# 答案折叠：渲染后的 DOM 里每道题一个 details，答案确实被包在块内而不是露在外面
+fold_bad, fold_total = [], 0
+for slug, html in pages.items():
+    if not slug.startswith('xc-') or slug == 'xc-answer':
+        continue
+    src_text = next((v for k, v in xc_src.items() if fm_slug(v) == slug), None)
+    if src_text is None:
+        fold_bad.append(f'{slug} 找不到源文件')
+        continue
+    n_ans = len(re.findall(r'<strong>答案：', src_text))
+    n_fold = len(re.findall(r'<details class="answer">', html))
+    n_over = len(re.findall(r'<details class="answer answer-overview">', html))
+    fold_total += n_fold
+    if n_fold != n_ans:
+        fold_bad.append(f'{slug} 折叠 {n_fold} != 答案 {n_ans}')
+    if n_over != 1:
+        fold_bad.append(f'{slug} 速览折叠 {n_over} != 1')
+    # 每个折叠块里都得真的装着答案，summary 文案也要在
+    for blk in re.findall(r'<div class="answer-body">(.*?)</div>', html, re.S):
+        if '<strong>答案：' not in blk and 'DABAB' not in blk and '|' not in blk:
+            fold_bad.append(f'{slug} 有个折叠块里没答案')
+            break
+    if '<summary>看答案</summary>' not in html:
+        fold_bad.append(f'{slug} 没有「看答案」的 summary')
+    # 块外的裸答案：正文里 <strong>答案： 的总数应该 == 折叠数
+    if len(re.findall(r'<strong>答案：', html)) != n_ans:
+        fold_bad.append(f'{slug} 渲染出的答案数 {len(re.findall(r"<strong>答案：", html))} != 源里 {n_ans}')
+check(fold_total >= 500, f'行测折叠共 {fold_total} 块')
+check(not fold_bad, '每道行测题的答案都折在 details 里、点击才露出来', str(fold_bad[:4]))
 
 print('\n%s' % ('全部通过' if not fail else f'{len(fail)} 项失败：' + '；'.join(fail)))
 sys.stdout.flush()          # stdout 被我换成 TextIOWrapper 了，sys.exit 时不一定帮你刷管道

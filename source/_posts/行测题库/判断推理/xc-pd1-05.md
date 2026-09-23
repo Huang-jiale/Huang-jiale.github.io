@@ -3,6 +3,7 @@ title: "判断推理 · 类比推理 高分必刷难题（二）"
 slug: xc-pd1-05
 date: 2026-09-22 09:05:00
 categories:
+  - "学习"
   - "行测"
   - "判断推理"
 tags:
@@ -12,7 +13,7 @@ tags:
   - "类比推理"
   - "上册"
   - "第 5 组"
-description: "判断推理 · 类比推理 第 5 组，共 15 题（题号 1–15），答案随题给出，末尾附答案速览。"
+description: "判断推理 · 类比推理 第 5 组，共 15 题（题号 1–15），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【判断推理】上册 · 类比高分必刷难题（二）
 
@@ -25,7 +26,14 @@ B. 星罗棋布：漫山遍野
 C. 心领神会：心照不宣
 D. 奋起直追：迎头赶上
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>2.（2026 事业单位）</strong> 草木蔓发：春山可望
 
@@ -34,7 +42,14 @@ B. 木叶尽脱：绿阴幽草
 C. 春树暮云：睹物思人
 D. 万物并秀：孟夏之日
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>3.（2025 四川）</strong> 火炉：蒲扇
 
@@ -43,7 +58,14 @@ B. 暖气：空调
 C. 油门：刹车
 D. 出租车：私家车
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>4.（2024 四川）</strong> 政治家：军事家：曹操
 
@@ -52,7 +74,14 @@ B. 直辖市：港口城市：北京
 C. 企业家：科学家：爱因斯坦
 D. 发展中国家：亚洲国家：菲律宾
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>5.（2020 福建）</strong> 大豆：豆油：压榨
 
@@ -61,7 +90,14 @@ B. 水泥：房屋：建造
 C. 布料：成衣：缝制
 D. 太阳：阳光：辐射
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>6.（2024 湖北选调）</strong> 面团：蒸笼：馒头
 
@@ -70,7 +106,14 @@ B. 钢铁：工厂：汽车
 C. 歌曲：电台：节目
 D. 苹果：榨机：果汁
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>7.（2024 江西）</strong> 虫害：植物受损
 
@@ -79,7 +122,14 @@ B. 除名：查无此人
 C. 赤潮：海水污染
 D. 失眠：辗转反侧
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>8.（2013 重庆）</strong> 画商：经纪人：佣金
 
@@ -88,7 +138,14 @@ B. 演员：表演者：片酬
 C. 律师：执业人员：诉讼费
 D. 教师：学者：课时费
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>9.（2020 广东）</strong> 夜晚：路灯
 
@@ -97,7 +154,14 @@ B. 站台：路标
 C. 春节：春联
 D. 黄昏：道别
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>10.（2024 江苏）</strong> 梅花：梅花糕：糕
 
@@ -106,7 +170,14 @@ B. 珊瑚：珊瑚树：树
 C. 桥头：桥头堡：堡
 D. 面包：面包车：车
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>11.（2024 国考）</strong> 感想：主观性：体会
 
@@ -115,7 +186,14 @@ B. 发明：创造性：方法
 C. 泥土：可塑性：材料
 D. 规律：普适性：定理
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>12.（2023 四川）</strong> 书籍：书桌：读书
 
@@ -124,7 +202,14 @@ B. 纸张：纸篓：废纸
 C. 蔬菜：菜篮：买菜
 D. 净水：水杯：饮水
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>13.（2021 国考）</strong> 江河湖海：水体
 
@@ -133,7 +218,14 @@ B. 油盐酱醋：调味
 C. 山珍海味：美食
 D. 绫罗绸缎：面料
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>14.（2026 浙江）</strong> 实现：现实
 
@@ -142,7 +234,14 @@ B. 代替：替代
 C. 离别：别离
 D. 积累：累积
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>15.（2020 河南）</strong> 蛛丝马迹：鸟迹虫丝
 
@@ -151,9 +250,23 @@ B. 堆玉积金：屯粮积草
 C. 冰肌玉骨：劲骨丰肌
 D. 挨冻受饿：担饿受冻
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 类比(二): 1-5 DACDA | 6-10 AABCD | 11-15 ACDAC
+
+</div>
+</details>

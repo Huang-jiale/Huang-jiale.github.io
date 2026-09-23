@@ -3,6 +3,7 @@ title: "言语理解 · 逻辑填空 高分必刷难题（五）"
 slug: xc-yy1-05
 date: 2026-09-22 09:22:00
 categories:
+  - "学习"
   - "行测"
   - "言语理解"
 tags:
@@ -12,7 +13,7 @@ tags:
   - "逻辑填空"
   - "上册"
   - "第 5 组"
-description: "言语理解 · 逻辑填空 第 5 组，共 15 题（题号 1–15），答案随题给出，末尾附答案速览。"
+description: "言语理解 · 逻辑填空 第 5 组，共 15 题（题号 1–15），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【言语理解】上册 · 逻辑填空高分必刷难题（五）
 
@@ -27,7 +28,14 @@ B. 耸入云霄  袅袅不绝
 C. 富丽堂皇  雅俗共赏
 D. 古色古香  余音绕梁
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>2.（2024 国考）</strong> 基层工作 ______，调研起来难免千头万绪。调查研究要从"小切口"入题，从民生实事选题定向。同时，调研要坚持"一根竿子插到底"，______直面"真问题"，克服认知盲区和思维局限，秉持更加开阔的视野，方能 ______基层"最后一公里"的症结。
 
@@ -38,7 +46,14 @@ B. 错综复杂  追根溯源  洞见
 C. 包罗万象  抽丝剥茧  破解
 D. 任重道远  实事求是  缓解
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>3.（2026 江西）</strong> 现有研究认为，虚拟孵化之所以能培育创业企业，是基于网络聚集了人力和资本资源，帮助创业企业实现了资源 ______。事实上，无论是传统孵化还是虚拟孵化，提供资源是孵化平台帮助创业企业克服新生 ______、获取竞争优势的重要方式。
 
@@ -49,7 +64,14 @@ B. 聚积  弱势
 C. 聚拢  态势
 D. 聚合  劣势
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>4.（2023 浙江）</strong> 探索浩瀚宇宙，是中华民族数千年来 ______的追求。中国航天承载了一个大国的斑斓梦想，也 ______了新时代中国人的骄傲与情怀。
 
@@ -60,7 +82,14 @@ B. 志在必得  铭刻
 C. 亘古不变  映射
 D. 孜孜不倦  彰显
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>5.（2022 青海）</strong> 不断攀升的销售总额、不断刷新的"购物车"清单，清晰地勾勒出中国消费结构优化升级、不断 ______新增长点的轨迹。令人振奋的不只有消费时点的成交额，还有背后消费新业态的成长与新模式的更迭。正是后者 ______了中国不断迸发的创新活力，令人对中国经济行稳致远更有信心。
 
@@ -71,7 +100,14 @@ B. 培育  展现
 C. 带动  反映
 D. 催生  凸显
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>6.（2023 浙江）</strong> 骈文的特点是追求形式美：对偶、声律、用典、藻饰。魏晋时期，这种刻意追求文学形式美的 ______，一方面促进了文学独立品格的建立，另一方面又造成了形式上的僵化和内容上的 ______。
 
@@ -82,7 +118,14 @@ B. 手法  单一
 C. 潮流  呆板
 D. 风尚  空洞
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>7.（2021 浙江）</strong> 水雷虽老，却依然是军舰的"______"。一方面，水雷威力巨大，即便是一些老式水雷也会对现代海军舰船构成相当威胁；另一方面，水雷研发难度低，制造成本也不高，因此平时可以大批量地制造、储备，战时可以大面积布设。所以，直到现在水雷依然是各国海军武器库的 ______。
 
@@ -93,7 +136,14 @@ B. 天敌  王牌
 C. 仇家  底牌
 D. 克星  主力
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>8.（2024 辽宁）</strong> 土壤中的蚯蚓、蚂蚁等动物和真菌、细菌等微生物被称为土壤生物，这些生物在土壤中并不是 ______，而是通过"吃"与"被吃"的关系建成一张食物网，在这一过程中，生物种类、数量和所占比例保持在相对稳定的状态，从而维持了土壤中的生物 ______。
 
@@ -104,7 +154,14 @@ B. 杂乱无章  多样性
 C. 相安无事  安全性
 D. 盘根错节  复杂性
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>9.（2023 山东）</strong> 新业态快速发展，既为经济社会发展提供了新的增长点，也成为公共安全新的风险点。对新业态发展中的问题，既不能 ______，也不能 ______，重在找准鼓励创新和防控风险的平衡点，坚持在发展中规范、在规范中发展。
 
@@ -115,7 +172,14 @@ B. 因小失大  因循守旧
 C. 坐以待毙  熟视无睹
 D. 因噎废食  视而不见
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>10.（2020 广东）</strong> 伟大的成就与变革，往往是前所未有的，是 ______的，是惊心动魄的，却没有一个是 ______的，是信手拈来的，是一蹴而就的。
 
@@ -126,7 +190,14 @@ B. 开天辟地  空中楼阁
 C. 荡气回肠  轻而易举
 D. 振聋发聩  日行千里
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>11.（2022 江苏）</strong> 以都市圈视角来看，超大城市的城区和郊区应该互相 ______、互相补充并 ______：城区是超大集聚，郊区则应该是中型或小型集聚；城区是尽显 ______的超级都市，郊区则是各有特色的市镇体系和生态田园；城区是高容积率和高密度的，郊区则是相对低容积率和低密度的。
 
@@ -137,7 +208,14 @@ B. 呼应  融为一体  实力
 C. 错位  相得益彰  魅力
 D. 借鉴  珠联璧合  优势
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>12.（2024 陕西）</strong> 在当今世界，科学家利用基因编辑技术，为"复活"灭绝物种 ______了生态修复的新途径，但挽救濒危物种，保护生物多样性才是核心要义，人类需要采取组合措施来遏制和 ______生物多样性丧失的严峻形势。
 
@@ -148,7 +226,14 @@ B. 开拓  扭转
 C. 发现  抢救
 D. 开辟  缓解
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>13.（2022 青海）</strong> 汽车是 20 世纪现代化的重要标志，以石油为燃料的汽车工业 ______是世界各强国经济腾飞的龙头和重要支柱。近年来，世界主要汽车大国纷纷加强战略谋划、强化政策支持，跨国企业加大研发投入、完善产业布局，新能源汽车成为全球汽车产业转型发展的主要方向和促进未来世界经济持续增长的重要 ______。
 
@@ -159,7 +244,14 @@ B. 曾经  引擎
 C. 之前  源泉
 D. 向来  引领
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>14.（2026 江西）</strong> 人工智能技术飞速发展，逐渐向人类智能水平逼近。科学家们在研究过程中愈发清晰地意识到，许多棘手的问题并非单凭一家公司之力就能成功解决。除了至今 ______的"电车难题"外，还有日益重要的价值观 ______问题——当 AI 拥有了自主设定目标的能力时，又该如何确保这些由 AI 自行确定的目标符合人类利益、与人类价值观相 ______？
 
@@ -170,7 +262,14 @@ B. 流口常谈  践行  出入
 C. 悬而未决  对齐  契合
 D. 束手无策  匹配  切合
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>15.（2023 国考）</strong> 翻开古代农书，几千年间古人对于土地的保养，几乎与当代耕作学关注的措施 ______，其中历代农书涉及最多的是施肥。在中国古人的摸索中，施肥成为一种讲究，何时、何地施肥，施何种肥，怎样施肥，形成了一个 ______的体系，在每个年度的农业生产进程中，精心安排在各个时节。
 
@@ -181,9 +280,23 @@ B. 如出一辙  固定
 C. 别无二致  完整
 D. 不谋而合  复杂
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 逻辑填空(五): 1-5 DCDAD | 6-10 DABDC | 11-15 CBCC
+
+</div>
+</details>

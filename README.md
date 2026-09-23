@@ -76,20 +76,23 @@ categories:
 
 用户能提供的只有两样：**MD 文件** 和 **一句话的分类要求**。下面约定保证「一个 MD 文件 = 一篇文章」这条链路不需要每次重新商量。
 
-### 分类口径（全站，2026-09-23 定）
+### 分类口径（全站，2026-09-23 定，同日改成三层）
 
-**分类只到两级：`模块 / 大类`，没有第三级。** 用户原话：「分类太多了，直接按树结构分，横着，跟选择适合的牌子一样，到二级类就够了，剩下等点进去，看左边的自由选择」——选牌子那个比喻就是侧栏那棵树：先挑模块，再挑大类，两下到位；更细的定位（哪个题型、哪一课、哪个专题）交给**标签**和**文章左侧的「文章目录」**（`sidebar.position: left`，`display: always`）。
-
-现在的全站分类（`/categories/` 上的徽章 17 = 3 个模块 + 14 个大类）：
+**三层：`顶层模块 / 模块 / 大类`。** 顶层只有三个：**工作 / 学习 / 生活**（用户 2026-09-23：「分类设计为三大模块，工作 生活 学习，现在的都得属于学习，后续知识库会标记属于哪一种」）。第二层还是原来的模块，第三层还是原来的大类：
 
 ```
-行测      / 判断推理 · 数量关系 · 言语理解 · 资料分析 · 答案键      （38 篇）
-时政要点  / 2025年11月 · 2025年12月 · 2026年1月 · 2026年2月 · 专题 · 速查（74 篇）
-素描      / 基础与造型 · 静物写生 · 人物与创作                      （7 篇）
-申论知识库（等新母本，导入时照这条来）
+学习 / 行测      / 判断推理 · 数量关系 · 言语理解 · 资料分析 · 答案键        （38 篇）
+学习 / 时政要点  / 2025年11月 · 2025年12月 · 2026年1月 · 2026年2月 · 专题 · 速查（74 篇）
+学习 / 素描      / 基础与造型 · 静物写生 · 人物与创作                        （7 篇）
+工作 / …   （空，等第一篇）
+生活 / …   （空，等第一篇）
+申论知识库、言语理解（等新母本，导入时照这条来，一级挂「学习」）
 ```
 
-掉到标签里的东西：行测的题型与册/组号、时政的年份与专题类别（`重要讲话与指示`…）和星级、素描的阶段号。**新增模块别再往三级以上挂**，母本里那些层级的信息一律先当标签用。
+- **侧栏和分类页还是原来那棵树**，只是上面多了一层「学习」；点进模块后自由选大类，更细的定位（题型、册/组号、年份、星级、阶段号）继续走**标签**。
+- 新写一篇文章时 front-matter 必须给满三层，`check-build.py` 第 1b 节会拦住「一级不是工作/学习/生活」和层数不够的文章。
+- 顶层名字要和 `scripts/bento-home.js` 里的 `TOPS` 一致（首页三张卡按它取数，空模块显示占位卡）。
+- 分类页 URL 现在形如 `/categories/学习/行测/判断推理/`；`_废弃/申论知识库-2026-09-21/` 里那 259 篇是两级时代的产物，接回来时要补一层。
 
 顶部菜单另有一张手绘的课程树：`素描课程 → /sketch-map/`，由 `import-sketch.mjs` 按 manifest 生成（三大类 → 6 阶段 → 30 课，每格链到该课的锚点，check-build 第 8 节逐条核锚点存在）。
 
@@ -145,18 +148,83 @@ Actions 成功不等于内容上线（404 常见于 CDN 传播延迟）。跑 `p
 5. 老 URL 是否如预期消失或保留。
 6. 自查脚本要先断言「采样数量 == 文章数」再报结论——正则写错导致匹配到 0 个文件时，所有检查都会假绿。
 
-## 外观（布局与留白）
+## 前端（换皮 + 首页热力图与三大模块 + 答案折叠）
+
+2026-09-23 起，站点不再是「主题默认的样子」。所有改动都走 NexT 官方的覆盖口，**没有 fork 主题**，
+所以主题升级不会冲突。三层：
+
+**① token 层：`source/_data/variables.styl`**（在 `_config.next.yml` 里用 `custom_file_path.variable` 指过去）。
+主题的 `main.styl` 顺序是 `_variables/base` → `_variables/Pisces` → **injects.variable** → …… → **injects.style**，
+所以这里重写的变量一定压过主题自己的：苹果风格的字体栈、17px/1.8 行距、`#1d1d1f` 墨色、`#0071e3` 强调色、
+`#f5f5f7` 页面底色、20px 圆角、两级柔和阴影、胶囊按钮。Pisces 原本把 `$border-radius/$box-shadow` 全设成
+`initial`（所以之前看着像 2010 年的扁平博客），这里整套换成有层次的值。
+
+**② 规则层：`source/_data/styles.styl`**（`custom_file_path.style`，排在 `main.css` 最后，同优先级不需要 `!important`）。
+内容：去掉头部的深色横幅（`.site-brand-container` 透明、站名左对齐）、菜单胶囊、正文排章节奏（h2 上边距、
+表格数字 `tabular-nums`、引用条）、`.post-eof { display: none }`、分页胶囊、移动端吸顶毛玻璃头部、
+`details.answer` 折叠样式、`.bento-*` 首页栅格、`prefers-reduced-motion` 兜底。深色模式统一用
+`if (hexo-config('darkmode')) { @media (prefers-color-scheme: dark) { … } }` 包，颜色走 `:root` 自定义属性。
+
+**③ 首页：`scripts/bento-home.js` + `tools/bento-home.njk`**。脚本在 `before_generate`（优先级 10）里
+从全站数据库现算四张卡的数据，挂到 `theme.config.bento`，再用 `hexo.theme.setView('index.njk', …)`
+换掉首页模板——第 2 页及以后仍渲染主题原来的文章列表，分页没坏。**篇数、题数、热力图都不写死**，
+导完新内容不用改这里（`check-build.py` 会拿 `source/_posts` 现算来对账）：
+
+- **52 周热力图**（整行一张卡）：按 `p.date.format('YYYY-MM-DD')` 分组，格子从「本周所在周的周一」往前推
+  51 周的周一起排，每列固定 7 天，未来的日子渲染成空格子（`heat-cell--future`）。深浅分 5 档由 `levelOf()`
+  现算（0 / 1 / 2 / ≤4 → 3 / 其余 → 4）。纯 CSS 静态网格，**没有 JS**，tooltip 只有 `title` 属性，形如
+  `2025-11-01 · 17 篇 · 时政要点`。日期上没写文章的一律是浅色 —— 现在 119 篇只落在 8 个日期上，
+  因为行测/素描的 front-matter 日期就是导入那天、时政按月归到每月 1 号。**这张图反映的是「什么时候导的」，
+  不是「什么时候写的」**，要变成真正的写作频率，得给每篇补真实日期。
+- **三张模块卡：工作 / 学习 / 生活**，口径写在脚本顶部的 `TOPS` 里（一行一个模块：名字、文案、可选的下钻链接）。
+  卡上的二级分类篇数、行测题数都从数据库现算；**一个模块还没文章时不删卡**，渲染成虚线占位卡
+  （`bento-card--empty`），提醒你这一类还空着。
+- **最近 6 篇**：`hexo.locals.get('posts')` 排序后取前 6。
+- 2026-09-23 这一版把原来的「素描大卡 + 首页封面图（hero / `.bento-covers`）」整套撤掉了，首页不再放图。
+
+踩过的坑，改这套东西前先看：
+
+- `scripts/` 下的**每个文件都会被当 JS 加载**，放 `.njk` 会报 `Script load failed` → 模板放 `tools/`。
+- 脚本被包成 `(async function(exports, require, module, __filename, __dirname, hexo){…})`，**`module.exports`
+  永远不会被调用** → 顶层直接 `hexo.extend.filter.register(...)`，文件头写 `/* global hexo */`。
+- `hexo.locals.get('posts')` 是 Warehouse Query：**不能 `for…of`/展开**（`.toArray()`），
+  `Query.sort()` 只吃 `'-date'` 这种字段名，**传比较函数会被静默忽略**（首页曾经因此列出最老的 6 篇）。
+- 改了 `source/_data/*.styl` 或 `scripts/*.js`，`hexo generate` 可能报「0 files generated」用缓存的旧产物
+  → **先 `npx hexo clean`**，别信增量。
+- 月份标签那一行和下面的格子对不齐：**flex 子项默认 `min-width: auto`**，两个字（「10月」）会把 11px 的槽位撑开，
+  先是从左到右越漂越远；加了 `.heat-month { flex: 0 0 var(--heat-cell); min-width: 0 }` 后变成整体右移固定值，
+  原因是这行被居中对齐了 → 再显式 `justify-content: flex-start`。现在 1280px / 831px 两个宽度上漂移都是 0。
+- 答案折叠：`import-xingce.mjs` 把每题的 `**答案：X**` 包成 `<details class="answer"><summary>看答案</summary>
+  <div class="answer-body">…` ；markdown 在 `<div>` 里必须**前后空行**才渲染；每组末尾的「答案速览」用
+  `class="answer answer-overview"`（否则首页统计题数时会多算 38 题）。
+- **`<details>` 折叠在测量时会「假装可见」**：Chrome 隐藏 closed 内容用的是 `::details-content { content-visibility: hidden }`
+  ——布局盒子照常存在，`getBoundingClientRect()` 量得到高度，只有 `checkVisibility()` / `innerText` / 命中测试说它不存在。
+  所以量折叠一律用 `el.checkVisibility({contentVisibilityProperty:true})` 或看 `.post-body` 的 `innerText` 里有没有答案文本。
+  我们自己还是补了一条显式 `> .answer-body { display: none }` + `[open] > .answer-body { display: block }`：
+  省掉那个占位盒子，也照顾不支持该伪元素的内核。主题的 `normalize.css` 只写 `details { display: block }`，
+  全站 CSS 里没有别的规则碰 `content-visibility / visibility / filter / position`，不会干扰原生折叠。
+- `<summary>` 的 UA 默认是 `display: list-item` + `list-style-type: disclosure-closed/open`（那个三角）。我们的
+  `details.answer > summary` 改成 `inline-block` + `list-style: none`，所以只剩胶囊文字，箭头由 `[open]` 换底色表示。
+- 首屏真需要的图**不要加 `loading="lazy"`**：预览里它可能一次网络请求都不发（`naturalWidth` 一直是 0）。
+- 内置预览浏览器（Qoder 的 in-app browser）视口 831px、`window.open` 被拦、不能截图。要看 ≥992px 的桌面布局，
+  在页面里注入一个同源 `iframe` 并强制 `width:1280px; max-width:none !important`（主题自带
+  `iframe{max-width:100%}`，不覆盖的话内部 `innerWidth` 还是 816，媒体查询按父窗口算）；媒体查询是按 iframe
+  自己的视口判的，所以量出来的盒子可信。验证一律用 `evaluate_script` + `getBoundingClientRect()`。
+
+### 布局与容器宽度
 
 `_config.next.yml` 里 `scheme: Pisces` —— 双栏卡片布局，≥992px 时左侧栏 240px（`sidebar.width_dual_column` 可调），正文列宽 `calc(100% - 252px)`。之前的 `Muse` 是单栏宽体，正文列最宽只有 900px，在 1920 屏上两侧各留 ~510px 空白。
 
-NexT 把整块容器宽度写死在主题包里（`$content-desktop-large = 1160px`，≥1600px 时改为视口的 73%），改配置改不动。真要再放宽，只能在 `_config.next.yml` 开启：
+NexT 把整块容器宽度写死在主题包里（`$content-desktop-large = 1160px`，≥1600px 时改为视口的 73%），改配置改不动。真要再放宽，就在上面说的 `source/_data/variables.styl` 里重写 `$content-desktop-large`，升级主题不会被覆盖。
 
-```yaml
-custom_file_path:
-  variable: source/_data/variables.styl
-```
+### 验证这套前端的机器化检查
 
-然后在该文件里重写 `$content-desktop-large`。这样升级主题不会被覆盖。
+`tools/check-build.py`：第 1b 节查三层分类（一级只能是 工作/学习/生活，且每篇的分类路径都建了页）；
+第 9 节查 CSS 里 token/字体/折叠/热力图/减少动效都在、自定义层排在主题层之后、折叠态规则是显式 `display: none`、
+首页没有 `post-block`、1 张热力图卡 + 3 张模块卡（名字必须是 工作/学习/生活，空的那些要带 `--empty`）、
+格子数正好 52 列 364 格、格子里标的篇数加起来 == 源里窗口内的文章数（图例小方块不计入）、
+「学习」卡上的题数文案和二级分类芯片与源现算结果一致、首页每个 href/src 都落盘、
+最近更新 == 全站最新 6 篇、`public/page/2/` 还是文章流、每篇行测「折叠块数 == 答案数」且速览恰好 1 块。
 
 ## 申论知识库导入流水线（第一版 259 篇，已撤回）
 

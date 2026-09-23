@@ -3,6 +3,7 @@ title: "资料分析 · 高分必刷难题（五）"
 slug: xc-zl2-01
 date: 2026-09-22 09:34:00
 categories:
+  - "学习"
   - "行测"
   - "资料分析"
 tags:
@@ -11,7 +12,7 @@ tags:
   - "资料分析"
   - "下册"
   - "第 1 组"
-description: "资料分析 第 1 组，共 15 题（题号 1–15），答案随题给出，末尾附答案速览。"
+description: "资料分析 第 1 组，共 15 题（题号 1–15），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【资料分析】下册 · 资料分析高分必刷难题（五）
 
@@ -29,7 +30,14 @@ B. 50%～60% 之间
 C. 60%～70% 之间
 D. 超过 70%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料二
 
@@ -42,7 +50,14 @@ B. 56.3%
 C. 51.8%
 D. 46.5%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料三
 
@@ -57,7 +72,14 @@ B. 23.2%
 C. 29.6%
 D. 62.1%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料四
 
@@ -74,7 +96,14 @@ B. 17
 C. 22
 D. 27
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料五
 
@@ -89,7 +118,14 @@ B. 3～5 万亿元
 C. 5～7 万亿元
 D. 7 万亿元以上
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料六
 
@@ -108,7 +144,14 @@ B. 34.5
 C. 40.5
 D. 45
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料七
 
@@ -123,7 +166,14 @@ B. 5
 C. 7
 D. 9
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料八
 
@@ -138,7 +188,14 @@ B. 0.8
 C. 1.0
 D. 1.3
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料九
 
@@ -153,7 +210,14 @@ B. 4 个
 C. 5 个
 D. 6 个
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十
 
@@ -166,7 +230,14 @@ B. ①③②
 C. ③②①
 D. ②③①
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料十一
 
@@ -179,7 +250,14 @@ B. 7 月、9 月、8 月
 C. 9 月、7 月、8 月
 D. 9 月、8 月、7 月
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料十二
 
@@ -196,7 +274,14 @@ B. 46%
 C. 32%
 D. 24%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料十三
 
@@ -211,7 +296,14 @@ B. 10%～30% 之间
 C. 5%～10% 之间
 D. 不到 5%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料十四
 
@@ -230,7 +322,14 @@ B. SUV
 C. MPV
 D. 交叉型乘用车
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料十五
 
@@ -245,9 +344,23 @@ B.（饼图，见原题页图片）
 C.（饼图，见原题页图片）
 D.（饼图，见原题页图片）
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 资料分析(五): 1-5 BBCCC | 6-10 BCCBD | 11-15 DDDDD
+
+</div>
+</details>

@@ -3,6 +3,7 @@ title: "资料分析 · 高分必刷难题（一）"
 slug: xc-zl1-01
 date: 2026-09-22 09:30:00
 categories:
+  - "学习"
   - "行测"
   - "资料分析"
 tags:
@@ -11,7 +12,7 @@ tags:
   - "资料分析"
   - "上册"
   - "第 1 组"
-description: "资料分析 第 1 组，共 15 题（题号 1–15），答案随题给出，末尾附答案速览。"
+description: "资料分析 第 1 组，共 15 题（题号 1–15），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【资料分析】上册 · 资料分析高分必刷难题（一）
 
@@ -29,7 +30,14 @@ B. 6.2
 C. 7.5
 D. 8.3
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料二
 
@@ -44,7 +52,14 @@ B. 10.9 ～ 11.1 万亿元
 C. 11.1 ～ 11.3 万亿元
 D. 11.3 ～ 11.5 万亿元
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料三
 
@@ -57,7 +72,14 @@ B. 295.6
 C. 301.4
 D. 323.6
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料四
 
@@ -72,7 +94,14 @@ B. 387
 C. 407
 D. 421
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料五
 
@@ -85,7 +114,14 @@ B. 3032
 C. 1998
 D. 1568
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料六
 
@@ -98,7 +134,14 @@ B. 205
 C. 264
 D. 304
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料七
 
@@ -111,7 +154,14 @@ B. 0.2
 C. 0.3
 D. 0.4
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料八
 
@@ -126,7 +176,14 @@ B. 39851
 C. 40472
 D. 41279
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料九
 
@@ -139,7 +196,14 @@ B. 2 月
 C. 3 月
 D. 4 月
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料十
 
@@ -154,7 +218,14 @@ B. 2026
 C. 2027
 D. 2028
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十一
 
@@ -167,7 +238,14 @@ B. 2022 年
 C. 2023 年
 D. 2024 年
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料十二
 
@@ -182,7 +260,14 @@ B. 1100 ～ 1150GW
 C. 1150 ～ 1200GW
 D. 超过 1200GW
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料十三
 
@@ -195,7 +280,14 @@ B. 4500 亿～ 4750 亿元之间
 C. 超过 5000 亿元
 D. 4750 亿～ 5000 亿元之间
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料十四
 
@@ -210,7 +302,14 @@ B. 371 亿元
 C. 373 亿元
 D. 383 亿元
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料十五
 
@@ -225,9 +324,23 @@ B. 275 万吨
 C. 285 万吨
 D. 291 万吨
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 资料分析(一): 1-5 DACBB | 6-10 BDBAB | 11-15 CCDCC
+
+</div>
+</details>

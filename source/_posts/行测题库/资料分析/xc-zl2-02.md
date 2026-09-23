@@ -3,6 +3,7 @@ title: "资料分析 · 高分必刷难题（六）"
 slug: xc-zl2-02
 date: 2026-09-22 09:35:00
 categories:
+  - "学习"
   - "行测"
   - "资料分析"
 tags:
@@ -11,7 +12,7 @@ tags:
   - "资料分析"
   - "下册"
   - "第 2 组"
-description: "资料分析 第 2 组，共 15 题（题号 1–15），答案随题给出，末尾附答案速览。"
+description: "资料分析 第 2 组，共 15 题（题号 1–15），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【资料分析】下册 · 资料分析高分必刷难题（六）
 
@@ -33,7 +34,14 @@ B. 16.6%
 C. 18.8%
 D. 21.1%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料二
 
@@ -48,7 +56,14 @@ B. 4.5%
 C. 4.9%
 D. 5.2%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料三
 
@@ -63,7 +78,14 @@ B. 62.18%
 C. 59.15%
 D. 33.58%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料四
 
@@ -78,7 +100,14 @@ B. 15.3%
 C. 15.5%
 D. 17.8%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料五
 
@@ -95,7 +124,14 @@ B. 49.6%
 C. 50.3%
 D. 56.6%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料六
 
@@ -112,7 +148,14 @@ B. 42.9%
 C. 44.1%
 D. 46.2%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料七
 
@@ -125,7 +168,14 @@ B. 26
 C. 31
 D. 45
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料八
 
@@ -142,7 +192,14 @@ B. 35%
 C. 40%
 D. 45%
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料九
 
@@ -159,7 +216,14 @@ B. 2 种
 C. 3 种
 D. 4 种
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十
 
@@ -178,7 +242,14 @@ B.（折线图，见原题页图片）
 C.（折线图，见原题页图片）
 D.（折线图，见原题页图片）
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十一
 
@@ -195,7 +266,14 @@ B. 增加了超过 3 个百分点
 C. 减少了不到 3 个百分点
 D. 减少了超过 3 个百分点
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料十二
 
@@ -210,7 +288,14 @@ B. 下降了不到 2 个百分点
 C. 上升了 2 个百分点以上
 D. 上升了不到 2 个百分点
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料十三
 
@@ -225,7 +310,14 @@ B. 0.6
 C. 1.9
 D. 9.8
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十四
 
@@ -242,7 +334,14 @@ B. 0.7 个百分点
 C. 0.8 个百分点
 D. 0.9 个百分点
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十五
 
@@ -257,9 +356,23 @@ B. 上升不到 3 个百分点
 C. 下降 3 个百分点以上
 D. 下降不到 3 个百分点
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 资料分析(六): 1-5 BBCBB | 6-10 BCCBB | 11-15 ADBBD
+
+</div>
+</details>

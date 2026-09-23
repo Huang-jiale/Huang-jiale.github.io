@@ -3,6 +3,7 @@ title: "数量关系 · 高分必刷难题（五）"
 slug: xc-sl2-02
 date: 2026-09-22 09:17:00
 categories:
+  - "学习"
   - "行测"
   - "数量关系"
 tags:
@@ -11,7 +12,7 @@ tags:
   - "数量关系"
   - "下册"
   - "第 2 组"
-description: "数量关系 第 2 组，共 12 题（题号 1–12），答案随题给出，末尾附答案速览。"
+description: "数量关系 第 2 组，共 12 题（题号 1–12），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【数量关系】下册 · 数量关系高分必刷难题（五）
 
@@ -24,7 +25,14 @@ B. 72 种
 C. 120 种
 D. 144 种
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>2.（2019 国考）</strong> 某单位要求职工参加 20 课时线上教育课程，其中政治理论 10 课时，专业技能 10 课时。可供选择的政治理论课共 8 门，每门 2 课时；可供选择的专业技能课共 10 门，其中 2 课时的有 5 门，1 课时的有 5 门。问可选择的课程组合共有多少种？
 
@@ -33,7 +41,14 @@ B. 5600
 C. 1848
 D. 616
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>3.（2024 联考）</strong> 为弘扬耕读文化，某校打造多样化“校外＋校内”耕读文化教育基地，有种植、绘画、编织、美食四个主题基地供同学们选学。假设每位学生选择 1 个主题基地参与学习，那么甲、乙、丙、丁 4 名学生中至少有 3 名学生选择不同主题基地的方法有多少种？
 
@@ -42,7 +57,14 @@ B. 60
 C. 144
 D. 168
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>4.（2024 国考）</strong> 公司有六个编号依次为 1～6 的研发团队，现安排这 6 个团队参与甲、乙两个科研课题，要求每个团队参与一个课题。每个课题最少安排 2 个团队，每个课题安排一个团队负责，且负责团队不能是该课题所有参与团队中编号最小的团队。问有多少种不同的安排方式？
 
@@ -51,7 +73,14 @@ B. 340
 C. 150
 D. 170
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>5.（2022 联考）</strong> 滑雪和滑冰是冬奥会的两大项赛事，其中高山滑雪、自由式滑雪、单板滑雪、跳台滑雪、越野滑雪和北欧两项是滑雪大项中的 6 个分项，短道速滑、速度滑冰和花样滑冰是滑冰大项中的 3 个分项。小林打算去现场观看比赛，共选择 6 个项目，并且每个大项不少于 1 个，若所有项目比赛时间均不交叉，则不同的观赛方式有：
 
@@ -60,7 +89,14 @@ B. 84 种
 C. 92 种
 D. 102 种
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>6.（2020 国考）</strong> 扶贫干部某日需要走访村内 6 个贫困户甲、乙、丙、丁、戊和己。已知甲和乙的走访次序要相邻，丙要在丁之前走访，戊要在丙之前走访，己只能在第一个或最后一个走访。问走访顺序有多少种不同的安排方式？
 
@@ -69,7 +105,14 @@ B. 16
 C. 48
 D. 32
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>7.（2023 联考）</strong> 某空军基地举行飞行训练，有 8 架歼击机、3 架预警直升机、2 架反潜直升机参与训练，每架飞机编号不同。训练时，需派出 3 架歼击机、2 架预警直升机、1 架反潜直升机进行起降飞行。若每次只能起飞 1 架飞机，其中 3 架歼击机必须相邻起飞，2 架预警直升机不能相邻起飞，那么不同的起飞方式有多少种？
 
@@ -78,7 +121,14 @@ B. 4032
 C. 8064
 D. 24192
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>8.（2024 浙江）</strong> 某公司组织面试，每位考生都要回答甲、乙、丙、丁、戊 5 道试题，作答顺序随机安排。已知小张第二题是甲题、第四题是丁题，小王第三题是乙题，那么两人作答顺序完全相同的概率是：
 
@@ -87,7 +137,14 @@ B. 1/48
 C. 1/36
 D. 1/24
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>9.（2025 国考）</strong> 小王计划在 7 天假期自学甲、乙两门在线课程，每门课程需要连学 2 整天。如在所有可能的安排中随机选择 1 种，不用学习的 3 天均不相邻的概率为：
 
@@ -96,7 +153,14 @@ B. 1/8
 C. 1/9
 D. 1/10
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>10.（2026 浙江）</strong> 从 1、2、3、4、5、6、7、8、9、10 十个数中随机选择两个数，它们的最大公约数为 1 的概率是多少？
 
@@ -105,7 +169,14 @@ B. 31/45
 C. 11/15
 D. 7/9
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>11.（2025 联考）</strong> 小王、小李参加某项知识竞赛答题，小王每题答对的概率相等，且均为小李的 1.5 倍。已知小王连续答对 2 题的概率比小李高 0.2，问小王前 2 题全对且小李前 2 题全错的概率在以下哪个范围内？
 
@@ -114,7 +185,14 @@ B. 0.05～0.08
 C. 0.08～0.11
 D. 0.11 以上
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>12.（2023 联考）</strong> 某学习平台收到的征文，将通过两轮评审决定能否采用。先由两位编辑进行初审，若两位编辑评审都通过，则予以采用；若两位编辑都未予通过，则不予采用；若仅有一位编辑初审通过，则再由主编进行复审，若复审通过，则予以采用，否则不予采用。设稿件能通过各初审编辑评审的概率均为 0.4，复审的稿件能通过的概率为 0.2，各编辑独立评审，则每篇征文被采用的概率为：
 
@@ -123,9 +201,23 @@ B. 0.256
 C. 0.24
 D. 0.208
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 数量(五): 1-5 CADDA | 6-10 BDADB | 11-12 DB
+
+</div>
+</details>

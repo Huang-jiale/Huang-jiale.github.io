@@ -10,6 +10,25 @@
 # Pisces | Gemini（以上两种：双栏，侧栏成卡片，横向空白被侧栏填掉）
 scheme: Pisces
 
+# ---------------------------------------------------------------
+# 自定义样式：主题的官方钩子，升级主题不会被覆盖，也不用 fork 主题
+# variable 在 _variables/base + _variables/Pisces 之后导入（盖掉主题默认变量），
+# style 在整份主题 CSS 的最后导入（同优先级选择器这里赢）。
+# ---------------------------------------------------------------
+custom_file_path:
+  variable: source/_data/variables.styl
+  style: source/_data/styles.styl
+
+# 强调色：全站只留一个蓝（顶栏进度、选中文字、按钮、链接都跟着走）
+theme_color:
+  light: "#0071e3"
+  dark: "#6cb6ff"
+
+# 正文左对齐，不再两端强制对齐（原来 justify 在窄栏里会拉出大空格）
+text_align:
+  desktop: start
+  mobile: start
+
 # 深色模式切换按钮
 darkmode: true
 

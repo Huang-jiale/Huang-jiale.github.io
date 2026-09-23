@@ -3,6 +3,7 @@ title: "行测难题精刷 · 全模块答案键（27 考季）"
 slug: xc-answer
 date: 2026-09-22 10:00:00
 categories:
+  - "学习"
   - "行测"
   - "答案键"
 tags:

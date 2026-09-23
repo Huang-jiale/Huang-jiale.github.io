@@ -3,6 +3,7 @@ title: "判断推理 · 图形推理 高分必刷难题（一）"
 slug: xc-pd2-04
 date: 2026-09-22 09:10:00
 categories:
+  - "学习"
   - "行测"
   - "判断推理"
 tags:
@@ -12,7 +13,7 @@ tags:
   - "图形推理"
   - "下册"
   - "第 4 组"
-description: "判断推理 · 图形推理 第 4 组，共 15 题（题号 1–15），答案随题给出，末尾附答案速览。"
+description: "判断推理 · 图形推理 第 4 组，共 15 题（题号 1–15），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【判断推理】下册 · 图形推理高分必刷难题（一）
 
@@ -22,61 +23,131 @@ description: "判断推理 · 图形推理 第 4 组，共 15 题（题号 1–1
 
 ![图形推理原题页](/images/xingce/pd-xia/p20.png)
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>2.（2024 江苏）</strong> 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。
 
 （图见上图）
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>3.（2025 事业单位）</strong> 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。
 
 ![图形推理原题页](/images/xingce/pd-xia/p21.png)
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>4.（2025 事业单位）</strong> 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。
 
 （图见上图）
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>5.（2022 广东）</strong> 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。
 
 （图见上图）
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>6.（2024 国考）</strong> 左图为 8 个白色正方体和 4 个灰色正方体拼接而成的长方体，右边哪一项可能是其外表面展开图？
 
 ![图形推理原题页](/images/xingce/pd-xia/p22.png)
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>7.（2026 事业单位）</strong> 左边为给定的多面体，将其沿 A、B、C 三个顶点所在的平面切开，正确的切面是：
 
 （图见上图）
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>8.（2023 山东）</strong> 如图所示为某立体图形的表面形状，则该立体图形的下表面是哪一项？
 
 （图见上图）
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>9.（2026 国考）</strong> 左边为由 12 个白色正方体和 3 个灰色正方体组合而成的多面体的前后两面直观图，其可以由除哪项外的三个多面体组合而成？
 
 （图见上图）
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>10.（2019 浙江）</strong> 左图是给定的立体图形，哪个选项是该立体图形的外表面展开图？
 
 ![图形推理原题页](/images/xingce/pd-xia/p23.png)
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>11.（2024 事业单位）</strong> 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：
 
@@ -87,7 +158,14 @@ B. ①②⑥，③④⑤
 C. ①④⑥，②③⑤
 D. ①⑤，②③④
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>12.（2026 四川）</strong> 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：
 
@@ -98,7 +176,14 @@ B. ①②⑤，③④⑥
 C. ①③⑤，②④⑥
 D. ①⑤⑥，②③④
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>13.（2026 事业单位）</strong> 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：
 
@@ -109,7 +194,14 @@ B. ①②⑥，③④⑤
 C. ①④⑤，②③⑥
 D. ①④⑥，②③⑤
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>14.（2024 事业单位）</strong> 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：
 
@@ -120,7 +212,14 @@ B. ①③④，②⑤
 C. ①⑤，②④⑥
 D. ①④⑥，②③⑤
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>15.（2024 联考）</strong> 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：
 
@@ -131,9 +230,23 @@ B. ①②③，④⑤⑥
 C. ①④⑥，②③⑤
 D. ①③⑤，②④⑥
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 图形推理(一): 1-5 BACBD | 6-10 DCBBA | 11-15 DAADC
+
+</div>
+</details>

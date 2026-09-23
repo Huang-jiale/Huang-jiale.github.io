@@ -3,6 +3,7 @@ title: "数量关系 · 高分必刷难题（二）"
 slug: xc-sl1-02
 date: 2026-09-22 09:14:00
 categories:
+  - "学习"
   - "行测"
   - "数量关系"
 tags:
@@ -11,7 +12,7 @@ tags:
   - "数量关系"
   - "上册"
   - "第 2 组"
-description: "数量关系 第 2 组，共 12 题（题号 1–12），答案随题给出，末尾附答案速览。"
+description: "数量关系 第 2 组，共 12 题（题号 1–12），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【数量关系】上册 · 数量关系高分必刷难题（二）
 
@@ -24,7 +25,14 @@ B. 12
 C. 6
 D. 8
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>2.（2024 浙江）</strong> 有一批零件，如果由甲、乙两人加工，20 小时可以完成，需要支付酬劳 1200 元；如果由甲、丙两人加工，15 小时可以完成，需要支付酬劳 1350 元；如果由乙、丙两人加工，12 小时可以完成，需要支付酬劳 1320 元。现在安排 3 人都参与加工，并要求在 13 小时以内完成，那么最少需要支付酬劳多少元？
 
@@ -33,7 +41,14 @@ B. 1280
 C. 1290
 D. 1300
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>3.（2025 上海）</strong> 甲、乙、丙三家工厂同时进行改造升级，升级之前三家工厂每小时完成任务数量之比为 3：4：5，升级后每小时完成任务数量之比为 2：3：4，升级后原来三家合作需要 12 天完成的生产任务能比之前少用 4 天完成。则升级后丙的效率提升了：
 
@@ -42,7 +57,14 @@ B. 2/5
 C. 1/2
 D. 3/5
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>4.（2024 浙江）</strong> 甲、乙两个施工队共同完成一项工程需要 20 天。甲、乙两队合作 4 天后，乙队因故退出 6 天后回归，回归时工程总量已完成 40%。为保证按时完工，乙队回归时带来了丙施工队，甲、乙、丙三队共同工作 10 天后刚好完成工程。问甲、乙、丙队的效率比为多少？
 
@@ -51,7 +73,14 @@ B. 4：8：15
 C. 6：3：2
 D. 10：5：3
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>5.（2024 重庆选调）</strong> 某村有 A、B 两块待收割麦田，其中 A 的面积为 B 的 2 倍。现安排 x 名村民 8:00 开始在 A 收割，12:00 开始将 0.5x 名村民调到 B，14:00 撤走在 B 收割的村民，只保留 1 人继续工作且 A、B 分别于当天 16:00 和 22:00 完成收割。已知所有村民的工作效率相同，问 x 的值为多少？
 
@@ -60,7 +89,14 @@ B. 8
 C. 12
 D. 16
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>6.（2023 广东）</strong> 某印刷厂原计划用全自动装订机花费 4 小时装订一批文件，但在还剩 300 份文件时装订机出现故障，无法装订。印刷厂立即安排了部分员工进行人工装订，由于人工装订的总效率仅为机器的 20%，最终比原计划推迟 1 小时完成装订。则这批文件共有多少份？
 
@@ -69,7 +105,14 @@ B. 3600
 C. 4800
 D. 6000
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>7.（2025 内蒙古）</strong> 某单位接到一项任务，探访所在辖区的商户了解相关信息。原计划由 5 人 10 天完成探访 200 家商户工作任务，工作 5 天后，由于工作调整，需要增加探访辖区的 300 家商户。假定所有人工作效率相同，若仍要求在原计划时间之内完成，则需要增加的人数为：
 
@@ -78,7 +121,14 @@ B. 15 人
 C. 20 人
 D. 25 人
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>8.（2025 浙江）</strong> 甲、乙两名工人同时开始生产相同数量的零件，两人手工生产的效率都是 2 个/小时，用机器生产的效率都是 6 个/小时。已知甲先用机器生产任务总量的一半，然后换手工生产直至完成；乙先手工生产 t 小时，然后再用机器生产 t 小时，正好完成任务。问以下折线图中，最能准确反映甲（实线）和乙（虚线）两人生产用时和产量之间关系的是：
 
@@ -91,7 +141,14 @@ B. 折线图（横轴时间、纵轴产量）
 C. 折线图（横轴时间、纵轴产量）
 D. 折线图（横轴时间、纵轴产量）
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>9.（2020 江苏）</strong> 某小微企业接到三个相同的订单，赵、钱、孙、李四位师傅单独完成一个，分别需 20 小时、20 小时、15 小时和 12 小时。现钱、孙、李各负责一个订单，赵根据需要协助他们完成任务。若要三个订单同时完工且用时最短，则赵协助钱的时间是：
 
@@ -100,7 +157,14 @@ B. 7 小时
 C. 6 小时
 D. 9 小时
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>10.（2022 山东）</strong> 甲、乙、丙三个工程队承担 A、B 两项工程。已知甲队的效率比乙队高 20%，乙队的效率比丙队高 25%。工程 A 的工作量是工程 B 的 1.5 倍。甲队在工程 A 施工，乙队在工程 B 施工，丙队先在工程 A 施工若干天后再转到工程 B 施工。若 A、B 两工程同时开工，且 180 天同时完成。问丙队在工程 B 施工多少天？
 
@@ -109,7 +173,14 @@ B. 75
 C. 105
 D. 135
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>11.（2025 国考）</strong> 某种机械由 3 个 A 模块和 2 个 B 模块组成。甲车间每天可生产 6 个 A 模块或 3 个 B 模块，乙车间每天可生产 1 个 A 模块或 2 个 B 模块。现两车间合作生产 40 台该机械所需模块，问至少需要多少天？
 
@@ -118,7 +189,14 @@ B. 26
 C. 28
 D. 30
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>12.（2026 国考）</strong> 甲、乙两个工程队单独完成 A、B、C 三个工程，所需时间如下：
 
@@ -134,9 +212,23 @@ B. 17
 C. 16
 D. 15
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 数量(二): 1-5 BADDA | 6-10 CBCAA | 11-12 CD
+
+</div>
+</details>

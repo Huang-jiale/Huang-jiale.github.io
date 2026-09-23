@@ -1,0 +1,99 @@
+{#
+  首页模板：最近 52 周发文热力图 + 三张一级模块卡（工作/学习/生活）+ 最近更新。
+  由 scripts/bento-home.js 在 before_generate 里用 hexo.theme.setView('index.njk', …)
+  覆盖主题的 layout/index.njk。
+  骨架（extends + sidebar 宏 + class 块）与主题原版逐行对齐，头部/侧栏/页脚/搜索都不受影响；
+  数据来自 theme.bento（同一脚本算好挂上去的）。
+  第 2 页起落回主题原来的文章列表 + 分页，/page/2/ 这类老链接不坏。
+#}
+{% extends '_layout.njk' %}
+{% import '_macro/sidebar.njk' as sidebar_template with context %}
+
+{% block title %}{{ title }}{% if theme.index_with_subtitle and subtitle %} - {{ subtitle }}{% endif %}{% endblock %}
+
+{% block class %}index posts-expand{% endblock %}
+
+{% block content %}
+  {% if page.current and page.current > 1 %}
+
+    {%- for post in page.posts.toArray() %}
+      {{ partial('_macro/post.njk', {post: post, is_index: true}) }}
+    {%- endfor %}
+    {%- include '_partials/pagination.njk' -%}
+
+  {% else %}
+
+    <section class="bento">
+      <div class="bento-grid">
+
+        {%- set heat = theme.bento.heat %}
+        <article class="bento-card bento-card--heat">
+          <p class="bento-kicker">最近 52 周 · {{ heat.shown }} 篇</p>
+          <div class="heat">
+            <div class="heat-months">
+              {%- for w in heat.weeks %}
+              <span class="heat-month">{{ w.monthLabel }}</span>
+              {%- endfor %}
+            </div>
+            <div class="heat-cols">
+              {%- for w in heat.weeks %}
+              <div class="heat-col">
+                {%- for d in w.days %}
+                {%- if d.count %}
+                <span class="heat-cell heat-l{{ d.level }}" title="{{ d.label }}"></span>
+                {%- elif d.future %}
+                <span class="heat-cell heat-cell--future"></span>
+                {%- else %}
+                <span class="heat-cell heat-l0"></span>
+                {%- endif %}
+                {%- endfor %}
+              </div>
+              {%- endfor %}
+            </div>
+            <div class="heat-foot">
+              <span class="heat-range">{{ heat.from }} → {{ heat.to }}</span>
+              <span class="heat-legend">少<i class="heat-cell heat-l0"></i><i class="heat-cell heat-l1"></i><i class="heat-cell heat-l2"></i><i class="heat-cell heat-l3"></i><i class="heat-cell heat-l4"></i>多</span>
+            </div>
+          </div>
+        </article>
+
+        {%- for m in theme.bento.tops %}
+        <article class="bento-card{% if not m.count %} bento-card--empty{% endif %}">
+          <p class="bento-kicker">{{ m.kicker }}</p>
+          <h3 class="bento-name">{% if m.count %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}</h3>
+          <p class="bento-blurb">{{ m.blurb }}</p>
+          {% if m.kids.length %}
+          <ul class="bento-kids">
+            {%- for k in m.kids %}
+            <li><a href="{{ k.url }}">{{ k.name }}<span class="bento-count">{{ k.count }}</span></a></li>
+            {%- endfor %}
+          </ul>
+          {% endif %}
+          {% if m.href %}
+          <a class="bento-more" href="{{ m.href }}">{{ m.hrefTxt }} <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          {% endif %}
+        </article>
+        {%- endfor %}
+
+        <article class="bento-card bento-card--feed">
+          <p class="bento-kicker">最近更新</p>
+          <ul class="bento-feed">
+            {%- for r in theme.bento.recent %}
+            <li>
+              <time datetime="{{ r.day }}">{{ r.day }}</time>
+              <a class="bento-feed-title" href="{{ r.url }}">{{ r.title }}</a>
+              <span class="bento-tag">{{ r.cat }}</span>
+            </li>
+            {%- endfor %}
+          </ul>
+          <a class="bento-more" href="/archives/">全部 {{ theme.bento.total }} 篇 <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+      </div>
+    </section>
+
+  {% endif %}
+{% endblock %}
+
+{% block sidebar %}
+  {{ sidebar_template.render(false) }}
+{% endblock %}

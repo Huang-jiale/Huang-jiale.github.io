@@ -3,6 +3,7 @@ title: "资料分析 · 高分必刷难题（四）"
 slug: xc-zl1-04
 date: 2026-09-22 09:33:00
 categories:
+  - "学习"
   - "行测"
   - "资料分析"
 tags:
@@ -11,7 +12,7 @@ tags:
   - "资料分析"
   - "上册"
   - "第 4 组"
-description: "资料分析 第 4 组，共 15 题（题号 1–15），答案随题给出，末尾附答案速览。"
+description: "资料分析 第 4 组，共 15 题（题号 1–15），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【资料分析】上册 · 资料分析高分必刷难题（四）
 
@@ -29,7 +30,14 @@ B. 增加了 200 万户以上
 C. 减少了不到 200 万户
 D. 减少了 200 万户以上
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料二
 
@@ -44,7 +52,14 @@ B. 1168
 C. 1263
 D. 1190
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料三
 
@@ -57,7 +72,14 @@ B. 853 元
 C. 891 元
 D. 1069 元
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料四
 
@@ -70,7 +92,14 @@ B. 532 亿元
 C. 555 亿元
 D. 578 亿元
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料五
 
@@ -85,7 +114,14 @@ B. 上升了 1000 万部以上
 C. 下降了不到 1000 万部
 D. 下降了 1000 万部以上
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料六
 
@@ -98,7 +134,14 @@ B. 14
 C. 20
 D. 30
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料七
 
@@ -113,7 +156,14 @@ B. 500 多万
 C. 600 多万
 D. 700 万以上
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料八
 
@@ -126,7 +176,14 @@ B. 0.60
 C. 0.63
 D. 0.71
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料九
 
@@ -141,7 +198,14 @@ B. 2
 C. 3
 D. 4
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十
 
@@ -154,7 +218,14 @@ B. 1
 C. 2
 D. 3
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料十一
 
@@ -169,7 +240,14 @@ B. （折线图，见原页图）
 C. （折线图，见原页图）
 D. （折线图，见原页图）
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料十二
 
@@ -182,7 +260,14 @@ B. 公路、铁路、水运、民航
 C. 公路、水运、铁路、民航
 D. 民航、公路、铁路、水运
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十三
 
@@ -195,7 +280,14 @@ B. 东部、西部、中部
 C. 中部、东部、西部
 D. 中部、西部、东部
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十四
 
@@ -208,7 +300,14 @@ B. 1.4
 C. 1.7
 D. 2.2
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料十五
 
@@ -221,9 +320,23 @@ B. 4.2
 C. 5.4
 D. 6.6
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 资料分析(四): 1-5 ABCCD | 6-10 BCBBC | 11-15 CBBCC
+
+</div>
+</details>

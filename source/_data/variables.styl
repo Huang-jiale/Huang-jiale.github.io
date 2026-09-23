@@ -1,0 +1,105 @@
+// ============================================================
+// 站点样式变量覆盖（NexT 官方钩子：_config.next.yml 的 custom_file_path.variable）
+//
+// 主题里 main.styl 的导入顺序是 _variables/base -> _variables/Pisces -> injects.variable，
+// 也就是这一层最后求值，写在这里的赋值会盖掉主题默认值，不用 fork 主题、升级主题也不受影响。
+// 这里只放变量；选择器级的改动全在 styles.styl。
+// 主题内的变量名可在 node_modules/hexo-theme-next/source/css/_variables/{base,Pisces}.styl 核对。
+// ============================================================
+
+// —— 字体：纯系统栈，不引网络字体（中文苹方 / HarmonyOS / 微软雅黑，拉丁走系统 UI 字体）
+$font-family-chinese  = 'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei';
+$font-family-base     = -apple-system, 'Segoe UI', $font-family-chinese, 'Noto Sans SC', sans-serif;
+$font-family-logo     = $font-family-base;
+$font-family-headings = $font-family-base;
+$font-family-posts    = $font-family-base;
+
+// —— 字号与行高：正文 17px，标题靠字号 + 字重一起分层（原来是 16px / 行高 2，太松且层级全靠加粗）
+$font-size-base          = 1.0625em;
+$font-size-headings-base = 1.75em;
+$font-size-headings-step = .1875em;
+$line-height-base        = 1.8;
+
+// —— 颜色：背景更中性、正文更黑，深色模式同一套（暗色值走 _colors.styl 的 --*-dark 变量）
+$black-light  = #424245;   // 主题里正文色、按钮文字色都指向它
+$black-dim    = #2c2c2e;
+$black-deep   = #1d1d1f;   // 标题、hover
+$text-color   = $black-light;
+$grey-dim     = #6e6e73;
+$grey-dark    = #86868b;
+$grey-light   = #d2d2d7;
+$link-color             = #0071e3;
+$link-hover-color       = #0077ed;
+$link-decoration-color  = transparent;   // 去掉「每个链接一条下划线」的老博客感
+$blockquote-color       = $grey-dim;
+
+$body-bg-color      = #f5f5f7;   // Pisces 本来是 #f5f7f9，Apple 那套中性灰白
+$content-bg-color   = #ffffff;
+$card-bg-color      = #fbfbfd;
+$menu-item-bg-color = #f5f5f7;
+
+$text-color-dark      = #d2d2d7;
+$link-color-dark      = #6cb6ff;
+$link-hover-color-dark = #9fd0ff;
+$body-bg-color-dark   = #000000;
+$content-bg-color-dark = #1c1c1e;
+$card-bg-color-dark   = #2c2c2e;
+$menu-item-bg-color-dark = #2c2c2e;
+$blockquote-color-dark = #98989d;
+
+$selection-bg  = rgba(0, 113, 227, .18);
+$selection-color = $black-deep;
+$selection-bg-dark = rgba(108, 182, 255, .28);
+$selection-color-dark = #f5f5f7;
+
+// —— 边框与表格：1px 硬边框退到很浅，靠间距和阴影分块
+$border-color             = #e8e8ed;
+$table-border-color       = #e8e8ed;
+$table-cell-border-bottom-color = #ededf0;
+$table-row-odd-bg-color   = #fbfbfd;
+$table-row-hover-bg-color = #f5f5f7;
+
+// —— 圆角与阴影：主题在 Pisces 里把这几项设成 initial（等于没有），这里给回一套
+$border-radius-inner = 20px;   // .header 与 .main-inner
+$border-radius       = 20px;   // .sidebar-inner
+$shadow-soft  = 0 1px 2px rgba(0, 0, 0, .04), 0 12px 32px rgba(0, 0, 0, .06);
+$shadow-float = 0 2px 8px rgba(0, 0, 0, .06), 0 20px 48px rgba(0, 0, 0, .10);
+$shadow-dark    = 0 1px 2px rgba(0, 0, 0, .5), 0 16px 40px rgba(0, 0, 0, .45);
+$box-shadow-inner = $shadow-soft;
+$box-shadow       = $shadow-soft;
+
+// —— 控件：按钮/徽章/标签页都改成胶囊与大圆角
+$btn-default-radius        = 980px;
+$btn-default-bg            = #0071e3;
+$btn-default-color         = #ffffff;
+$btn-default-border-color  = #0071e3;
+$btn-default-hover-bg      = #0077ed;
+$btn-default-hover-color   = #ffffff;
+$btn-default-hover-border-color = #0077ed;
+$btn-default-bg-dark             = #6cb6ff;
+$btn-default-color-dark          = #1c1c1e;
+$btn-default-border-color-dark   = #6cb6ff;
+$btn-default-hover-bg-dark       = #9fd0ff;
+$btn-default-hover-color-dark    = #1c1c1e;
+$btn-default-hover-border-color-dark = #9fd0ff;
+
+$badge-border-radius = 980px;
+$badge-background    = #e8e8ed;
+$badge-color         = #424245;
+$badge-padding       = 2px 8px;
+$tbr                 = 12px;
+$note-border-radius  = 14px;
+
+// —— 动效时长：主题的 .2s 偏生硬，Apple 一律更慢且带缓出
+$transition-duration = .35s;
+$transition-ease     = $transition-duration cubic-bezier(.25, .1, .25, 1);
+$transition-ease-in  = $transition-duration cubic-bezier(.4, 0, 1, 1);
+$transition-ease-out = $transition-duration cubic-bezier(0, 0, .2, 1);
+
+// —— 节奏：靠空白分格而不是分割线，卡片内边距给足
+$content-desktop-padding = 48px;
+
+// Headband（页面顶部那条 3px 实色带）收掉：Apple 不在最上面放一条饱和色。
+$headband-height = 0;
+// 「阅读全文」等按钮原来跟着 Pisces 居中，改成左对齐跟着正文走。
+$scheme-text-align = left;

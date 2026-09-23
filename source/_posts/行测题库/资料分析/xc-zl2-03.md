@@ -3,6 +3,7 @@ title: "资料分析 · 高分必刷难题（七）"
 slug: xc-zl2-03
 date: 2026-09-22 09:36:00
 categories:
+  - "学习"
   - "行测"
   - "资料分析"
 tags:
@@ -11,7 +12,7 @@ tags:
   - "资料分析"
   - "下册"
   - "第 3 组"
-description: "资料分析 第 3 组，共 15 题（题号 1–15），答案随题给出，末尾附答案速览。"
+description: "资料分析 第 3 组，共 15 题（题号 1–15），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【资料分析】下册 · 资料分析高分必刷难题（七）
 
@@ -31,7 +32,14 @@ B. 285
 C. 296
 D. 324
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料二
 
@@ -52,7 +60,14 @@ B. 200～300 人次之间
 C. 100～200 人次之间
 D. 不到 100 人次
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料三
 
@@ -65,7 +80,14 @@ B. 1.5
 C. 0.8
 D. 0.3
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料四
 
@@ -78,7 +100,14 @@ B. 在 300～500 万元之间
 C. 在 500～1000 万元之间
 D. 超过 1000 万元
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料五
 
@@ -97,7 +126,14 @@ B. 12.1
 C. 12.6
 D. 无法判断
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料六
 
@@ -110,7 +146,14 @@ B. 2.3～2.4 万亿千瓦时
 C. 2.4～2.5 万亿千瓦时
 D. 2.5 万亿千瓦时以上
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料七
 
@@ -123,7 +166,14 @@ B. 8702
 C. 9200
 D. 8800
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料八
 
@@ -140,7 +190,14 @@ B. 全国艺术表演团体赴农村演出
 C. 全国艺术表演场馆馆内艺术演出
 D. 全国各级文化部门所属艺术表演场馆艺术演出
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料九
 
@@ -153,7 +210,14 @@ B. 2021 年
 C. 2022 年
 D. 2023 年
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十
 
@@ -166,7 +230,14 @@ B.（折线图，见原题页图片）
 C.（折线图，见原题页图片）
 D.（折线图，见原题页图片）
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 ### 材料十一
 
@@ -183,7 +254,14 @@ B. 14
 C. 15
 D. 17
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 ### 材料十二
 
@@ -198,7 +276,14 @@ B. 70 亿～80 亿美元之间
 C. 60 亿～70 亿美元之间
 D. 不到 60 亿美元
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十三
 
@@ -211,7 +296,14 @@ B. 400～450 人次
 C. 450～500 人次
 D. 500 人次以上
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 ### 材料十四
 
@@ -228,7 +320,14 @@ B. 4674 元/平方米
 C. 4888 元/平方米
 D. 5008 元/平方米
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 ### 材料十五
 
@@ -247,9 +346,23 @@ B. 清明、“五一”、端午
 C. “五一”、清明、端午
 D. 清明、端午、“五一”
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 资料分析(七): 1-5 ABDBC | 6-10 CDABD | 11-15 ABBCC
+
+</div>
+</details>

@@ -3,6 +3,7 @@ title: "判断推理 · 逻辑判断 高分必刷难题（一）"
 slug: xc-pd2-01
 date: 2026-09-22 09:07:00
 categories:
+  - "学习"
   - "行测"
   - "判断推理"
 tags:
@@ -12,7 +13,7 @@ tags:
   - "逻辑判断"
   - "下册"
   - "第 1 组"
-description: "判断推理 · 逻辑判断 第 1 组，共 15 题（题号 1–15），答案随题给出，末尾附答案速览。"
+description: "判断推理 · 逻辑判断 第 1 组，共 15 题（题号 1–15），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【判断推理】下册 · 逻辑判断高分必刷难题（一）
 
@@ -35,7 +36,14 @@ B. ②③
 C. ②③④
 D. ①②③④
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>2.（2023 联考）</strong> 土地荒漠化是人为因素和自然因素综合作用的结果，想要在土地退化的地区恢复人与自然和谐共生的状态，必须提高土地荒漠化防治的科学性。一方面，把握积极作为和有所不为的平衡，即一手抓人工治理，一手抓自然修复；另一方面，提高防治精细化水平。如果同时做到上述两个方面，土地荒漠化防治的科学性自然得到了提高。
 
@@ -46,7 +54,14 @@ B. 如果土地荒漠化防治的科学性得到了提高，则说明在土地�
 C. 如果土地荒漠化防治的科学性没有得到提高，则说明或者没有把握积极作为和有所不为的平衡，或者没有提升防治精细化水平
 D. 如果土地荒漠化防治的科学性得到了提高，则说明把握积极作为和有所不为的平衡，以及提升防治精细化水平一定同时得以实现
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>3.（2020 上海）</strong> 在某旅行社的股东会上，总经理提出：根据目前公司整体规划，我提议欧洲线和北美线两条线路至少要开通一条，但南美线因航线问题不能马上开通。董事长表示反对。
 
@@ -57,7 +72,14 @@ B. 欧洲线、北美线和南美线三条线路都不开通
 C. 欧洲线和北美线两条线路至多开通一条，但南美线要马上开通
 D. 如果南美线不能马上开通，那么欧洲线和北美线两条线路都不能开通
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>4.（2022 北京）</strong> 要稳定地提高在逻辑考试上的成绩，关键是要在基本概念上有真正的理解，如果没有真正的理解，即使投入再多的精力，做再多的练习，也不可能取得真正稳定的好成绩。
 
@@ -68,7 +90,14 @@ B. 除非在基本概念上有真正的理解，否则不能取得真正稳定�
 C. 只要在基本概念上有真正的理解，即使没有花很多精力，也能取得真正稳定的好成绩
 D. 如果取得了真正稳定的好成绩，说明一定在基本概念上有了真正的理解
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>5.（2020 上海）</strong> 一家人准备一起去北欧旅游，各自表达如下愿望：
 
@@ -85,7 +114,14 @@ B. 去瑞典、芬兰和冰岛
 C. 去瑞典、丹麦和冰岛
 D. 去芬兰、丹麦和冰岛
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>6.（2023 国考）</strong> 石、方、白、于、叶 5 人参加单板滑雪、跳台滑雪、越野滑雪和高山滑雪 4 个项目的比赛，每人参加一个项目，每个项目均有 1～2 人参加。已知：
 
@@ -100,7 +136,14 @@ B. 叶未参加单板滑雪
 C. 石参加了高山滑雪
 D. 白未参加跳台滑雪
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>7.（2023 上海）</strong> 某国际会议期间，会务组招聘了张、王、李、陈、宋、孔、何 7 名志愿者，拟将他们分配至甲、乙、丙 3 个工作组，每组分配 2～3 人。已知：
 
@@ -115,7 +158,14 @@ B. 宋和孔
 C. 陈和何
 D. 张和宋
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>8.（2025 四川）</strong> 某大学毕业班甲、乙、丙、丁、戊、己、庚 7 位同学对于未来的打算包括就业、考研、留学 3 种情况，每位同学只选择了其中一种，且每种情况都有上述 7 位同学中的 2～3 人选择。已知：
 
@@ -132,7 +182,14 @@ B. 丙和戊
 C. 乙和丁
 D. 丁和庚
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>9.（2024 浙江）</strong> 张、王、李、赵、钱、孙 6 人是某单位的优秀员工，在全面深化改革方面取得了很大的成就，现有甲、乙、丙、丁四种奖项可以申报，每名员工只能申报一种奖项，且每种奖项都有 1 至 2 名员工申报，已知以下情况：
 
@@ -153,7 +210,14 @@ B. 赵、钱申报乙奖
 C. 王、李申报丁奖
 D. 李、赵申报丁奖
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>10.（2026 事业单位）</strong> 卫一、卫二、卫三、卫四、卫五是某遥远星系中的 3 颗行星（朱雀、玄武、青龙）的卫星。每颗行星都有其中的 1～2 颗卫星，每颗卫星仅是 1 颗行星的卫星，朱雀的卫星最少。已知：
 
@@ -168,7 +232,14 @@ B. 卫三、卫四是青龙的卫星
 C. 卫一是玄武的卫星
 D. 卫四、卫五是玄武的卫星
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>11.（2026 联考）</strong> 甲、乙、丙、丁、戊、己、庚 7 人分别去 P、Q、R、S 四个不同的值班点，根据工作安排，每个值班点至少有 1 人，至多有 3 人；每个人只能去 1 个值班点；要求 Q 值班点有 3 人值班。同时，还需满足下列条件：
 
@@ -185,7 +256,14 @@ B. 甲去 Q 值班点，丁去 P 值班点
 C. 己去 P 值班点，庚去 R 值班点
 D. 丙去 P 值班点，戊去 S 值班点
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>12.（2019 事业单位）</strong> 某单位事业编制招聘录用名单已经公布，已知：
 
@@ -204,7 +282,14 @@ B. 甲、乙都未被录取
 C. 甲被录取，乙未被录取
 D. 甲未被录取，乙被录取
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>13.（2025 事业单位）</strong> 某校举办《稻草人》一书的知识竞赛活动，经过三轮的比拼，在小董、小周、小程和小魏四人中产生了第一名。相关老师预测：
 
@@ -221,7 +306,14 @@ B. 小魏
 C. 小程
 D. 小董
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>14.（2024 浙江选调）</strong> 某公司组织参观活动，甲、乙、丙、丁四人在一起谈论此事。
 
@@ -240,7 +332,14 @@ B. 乙
 C. 丙
 D. 丁
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>15.（2019 河北）</strong> 今年 4 月 18 日，某城市日报刊发消息称，目前大部分西红柿使用催熟剂，而过量使用催熟剂会给人体带来较大危害。该消息刊发后，对该城市消费者产生的影响极其有限，几乎没有消费者想改变购买西红柿的习惯。但到了五月中旬，该城市生鲜食品超市的西红柿销量大幅度下降了。
 
@@ -251,9 +350,23 @@ B. 5 月份时，很多消费者选择在家门口的菜摊上购买西红柿
 C. 5 月份时，大部分生鲜食品超市为树立自身良好形象，不再销售西红柿
 D. 该城市周边的菜农们认为这条消息会使西红柿的销量大幅度萎缩，主动降低了产量
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 逻辑判断(一): 1-5 CCDCB | 6-10 DACDB | 11-15 ABBBC
+
+</div>
+</details>

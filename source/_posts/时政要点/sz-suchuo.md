@@ -3,6 +3,7 @@ title: "时政跨月速查 · 高频数字 + 易混提法对照"
 slug: sz-suchuo
 date: 2026-02-10 09:00:00
 categories:
+  - "学习"
   - "时政要点"
   - "速查"
 tags:

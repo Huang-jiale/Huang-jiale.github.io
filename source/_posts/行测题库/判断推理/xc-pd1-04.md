@@ -3,6 +3,7 @@ title: "判断推理 · 类比推理 高分必刷难题（一）"
 slug: xc-pd1-04
 date: 2026-09-22 09:04:00
 categories:
+  - "学习"
   - "行测"
   - "判断推理"
 tags:
@@ -12,7 +13,7 @@ tags:
   - "类比推理"
   - "上册"
   - "第 4 组"
-description: "判断推理 · 类比推理 第 4 组，共 15 题（题号 1–15），答案随题给出，末尾附答案速览。"
+description: "判断推理 · 类比推理 第 4 组，共 15 题（题号 1–15），答案随题折叠、点击揭晓，末尾附答案速览。"
 ---
 <strong>出处</strong>：27 考季【判断推理】上册 · 类比高分必刷难题（一）
 
@@ -25,7 +26,14 @@ B. 公众人物：新闻人物：政治人物
 C. 报刊杂志：书法绘画：出版书籍
 D. 笔墨纸砚：文房四宝：文书工具
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>2.（2025 联考）</strong> 法定节日：传统节日：纪念节日
 
@@ -34,7 +42,14 @@ B. 劳动产品：手工产品：文创产品
 C. 儿童医院：公立医院：私立医院
 D. 帆布书包：双肩书包：学生书包
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>3.（2024 黑龙江）</strong> 程序法 对于 （ ） 相当于 （ ） 对于 个人收入
 
@@ -43,7 +58,14 @@ B. 经济法 劳动收入
 C. 诉讼法 合法收入
 D. 国内法 投资收入
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>4.（2026 海南）</strong> 故事：寓言：格言
 
@@ -52,7 +74,14 @@ B. 住宅：别墅：厂房
 C. 钟表：指针：发条
 D. 地区：盆地：山川
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>5.（2025 湖北选调）</strong> 铁三角 对于 （ ） 相当于 （ ） 对于 老谋深算
 
@@ -61,7 +90,14 @@ B. 金兰之交 和事佬
 C. 泛泛之交 愣头青
 D. 总角之交 老江湖
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>6.（2023 辽宁）</strong> 小不忍：则乱大谋
 
@@ -70,7 +106,14 @@ B. 知己知彼：百战百胜
 C. 锲而舍之：朽木不折
 D. 未雨绸缪：临渴掘井
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>7.（2026 联考）</strong> 输液泵：病房：精准给药
 
@@ -79,7 +122,14 @@ B. 变压器：电网：电压调节
 C. 消防栓：街道：应急供水
 D. 服务器：硬盘：数据存储
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>8.（2024 江苏）</strong> 牙齿磨损 之于 （ ） 相当于 （ ） 之于 经济活力
 
@@ -88,7 +138,14 @@ B. 牙齿脱落 社会效益
 C. 骨骼磨损 发展指数
 D. 坚硬食物 经济疲软
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>9.（2026 事业单位）</strong> 体检合格：参军入伍
 
@@ -97,7 +154,14 @@ B. 参加比赛：获得冠军
 C. 工作年限：考试报名
 D. 考核优秀：职级晋升
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>10.（2023 浙江选调）</strong> 维生素：人体：蛋白质
 
@@ -106,7 +170,14 @@ B. 病人：医院：病房
 C. 软件：手机：应用
 D. 气囊：汽车：油门
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：A</strong>
+
+</div>
+</details>
 
 <strong>11.（2026 国考）</strong> 减数：被减数：差
 
@@ -115,7 +186,14 @@ B. 溶质质量：溶液质量：溶剂质量
 C. 可售天数：库存总量：日均销量
 D. 间隔天数：结束日期：开始日期
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 <strong>12.（2026 事业单位）</strong> 实际距离：图上距离：比例尺
 
@@ -124,7 +202,14 @@ B. 风速：风压：风力等级
 C. 航程：航速：飞行时间
 D. 总资产：总负债：资产负债率
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>13.（2024 四川）</strong> 柴门闻犬吠：风雪夜归人
 
@@ -133,7 +218,14 @@ B. 向晚意不适：驱车登古原
 C. 不敢高声语：恐惊天上人
 D. 举头望明月：低头思故乡
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：C</strong>
+
+</div>
+</details>
 
 <strong>14.（2025 事业单位）</strong> 碧玉妆成一树高，万条垂下绿丝绦：万树江边杏，新开一夜风
 
@@ -142,7 +234,14 @@ B. 接天莲叶无穷碧，映日荷花别样红：采菊东篱下，悠然见�
 C. 无边落木萧萧下，不尽长江滚滚来：蝉噪林逾静，鸟鸣山更幽
 D. 忽如一夜春风来，千树万树梨花开：林表明霁色，城中增暮寒
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：D</strong>
+
+</div>
+</details>
 
 <strong>15.（2024 江苏）</strong> （ ） 之于 白蚁 相当于 岩羊 之于 （ ）
 
@@ -151,9 +250,23 @@ B. 树木 雪豹
 C. 蚂蚁 老鹰
 D. 蚁后 羊群
 
+<details class="answer">
+<summary>看答案</summary>
+<div class="answer-body">
+
 <strong>答案：B</strong>
+
+</div>
+</details>
 
 
 ## 答案速览
 
+<details class="answer answer-overview">
+<summary>展开本组速览</summary>
+<div class="answer-body">
+
 - 类比(一): 1-5 ADDBC | 6-10 CCABA | 11-15 BDCDB
+
+</div>
+</details>

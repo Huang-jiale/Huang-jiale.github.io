@@ -1,0 +1,676 @@
+// ============================================================
+// 站点样式覆盖（NexT 官方钩子：_config.next.yml 的 custom_file_path.style）
+//
+// main.styl 的最后一层是 `for $inject_style in hexo-config('injects.style')`，
+// 所以这里排在主题所有样式之后：同优先级的规则这里写就赢，不需要 !important。
+// 设计目标是「苹果那套」：层级靠字重和留白、色块代替分割线、大圆角 + 两级阴影、单一强调色。
+//
+// 颜色这类无逗号 token 用 CSS 自定义属性（:root + 深色媒体查询）；
+// 阴影这类带逗号的值一律写成 Stylus 变量再落到属性上，避免 Stylus 解析自定义属性里的逗号。
+// ============================================================
+
+:root {
+  --ink: #1d1d1f;          // 标题、需要压住一切的正文
+  --ink-soft: #424245;     // 正文
+  --muted: #86868b;        // 次要信息：时间、分类、说明
+  --hairline: #e8e8ed;     // 只用于表格和输入框，不再当卡片分割线
+  --surface: #ffffff;      // 卡片
+  --surface-2: #f5f5f7;    // 卡片内的次级色块、hover 底
+  --accent: #0071e3;
+  --accent-ink: #ffffff;
+  // 首页热力图的五档深浅（0 = 那天没发），深色模式在下面整套换掉
+  --heat-0: #ececf0;
+  --heat-1: #cfe5fb;
+  --heat-2: #9fcbf4;
+  --heat-3: #4f97e8;
+  --heat-4: #0071e3;
+  --heat-future: transparent;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-pill: 980px;
+  --ease: cubic-bezier(.25, .1, .25, 1);
+}
+
+if (hexo-config('darkmode')) {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #f5f5f7;
+      --ink-soft: #d2d2d7;
+      --muted: #98989d;
+      --hairline: #38383a;
+      --surface: #1c1c1e;
+      --surface-2: #2c2c2e;
+      --accent: #6cb6ff;
+      --accent-ink: #000000;
+      --heat-0: #232326;
+      --heat-1: #1d3b57;
+      --heat-2: #2a5c88;
+      --heat-3: #3f87c4;
+      --heat-4: #6cb6ff;
+    }
+  }
+}
+
+// 深色下主题的浅阴影看不见，卡片改用重阴影（选择器与主题 _schemes/Pisces 里的三块卡片对齐）
+if (hexo-config('darkmode')) {
+  @media (prefers-color-scheme: dark) {
+    header.header {
+      box-shadow: $shadow-dark;
+    }
+
+    .main-inner {
+      box-shadow: $shadow-dark;
+    }
+
+    +desktop() {
+      .sidebar-inner {
+        box-shadow: $shadow-dark;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------
+// 排版基座：字体平滑、数字等宽、链接去掉那条下边框
+// ---------------------------------------------------------------
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  border-bottom: 0;
+  transition: color $transition-ease;
+
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: -.014em;
+}
+
+// ---------------------------------------------------------------
+// 卡片外观：主内容区 / 侧栏 / 头部三块圆角卡，去掉 post-eof 那条分割线
+// ---------------------------------------------------------------
+.post-eof {
+  display: none;
+}
+
+.post-block:first-of-type {
+  padding-top: 0;
+}
+
+// ---------------------------------------------------------------
+// 头部：原来是一整块饱和色 banner（--theme-color 底 + 白字），换成干净的左对齐标题
+// ---------------------------------------------------------------
+.site-brand-container {
+  background: transparent;
+}
+
+.site-meta {
+  padding: 22px 20px 10px;
+  text-align: left;
+}
+
+.brand {
+  color: var(--ink);
+
+  &:hover {
+    color: var(--accent);
+  }
+
+  .logo-line {
+    display: none;   // 标题两侧那两道装饰斜线
+  }
+}
+
+.site-title {
+  font-size: 1.125em;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.site-subtitle {
+  color: var(--muted);
+  margin: 4px 0 0;
+  text-align: left;
+}
+
+.site-nav-toggle .toggle, .site-nav-right .toggle {
+  color: var(--ink);
+
+  .toggle-line {
+    background: currentColor;
+  }
+}
+
+// 菜单：竖排胶囊项，选中/hover 用次级色块，不靠小圆点
+.menu {
+  padding: 0 12px 12px;
+}
+
+.menu .menu-item {
+  margin: 2px 0;
+
+  a {
+    border-radius: var(--radius-pill);
+    color: var(--ink-soft);
+    font-size: .9375em;
+    font-weight: 500;
+    padding: 7px 14px;
+    transition: background-color $transition-ease, color $transition-ease;
+
+    &:hover, &.menu-item-active {
+      background: var(--surface-2);
+      color: var(--ink);
+    }
+  }
+
+  .badge {
+    background: var(--hairline);
+    border-radius: var(--radius-pill);
+    color: var(--muted);
+    text-shadow: none;
+  }
+}
+
+// ---------------------------------------------------------------
+// 文章页：标题左对齐、去掉 hover 划线动画，正文层级靠字重与留白
+// ---------------------------------------------------------------
+.posts-expand {
+  .post-header {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .post-title {
+    font-size: 1.9em;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .post-title-link {
+    color: var(--ink);
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.post-meta {
+  color: var(--muted);
+  font-feature-settings: 'tnum' 1;
+  font-variant-numeric: tabular-nums;
+
+  a {
+    color: var(--muted);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.post-body {
+  color: var(--ink-soft);
+
+  p {
+    margin: 0 0 1.2em;
+  }
+
+  h2 {
+    margin: 2.2em 0 .8em;
+  }
+
+  h3, h4 {
+    margin: 1.8em 0 .6em;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  img, video {
+    border-radius: var(--radius-md);
+    margin-bottom: 16px;
+  }
+
+  table {
+    font-feature-settings: 'tnum' 1;
+    font-variant-numeric: tabular-nums;
+
+    th {
+      color: var(--muted);
+      font-weight: 600;
+    }
+  }
+
+  blockquote {
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    color: var(--muted);
+    padding: 12px 20px;
+  }
+
+  // 正文里的链接：静止不下划线，hover 才出现，颜色本身就是可点击的提示
+  a {
+    color: var(--accent);
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+// 按钮（阅读全文、提交等）：胶囊 + 轻微上浮
+.post-button {
+  margin-top: 20px;
+}
+
+.btn, .post-button .btn {
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  letter-spacing: -.01em;
+  padding: 9px 22px;
+  transition: background-color $transition-ease, box-shadow $transition-ease, transform $transition-ease;
+
+  &:hover {
+    box-shadow: 0 6px 18px rgba(0, 113, 227, .28);
+    transform: translateY(-1px);
+  }
+}
+
+.pagination {
+  a, .page-number {
+    border-color: transparent;
+    border-radius: var(--radius-pill);
+    transition: background-color $transition-ease, color $transition-ease;
+  }
+
+  a:hover {
+    background: var(--surface-2);
+    border-color: transparent;
+  }
+
+  .page-number.current {
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+}
+
+// ---------------------------------------------------------------
+// 移动端头部：吸顶 + 毛玻璃（桌面端头部是左栏里的一张卡，不动它，避免盖住正文）
+// ---------------------------------------------------------------
++tablet-mobile() {
+  header.header {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(255, 255, 255, .78);
+    border-radius: 0;
+    position: sticky;
+    top: 0;
+    z-index: $zindex-3;
+  }
+}
+
+if (hexo-config('darkmode')) {
+  @media (prefers-color-scheme: dark) {
+    +tablet-mobile() {
+      header.header {
+        background: rgba(28, 28, 30, .78);
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------
+// 行测「点击揭晓答案」：details 折叠，静止时只有一颗胶囊，展开后是次级色块
+// ---------------------------------------------------------------
+details.answer {
+  margin: 0 0 1.4em;
+
+  // 折叠按钮的文案来自 HTML 里的 <summary>，CSS 不再 ::before 补字，免得两处对不上
+  > summary {
+    background: var(--surface-2);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-pill);
+    color: var(--muted);
+    cursor: pointer;
+    display: inline-block;
+    font-size: .875em;
+    font-weight: 500;
+    list-style: none;
+    padding: 5px 14px;
+    transition: background-color $transition-ease, border-color $transition-ease, color $transition-ease;
+    user-select: none;
+    -webkit-user-select: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--accent-ink);
+    }
+  }
+
+  &[open] > summary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-ink);
+  }
+
+  // Chrome 靠 `::details-content { content-visibility: hidden }` 隐藏折叠内容：布局盒子还在，
+  // 只是不画（getBoundingClientRect 会量到高度，checkVisibility() 才是 false）。
+  // 这里显式 display:none，一是换掉那个占位盒子，二是让不支持该伪元素的内核也真的藏住。
+  > .answer-body {
+    display: none;
+  }
+
+  &[open] > .answer-body {
+    display: block;
+  }
+
+  .answer-body {
+    background: var(--surface-2);
+    border-radius: var(--radius-md);
+    margin-top: 10px;
+    padding: 14px 18px;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ---------------------------------------------------------------
+// 首页 Bento 栅格（数据 scripts/bento-home.js，模板 tools/bento-home.njk）
+// 只在首页这一块作用域里，卡片之间靠网格与色差分格，卡内不再画分割线
+// ---------------------------------------------------------------
+.bento-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.bento-card {
+  background: var(--surface-2);
+  border-radius: var(--radius-lg);
+  grid-column: span 2;
+  padding: 26px;
+  transition: transform $transition-ease, box-shadow $transition-ease;
+
+  &:hover {
+    box-shadow: $shadow-float;
+    transform: translateY(-2px);
+  }
+}
+
+// 热力图与「最近更新」都整行铺；三张模块卡一行三张
+.bento-card--heat,
+.bento-card--feed {
+  grid-column: span 6;
+}
+
+.bento-card--empty {
+  background: transparent;
+  border: 1px dashed var(--hairline);
+
+  .bento-name {
+    color: var(--muted);
+  }
+
+  &:hover {
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+.bento-kicker {
+  color: var(--muted);
+  font-feature-settings: 'tnum' 1;
+  font-size: .8125em;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  letter-spacing: .02em;
+  margin: 0 0 8px;
+}
+
+.bento-name {
+  font-size: 1.3em;
+  margin: 0;
+
+  a {
+    color: var(--ink);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.bento-blurb {
+  color: var(--ink-soft);
+  font-size: .9375em;
+  line-height: 1.7;
+  margin: 10px 0 0;
+}
+
+// ---------------------------------------------------------------
+// 首页热力图：一列 = 一周，一格 = 一天，纯 CSS 静态渲染（不用 JS、不动画）
+// 52 列在窄屏放不下时整块横向滑，不把格子压扁——压扁就看不出周与周的边界了
+// ---------------------------------------------------------------
+.heat {
+  --heat-cell: 11px;
+  --heat-gap: 3px;
+}
+
+.heat-months {
+  color: var(--muted);
+  display: flex;
+  flex-wrap: nowrap;
+  font-feature-settings: 'tnum' 1;
+  font-size: .6875em;
+  gap: var(--heat-gap);
+  height: 1.5em;
+  // 实测这一行会被居中对齐（整排右移 ~17px，月份标签和格子对不上），显式钉左
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.heat-month {
+  flex: 0 0 var(--heat-cell);
+  // flex 项默认 min-width:auto，「10月」这种两字标签会把 11px 的格子撑宽、整排错位；
+  // 放开到 0 之后格子保持一格宽，文字照常溢出盖在后面的空格上
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.heat-cols {
+  display: flex;
+  gap: var(--heat-gap);
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.heat-col {
+  display: flex;
+  flex: 0 0 var(--heat-cell);
+  flex-direction: column;
+  gap: var(--heat-gap);
+}
+
+.heat-cell {
+  border-radius: 2px;
+  display: block;
+  flex: 0 0 var(--heat-cell);
+  height: var(--heat-cell);
+  width: var(--heat-cell);
+}
+
+.heat-l0 { background: var(--heat-0); }
+.heat-l1 { background: var(--heat-1); }
+.heat-l2 { background: var(--heat-2); }
+.heat-l3 { background: var(--heat-3); }
+.heat-l4 { background: var(--heat-4); }
+.heat-cell--future { background: var(--heat-future); }
+
+.heat-foot {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  font-feature-settings: 'tnum' 1;
+  font-size: .75em;
+  gap: 8px;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.heat-legend {
+  align-items: center;
+  display: inline-flex;
+  font-variant-numeric: tabular-nums;
+  gap: 4px;
+}
+
+.bento-kids {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+
+  a {
+    align-items: center;
+    background: var(--surface);
+    border-radius: var(--radius-pill);
+    color: var(--ink-soft);
+    display: inline-flex;
+    font-size: .875em;
+    font-weight: 500;
+    gap: 7px;
+    padding: 5px 13px;
+    transition: background-color $transition-ease, color $transition-ease;
+
+    &:hover {
+      background: var(--accent);
+      color: var(--accent-ink);
+
+      .bento-count {
+        color: var(--accent-ink);
+        opacity: .75;
+      }
+    }
+  }
+}
+
+.bento-count {
+  color: var(--muted);
+  font-feature-settings: 'tnum' 1;
+  font-size: .8125em;
+  font-variant-numeric: tabular-nums;
+}
+
+.bento-more {
+  align-items: center;
+  color: var(--accent);
+  display: inline-flex;
+  font-size: .9375em;
+  font-weight: 500;
+  gap: 7px;
+  margin-top: 18px;
+
+  i {
+    font-size: .8em;
+  }
+}
+
+.bento-feed {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+
+  li {
+    align-items: baseline;
+    border-bottom: 1px solid var(--hairline);
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 48px 1fr auto;
+    padding: 11px 0;
+  }
+
+  li:last-child {
+    border-bottom: 0;
+  }
+
+  time {
+    color: var(--muted);
+    font-feature-settings: 'tnum' 1;
+    font-size: .8125em;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.bento-feed-title {
+  color: var(--ink);
+  font-weight: 500;
+  overflow-wrap: break-word;
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.bento-tag {
+  background: var(--surface);
+  border-radius: var(--radius-pill);
+  color: var(--muted);
+  font-size: .75em;
+  padding: 2px 9px;
+  white-space: nowrap;
+}
+
++tablet-mobile() {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-card, .bento-card--heat, .bento-card--feed {
+    grid-column: auto;
+    grid-row: auto;
+    padding: 22px;
+  }
+
+  // 手机上格子缩一点，52 周还是靠横向滑动看，不硬塞进屏宽
+  .heat {
+    --heat-cell: 9px;
+    --heat-gap: 2px;
+  }
+}
+
+// ---------------------------------------------------------------
+// 无障碍：用户要求减少动效时，主题的入场动画（animate.css）直接落到终态
+// ---------------------------------------------------------------
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}

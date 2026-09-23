@@ -198,7 +198,7 @@ for (const a of arts) {
   if (slugs.has(a.slug)) die(`slug 撞了：${a.slug}`);
   slugs.add(a.slug);
   const fm = ['---', `title: ${a.title}`, `date: ${a.date}`, 'tags:', ...a.tags.map((t) => `  - ${t}`),
-    'categories:', `  - ${a.cat1}`, `  - ${a.cat2}`, `description: ${a.desc}`, '---'].join('\n');
+    'categories:', '  - 学习', `  - ${a.cat1}`, `  - ${a.cat2}`, `description: ${a.desc}`, '---'].join('\n');
   fs.writeFileSync(path.join(POSTS, `${a.slug}.md`), fm + '\n\n' + a.lines.join('\n') + '\n');
 }
 let copied = 0;
@@ -227,7 +227,7 @@ for (const g of GROUPS) {
   const rows = MAP.filter((m) => m.group.name === g.name);
   mapLines.push(
     `## ${g.name}`, '',
-    `<strong>这一类管什么</strong>：${g.note}。共 ${rows.length} 个阶段 ${rows.reduce((s, r) => s + r.lessons.length, 0)} 课 → 分类页 [/categories/素描/${g.name}/](/categories/素描/${g.name}/)。`, '',
+    `<strong>这一类管什么</strong>：${g.note}。共 ${rows.length} 个阶段 ${rows.reduce((s, r) => s + r.lessons.length, 0)} 课 → 分类页 [/categories/学习/素描/${g.name}/](/categories/学习/素描/${g.name}/)。`, '',
   );
   for (const r of rows) {
     mapLines.push(

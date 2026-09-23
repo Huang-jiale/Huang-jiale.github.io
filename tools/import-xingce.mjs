@@ -16,13 +16,18 @@
  *     母本副本 `data/xingce-raw/assets/` 是完整的 152 张（gitignore，不入库），脚本按题数报出「引用不到」和
  *     「说了有图却一张都没有」两种缺口，供人工决定是否补图
  *   - 每篇末尾附本组的答案速览（从 `_答案键.md` 按 模块+册+题型+组号 对上号）
+ *   - 答案折叠（用户 2026-09-23 选的「点击揭晓答案」）：每行的 `**答案：X**` 原样保留，外面套
+ *     `<details class="answer"><summary>看答案</summary><div class="answer-body">…</div></details>`，
+ *     速览那一行同样折起；块内块外都留空行，否则 marked 把 HTML 块一直延伸到文末、里面的 markdown 不再解析。
+ *     样式在 `source/_data/styles.styl` 的 details.answer 一节。
  *
  * 自检（跑完必须全绿，两道）：
  *   1. 逐行：除标题行外，9 个母本的每一行都必须在某篇文章里原样出现（`**`→<strong>、图片路径改写
  *      这两处归一化两侧同用，所以别处丢了照样报）；
  *   2. 结构：每个 `##` 都成篇、每个 `###` 都留在正文里、每组「题数 == 答案数」、答案都是单个 A–D、
  *      slug 不撞、引用的图片在 source 里真实存在、正文没有残留 `**`、答案键的组数与母本对得上
- *      （对不上只报警并把差异写进答案键那篇，不算失败——那是母本本身缺内容）。
+ *      （对不上只报警并把差异写进答案键那篇，不算失败——那是母本本身缺内容）、
+ *      每篇的「每题折叠块 == 答案数」且「速览折叠块 == 1」（缺答案键的那篇除外）。
  *
  *   node tools/import-xingce.mjs [--clean]
  */
@@ -141,7 +146,16 @@ for (const f of books) {
     const body = [];
     for (const l of cur.lines) {
       if (!l.trim()) { body.push(''); continue; }
-      body.push(norm(l));
+      const t = norm(l);
+      // 答案折叠：刷题时先自己想，点「看答案」才露出来（样式在 source/_data/styles.styl 的 details.answer）。
+      // 中间必须留空行——marked 的 HTML 块遇到空行才结束，块内的 markdown 才会被渲染。
+      if (/^<strong>答案：/.test(t)) {
+        body.push('<details class="answer">', '<summary>看答案</summary>', '<div class="answer-body">', '',
+          t, '',
+          '</div>', '</details>');
+        continue;
+      }
+      body.push(t);
     }
     const q = cur.lines.filter(l => /^\*\*\d+\.[（(]/.test(l)).length;
     const a = cur.lines.filter(l => /^\*\*答案：/.test(l)).length;
@@ -156,9 +170,9 @@ for (const f of books) {
       slug: `xc-${MODULES[mod].code}${VOL[vol]}-${p2(cur.n)}`,
       title: cur.type === mod ? `${mod} · 高分必刷难题（${cur.cn}）` : `${mod} · ${cur.type} 高分必刷难题（${cur.cn}）`,
       date: new Date(2026, 8, 22, 9, seqAll, 0),
-      categories: ['行测', mod],
+      categories: ['学习', '行测', mod],
       tags: ['刷题', '27考季', mod, ...(cur.type === mod ? [] : [cur.type]), VOL_NAME[vol], `第 ${cur.n} 组`],
-      description: `${mod}${cur.type === mod ? '' : ` · ${cur.type}`} 第 ${cur.n} 组，共 ${q} 题（题号 1–${q}），答案随题给出，末尾附答案速览。`,
+      description: `${mod}${cur.type === mod ? '' : ` · ${cur.type}`} 第 ${cur.n} 组，共 ${q} 题（题号 1–${q}），答案随题折叠、点击揭晓，末尾附答案速览。`,
       questions: q, answers: a, figWords, imgs,
       missingKey: !key,
       content: [
@@ -166,7 +180,11 @@ for (const f of books) {
         ...preamble.map(norm), '',
         ...body.map(l => l.trim()).filter((l, i, arr) => !(l === '' && arr[i - 1] === '')), '',
         '## 答案速览', '',
-        key ? norm(key) : '（母本 `_答案键.md` 里没有这一组，待补）', '',
+        // 速览也折起来：整组做完再展开对答案，做的时候不给自己留小抄
+        ...(key
+          ? ['<details class="answer answer-overview">', '<summary>展开本组速览</summary>', '<div class="answer-body">', '',
+             norm(key), '', '</div>', '</details>']
+          : ['（母本 `_答案键.md` 里没有这一组，待补）']), '',
       ].join('\n'),
     });
     cur = null;
@@ -203,7 +221,7 @@ for (const f of books) {
     slug: 'xc-answer',
     title: '行测难题精刷 · 全模块答案键（27 考季）',
     date: new Date(2026, 8, 22, 10, 0, 0),
-    categories: ['行测', '答案键'],
+    categories: ['学习', '行测', '答案键'],
     tags: ['刷题', '27考季', '答案键'],
     description: `各册「答案速览」页的汇总，题号在每个难题组内从 1 重新编号。${note ? '末尾列出尚未导入母本的组。' : ''}`,
     questions: 0, answers: 0, missingKey: false,
@@ -240,7 +258,7 @@ const orphan = [...onDisk].filter(w => !wanted.has(w));
 
 if (cleanArg && existsSync(OUT)) rmSync(OUT, { recursive: true });
 for (const p of posts) {
-  const dir = join(OUT, p.categories[1]);
+  const dir = join(OUT, p.categories[2]);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, `${p.slug}.md`), frontMatter(p) + p.content, 'utf8');
 }
@@ -270,6 +288,11 @@ if (new Set(arts.map(p => p.slug)).size !== arts.length) problems.push('slug 有
 for (const p of arts) {
   if (p.questions !== p.answers) problems.push(`${p.slug} 题数 ${p.questions} != 答案数 ${p.answers}`);
   if (!p.questions) problems.push(`${p.slug} 一题都没有`);
+  // 每题一个折叠 + 文末速览一个（速览那块带 answer-overview，首页统计题数时不数它）
+  const folds = (p.content.match(/<details class="answer">/g) || []).length;
+  const over = (p.content.match(/<details class="answer answer-overview">/g) || []).length;
+  if (folds !== p.answers) problems.push(`${p.slug} 每题折叠 ${folds} 个，答案有 ${p.answers} 个`);
+  if (over !== (p.missingKey ? 0 : 1)) problems.push(`${p.slug} 速览折叠 ${over} 个，应该是 ${p.missingKey ? 0 : 1} 个`);
 }
 for (const p of posts) if (/\*\*/.test(p.content)) problems.push(`${p.slug} 正文残留 **`);
 for (const h of srcH3) if (![...emitted].some(l => l.includes(h))) problems.push(`材料小标题没进任何正文：${h}`);
