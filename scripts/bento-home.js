@@ -35,10 +35,8 @@ const WEEKS = 52;
 // 三个一级模块。工作/生活现在是空的，卡片照样出现，写「还没有内容」，以后有文章自动填上。
 const TOPS = [
   {
-    name   : '学习',
-    blurb  : '公考与画画：行测难题刷题库、按月归档的时政考点、素描 30 课。点分类名下钻，左侧栏自由选。',
-    href   : '/sketch-map/',
-    hrefTxt: '素描课程总览 · 一张图看 30 课'
+    name : '学习',
+    blurb: '公考与画画：行测难题刷题库、按月归档的时政考点、素描 30 课。点分类名下钻，左侧栏自由选。'
   },
   { name: '工作', blurb: '竞品与选品、流程和复盘。写什么、怎么写，等第一篇定口径。' },
   { name: '生活', blurb: '读书随笔、生活记录。' }
@@ -139,9 +137,7 @@ function build(hexo) {
       kicker : mine.length
         ? (questions ? `${questions} 题 · ${mine.length} 篇` : `${mine.length} 篇`)
         : '还没有内容',
-      kids   : [...kids].map(([name, n]) => ({ name, url: catUrl([cfg.name, name]), count: n })),
-      href   : mine.length ? cfg.href || '' : '',
-      hrefTxt: cfg.hrefTxt || ''
+      kids   : [...kids].map(([name, n]) => ({ name, url: catUrl([cfg.name, name]), count: n }))
     };
   });
 
