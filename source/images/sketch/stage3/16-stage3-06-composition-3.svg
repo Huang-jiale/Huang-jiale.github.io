@@ -1,0 +1,50 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="九宫格强弱分配" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="26" class="labk">把画面切成九格，给每格定"对比强度"与"细节密度"</text>
+  <rect x="60" y="54" width="110" height="72" class="st f-g1"/>
+  <rect x="170" y="54" width="110" height="72" class="st f-g2"/>
+  <rect x="280" y="54" width="110" height="72" class="st f-white"/>
+  <rect x="60" y="126" width="110" height="72" class="st f-g5"/>
+  <rect x="170" y="126" width="110" height="72" class="st f-g3"/>
+  <rect x="280" y="126" width="110" height="72" class="st f-g1"/>
+  <rect x="60" y="198" width="110" height="72" class="st f-g2"/>
+  <rect x="170" y="198" width="110" height="72" class="st f-g4"/>
+  <rect x="280" y="198" width="110" height="72" class="st f-white"/>
+  <text x="104" y="96" class="labk">3</text>
+  <text x="214" y="96" class="labk">4</text>
+  <text x="324" y="96" class="labk">2</text>
+  <text x="104" y="168" class="labk">9</text>
+  <text x="214" y="168" class="labk">6</text>
+  <text x="324" y="168" class="labk">3</text>
+  <text x="104" y="240" class="labk">4</text>
+  <text x="214" y="240" class="labk">7</text>
+  <text x="324" y="240" class="labk">2</text>
+  <circle cx="115" cy="162" r="4" class="dot"/>
+  <text x="420" y="70" class="lab">数字 = 这一格允许的对比强度（级差）</text>
+  <text x="420" y="94" class="lab">中心格 = 视觉中心，落在偏左 1/3、下 2/3 交点</text>
+  <text x="420" y="118" class="lab">对角与四角 2~3 级：只放"整块布"或背景</text>
+  <text x="420" y="150" class="labk">细节密度同步递减：</text>
+  <text x="420" y="172" class="lab2">中心物体 100%（交界线 + 高光 + 质感 + 结构）</text>
+  <text x="420" y="190" class="lab2">第二件 60%（交界线 + 一条高光）</text>
+  <text x="420" y="208" class="lab2">第三件 30%（只有大明暗）</text>
+  <text x="420" y="226" class="lab2">背景与布 15%（两个大面 + 一处闭塞）</text>
+  <text x="60" y="288" class="lab2">用法：起形后先给九格各写一个数字，铺调子时逐格核对。画完远看，如果最亮的数字出现在边角，就是那里画过头了。</text>
+</svg>

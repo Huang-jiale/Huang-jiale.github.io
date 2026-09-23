@@ -1,0 +1,84 @@
+<svg viewBox="0 0 760 420" role="img" aria-label="七点五头身比例尺" xmlns="http://www.w3.org/2000/svg" width="760" height="420"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="420" class="bg-paper"/>
+  <text x="18" y="24" class="labk">成人 7.5 头：把身高切成八格（男）</text>
+  <rect x="88" y="48" width="44" height="44" class="st"/>
+  <rect x="88" y="92" width="44" height="44" class="st"/>
+  <rect x="88" y="136" width="44" height="44" class="st"/>
+  <rect x="88" y="180" width="44" height="44" class="st"/>
+  <rect x="88" y="224" width="44" height="44" class="st"/>
+  <rect x="88" y="268" width="44" height="44" class="st"/>
+  <rect x="88" y="312" width="44" height="44" class="st"/>
+  <rect x="88" y="356" width="44" height="22" class="st"/>
+  <text x="82" y="96" class="lab2" text-anchor="end">1</text>
+  <text x="82" y="140" class="lab2" text-anchor="end">2</text>
+  <text x="82" y="184" class="lab2" text-anchor="end">3</text>
+  <text x="82" y="228" class="lab2" text-anchor="end">4</text>
+  <text x="82" y="272" class="lab2" text-anchor="end">5</text>
+  <text x="82" y="316" class="lab2" text-anchor="end">6</text>
+  <text x="82" y="360" class="lab2" text-anchor="end">7</text>
+  <text x="82" y="380" class="lab2" text-anchor="end">7.5</text>
+  <line x1="76" y1="378" x2="300" y2="378" class="st"/>
+  <circle cx="210" cy="70" r="22" class="st"/>
+  <line x1="210" y1="92" x2="210" y2="104" class="st"/>
+  <line x1="160" y1="104" x2="260" y2="104" class="st-red"/>
+  <path d="M166 108 L254 108 L240 182 L180 182 Z" class="st"/>
+  <line x1="176" y1="136" x2="244" y2="136" class="st-thin"/>
+  <path d="M180 186 L240 186 L246 226 L174 226 Z" class="st"/>
+  <line x1="150" y1="213" x2="272" y2="213" class="st-red"/>
+  <line x1="172" y1="290" x2="250" y2="290" class="st-thin"/>
+  <path d="M190 226 L186 290 L184 372" class="st"/>
+  <path d="M230 226 L234 290 L236 372" class="st"/>
+  <path d="M184 372 L166 378" class="st"/>
+  <path d="M236 372 L254 378" class="st"/>
+  <path d="M166 110 L152 180 L148 214 L146 232" class="st"/>
+  <path d="M254 110 L268 180 L272 214 L274 232" class="st"/>
+  <circle cx="152" cy="180" r="4" class="dot"/>
+  <circle cx="268" cy="180" r="4" class="dot"/>
+  <circle cx="186" cy="290" r="4" class="dot"/>
+  <circle cx="234" cy="290" r="4" class="dot"/>
+  <line x1="234" y1="70" x2="296" y2="70" class="st-thin"/>
+  <text x="302" y="74" class="lab">头：全身唯一的尺子</text>
+  <line x1="262" y1="104" x2="296" y2="104" class="st-thin"/>
+  <text x="302" y="108" class="lab">① 肩线：宽 2 格</text>
+  <text x="302" y="126" class="lab2">　上半身的分量全看它</text>
+  <line x1="248" y1="136" x2="296" y2="136" class="st-thin"/>
+  <text x="302" y="140" class="lab">② 乳线：2 格</text>
+  <line x1="244" y1="180" x2="296" y2="180" class="st-thin"/>
+  <text x="302" y="184" class="lab">③ 腰与脐：3 格</text>
+  <text x="302" y="202" class="lab2">　肘尖落在这条线上</text>
+  <line x1="276" y1="213" x2="296" y2="213" class="st-red"/>
+  <text x="302" y="217" class="lab">④ 耻骨：3.75 格＝身高一半</text>
+  <text x="302" y="235" class="lab2">　腕也在这条线上，腿从它往下算</text>
+  <line x1="252" y1="290" x2="296" y2="290" class="st-thin"/>
+  <text x="302" y="294" class="lab">⑤ 膝：5.5 格＝腿的中点</text>
+  <text x="302" y="312" class="lab2">　耻骨到地面正好两格</text>
+  <line x1="240" y1="372" x2="296" y2="372" class="st-thin"/>
+  <text x="302" y="376" class="lab">⑥ 踝：7.25 格</text>
+  <text x="302" y="394" class="lab2">　最后 0.25 格是脚，别把脚画没</text>
+  <text x="546" y="72" class="labk">落笔先画这四条横线</text>
+  <text x="546" y="98" class="lab2">肩线 · 乳线 · 腰 · 耻骨</text>
+  <text x="546" y="156" class="labk">三个最常错的刻度</text>
+  <text x="546" y="182" class="lab2">一半记在腰上 → 腿短</text>
+  <text x="546" y="202" class="lab2">膝低于 5.5 格 → 腿短</text>
+  <text x="546" y="222" class="lab2">肩窄于 1.85 格 → 瘦弱</text>
+  <text x="546" y="258" class="labk">比例不是审美</text>
+  <text x="18" y="412" class="lab2">量法：先用铅笔"掐"出头的高度（第 04 课），再往下切 8 格；宁可先画成一个"格子人"，也不要一开始就描轮廓。</text>
+</svg>

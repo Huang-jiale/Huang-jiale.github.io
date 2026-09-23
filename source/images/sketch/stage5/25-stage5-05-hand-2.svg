@@ -1,0 +1,55 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="画手四步：楔形、分组、斜线、写实" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="24" class="labk">画手四步：楔形 → 三组 → 斜拱 → 写实</text>
+  <path d="M69 200 L121 200 L127 122 L63 122 Z" class="st"/>
+  <line x1="63" y1="122" x2="127" y2="122" class="st-red"/>
+  <path d="M71 200 L71 224 M119 200 L119 224" class="st"/>
+  <path d="M259 200 L311 200 L317 122 L253 122 Z" class="st"/>
+  <rect x="255" y="66" width="30" height="58" rx="9" class="st"/>
+  <rect x="287" y="78" width="28" height="46" rx="9" class="st"/>
+  <rect x="244" y="150" width="16" height="44" rx="7" class="st" transform="rotate(-32 252 172)"/>
+  <path d="M449 200 L501 200 L507 122 L443 122 Z" class="st"/>
+  <rect x="445" y="66" width="14" height="58" rx="6" class="st"/>
+  <rect x="460" y="60" width="14" height="64" rx="6" class="st"/>
+  <rect x="475" y="68" width="14" height="56" rx="6" class="st"/>
+  <rect x="490" y="86" width="13" height="38" rx="6" class="st"/>
+  <rect x="432" y="150" width="16" height="44" rx="7" class="st" transform="rotate(-32 440 172)"/>
+  <path d="M445 128 Q475 116 503 134" class="st-red"/>
+  <line x1="460" y1="78" x2="474" y2="78" class="st-thin"/>
+  <line x1="460" y1="98" x2="474" y2="98" class="st-thin"/>
+  <path d="M629 200 L681 200 L687 124 L623 124 Z" class="st"/>
+  <path d="M625 124 L625 70 q7 -10 14 0 L639 124" class="st"/>
+  <path d="M641 124 L641 60 q7 -10 14 0 L655 124" class="st"/>
+  <path d="M657 124 L657 66 q7 -10 14 0 L671 124" class="st"/>
+  <path d="M673 124 L673 88 q6 -9 12 0 L685 124" class="st"/>
+  <path d="M623 152 q-16 6 -18 22 q-2 14 10 18 l12 -8" class="st"/>
+  <line x1="632" y1="128" x2="640" y2="196" class="st-thin"/>
+  <line x1="655" y1="128" x2="657" y2="196" class="st-thin"/>
+  <line x1="676" y1="132" x2="672" y2="196" class="st-thin"/>
+  <text x="95" y="252" class="labk" text-anchor="middle">① 掌＝楔形</text>
+  <text x="95" y="272" class="lab2" text-anchor="middle">腕窄、指根宽（20 秒）</text>
+  <text x="285" y="252" class="labk" text-anchor="middle">② 五指分三组</text>
+  <text x="285" y="272" class="lab2" text-anchor="middle">食中一组，无名小一组</text>
+  <text x="475" y="252" class="labk" text-anchor="middle">③ 关节线走斜拱</text>
+  <text x="475" y="272" class="lab2" text-anchor="middle">四根指节线都不水平</text>
+  <text x="644.6" y="252" class="labk" text-anchor="middle">④ 收边缘、点指甲</text>
+  <text x="627.5" y="272" class="lab2" text-anchor="middle">掌骨三条斜线，指根有缝</text>
+</svg>

@@ -1,0 +1,79 @@
+<svg viewBox="0 0 760 440" role="img" aria-label="建筑测量与透视校验：竖线垂直、同向线交于消失点、人高做尺" xmlns="http://www.w3.org/2000/svg" width="760" height="440"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="440" class="bg-paper"/>
+  <text x="18" y="26" class="labk">校验一：所有竖线必须真的垂直；同向斜线必须交在同一个点上</text>
+
+  <rect x="30" y="46" width="350" height="230" class="f-white" stroke="#ddd9d2"/>
+  <line x1="30" y1="150" x2="380" y2="150" class="st-thin"/>
+  <text x="372" y="140" text-anchor="end" class="lab2">视平线＝眼高</text>
+  <circle cx="330" cy="150" r="4" class="dot"/>
+  <text x="336" y="168" class="lab2">VP</text>
+  <g stroke="#1c1c1c" stroke-width="1.3">
+    <line x1="50"  y1="96"  x2="50"  y2="262"/>
+    <line x1="110" y1="111" x2="110" y2="232"/>
+    <line x1="165" y1="124" x2="165" y2="208"/>
+    <line x1="212" y1="135" x2="212" y2="190"/>
+    <line x1="252" y1="143" x2="252" y2="176"/>
+    <line x1="50"  y1="96"  x2="252" y2="143"/>
+    <line x1="50"  y1="262" x2="252" y2="176"/>
+  </g>
+  <g stroke="#0f6ab5" stroke-width="1" stroke-dasharray="6 3" fill="none">
+    <line x1="50" y1="96" x2="330" y2="150"/>
+    <line x1="50" y1="262" x2="330" y2="150"/>
+    <line x1="110" y1="96" x2="110" y2="262"/>
+  </g>
+  <text x="56" y="86" class="lab2">屋脊线延长 → 必须过 VP</text>
+  <g stroke="#1c1c1c" stroke-width="0.8">
+    <rect x="66" y="150" width="14" height="26" fill="#8f8f8f"/>
+    <rect x="88" y="158" width="12" height="22" fill="#8f8f8f"/>
+    <rect x="122" y="150" width="10" height="18" fill="#8f8f8f"/>
+  </g>
+  <path d="M150 262 L150 240 L158 240 L158 262 Z" class="f-g5"/>
+  <circle cx="154" cy="235" r="4" class="f-g5"/>
+  <text x="40" y="392" class="lab">① 铅笔当铅垂线：手臂完全伸直、笔尖朝上，笔杆竖直＝真垂直基准</text>
+  <text x="40" y="412" class="lab">② 铅笔量角度：把笔按在屋檐方向上，手腕锁死，平移到纸上描下来</text>
+  <text x="40" y="432" class="lab">③ 人高当尺：一层楼≈1.7 个人高，先量"房子有几个我"再定大小</text>
+
+  <rect x="410" y="46" width="330" height="140" class="f-white" stroke="#c0392b"/>
+  <g stroke="#c0392b" stroke-width="1.4">
+    <line x1="440" y1="70" x2="452" y2="170"/>
+    <line x1="530" y1="70" x2="530" y2="170"/>
+    <line x1="620" y1="70" x2="608" y2="170"/>
+    <line x1="440" y1="70" x2="620" y2="70"/>
+    <line x1="452" y1="170" x2="608" y2="170"/>
+    <line x1="446" y1="104" x2="616" y2="104"/>
+    <line x1="449" y1="138" x2="612" y2="138"/>
+  </g>
+  <text x="420" y="204" class="lab">✗ 把竖线也做了透视</text>
+  <text x="420" y="222" class="lab2">房子像被从上面捏住。只有画超高层仰视时竖线才收。</text>
+
+  <rect x="410" y="240" width="330" height="96" class="f-white" stroke="#c0392b"/>
+  <g stroke="#c0392b" stroke-width="1.4">
+    <line x1="470" y1="320" x2="470" y2="266"/>
+    <line x1="520" y1="320" x2="520" y2="252"/>
+    <line x1="470" y1="266" x2="520" y2="252"/>
+    <line x1="470" y1="320" x2="520" y2="308"/>
+    <line x1="575" y1="252" x2="575" y2="320"/>
+    <line x1="520" y1="252" x2="575" y2="266"/>
+    <line x1="520" y1="308" x2="575" y2="320"/>
+    <line x1="640" y1="240" x2="640" y2="336"/>
+  </g>
+  <text x="418" y="356" class="lab">✗ 站得太近（鱼眼）：两面收得太急 → 后退 10 步再画</text>
+</svg>

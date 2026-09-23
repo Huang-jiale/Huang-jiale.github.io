@@ -1,0 +1,51 @@
+<svg viewBox="0 0 760 220" role="img" aria-label="手臂上包着画与织毛衣交叉对比" xmlns="http://www.w3.org/2000/svg" width="760" height="220"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="220" class="bg-paper"/>
+  <text x="18" y="24" class="labk">一段手臂（长椭球）：✓ 线绕柱转、两头收密 ／ ✗ 满手井字交叉 = 织毛衣</text>
+  <line x1="58" y1="96" x2="300" y2="104" class="st"/>
+  <line x1="58" y1="150" x2="300" y2="140" class="st"/>
+  <path d="M58 96 A27 27 0 0 0 58 150" class="st"/>
+  <path d="M300 104 A18 18 0 0 0 300 140" class="st"/>
+  <g class="st-ok">
+    <path d="M66 99 Q62 123 70 148"/>
+    <path d="M80 98 Q77 122 84 147"/>
+    <path d="M96 99 Q95 122 100 146"/>
+    <path d="M116 100 Q116 122 120 146"/>
+    <path d="M138 101 Q139 122 142 146"/>
+    <path d="M160 102 Q162 122 164 145"/>
+    <path d="M182 103 Q185 122 186 144"/>
+    <path d="M204 104 Q208 121 208 143"/>
+    <path d="M226 104 Q231 121 230 142"/>
+    <path d="M248 104 Q253 121 251 141"/>
+    <path d="M268 104 Q274 121 271 141"/>
+    <path d="M284 104 Q291 120 286 140"/>
+  </g>
+  <text x="70" y="176" class="lab2">✓ 中间疏、两头（转开处）密，线绕着转</text>
+  <line x1="420" y1="96" x2="662" y2="104" class="st"/>
+  <line x1="420" y1="150" x2="662" y2="140" class="st"/>
+  <path d="M420 96 A27 27 0 0 0 420 150" class="st"/>
+  <path d="M662 104 A18 18 0 0 0 662 140" class="st"/>
+  <g class="st-bad">
+    <line x1="430" y1="150" x2="452" y2="98"/><line x1="458" y1="150" x2="480" y2="98"/><line x1="486" y1="150" x2="508" y2="98"/><line x1="514" y1="150" x2="536" y2="98"/><line x1="542" y1="150" x2="564" y2="98"/><line x1="570" y1="150" x2="592" y2="98"/><line x1="598" y1="150" x2="620" y2="98"/><line x1="626" y1="150" x2="648" y2="98"/>
+    <line x1="430" y1="98" x2="452" y2="150"/><line x1="458" y1="98" x2="480" y2="150"/><line x1="486" y1="98" x2="508" y2="150"/><line x1="514" y1="98" x2="536" y2="150"/><line x1="542" y1="98" x2="564" y2="150"/><line x1="570" y1="98" x2="592" y2="150"/><line x1="598" y1="98" x2="620" y2="150"/><line x1="626" y1="98" x2="648" y2="150"/>
+  </g>
+  <text x="430" y="176" class="lab2">✗ 两个方向铺满、不分面 → 像织毛衣，平的</text>
+  <text x="18" y="206" class="lab">补救：已经织成毛衣了？用可塑橡皮整体粘淡，退回"一个面一组方向"重来。</text>
+</svg>

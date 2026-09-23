@@ -1,0 +1,61 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="眼睛的体块画法到写实画法四步" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="24" class="labk">顺序永远是：球 → 两片睑 → 虹膜高光 → 细节</text>
+
+  <circle cx="110" cy="120" r="52" class="st"/>
+  <line x1="110" y1="68" x2="110" y2="172" class="st-thin"/>
+  <line x1="58" y1="120" x2="162" y2="120" class="st-thin"/>
+  <path d="M62 108 Q110 74 158 108" class="st-red"/>
+  <path d="M64 132 Q110 162 156 132" class="st-blue"/>
+  <text x="46" y="204" class="lab">① 球＋两片弧</text>
+  <text x="46" y="224" class="lab2">红弧＝上睑，蓝弧＝下睑</text>
+  <text x="46" y="242" class="lab2">两弧夹角＝睁多大</text>
+
+  <circle cx="300" cy="120" r="52" class="st"/>
+  <path d="M252 108 Q300 72 348 108 L348 114 Q300 84 252 114 Z" class="f-g3 st-thin"/>
+  <path d="M252 108 Q300 74 348 108" class="st"/>
+  <path d="M254 132 Q300 160 346 132" class="st"/>
+  <circle cx="300" cy="118" r="22" class="f-g2 st"/>
+  <circle cx="300" cy="118" r="10" class="f-g5"/>
+  <circle cx="293" cy="110" r="4" class="f-white"/>
+  <text x="236" y="204" class="lab">② 睑压在球上</text>
+  <text x="236" y="224" class="lab2">上睑有厚度 → 一条暗边</text>
+  <text x="236" y="242" class="lab2">虹膜是圆的，露出 4/5</text>
+
+  <path d="M456 122 q44 -32 88 0" class="st"/>
+  <path d="M458 122 q42 24 84 -2" class="st"/>
+  <circle cx="500" cy="116" r="17" class="f-g2 st"/>
+  <circle cx="500" cy="116" r="8" class="f-g5"/>
+  <circle cx="494" cy="109" r="3.5" class="f-white"/>
+  <path d="M450 118 q6 -7 13 -5" class="st"/>
+  <path d="M544 116 q7 1 10 -2" class="st-thin"/>
+  <path d="M470 134 q30 12 60 -2" class="st-thin"/>
+  <text x="440" y="204" class="lab">③ 写实：三条线分工</text>
+  <text x="440" y="224" class="lab2">上睑缘最重、下睑缘最轻</text>
+  <text x="440" y="242" class="lab2">眼白上缘留一条投影</text>
+
+  <path d="M648 92 L648 148 L724 120 Z" class="st"/>
+  <circle cx="648" cy="120" r="14" class="f-g1 st-thin"/>
+  <text x="616" y="204" class="lab">④ 侧面是个楔形</text>
+  <text x="616" y="224" class="lab2">内眼角低、外眼角高，</text>
+  <text x="616" y="242" class="lab2">整眼外倾 5~10°</text>
+  <text x="18" y="278" class="lab2">画成水平＝死鱼眼；画成 2:1 的圆＝受惊脸。眼裂宽:高≈3:1，外眼角高 1~2mm，上睑盖住虹膜约 1/4。</text>
+</svg>

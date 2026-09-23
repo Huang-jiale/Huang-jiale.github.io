@@ -1,0 +1,47 @@
+<svg viewBox="0 0 760 280" role="img" aria-label="耳朵的 C 与 Y 结构及其在头侧的位置" xmlns="http://www.w3.org/2000/svg" width="760" height="280"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="280" class="bg-paper"/>
+  <text x="18" y="24" class="labk">左：耳挂在头侧的哪一段；右：把耳拆成 C ＋ Y ＋ 一个椭球</text>
+  <circle cx="130" cy="120" r="62" class="st"/>
+  <path d="M92 172 L88 208 Q130 226 172 208 L172 168" class="st"/>
+  <line x1="68" y1="92" x2="200" y2="92" class="st-red"/>
+  <line x1="68" y1="152" x2="200" y2="152" class="st-red"/>
+  <path d="M186 96 q22 12 18 30 q-4 18 -16 24" class="st"/>
+  <path d="M188 108 q12 8 10 20 q-2 12 -10 16" class="st-thin"/>
+  <text x="216" y="86" class="lab2">上沿＝眉弓线</text>
+  <text x="216" y="168" class="lab2">下沿＝鼻底线</text>
+  <text x="36" y="240" class="lab2">正面看：耳在头宽的外侧 1/4 里，</text>
+  <text x="36" y="258" class="lab2">所以正面像的耳会被脸"吃掉"一半，只露出外缘一条。</text>
+
+  <path d="M380 70 q56 -14 66 40 q8 46 -20 78 q-22 24 -44 12" class="st"/>
+  <path d="M404 96 q28 -6 30 24 q2 26 -14 40" class="st"/>
+  <path d="M420 118 l14 -12 M420 118 l-2 22" class="st"/>
+  <ellipse cx="392" cy="196" rx="16" ry="18" class="st"/>
+  <path d="M398 140 q18 6 22 -6" class="st-thin"/>
+  <text x="470" y="70" class="lab">① 耳轮（外圈 C）</text>
+  <text x="470" y="92" class="lab">② 对耳轮（Y：上脚＋下脚）</text>
+  <text x="470" y="114" class="lab">③ 三角窝（Y 两支之间，暗）</text>
+  <text x="470" y="136" class="lab">④ 耳甲（C 与 Y 之间，最暗的一块）</text>
+  <text x="470" y="158" class="lab">⑤ 耳垂（松的椭球，有亮面）</text>
+  <text x="470" y="192" class="labk">耳的明暗只有两处</text>
+  <text x="470" y="214" class="lab2">耳甲窝＋三角窝压暗，其余留亮；</text>
+  <text x="470" y="232" class="lab2">外缘一整圈都要虚（它离视线最远）。</text>
+  <text x="470" y="256" class="lab2">把整个耳涂黑＝"脸上挂了两个洞"。</text>
+</svg>

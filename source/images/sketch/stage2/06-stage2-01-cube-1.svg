@@ -1,0 +1,44 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="取方：先框外盒再切形" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="24" class="labk">取方三步：框 → 切 → 留</text>
+
+  <text x="40" y="60" class="lab">① 框：定四个极点</text>
+  <g class="st-thin"><line x1="40" y1="80" x2="200" y2="80"/><line x1="40" y1="240" x2="200" y2="240"/>
+  <line x1="40" y1="80" x2="40" y2="240"/><line x1="200" y1="80" x2="200" y2="240"/></g>
+  <g class="dot"><circle cx="120" cy="80" r="3"/><circle cx="120" cy="240" r="3"/>
+  <circle cx="40" cy="160" r="3"/><circle cx="200" cy="160" r="3"/></g>
+  <text x="40" y="266" class="lab2">四条辅助线定出宽高，</text>
+  <text x="40" y="284" class="lab2">此时物体还不存在</text>
+
+  <text x="280" y="60" class="lab">② 切：用直线切大形</text>
+  <g class="st-thin"><line x1="280" y1="80" x2="440" y2="80"/><line x1="280" y1="240" x2="440" y2="240"/>
+  <line x1="280" y1="80" x2="280" y2="240"/><line x1="440" y1="80" x2="440" y2="240"/></g>
+  <path d="M300 100 L420 100 L430 150 L420 224 L300 224 L290 150 Z" class="st" fill="#f2f2f2"/>
+  <text x="280" y="266" class="lab2">八个"切点"决定转折，</text>
+  <text x="280" y="284" class="lab2">宁方勿圆</text>
+
+  <text x="520" y="60" class="lab">③ 留：擦框存真边</text>
+  <g class="st-thin"><line x1="520" y1="80" x2="680" y2="80"/><line x1="520" y1="240" x2="680" y2="240"/>
+  <line x1="520" y1="80" x2="520" y2="240"/><line x1="680" y1="80" x2="680" y2="240"/></g>
+  <path d="M540 100 L660 100 L670 150 L660 224 L540 224 L530 150 Z" class="st-ok" fill="#f2f2f2"/>
+  <text x="520" y="266" class="lab2">绿线 = 最后要留下的</text>
+  <text x="520" y="284" class="lab2">那几条真实边</text>
+</svg>

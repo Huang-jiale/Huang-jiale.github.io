@@ -1,0 +1,33 @@
+<svg viewBox="0 0 760 250" role="img" aria-label="用边缘虚实分主次与前后" xmlns="http://www.w3.org/2000/svg" width="760" height="250"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="250" class="bg-paper"/>
+  <text x="18" y="24" class="labk">同一组两物体：前的边实、对比强；后的边虚、融进空气</text>
+  <path d="M120 90 C120 60 250 60 250 90 L250 200 C250 214 120 214 120 200 Z" class="f-g1 st" stroke-width="2.4"/>
+  <ellipse cx="185" cy="90" rx="65" ry="16" class="st" stroke-width="2"/>
+  <path d="M250 130 C285 130 285 180 250 180" class="st" stroke-width="1.8"/>
+  <g class="st"><line x1="140" y1="110" x2="140" y2="198"/><line x1="154" y1="108" x2="154" y2="202"/><line x1="168" y1="108" x2="168" y2="204"/></g>
+  <text x="120" y="232" class="lab2">主体：边实、暗部沉、卡点明确 → 靠前</text>
+  <path d="M430 120 C430 92 560 92 560 120 L560 196 C560 208 430 208 430 196 Z" class="st" stroke-width="1" stroke="#bdbdbd"/>
+  <ellipse cx="495" cy="120" rx="65" ry="16" class="st" stroke-width="1" stroke="#bdbdbd"/>
+  <line x1="560" y1="140" x2="560" y2="196" class="st" stroke-dasharray="2 6" stroke="#bdbdbd"/>
+  <text x="420" y="232" class="lab2">后景：边虚、对比弱、边缘断 → 退进空气</text>
+  <line x1="330" y1="70" x2="330" y2="210" class="st-thin"/>
+  <text x="318" y="60" class="lab2">前后</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="玻璃杯的正确与错误画法" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="26" class="labk">同一个玻璃杯：左「画背后的东西 + 边缘」右「画'透明'这个词」</text>
+  <line x1="380" y1="40" x2="380" y2="284" class="st-thin"/>
+  <line x1="100" y1="50" x2="100" y2="270" class="st-thin"/>
+  <line x1="190" y1="50" x2="190" y2="270" class="st-thin"/>
+  <line x1="280" y1="50" x2="280" y2="270" class="st-thin"/>
+  <ellipse cx="190" cy="70" rx="60" ry="12" class="st"/>
+  <ellipse cx="190" cy="73" rx="53" ry="9" class="st-thin"/>
+  <line x1="130" y1="70" x2="142" y2="240" class="st"/>
+  <line x1="250" y1="70" x2="238" y2="240" class="st"/>
+  <ellipse cx="190" cy="240" rx="48" ry="12" class="st"/>
+  <ellipse cx="190" cy="232" rx="40" ry="9" class="st-thin"/>
+  <path d="M142 150 A48 11 0 0 0 238 150" class="st"/>
+  <line x1="146" y1="80" x2="152" y2="236" class="st" stroke-width="5"/>
+  <line x1="234" y1="80" x2="228" y2="236" class="st" stroke-width="5"/>
+  <path d="M150 60 L150 74 M232 60 L232 74" class="f-white"/>
+  <line x1="118" y1="150" x2="118" y2="270" class="st-red"/>
+  <line x1="262" y1="150" x2="262" y2="270" class="st-red"/>
+  <line x1="100" y1="150" x2="130" y2="150" class="st-red"/>
+  <line x1="250" y1="150" x2="280" y2="150" class="st-red"/>
+  <ellipse cx="196" cy="256" rx="26" ry="6" class="f-white st-thin"/>
+  <text x="40" y="290" class="labk">对</text>
+  <text x="66" y="290" class="lab2">背景条纹在杯壁处折断、杯中被拉宽；两侧边缘最黑</text>
+  <ellipse cx="560" cy="70" rx="60" ry="12" class="st-bad"/>
+  <path d="M500 70 L512 240 L608 240 L620 70 Z" class="f-g3"/>
+  <path d="M500 70 L512 240 L608 240 L620 70" class="st-bad"/>
+  <line x1="512" y1="240" x2="608" y2="240" class="st-bad"/>
+  <ellipse cx="536" cy="120" rx="18" ry="26" class="f-white" transform="rotate(-12 536 120)"/>
+  <text x="410" y="290" class="labk">错</text>
+  <text x="436" y="290" class="lab2">整杯平涂灰 + 一团白 = 塑料，透明感反而没了</text>
+  <text x="640" y="150" class="lab2">缺：厚度、水线、</text>
+  <text x="640" y="168" class="lab2">边缘、折射、焦散</text>
+</svg>

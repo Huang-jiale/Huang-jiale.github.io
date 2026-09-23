@@ -1,0 +1,34 @@
+<svg viewBox="0 0 760 220" role="img" aria-label="五种线质量样本" xmlns="http://www.w3.org/2000/svg" width="760" height="220"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="220" class="bg-paper"/>
+  <text x="18" y="24" class="labk">五种线质量：实 · 虚 · 粗 · 细 · 断 —— 各用各的地方</text>
+  <line x1="30" y1="80" x2="120" y2="80" class="st" stroke-width="1.6"/>
+  <text x="52" y="66" class="lab2">实</text><text x="24" y="106" class="lab2">卡点/主体边</text><text x="30" y="124" class="lab2">/受光转折</text>
+  <line x1="170" y1="80" x2="260" y2="80" class="st" stroke-width="1" stroke="#b4b4b4"/>
+  <text x="192" y="66" class="lab2">虚</text><text x="164" y="106" class="lab2">松点/背光边</text><text x="164" y="124" class="lab2">/次要形</text>
+  <line x1="310" y1="80" x2="400" y2="80" class="st" stroke-width="3.4"/>
+  <text x="332" y="66" class="lab2">粗</text><text x="304" y="106" class="lab2">最靠前/最重</text><text x="304" y="124" class="lab2">的少数几处</text>
+  <line x1="450" y1="80" x2="540" y2="80" class="st" stroke-width="0.6"/>
+  <text x="472" y="66" class="lab2">细</text><text x="444" y="106" class="lab2">转折弱/远景</text><text x="444" y="124" class="lab2">/辅助结构</text>
+  <line x1="590" y1="80" x2="700" y2="80" class="st" stroke-dasharray="2 7"/>
+  <text x="612" y="66" class="lab2">断</text><text x="596" y="106" class="lab2">反光/空气感</text><text x="596" y="124" class="lab2">/最远最虚处</text>
+  <text x="18" y="180" class="lab">同一根轮廓，从上到下常会走完"粗→实→虚→断"，</text>
+  <text x="18" y="202" class="lab">这就不是铁丝，而是"面在往里转、并退进空气里"。</text>
+</svg>

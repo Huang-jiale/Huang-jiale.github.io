@@ -1,0 +1,46 @@
+<svg viewBox="0 0 760 280" role="img" aria-label="正形与负形" xmlns="http://www.w3.org/2000/svg" width="760" height="280"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="280" class="bg-paper"/>
+  <text x="18" y="24" class="labk">同一把椅子：左图画"椅子"（正形），右图画"空隙"（负形）</text>
+
+  <g>
+    <rect x="60" y="60" width="150" height="14" class="st" fill="#dcdcdc"/>
+    <rect x="66" y="74" width="12" height="90" class="st" fill="#dcdcdc"/>
+    <rect x="192" y="74" width="12" height="90" class="st" fill="#dcdcdc"/>
+    <rect x="52" y="140" width="166" height="14" class="st" fill="#dcdcdc"/>
+    <rect x="58" y="154" width="12" height="86" class="st" fill="#dcdcdc"/>
+    <rect x="200" y="154" width="12" height="86" class="st" fill="#dcdcdc"/>
+    <text x="96" y="266" class="lab2">正形：容易画成正视图</text>
+  </g>
+
+  <g>
+    <rect x="420" y="60" width="160" height="180" class="st-thin" fill="none"/>
+    <path d="M420 60 h160 v14 h-12 v90 h12 v16 h-166 v-16 h12 v-90 h-6 Z" fill="#4f4f4f" stroke="#1c1c1c"/>
+    <path d="M426 154 h12 v86 h-12 Z" fill="#4f4f4f" stroke="#1c1c1c"/>
+    <path d="M568 154 h12 v86 h-12 Z" fill="#4f4f4f" stroke="#1c1c1c"/>
+    <path d="M438 154 h130 v86 h-12 v-86 M438 240 h130 v-86" fill="none" class="st-thin"/>
+    <text x="452" y="196" class="lab2" fill="#fff">空隙 A</text>
+    <text x="452" y="228" class="lab2" fill="#fff">空隙 B（最大的一块）</text>
+    <text x="404" y="266" class="lab2">负形：把空隙当形状画，椅子自己就出来了</text>
+  </g>
+  <text x="240" y="120" class="lab">→</text>
+  <text x="240" y="146" class="lab2">同一目标，</text>
+  <text x="240" y="164" class="lab2">两条路径</text>
+</svg>

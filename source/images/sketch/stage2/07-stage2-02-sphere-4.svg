@@ -1,0 +1,57 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="四种光位下明暗交界线的位置变化" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="24" class="labk">同一颗球 · 四种光位 · 交界线（红带）从"靠下"→"居中"→"贴轮廓"依次搬家</text>
+
+  <text x="34" y="58" class="lab">① 顶光 70°~80°</text>
+  <g class="st-blue"><line x1="70" y1="66" x2="70" y2="92"/><line x1="92" y1="62" x2="92" y2="88"/><line x1="114" y1="66" x2="114" y2="92"/></g>
+  <circle cx="92" cy="150" r="52" class="st f-g1"/>
+  <path d="M47 176 Q92 208 137 176" class="st-red" stroke-width="9" opacity=".45"/>
+  <circle cx="76" cy="116" r="9" class="f-white"/>
+  <text x="18" y="232" class="lab2">带横躺下半球，距轮廓 0.4R</text>
+  <text x="18" y="250" class="lab2">亮部最大，暗部只剩底座</text>
+
+  <text x="204" y="58" class="lab">② 侧顺光 45°</text>
+  <g class="st-blue"><line x1="176" y1="70" x2="204" y2="98"/><line x1="198" y1="62" x2="226" y2="90"/>
+  <line x1="220" y1="60" x2="248" y2="88"/></g>
+  <circle cx="262" cy="150" r="52" class="st f-g1"/>
+  <path d="M288 105 Q316 152 236 195" class="st-red" stroke-width="9" opacity=".45"/>
+  <circle cx="240" cy="122" r="9" class="f-white"/>
+  <text x="188" y="232" class="lab2">标准光位：距轮廓 0.5R</text>
+  <text x="188" y="250" class="lab2">亮灰暗三段最匀称</text>
+
+  <text x="374" y="58" class="lab">③ 低角度平侧光 15°~25°</text>
+  <g class="st-blue"><line x1="348" y1="140" x2="378" y2="140"/><line x1="348" y1="152" x2="378" y2="152"/>
+  <line x1="348" y1="164" x2="378" y2="164"/></g>
+  <circle cx="432" cy="150" r="52" class="st f-g1"/>
+  <path d="M432 98 Q454 150 432 202" class="st-red" stroke-width="9" opacity=".45"/>
+  <circle cx="404" cy="140" r="9" class="f-white"/>
+  <text x="358" y="232" class="lab2">带跑到球心附近，暗部 60%</text>
+  <text x="358" y="250" class="lab2">最容易画黑、丢掉反光层次</text>
+
+  <text x="544" y="58" class="lab">④ 正面顺光 0°~10°</text>
+  <g class="st-blue"><line x1="556" y1="96" x2="586" y2="118"/><line x1="566" y1="86" x2="596" y2="108"/></g>
+  <circle cx="602" cy="150" r="52" class="st f-g1"/>
+  <path d="M648 126 Q656 150 648 174" class="st-bad" stroke-width="5" opacity=".5"/>
+  <text x="544" y="232" class="lab2">带几乎贴到轮廓上，明暗拉开极短</text>
+  <text x="544" y="250" class="lab2">必须靠投影 + 轮廓挤压才立得住</text>
+
+  <text x="18" y="284" class="lab2">蓝虚线 = 光线方向；红带 = 明暗交界线（宽度按实际 8~20 mm 折算）。高光始终在"最正面"，不随交界线跑。</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg viewBox="0 0 760 250" role="img" aria-label="轮廓是面转到最外那一圈" xmlns="http://www.w3.org/2000/svg" width="760" height="250"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="250" class="bg-paper"/>
+  <text x="18" y="24" class="labk">轮廓 = 面转到最外那一圈，不是描上去的铁丝边</text>
+  <circle cx="140" cy="130" r="70" class="st-ok" stroke-width="2.2"/>
+  <ellipse cx="140" cy="130" rx="34" ry="70" class="st-thin"/>
+  <ellipse cx="140" cy="130" rx="70" ry="34" class="st-thin"/>
+  <line x1="140" y1="130" x2="200" y2="86" class="st-blue"/>
+  <text x="150" y="76" class="lab2">面朝外铺，铺到最外沿收成这条边</text>
+  <text x="86" y="226" class="lab2">球：整圈轮廓=转过去 90° 之点</text>
+  <path d="M420 96 L500 96 L500 184 L420 184 Z" class="f-none st-thin"/>
+  <path d="M420 96 L456 72 L536 72 L500 96 Z" class="f-none st-thin"/>
+  <path d="M500 96 L536 72 L536 160 L500 184 Z" class="f-none st-thin"/>
+  <path d="M420 96 L420 184 L500 184" class="st-ok" stroke-width="2.2"/>
+  <path d="M420 96 L456 72 L536 72 L536 160" class="st-ok" stroke-width="2.2"/>
+  <path d="M500 96 L536 72" class="st"/>
+  <line x1="500" y1="96" x2="500" y2="184" class="st-red"/>
+  <text x="560" y="120" class="lab2">绿色加粗：转到最外=轮廓</text>
+  <text x="560" y="140" class="lab2">红色竖线：两面的内部交界</text>
+  <text x="560" y="158" class="lab2">→ 一条在"边"上，一条在"面"里</text>
+  <text x="380" y="226" class="lab2">立方体：外圈是轮廓，中间的棱是面的转折</text>
+</svg>

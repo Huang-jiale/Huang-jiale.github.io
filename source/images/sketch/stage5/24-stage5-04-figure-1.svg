@@ -1,0 +1,91 @@
+<svg viewBox="0 0 760 340" role="img" aria-label="立七坐五盘三半示意图" xmlns="http://www.w3.org/2000/svg" width="760" height="340"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="340" class="bg-paper"/>
+  <text x="18" y="24" class="labk">「立七坐五盘三半」：头是唯一的尺子</text>
+  <line x1="56" y1="292" x2="600" y2="292" class="st"/>
+  <text x="56" y="312" class="lab2">地面</text>
+  <rect x="74" y="110" width="20" height="26" class="st"/>
+  <rect x="74" y="136" width="20" height="26" class="st"/>
+  <rect x="74" y="162" width="20" height="26" class="st"/>
+  <rect x="74" y="188" width="20" height="26" class="st"/>
+  <rect x="74" y="214" width="20" height="26" class="st"/>
+  <rect x="74" y="240" width="20" height="26" class="st"/>
+  <rect x="74" y="266" width="20" height="26" class="st"/>
+  <text x="68" y="140" class="lab2" text-anchor="end">1</text>
+  <text x="68" y="166" class="lab2" text-anchor="end">2</text>
+  <text x="68" y="192" class="lab2" text-anchor="end">3</text>
+  <text x="68" y="218" class="lab2" text-anchor="end">4</text>
+  <text x="68" y="244" class="lab2" text-anchor="end">5</text>
+  <text x="68" y="270" class="lab2" text-anchor="end">6</text>
+  <text x="68" y="296" class="lab2" text-anchor="end">7</text>
+  <circle cx="140" cy="123" r="13" class="st"/>
+  <line x1="140" y1="136" x2="140" y2="144" class="st"/>
+  <line x1="114" y1="144" x2="166" y2="144" class="st"/>
+  <line x1="140" y1="144" x2="140" y2="201" class="st"/>
+  <line x1="100" y1="201" x2="182" y2="201" class="st-red"/>
+  <path d="M114 144 L112 180 L110 204" class="st"/>
+  <path d="M166 144 L168 180 L170 204" class="st"/>
+  <path d="M128 201 L124 286 L116 292" class="st"/>
+  <path d="M152 201 L156 286 L164 292" class="st"/>
+  <circle cx="112" cy="180" r="4" class="dot"/>
+  <circle cx="170" cy="204" r="4" class="dot"/>
+  <text x="186" y="205" class="lab2">＝身高一半</text>
+  <rect x="286" y="110" width="20" height="26" class="st"/>
+  <rect x="286" y="136" width="20" height="26" class="st"/>
+  <rect x="286" y="162" width="20" height="26" class="st"/>
+  <rect x="286" y="188" width="20" height="26" class="st"/>
+  <rect x="286" y="214" width="20" height="26" class="st"/>
+  <text x="280" y="140" class="lab2" text-anchor="end">1</text>
+  <text x="280" y="166" class="lab2" text-anchor="end">2</text>
+  <text x="280" y="192" class="lab2" text-anchor="end">3</text>
+  <text x="280" y="218" class="lab2" text-anchor="end">4</text>
+  <text x="280" y="244" class="lab2" text-anchor="end">5</text>
+  <circle cx="352" cy="123" r="13" class="st"/>
+  <line x1="352" y1="136" x2="352" y2="150" class="st"/>
+  <line x1="326" y1="150" x2="378" y2="150" class="st"/>
+  <line x1="352" y1="150" x2="352" y2="240" class="st"/>
+  <path d="M326 150 L322 200 L340 234" class="st"/>
+  <line x1="352" y1="240" x2="404" y2="240" class="st"/>
+  <path d="M404 240 L404 286 L412 292" class="st"/>
+  <path d="M330 240 L330 292 M400 240 L400 292" class="st-thin"/>
+  <text x="410" y="196" class="lab2">坐高：头顶到凳面</text>
+  <rect x="470" y="201" width="20" height="26" class="st"/>
+  <rect x="470" y="227" width="20" height="26" class="st"/>
+  <rect x="470" y="253" width="20" height="26" class="st"/>
+  <rect x="470" y="279" width="20" height="13" class="st"/>
+  <circle cx="540" cy="214" r="13" class="st"/>
+  <line x1="540" y1="227" x2="540" y2="240" class="st"/>
+  <line x1="514" y1="240" x2="566" y2="240" class="st"/>
+  <line x1="540" y1="240" x2="540" y2="266" class="st"/>
+  <path d="M540 266 Q504 276 500 292 L580 292 Q576 276 540 266" class="st"/>
+  <path d="M514 240 L508 268 L520 280" class="st"/>
+  <path d="M566 240 L572 268 L560 280" class="st"/>
+  <text x="140" y="316" class="labk" text-anchor="middle">立七</text>
+  <text x="140" y="332" class="lab2" text-anchor="middle">站直＝7 个头高</text>
+  <text x="352" y="316" class="labk" text-anchor="middle">坐五</text>
+  <text x="352" y="332" class="lab2" text-anchor="middle">坐下＝5 个头高</text>
+  <text x="540" y="316" class="labk" text-anchor="middle">盘三半</text>
+  <text x="540" y="332" class="lab2" text-anchor="middle">盘腿＝3.5 个头高</text>
+  <text x="612" y="120" class="labk">这三句是取整值</text>
+  <text x="612" y="162" class="lab2">真人在 7～8 头</text>
+  <text x="612" y="216" class="labk">红点两处必卡</text>
+  <text x="612" y="238" class="lab2">肘：与腰同高</text>
+  <text x="612" y="258" class="lab2">腕：与耻骨同高</text>
+</svg>

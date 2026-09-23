@@ -1,0 +1,37 @@
+<svg viewBox="0 0 760 210" role="img" aria-label="从球体到苹果的四步改动" xmlns="http://www.w3.org/2000/svg" width="760" height="210"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="210" class="bg-paper"/>
+  <text x="18" y="26" class="labk">从球到苹果只有三处改动：压扁、顶窝、平底</text>
+  <circle cx="95" cy="115" r="48" class="st f-none"/>
+  <text x="52" y="184" class="lab">① 球（第 07 课）</text>
+  <text x="52" y="202" class="lab2">高宽比 1 : 1</text>
+  <polygon points="327,115 312,149 275,163 238,149 223,115 238,81 275,67 312,81" class="st f-none"/>
+  <text x="212" y="184" class="lab">② 压扁 + 切成 8 段直线</text>
+  <text x="212" y="202" class="lab2">高宽比 1 : 1.1，段段是切线</text>
+  <path d="M507 115 L492 145 L467 160 L443 160 L418 145 L403 115 L418 82 L434 74 L446 90 L464 90 L476 74 L492 82 Z" class="st f-none"/>
+  <text x="372" y="184" class="lab">③ 顶部挖窝、底部切平</text>
+  <text x="372" y="202" class="lab2">窝宽 0.28、深 0.10（×果径）</text>
+  <path d="M687 115 L672 145 L647 160 L623 160 L598 145 L583 115 L598 82 L614 74 L626 90 L644 90 L656 74 L672 82 Z" class="st f-none"/>
+  <path d="M632 90 L628 66 L620 56" class="st"/>
+  <path d="M612 158 L606 150 M658 158 L664 150" class="st-thin"/>
+  <path d="M600 150 Q634 124 668 68" class="st-red"/>
+  <text x="545" y="184" class="lab">④ 果蒂三笔 + 底部足</text>
+  <text x="545" y="202" class="lab2">只许 2 分钟，且必须放在调子之后</text>
+</svg>

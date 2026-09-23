@@ -1,0 +1,43 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="扁率随离视平线的距离变化" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="24" class="labk">同一个圆（半径 80），离 HL 越近越扁</text>
+  <line x1="18" y1="56" x2="430" y2="56" class="st-blue"/>
+  <text x="380" y="44" class="lab2">HL 视平线</text>
+  <ellipse cx="150" cy="56"  rx="80" ry="2"  class="st" fill="none"/>
+  <text x="250" y="76" class="lab2">距离 0 → 一条线（完全侧对）</text>
+  <ellipse cx="150" cy="96"  rx="80" ry="12" class="st" fill="#f2f2f2"/>
+  <text x="250" y="100" class="lab2">距离 40 → 极扁（杯口在眼前）</text>
+  <ellipse cx="150" cy="152" rx="80" ry="26" class="st" fill="#f2f2f2"/>
+  <text x="250" y="156" class="lab2">距离 96 → 中等（桌面物体的口）</text>
+  <ellipse cx="150" cy="228" rx="80" ry="46" class="st" fill="#f2f2f2"/>
+  <text x="250" y="232" class="lab2">距离 172 → 接近圆（俯视）</text>
+
+  <text x="470" y="60" class="labk">画椭圆的正确顺序：轴 → 端点 → 四段弧</text>
+  <g class="st-thin"><line x1="480" y1="130" x2="700" y2="130"/><line x1="590" y1="98" x2="590" y2="162"/></g>
+  <g class="dot"><circle cx="480" cy="130" r="3"/><circle cx="700" cy="130" r="3"/>
+  <circle cx="590" cy="98" r="3"/><circle cx="590" cy="162" r="3"/></g>
+  <ellipse cx="590" cy="130" rx="110" ry="32" class="st" fill="none"/>
+  <text x="470" y="192" class="lab2">① 先画长短轴十字，定圆心</text>
+  <text x="470" y="212" class="lab2">② 标出四个端点（这是"锚"）</text>
+  <text x="470" y="232" class="lab2">③ 分四段连，每段对称</text>
+  <text x="470" y="252" class="lab">✗ 一笔画两条大弧再拼 → 必歪</text>
+  <text x="470" y="278" class="lab2">检查：把纸转 180°，椭圆应当与原来完全重合</text>
+</svg>

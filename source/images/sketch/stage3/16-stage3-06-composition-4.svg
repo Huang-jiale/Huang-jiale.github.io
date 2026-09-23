@@ -1,0 +1,38 @@
+<svg viewBox="0 0 760 280" role="img" aria-label="三种黑白灰面积分配" xmlns="http://www.w3.org/2000/svg" width="760" height="280"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="280" class="bg-paper"/>
+  <text x="18" y="26" class="labk">三种面积配方：高调 / 中调（推荐）/ 低调</text>
+  <text x="30" y="66" class="lab">高调 75 / 20 / 5</text>
+  <rect x="170" y="50" width="375" height="24" class="st f-white"/>
+  <rect x="545" y="50" width="100" height="24" class="st f-g2"/>
+  <rect x="645" y="50" width="25" height="24" class="st f-g5"/>
+  <text x="30" y="122" class="lab">中调 60 / 30 / 10</text>
+  <rect x="170" y="106" width="300" height="24" class="st f-white"/>
+  <rect x="470" y="106" width="150" height="24" class="st f-g2"/>
+  <rect x="620" y="106" width="50" height="24" class="st f-g5"/>
+  <text x="30" y="178" class="lab">低调 30 / 40 / 30</text>
+  <rect x="170" y="162" width="150" height="24" class="st f-white"/>
+  <rect x="320" y="162" width="200" height="24" class="st f-g2"/>
+  <rect x="520" y="162" width="150" height="24" class="st f-g5"/>
+  <text x="170" y="204" class="lab2">白（1~3 级）　　　　　灰（4~6 级）　　　　　黑（7~9 级）</text>
+  <text x="30" y="238" class="lab2">高调：干净但容易"平"，必须靠 5% 的黑提神（第 07 课的交界线一点）。</text>
+  <text x="30" y="256" class="lab2">中调：本阶段主用。10% 的黑虽然少，却决定画面精神不精神。</text>
+  <text x="30" y="274" class="lab2">低调：戏剧感强，但要求黑连成大形，否则"花"；建议第 27 课再练。</text>
+</svg>

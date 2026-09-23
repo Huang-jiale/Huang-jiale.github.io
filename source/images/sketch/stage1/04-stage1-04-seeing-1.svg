@@ -1,0 +1,48 @@
+<svg viewBox="0 0 760 270" role="img" aria-label="铅笔测量法与比例搬运" xmlns="http://www.w3.org/2000/svg" width="760" height="270"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="270" class="bg-paper"/>
+  <text x="18" y="24" class="labk">量实物 → 得到比值 → 在纸上重画这个比值</text>
+  <rect x="52" y="70" width="66" height="120" rx="4" class="st" fill="#f2f2f2"/>
+  <path d="M118 108 q30 4 30 26 q0 22 -30 24" class="st" fill="none"/>
+  <ellipse cx="85" cy="70" rx="33" ry="9" class="st" fill="#fff"/>
+  <line x1="180" y1="52" x2="180" y2="206" class="st" stroke-width="6"/>
+  <path d="M172 70 q-14 4 -6 16 q10 2 12 -8" class="st" fill="#fff"/>
+  <text x="196" y="66" class="lab2">手臂锁直、笔竖直</text>
+  <line x1="150" y1="70" x2="212" y2="70" class="st-blue"/>
+  <line x1="150" y1="190" x2="212" y2="190" class="st-blue"/>
+  <text x="216" y="136" class="lab2">拇指卡出 1 个单位</text>
+
+  <text x="330" y="90" class="lab">① 高 : 宽 = 1 : 0.55</text>
+  <text x="330" y="112" class="lab2">② 高 : 总高（含把手顶）= 1 : 1.0</text>
+  <text x="330" y="134" class="lab">③ 把手宽 = 0.4 个"高"</text>
+  <text x="330" y="156" class="lab2">④ 杯口椭圆的扁率 ≈ 高的 0.15</text>
+  <text x="330" y="184" class="labk">→ 四个比值就够把形定住</text>
+
+  <g>
+    <line x1="600" y1="60" x2="600" y2="180" class="st"/>
+    <line x1="588" y1="60" x2="612" y2="60" class="st"/>
+    <line x1="588" y1="180" x2="612" y2="180" class="st"/>
+    <line x1="640" y1="60" x2="640" y2="126" class="st"/>
+    <text x="654" y="100" class="lab2">在纸上先刻"高"</text>
+    <text x="645.9" y="120" class="lab2">再刻 0.55×"高"当宽</text>
+    <rect x="600" y="60" width="22" height="120" class="st-thin" fill="none"/>
+    <text x="560" y="206" class="lab2">先画方框，再往框里塞椭圆和把手</text>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<svg viewBox="0 0 760 420" role="img" aria-label="衣纹跟形走：先画被衣服撑住的身体" xmlns="http://www.w3.org/2000/svg" width="760" height="420"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="420" class="bg-paper"/>
+  <text x="18" y="24" class="labk">衣纹跟形走：先有身体，再有线</text>
+  <rect x="232" y="46" width="36" height="46" class="st-thin"/>
+  <path d="M204 100 L296 100 L284 190 L216 190 Z" class="st-thin"/>
+  <path d="M216 194 L284 194 L292 246 L208 246 Z" class="st-thin"/>
+  <path d="M212 104 L196 112 L182 152 L200 158 L198 250 L302 250 L300 158 L318 152 L304 112 L288 104 L250 120 Z" class="st"/>
+  <path d="M200 250 L302 250 L296 344 L262 344 L252 280 L240 344 L206 344 Z" class="st"/>
+  <path d="M204 162 Q214 205 208 250" class="st"/>
+  <path d="M296 162 Q286 205 292 250" class="st"/>
+  <path d="M226 254 q10 34 4 86" class="st"/>
+  <path d="M276 254 q-8 34 -2 86" class="st"/>
+  <path d="M212 194 L206 250" class="st-thin"/>
+  <path d="M186 148 l14 8 l-12 8" class="st-red"/>
+  <circle cx="196" cy="112" r="5" class="dot"/>
+  <circle cx="304" cy="112" r="5" class="dot"/>
+  <circle cx="208" cy="246" r="5" class="dot"/>
+  <circle cx="292" cy="246" r="5" class="dot"/>
+  <line x1="304" y1="112" x2="336" y2="112" class="st-thin"/>
+  <text x="340" y="108" class="lab">支撑点：两个肩峰</text>
+  <text x="340" y="126" class="lab2">　上衣的纹全部从这两点出发</text>
+  <line x1="300" y1="196" x2="336" y2="196" class="st-thin"/>
+  <text x="340" y="192" class="lab">离形：腰侧是空的</text>
+  <text x="340" y="210" class="lab2">　只画一条长垂弧，别补短线</text>
+  <line x1="292" y1="250" x2="336" y2="250" class="st-thin"/>
+  <text x="340" y="246" class="lab">第二组支撑：髋与裆</text>
+  <text x="340" y="264" class="lab2">　裤纹从裆发散，从膝再发散</text>
+  <line x1="296" y1="330" x2="336" y2="330" class="st-thin"/>
+  <text x="340" y="326" class="lab">膝顶住 → 放射</text>
+  <text x="340" y="344" class="lab2">　膝以下布又变平行长直线</text>
+  <text x="560" y="72" class="labk">画的顺序</text>
+  <text x="560" y="100" class="lab2">① 虚线画身体（灰）</text>
+  <text x="560" y="122" class="lab2">② 定 2～4 个支撑点</text>
+  <text x="560" y="144" class="lab2">③ 从点出发画纹</text>
+  <text x="560" y="166" class="lab2">④ 空处只画一条长弧</text>
+  <text x="560" y="200" class="labk">三条禁令</text>
+  <text x="560" y="228" class="lab2">✗ 没有源头的弯线</text>
+  <text x="560" y="250" class="lab2">✗ 一个支撑点上画六条</text>
+  <text x="560" y="272" class="lab2">✗ 全身纹一样密</text>
+  <text x="560" y="308" class="lab2">密＝支撑处；疏＝悬空处。</text>
+  <text x="560" y="330" class="lab2">疏密比数量重要得多。</text>
+  <text x="18" y="400" class="lab2">灰虚线是被衣服盖住的身体——它必须先存在。画衣服时问三句：布在哪被顶住？哪离开身体？哪被折叠？答完再落笔。</text>
+</svg>

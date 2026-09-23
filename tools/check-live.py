@@ -48,14 +48,20 @@ def norm(p):
     return p.replace('\\', '/')
 
 
-posts = {}
+def fm_cats(text):
+    m = re.search(r'^categories:\n((?:  - .*\n)+)', text, re.M)
+    return [re.sub(r'^\s*-\s*["\']?(.*?)["\']?\s*$', r'\1', l) for l in m.group(1).splitlines()] if m else []
+
+
+posts = {}                       # slug -> (线上路径, 全文, 分类链)
 for p in glob.glob(f'source/_posts/{MOD}/**/*.md', recursive=True):
     t = open(p, encoding='utf-8').read()
     m = re.search(r'^slug:\s*(\S+)', t, re.M)
+    slug = m.group(1) if m else norm(p).split('/')[-1][:-3]     # 没写 slug 时 permalink 用文件名
     d = re.search(r'^date:\s*(\d{4})-(\d{2})-(\d{2})', t, re.M)
-    posts[m.group(1)] = (f'{d.group(1)}/{d.group(2)}/{d.group(3)}/{m.group(1)}/', t)
-check(len(posts) >= 30, f'源里 {MOD} 文章 {len(posts)} 篇（slug 取自 front-matter）')
-check(len(posts) == len(set(posts)), 'slug 无重复')
+    posts[slug] = (f'{d.group(1)}/{d.group(2)}/{d.group(3)}/{slug}/', t, fm_cats(t))
+check(len(posts) >= 5, f'源里 {MOD} 文章 {len(posts)} 篇（slug 取自 front-matter）')
+check(all(c for _, _, c in posts.values()), f'{MOD} 每篇都挂了分类')
 
 def safe(path):
     """网络抖动不算内容错误：拿不到就标 None，单独报「没查到」而不是整个脚本崩。"""
@@ -82,26 +88,35 @@ with ThreadPoolExecutor(8) as ex:
     codes = list(ex.map(lambda u: (u, safe(u.lstrip('/'))[0]), sampled))
 never = [u for u, c in codes if c is None]
 bad = [u for u, c in codes if c is not None and c != 200]
-check(len(imgs) >= 50, f'页面里出现图片 {len(imgs)} 张' + (f'，本次抽查 {len(sampled)} 张' if limit else ''))
+check(len(imgs) >= 20, f'页面里出现图片 {len(imgs)} 张' + (f'，本次抽查 {len(sampled)} 张' if limit else ''))
 check(not bad, '抽查的图片线上全部 200', str(bad[:3]))
 check(not never, '抽查没有因网络超时而漏掉', str(never[:3]))
 
-for cat in ['', '27%E8%80%83%E5%AD%A3/', '27%E8%80%83%E5%AD%A3/%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3/',
-            '27%E8%80%83%E5%AD%A3/%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3/%E4%B8%AD%E5%BF%83%E7%90%86%E8%A7%A3/']:
-    links = set()
-    page = ''
-    for _ in range(10):                                   # 分类页每页 10 条，翻到没有下一页为止
-        html = get(f'categories/%E8%A1%8C%E6%B5%8B/{cat}{page}')[1].decode('utf-8', 'replace')
-        found = set(re.findall(r'href="[^"]*?/(xc-[a-z0-9-]+)/"', html))
+def cat_page(path):
+    """翻完一个分类页的全部分页，返回合起来看到的本模块 slug。"""
+    links, page = set(), ''
+    for _ in range(10):                                   # 分类页每页 10 条，翻到没有新文章为止
+        html = get(f'{path}{page}')[1].decode('utf-8', 'replace')
+        found = {s for s in re.findall(r'href="[^"]*?/([a-z][a-z0-9-]{2,})/"', html)} & set(posts)
         if not found or found <= links:
             break
         links |= found
         page = f'page/{int(page.split("/")[1]) + 1}/' if page.startswith('page/') else 'page/2/'
-    want = len(posts) if cat in ('', '27%E8%80%83%E5%AD%A3/') else None
-    if want:
-        check(links == set(posts), f'分类页 /categories/行测/{urllib.parse.unquote(cat)} 收全 {len(links)} 篇', f'期望 {want}')
-    else:
-        check(len(links) > 0, f'分类页 /categories/行测/{urllib.parse.unquote(cat)} 有 {len(links)} 篇')
+    return links
+
+
+# 源里挂过的每条分类链都要有线上分类页；Hexo 把分类名 slug 化后才做目录（空格变成 `-`）
+cat_want = {}
+for slug, (_, _, cats) in posts.items():
+    for i in range(len(cats)):
+        cat_want.setdefault(tuple(cats[:i + 1]), set()).add(slug)
+paths = {k: 'categories/' + '/'.join(urllib.parse.quote(c.replace(' ', '-')) for c in k) + '/' for k in cat_want}
+with ThreadPoolExecutor(8) as ex:
+    got = list(ex.map(lambda k: (k, cat_page(paths[k])), sorted(cat_want)))
+for k, links in got:
+    check(links == cat_want[k], f'分类页 /{" / ".join(k)} 收全 {len(links)} 篇',
+          f'期望 {len(cat_want[k])}，缺 {sorted(cat_want[k] - links)[:3]}')
 
 print('\n%s' % ('线上核对全部通过' if not fail else f'{len(fail)} 项失败'))
+sys.stdout.flush()          # stdout 被我换成 TextIOWrapper 了，sys.exit 时不一定帮你刷管道
 sys.exit(1 if fail else 0)

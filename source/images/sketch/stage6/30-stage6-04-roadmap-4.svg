@@ -1,0 +1,66 @@
+<svg viewBox="0 0 760 320" role="img" aria-label="一年自学节奏：四个季度、十二个月主题" xmlns="http://www.w3.org/2000/svg" width="760" height="320"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="320" class="bg-paper"/>
+  <text x="18" y="24" class="labk">一年节奏：每季度一个主攻，每月一张长期 + 每周六张速写</text>
+  <g stroke="#1c1c1c" stroke-width="1">
+    <rect x="70"  y="44" width="212" height="52" class="f-g1"/>
+    <rect x="288" y="44" width="212" height="52" class="f-g1"/>
+    <rect x="506" y="44" width="232" height="52" class="f-g1"/>
+    <rect x="70"  y="112" width="212" height="52" class="f-g2"/>
+    <rect x="288" y="112" width="212" height="52" class="f-g2"/>
+    <rect x="506" y="112" width="232" height="52" class="f-g2"/>
+    <rect x="70"  y="180" width="212" height="52" class="f-g3"/>
+    <rect x="288" y="180" width="212" height="52" class="f-g3"/>
+    <rect x="506" y="180" width="232" height="52" class="f-g3"/>
+    <rect x="70"  y="248" width="212" height="52" class="f-g4"/>
+    <rect x="288" y="248" width="212" height="52" class="f-g4"/>
+    <rect x="506" y="248" width="232" height="52" class="f-g4"/>
+  </g>
+  <text x="24" y="76" class="lab">Q1</text>
+  <text x="24" y="144" class="lab">Q2</text>
+  <text x="24" y="212" class="lab">Q3</text>
+  <text x="24" y="280" class="lab">Q4</text>
+  <g class="lab2">
+    <text class="lab2" x="80"  y="66">M1 线条·九格·球体</text>
+    <text class="lab2" x="80"  y="86">每天 20 分钟基础</text>
+    <text class="lab2" x="298" y="66">M2 几何体组合＋透视</text>
+    <text class="lab2" x="298" y="86">每周 1 张 4 小时</text>
+    <text class="lab2" x="516" y="66">M3 静物三件套＋构图</text>
+    <text class="lab2" x="516" y="86">月末：8 小时作业 ×1</text>
+    <text class="lab2" x="80"  y="134">M4 结构素描·方盒概括</text>
+    <text class="lab2" x="80"  y="154">每天 12 分钟默写</text>
+    <text class="lab2" x="298" y="134">M5 质感·衬布·边缘</text>
+    <text class="lab2" x="298" y="154">每周 1 张 6 小时</text>
+    <text class="lab2" x="516" y="134">M6 复盘月：只画 2 小时短业</text>
+    <text class="lab2" x="516" y="154">把 M1~M5 各挑一张重画</text>
+    <text class="lab2" x="80"  y="202">M7 头部·五官</text>
+    <text class="lab2" x="80"  y="222">每周 1 张 45 分钟头像</text>
+    <text class="lab2" x="298" y="202">M8 人体比例·手脚</text>
+    <text class="lab2" x="298" y="222">每天 5 张 2 分钟动态</text>
+    <text class="lab2" x="516" y="202">M9 动态速写·场景</text>
+    <text class="lab2" x="516" y="222">户外 4 张 30 分钟／周</text>
+    <text class="lab2" x="80"  y="270">M10 长期作业（人物）</text>
+    <text class="lab2" x="80"  y="290">1 张 12 小时</text>
+    <text class="lab2" x="298" y="270">M11 默写＋三视图＋光位</text>
+    <text class="lab2" x="298" y="290">题库"转化类"每月 4 题</text>
+    <text class="lab2" x="516" y="270">M12 创作 1 张＋年终展</text>
+    <text class="lab2" x="516" y="290">把 12 张挂一排，写一页结论</text>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 190"><title>排线方向与衔接示意</title><style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif}.lab{font-size:13px;fill:#333}.lab2{font-size:11.5px;fill:#777}.stroke{fill:none;stroke:#1a1a1a;stroke-width:1.4}.thin{fill:none;stroke:#888;stroke-width:.9;stroke-dasharray:4 3}.fill-g{fill:#cfcfcf}</style><rect width="100%" height="100%" fill="#fff"/>
+  <text x="18" y="26" class="lab"><tspan>① 一组线方向一致，末端自然错落</tspan></text>
+  <g class="stroke">
+    <path d="M25 40 L95 150"/><path d="M40 40 L110 150"/><path d="M55 40 L125 150"/>
+    <path d="M70 40 L140 150"/><path d="M85 40 L155 150"/><path d="M100 40 L170 150"/>
+    <path d="M115 40 L185 150"/><path d="M130 40 L200 150"/>
+  </g>
+  <text x="250" y="26" class="lab"><tspan>② 错开衔接：不要一根压一根首尾对齐</tspan></text>
+  <g class="stroke">
+    <path d="M255 55 L320 120"/><path d="M300 40 L370 118"/><path d="M345 58 L410 126"/>
+    <path d="M255 100 L318 162"/><path d="M330 104 L396 168"/><path d="M385 45 L450 112"/>
+  </g>
+  <text x="500" y="26" class="lab"><tspan>③ 交叉排线：第二层只改变疏密，不换大方向</tspan></text>
+  <g class="stroke">
+    <path d="M505 45 L575 150"/><path d="M525 42 L595 148"/><path d="M545 40 L615 146"/><path d="M565 42 L635 148"/>
+    <path d="M505 130 L635 55" stroke-width="1.1"/><path d="M512 150 L645 70" stroke-width="1.1"/>
+  </g>
+  <text x="672" y="105" class="lab2">暗</text>
+</svg>

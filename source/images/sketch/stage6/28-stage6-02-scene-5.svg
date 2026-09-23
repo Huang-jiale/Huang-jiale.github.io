@@ -1,0 +1,64 @@
+<svg viewBox="0 0 760 274" role="img" aria-label="点景人物的尺度作用与画法四步" xmlns="http://www.w3.org/2000/svg" width="760" height="274"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="274" class="bg-paper"/>
+  <text x="18" y="26" class="labk">左：人高决定空间尺度 · 右：点景人的画法只要四步</text>
+
+  <rect x="20" y="42" width="360" height="180" class="f-white" stroke="#ddd9d2"/>
+  <line x1="20" y1="150" x2="380" y2="150" class="st-thin"/>
+  <g stroke="#1c1c1c" stroke-width="1">
+    <rect x="40" y="60" width="80" height="130" fill="#dcdcdc"/>
+    <rect x="130" y="80" width="60" height="110" fill="#bfbfbf"/>
+    <rect x="200" y="100" width="50" height="90" fill="#dcdcdc"/>
+    <line x1="40" y1="103" x2="120" y2="103"/>
+    <line x1="40" y1="146" x2="120" y2="146"/>
+    <line x1="40" y1="60" x2="120" y2="60"/>
+  </g>
+  <g fill="#303030">
+    <path d="M60 210 l0 -14 l4 0 l0 14 Z"/><circle cx="62" cy="192" r="3"/>
+    <path d="M150 196 l0 -9 l3 0 l0 9 Z"/><circle cx="151.5" cy="184" r="2"/>
+    <path d="M232 186 l0 -6 l2 0 l0 6 Z"/><circle cx="233" cy="178" r="1.4"/>
+    <path d="M300 176 l0 -4 l1.6 0 l0 4 Z"/><circle cx="300.8" cy="171" r="1"/>
+  </g>
+  <text x="28" y="240" class="lab2">近处人 14mm → 中景 9mm → 5mm → 3mm；</text>
+  <text x="28" y="258" class="lab2">左侧那栋楼画了三层人高，所以它是"四层楼"，一眼可信。</text>
+
+  <rect x="410" y="42" width="330" height="180" class="f-white" stroke="#ddd9d2"/>
+  <g stroke="#1c1c1c" stroke-width="1">
+    <line x1="410" y1="150" x2="740" y2="150" class="st-thin"/>
+  </g>
+  <path d="M436 176 L436 128 M436 138 L428 156 M436 138 L446 158 M436 128 a7 7 0 1 1 0.1 0" class="st"/>
+  <path d="M508 130 L508 176" class="st-red"/>
+  <path d="M500 176 L508 130 L518 176" class="st"/>
+  <circle cx="508" cy="124" r="7" class="f-none" stroke="#1c1c1c"/>
+  <path d="M578 120 a8 8 0 1 1 0.1 0 M578 128 L578 176 M570 176 L578 132 L586 176 Z" class="f-none" stroke="#1c1c1c"/>
+  <path d="M578 128 L578 176 L566 176 L566 152 Z" fill="#4f4f4f"/>
+  <ellipse cx="592" cy="178" rx="20" ry="4" fill="#8f8f8f"/>
+  <path d="M660 118 a8 8 0 1 1 0.1 0 M660 126 L660 176 M652 176 L660 130 L668 176 Z" class="f-none" stroke="#1c1c1c"/>
+  <path d="M660 126 L660 176 L648 176 L648 152 Z" fill="#303030"/>
+  <ellipse cx="678" cy="178" rx="22" ry="4.5" fill="#4f4f4f"/>
+  <g class="lab2">
+    <text class="lab2" x="418" y="204">① 剪影</text>
+    <text class="lab2" x="490" y="204">② 动态线</text>
+    <text class="lab2" x="556" y="204">③ 一侧明暗</text>
+    <text class="lab2" x="636" y="204">④ 投影必画</text>
+  </g>
+  <text x="418" y="240" class="lab2">5mm 高的人只配两块：一个头点 + 一条身子</text>
+  <text x="418" y="258" class="lab2">没有脸、没有手指、没有衣服褶皱。有脸就全完了。</text>
+</svg>

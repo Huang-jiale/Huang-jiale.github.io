@@ -1,0 +1,64 @@
+<svg viewBox="0 0 760 268" role="img" aria-label="画的三步：剪影体块、骨架、边缘节奏" xmlns="http://www.w3.org/2000/svg" width="760" height="268"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="268" class="bg-paper"/>
+  <text x="18" y="26" class="labk">一棵树的三步：剪影 → 骨架 → 边缘节奏（每步 2 分钟，共 6 分钟）</text>
+
+  <g>
+    <rect x="20" y="42" width="220" height="156" class="f-white" stroke="#ddd9d2"/>
+    <path d="M80 150 C40 142 32 104 62 90 C58 60 98 44 120 60 C138 38 188 48 190 80 C220 90 216 134 184 146 C168 166 104 168 80 150 Z" fill="#bfbfbf"/>
+    <path d="M132 196 C130 174 128 162 126 146 L146 146 C144 164 142 178 144 196 Z" fill="#8f8f8f"/>
+    <line x1="20" y1="196" x2="240" y2="196" class="st-thin"/>
+    <text x="28" y="218" class="lab">① 剪影体块</text>
+    <text x="28" y="236" class="lab2">先当"带把手的云"，3~5 个团块，</text>
+    <text x="28" y="252" class="lab2">一叶不画。形不对，后面全白画。</text>
+  </g>
+
+  <g transform="translate(250,0)">
+    <rect x="20" y="42" width="220" height="156" class="f-white" stroke="#ddd9d2"/>
+    <path d="M80 150 C40 142 32 104 62 90 C58 60 98 44 120 60 C138 38 188 48 190 80 C220 90 216 134 184 146 C168 166 104 168 80 150 Z" class="st-thin"/>
+    <path d="M132 196 C130 174 128 162 126 146 L146 146 C144 164 142 178 144 196 Z" fill="#8f8f8f"/>
+    <g stroke="#1c1c1c" stroke-width="1.6" fill="none">
+      <path d="M136 152 L104 112"/><path d="M136 152 L160 104"/><path d="M136 152 L138 92"/>
+      <path d="M104 112 L88 98"/><path d="M160 104 L176 92"/>
+    </g>
+    <line x1="20" y1="196" x2="240" y2="196" class="st-thin"/>
+    <text x="28" y="218" class="lab">② 主干与三大枝</text>
+    <text x="28" y="236" class="lab2">枝要"伸进"团块里，末端顶到轮廓内侧；</text>
+    <text x="28" y="252" class="lab2">顺手留 2~3 个天空洞（枝间的空白）。</text>
+  </g>
+
+  <g transform="translate(500,0)">
+    <rect x="20" y="42" width="220" height="156" class="f-white" stroke="#ddd9d2"/>
+    <path d="M80 150 C40 142 32 104 62 90 C58 60 98 44 120 60 C138 38 188 48 190 80 C220 90 216 134 184 146 C168 166 104 168 80 150 Z" class="f-g5"/>
+    <circle cx="66" cy="96" r="10" class="f-white"/>
+    <circle cx="126" cy="66" r="8" class="f-white"/>
+    <circle cx="176" cy="112" r="7" class="f-white"/>
+    <circle cx="104" cy="130" r="5" class="f-white"/>
+    <path d="M132 196 C130 174 128 162 126 146 L146 146 C144 164 142 178 144 196 Z" fill="#303030"/>
+    <g stroke="#1c1c1c" stroke-width="1">
+      <line x1="42" y1="122" x2="30" y2="128"/><line x1="50" y1="140" x2="38" y2="150"/>
+      <line x1="196" y1="140" x2="210" y2="146"/><line x1="188" y1="62" x2="198" y2="50"/>
+    </g>
+    <line x1="20" y1="196" x2="240" y2="196" class="st-thin"/>
+    <text x="28" y="218" class="lab">③ 边缘节奏 + 明暗</text>
+    <text x="28" y="236" class="lab2">受光面边缘碎（缺口、小团），背光面整；</text>
+    <text x="15.4" y="252" class="lab2">白圆是天空洞，不是叶子。全画只用 6~9 度。</text>
+  </g>
+</svg>

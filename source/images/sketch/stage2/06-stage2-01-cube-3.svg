@@ -1,0 +1,41 @@
+<svg viewBox="0 0 760 276" role="img" aria-label="收拢与不平行的对比" xmlns="http://www.w3.org/2000/svg" width="760" height="276"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="276" class="bg-paper"/>
+  <text x="18" y="24" class="labk">✓ 收拢速率一致 vs ✗ 画成平行 / 收得太急</text>
+
+  <text x="40" y="58" class="lab">✓ 收拢速率一致</text>
+  <path d="M60 90 L200 112 L200 188 L60 210 Z" class="st" fill="#f2f2f2"/>
+  <g class="st-thin"><line x1="200" y1="112" x2="252" y2="124"/><line x1="200" y1="188" x2="252" y2="176"/></g>
+  <text x="40" y="236" class="lab2">前后两条竖线：近的长</text>
+  <text x="40" y="254" class="lab2">远的短；上下边延长后交于一点</text>
+
+  <text x="300" y="58" class="lab">✗ 画成平行 → 变纸片</text>
+  <g class="st-bad"><rect x="320" y="90" width="140" height="120" fill="none"/>
+  <line x1="460" y1="90" x2="460" y2="210"/></g>
+  <text x="300" y="236" class="lab2">四条边全部平行，</text>
+  <text x="300" y="254" class="lab2">没有纵深 = 一张正方形</text>
+
+  <text x="540" y="58" class="lab">✗ 收得太急 → 畸变</text>
+  <g class="st-bad"><path d="M550 80 L650 138 L650 162 L550 220 Z" fill="none"/></g>
+  <g class="st-thin"><line x1="650" y1="138" x2="700" y2="150"/><line x1="650" y1="162" x2="700" y2="152"/></g>
+  <circle cx="704" cy="151" r="4" class="dot"/>
+  <text x="540" y="236" class="lab2">两条边在极短距离内</text>
+  <text x="540" y="254" class="lab2">相交 = 透视点太近</text>
+</svg>

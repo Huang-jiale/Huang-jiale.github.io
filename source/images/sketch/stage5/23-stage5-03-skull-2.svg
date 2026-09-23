@@ -1,0 +1,47 @@
+<svg viewBox="0 0 760 320" role="img" aria-label="头骨侧面关键结构与对应的体表形状" xmlns="http://www.w3.org/2000/svg" width="760" height="320"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="320" class="bg-paper"/>
+  <text x="18" y="24" class="labk">头骨侧视：四个必须知道的结构（左）与它们在体表造成的形（右）</text>
+
+  <path d="M120 70 Q200 46 250 78 Q268 92 268 116 L282 132 L268 142 Q266 168 250 176 L246 208 Q200 226 156 210 L150 178 Q112 160 104 118 Q100 88 120 70" class="st"/>
+  <ellipse cx="216" cy="120" rx="26" ry="20" class="st"/>
+  <path d="M190 108 q-16 -4 -22 6" class="st-thin"/>
+  <path d="M242 148 l14 8 M242 158 l16 4" class="st-thin"/>
+  <path d="M150 178 Q186 196 232 186" class="st"/>
+  <path d="M246 176 L250 208" class="st"/>
+  <circle cx="150" cy="182" r="5" class="dot"/>
+  <circle cx="262" cy="150" r="5" class="dot"/>
+  <circle cx="128" cy="152" r="5" class="dot"/>
+  <circle cx="176" cy="56" r="5" class="dot"/>
+  <text x="30" y="252" class="lab2">红点＝乳突、下颌角、颧弓、额结节</text>
+  <text x="30" y="272" class="lab2">眼眶是个向后的锥坑，不是平面上的圆洞</text>
+  <text x="30" y="292" class="lab2">下颌支是一根竖条，从耳前到下巴（U 形）</text>
+
+  <text x="330" y="60" class="labk">结构 → 体表：四条推论</text>
+  <text x="330" y="92" class="lab">① 眼窝是坑</text>
+  <text x="330" y="112" class="lab2">所以眉弓到上睑之间必有一层暗</text>
+  <text x="330" y="146" class="lab">② 鼻下半是软骨</text>
+  <text x="330" y="166" class="lab2">鼻梁（骨）实、鼻头（软骨）圆、可动</text>
+  <text x="330" y="200" class="lab">③ 下颌是一整块 U</text>
+  <text x="330" y="220" class="lab2">脸的下面 1/3 是一个"整体"，</text>
+  <text x="330" y="238" class="lab2">张嘴时颏与下颌角一起动</text>
+  <text x="330" y="272" class="lab">④ 颅顶有两个结节</text>
+  <text x="330" y="292" class="lab2">头顶偏"方穹"，画成正圆＝西瓜头</text>
+</svg>

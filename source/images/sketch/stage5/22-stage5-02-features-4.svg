@@ -1,0 +1,62 @@
+<svg viewBox="0 0 760 290" role="img" aria-label="鼻子的体块搭法与明暗分布" xmlns="http://www.w3.org/2000/svg" width="760" height="290"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="290" class="bg-paper"/>
+  <text x="18" y="24" class="labk">鼻＝方柱＋尖球＋两个鼻翼球＋底面（左体块 · 中明暗 · 右写实）</text>
+
+  <path d="M96 56 L84 128 L64 146 Q96 168 128 146 L108 128 L96 56" class="st"/>
+  <ellipse cx="72" cy="148" rx="14" ry="10" class="st"/>
+  <ellipse cx="120" cy="148" rx="14" ry="10" class="st"/>
+  <ellipse cx="96" cy="134" rx="16" ry="13" class="st"/>
+  <line x1="96" y1="56" x2="96" y2="122" class="st-thin"/>
+  <text x="36" y="200" class="lab">① 四个形叠起来</text>
+  <text x="36" y="220" class="lab2">方柱／尖球／两球／底面</text>
+  <text x="36" y="240" class="lab2">这一步只允许直线</text>
+
+  <path d="M300 56 L288 128 L268 146 Q300 168 332 146 L312 128 L300 56" class="st"/>
+  <path d="M300 56 L312 128 L332 146 Q318 158 306 160 L300 56" class="f-g3 st-thin"/>
+  <path d="M268 146 Q300 168 332 146 Q300 156 268 146 Z" class="f-g5 st-thin"/>
+  <ellipse cx="276" cy="146" rx="13" ry="9" class="f-g4 st-thin"/>
+  <ellipse cx="324" cy="146" rx="13" ry="9" class="f-g4 st-thin"/>
+  <path d="M312 128 L332 146" class="st-red"/>
+  <text x="240" y="200" class="lab">② 明暗只有四块</text>
+  <text x="240" y="220" class="lab2">亮：鼻梁正面留白</text>
+  <text x="240" y="240" class="lab2">灰：侧斜面</text>
+  <text x="240" y="260" class="lab2">最黑：鼻底与鼻翼下缘</text>
+
+  <path d="M470 58 Q464 96 460 124 Q448 138 442 148 Q456 164 474 160" class="st"/>
+  <path d="M470 58 Q478 100 482 126 Q494 140 500 148 Q486 166 474 160" class="st-thin"/>
+  <path d="M446 148 q10 10 24 8" class="st-thin"/>
+  <path d="M460 124 Q474 134 482 126" class="st-thin"/>
+  <text x="418" y="200" class="lab">③ 写实只用三条线</text>
+  <text x="418" y="220" class="lab2">鼻梁一侧转折线</text>
+  <text x="418" y="240" class="lab2">鼻尖底＋鼻翼弧</text>
+  <text x="418" y="260" class="lab2">另一侧不许描边</text>
+
+  <text x="556" y="60" class="labk">鼻子的四个数字</text>
+  <text x="556" y="84" class="lab2">长＝眉弓→鼻底＝头高 1/4</text>
+  <text x="556" y="104" class="lab2">宽＝一只眼＝头高 15%</text>
+  <text x="556" y="124" class="lab2">鼻根起点＝内眼角同高</text>
+  <text x="556" y="144" class="lab2">鼻底→口裂＝这段的 1/3</text>
+  <text x="556" y="180" class="labk">鼻沟不是线，是一个凹面</text>
+  <text x="556" y="204" class="lab2">所以它上重下轻、两头虚，</text>
+  <text x="556" y="224" class="lab2">并且永远和鼻底的暗连成一气。</text>
+  <text x="556" y="256" class="lab2">光从左上来时，投影落在</text>
+  <text x="556" y="274" class="lab2">右鼻翼、右鼻沟和上唇上。</text>
+</svg>

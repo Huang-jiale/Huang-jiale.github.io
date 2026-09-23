@@ -1,0 +1,61 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="素描地基通往五个方向的分支图" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="24" class="labk">同一块地基，五个方向要补的东西完全不同</text>
+  <rect x="24" y="120" width="150" height="64" class="f-g3" stroke="#1c1c1c"/>
+  <text x="34" y="146" class="labk">素描地基</text>
+  <text x="34" y="166" class="lab2">形·阶·体·结构</text>
+  <g stroke="#1c1c1c" stroke-width="1.2" fill="none">
+    <path d="M174 138 L250 52"/>
+    <path d="M174 148 L250 106"/>
+    <path d="M174 156 L250 160"/>
+    <path d="M174 164 L250 214"/>
+    <path d="M174 172 L250 266"/>
+  </g>
+  <g stroke="#1c1c1c" stroke-width="1">
+    <rect x="252" y="30"  width="140" height="44" class="f-white"/>
+    <rect x="252" y="84"  width="140" height="44" class="f-white"/>
+    <rect x="252" y="138" width="140" height="44" class="f-white"/>
+    <rect x="252" y="192" width="140" height="44" class="f-white"/>
+    <rect x="252" y="244" width="140" height="44" class="f-white"/>
+  </g>
+  <text x="262" y="58" class="lab">设计 / 建筑</text>
+  <text x="262" y="112" class="lab">插画</text>
+  <text x="262" y="166" class="lab">国画</text>
+  <text x="262" y="220" class="lab">油画</text>
+  <text x="262" y="272" class="lab">动画 / 概念</text>
+  <g stroke="#1c1c1c" stroke-width="1">
+    <rect x="406" y="30"  width="332" height="44" class="f-g1"/>
+    <rect x="406" y="84"  width="332" height="44" class="f-g1"/>
+    <rect x="406" y="138" width="332" height="44" class="f-g1"/>
+    <rect x="406" y="192" width="332" height="44" class="f-g1"/>
+    <rect x="406" y="244" width="332" height="44" class="f-g1"/>
+  </g>
+  <text x="416" y="52" class="lab2">补：硬透视、三视图与剖视、马克笔快速表现、尺度感</text>
+  <text x="416" y="66" class="lab2">先做：每天 1 张 20 分钟"物体三视图 + 一个使用场景"</text>
+  <text x="416" y="106" class="lab2">补：叙事性构图、色彩、角色设计、把 12 格缩略图练熟</text>
+  <text x="416" y="120" class="lab2">先做：给同一故事画 12 个不同构图，各配一句文案</text>
+  <text x="416" y="160" class="lab2">补：毛笔与线条质量、白描临摹、"以线代面"的思维转换</text>
+  <text x="416" y="174" class="lab2">先做：把同一静物画两张——一张全因素素描、一张纯线白描</text>
+  <text x="416" y="214" class="lab2">补：色彩关系（明度对了才谈色彩）、笔触、底层单色画法</text>
+  <text x="416" y="228" class="lab2">先做：单色（熟褐或黑）画 6 张静物，只解决明度</text>
+  <text x="416" y="266" class="lab2">补：速度（30 秒到 5 分钟）、表演与姿态线、模型表与转面</text>
+  <text x="416" y="280" class="lab2">先做：每天 20 张 30 秒动态 + 一个角色的转面表</text>
+</svg>

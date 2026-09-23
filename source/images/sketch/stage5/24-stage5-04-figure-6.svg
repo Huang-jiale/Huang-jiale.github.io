@@ -1,0 +1,95 @@
+<svg viewBox="0 0 760 460" role="img" aria-label="全身起形六步流程" xmlns="http://www.w3.org/2000/svg" width="760" height="460"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="460" class="bg-paper"/>
+  <text x="18" y="24" class="labk">全身起形六步（合计约 5 分钟）</text>
+  <rect x="14" y="40" width="232" height="200" class="st-thin"/>
+  <rect x="264" y="40" width="232" height="200" class="st-thin"/>
+  <rect x="514" y="40" width="232" height="200" class="st-thin"/>
+  <rect x="118" y="54" width="16" height="18" class="st"/>
+  <line x1="100" y1="72" x2="152" y2="72" class="st-thin"/>
+  <line x1="100" y1="90" x2="152" y2="90" class="st-thin"/>
+  <line x1="100" y1="108" x2="152" y2="108" class="st-thin"/>
+  <line x1="96" y1="126" x2="156" y2="126" class="st-red"/>
+  <line x1="100" y1="144" x2="152" y2="144" class="st-thin"/>
+  <line x1="100" y1="162" x2="152" y2="162" class="st-thin"/>
+  <line x1="100" y1="180" x2="152" y2="180" class="st-thin"/>
+  <line x1="100" y1="198" x2="152" y2="198" class="st-thin"/>
+  <text x="160" y="130" class="lab2">一半</text>
+  <text x="160" y="60" class="lab2">头顶</text>
+  <text x="126" y="220" class="labk" text-anchor="middle">① 量头高，切 8 格</text>
+  <text x="126" y="236" class="lab2" text-anchor="middle">先只画横线，不画人</text>
+  <circle cx="380" cy="63" r="9" class="st"/>
+  <line x1="362" y1="78" x2="398" y2="78" class="st"/>
+  <line x1="380" y1="78" x2="380" y2="126" class="st"/>
+  <line x1="368" y1="126" x2="392" y2="126" class="st"/>
+  <path d="M362 78 L356 102 L354 128" class="st"/>
+  <path d="M398 78 L404 102 L406 128" class="st"/>
+  <path d="M370 126 L368 162 L366 198" class="st"/>
+  <path d="M390 126 L392 162 L394 198" class="st"/>
+  <path d="M380 54 Q392 92 378 126" class="st-red"/>
+  <text x="380" y="220" class="labk" text-anchor="middle">② 火柴人＋动态线</text>
+  <text x="380" y="236" class="lab2" text-anchor="middle">肘在腰、腕在耻骨</text>
+  <rect x="626" y="54" width="16" height="18" class="st"/>
+  <path d="M614 76 L654 76 L648 122 L620 122 Z" class="st"/>
+  <path d="M620 126 L648 126 L654 162 L614 162 Z" class="st"/>
+  <line x1="610" y1="76" x2="658" y2="76" class="st-red"/>
+  <line x1="612" y1="162" x2="656" y2="162" class="st-red"/>
+  <path d="M624 162 L620 198" class="st-thin"/>
+  <path d="M644 162 L648 198" class="st-thin"/>
+  <line x1="634" y1="54" x2="634" y2="198" class="st-thin"/>
+  <text x="634" y="220" class="labk" text-anchor="middle">③ 三块积木定朝向</text>
+  <text x="634" y="236" class="lab2" text-anchor="middle">胸与盆不同向才有生活</text>
+  <rect x="14" y="248" width="232" height="200" class="st-thin"/>
+  <rect x="264" y="248" width="232" height="200" class="st-thin"/>
+  <rect x="514" y="248" width="232" height="200" class="st-thin"/>
+  <rect x="118" y="258" width="16" height="18" class="st"/>
+  <path d="M106 280 L146 280 L140 326 L112 326 Z" class="st"/>
+  <path d="M112 330 L140 330 L146 366 L106 366 Z" class="st"/>
+  <rect x="108" y="368" width="10" height="20" class="st"/>
+  <rect x="134" y="368" width="10" height="20" class="st"/>
+  <rect x="107" y="388" width="8" height="14" class="st"/>
+  <rect x="137" y="388" width="8" height="14" class="st"/>
+  <rect x="96" y="282" width="9" height="22" class="st" transform="rotate(10 100 293)"/>
+  <rect x="94" y="304" width="8" height="20" class="st"/>
+  <rect x="93" y="324" width="8" height="12" class="st"/>
+  <rect x="147" y="282" width="9" height="22" class="st" transform="rotate(-10 151 293)"/>
+  <rect x="150" y="304" width="8" height="20" class="st"/>
+  <rect x="152" y="324" width="8" height="12" class="st"/>
+  <circle cx="100" cy="304" r="3.5" class="dot"/>
+  <circle cx="151" cy="304" r="3.5" class="dot"/>
+  <circle cx="112" cy="388" r="3.5" class="dot"/>
+  <circle cx="139" cy="388" r="3.5" class="dot"/>
+  <text x="126" y="428" class="labk" text-anchor="middle">④ 四肢：当圆柱补上</text>
+  <text x="126" y="444" class="lab2" text-anchor="middle">每段长度都用头高校准</text>
+  <path d="M373 259 Q380 253 387 259 L388 272 L383 280 L383 285 L398 291 L401 315 L399 340 L402 352 L394 352 L391 330 L396 336 L394 364 L391 396 L399 402 L384 402 L383 364 L380 340 L377 364 L376 402 L361 402 L369 396 L366 364 L364 336 L369 330 L366 352 L358 352 L361 340 L359 315 L362 291 L377 285 L377 280 L372 272 Z" class="st f-g1"/>
+  <text x="380" y="428" class="labk" text-anchor="middle">⑤ 连外轮廓</text>
+  <text x="380" y="444" class="lab2" text-anchor="middle">先连大起伏，关节处留缝</text>
+  <g transform="translate(254 0)">
+    <path d="M373 259 Q380 253 387 259 L388 272 L383 280 L383 285 L398 291 L401 315 L399 340 L402 352 L394 352 L391 330 L396 336 L394 364 L391 396 L399 402 L384 402 L383 364 L380 340 L377 364 L376 402 L361 402 L369 396 L366 364 L364 336 L369 330 L366 352 L358 352 L361 340 L359 315 L362 291 L377 285 L377 280 L372 272 Z" class="st f-g2"/>
+  </g>
+  <line x1="598" y1="291" x2="672" y2="291" class="st-red"/>
+  <line x1="598" y1="330" x2="672" y2="330" class="st-red"/>
+  <line x1="598" y1="364" x2="672" y2="364" class="st-red"/>
+  <text x="676" y="295" class="lab2">肩</text>
+  <text x="676" y="334" class="lab2">一半</text>
+  <text x="676" y="368" class="lab2">膝</text>
+  <text x="634" y="428" class="labk" text-anchor="middle">⑥ 退远，量四条线</text>
+  <text x="616" y="444" class="lab2" text-anchor="middle">肩·耻骨·膝全对再上明暗</text>
+</svg>

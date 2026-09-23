@@ -1,0 +1,45 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="衣纹的三种类型" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="24" class="labk">三种纹，三个来源</text>
+  <rect x="96" y="58" width="48" height="26" class="st f-g2"/>
+  <circle cx="120" cy="88" r="5" class="dot"/>
+  <path d="M120 90 L94 200" class="st"/>
+  <path d="M120 90 L110 204" class="st"/>
+  <path d="M120 90 L132 204" class="st"/>
+  <path d="M120 90 L152 198" class="st"/>
+  <rect x="330" y="56" width="22" height="22" class="st f-g2"/>
+  <rect x="408" y="56" width="22" height="22" class="st f-g2"/>
+  <path d="M341 78 Q380 152 419 78" class="st"/>
+  <path d="M347 78 Q380 130 413 78" class="st-thin"/>
+  <path d="M353 78 Q380 110 407 78" class="st-thin"/>
+  <rect x="556" y="58" width="26" height="72" class="st f-g1" transform="rotate(-10 569 94)"/>
+  <rect x="564" y="122" width="24" height="68" class="st f-g1" transform="rotate(22 576 156)"/>
+  <path d="M560 132 l14 8 l-12 10 l14 8 l-12 10" class="st-red"/>
+  <text x="120" y="232" class="labk" text-anchor="middle">① 放射纹（支撑）</text>
+  <text x="120" y="252" class="lab2" text-anchor="middle">肩、臀、膝把布顶起来</text>
+  <text x="120" y="270" class="lab2" text-anchor="middle">线从红点发散</text>
+  <text x="380" y="232" class="labk" text-anchor="middle">② 垂坠纹（悬空）</text>
+  <text x="380" y="252" class="lab2" text-anchor="middle">两端钉住，中间自由下垂</text>
+  <text x="380" y="270" class="lab2" text-anchor="middle">最长弧＝身体最窄处</text>
+  <text x="620" y="232" class="labk" text-anchor="middle">③ 挤压纹（折叠）</text>
+  <text x="620" y="252" class="lab2" text-anchor="middle">关节弯合侧的之字形</text>
+  <text x="620" y="270" class="lab2" text-anchor="middle">对侧一定是拉伸的长线</text>
+</svg>

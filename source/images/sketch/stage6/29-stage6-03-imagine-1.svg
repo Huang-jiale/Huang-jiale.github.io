@@ -1,0 +1,47 @@
+<svg viewBox="0 0 760 250" role="img" aria-label="写生、三本账、默写与创作的关系流程图" xmlns="http://www.w3.org/2000/svg" width="760" height="250"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="250" class="bg-paper"/>
+  <text x="18" y="26" class="labk">原料 → 记账 → 查账 → 花钱：四个环节缺一不可</text>
+  <g stroke="#1c1c1c" stroke-width="1">
+    <rect x="20"  y="52" width="150" height="60" class="f-g1"/>
+    <rect x="205" y="52" width="150" height="60" class="f-g2"/>
+    <rect x="390" y="52" width="150" height="60" class="f-g3"/>
+    <rect x="575" y="52" width="170" height="60" class="f-g4"/>
+  </g>
+  <text x="30"  y="78" class="lab">① 写生／临摹</text>
+  <text x="30"  y="98" class="lab2">进原料：眼睛看到真的</text>
+  <text x="215" y="78" class="lab">② 拆成三本账</text>
+  <text x="215" y="98" class="lab2">形／调／关系，各记一句</text>
+  <text x="400" y="78" class="lab">③ 默写＝查账</text>
+  <text x="400" y="98" class="lab2">拿走对象，看还剩什么</text>
+  <text x="585" y="78" class="lab">④ 创作＝花钱</text>
+  <text x="585" y="98" class="lab2">取用、重组、加减</text>
+  <g fill="#1c1c1c">
+    <polygon points="176,78 176,90 200,84"/>
+    <polygon points="361,78 361,90 385,84"/>
+    <polygon points="556,78 556,90 570,84"/>
+  </g>
+  <path d="M660 116 L660 160 L95 160 L95 118" class="st-blue"/>
+  <polygon points="89,142 101,142 95,124" fill="#0f6ab5"/>
+  <text x="230" y="180" class="lab2">回路是这门课最重要的一句：创作时卡住的地方，就是你下周写生的题目。</text>
+
+  <text x="18" y="212" class="lab">"三本账"怎么记（每张写生收工前写三行，不超过 30 秒）：</text>
+  <text x="18" y="232" class="lab2">形＝最大的三个形状是什么／调＝最黑与最白的面积比／关系＝我这张画靠哪一处对比站住的</text>
+</svg>

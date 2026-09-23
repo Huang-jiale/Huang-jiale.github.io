@@ -1,0 +1,43 @@
+<svg viewBox="0 0 760 280" role="img" aria-label="同一个盒子旋转0度30度60度" xmlns="http://www.w3.org/2000/svg" width="760" height="280"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="280" class="bg-paper"/>
+  <text x="18" y="26" class="labk">同一个盒子旋转 0° / 30° / 60°：正面越来越窄，侧面越来越宽</text>
+  <path d="M46 66 L156 66 L156 206 L46 206 Z" class="st"/>
+  <path d="M46 66 L72 46 L182 46 L156 66 Z" class="st"/>
+  <path d="M156 66 L182 46 L182 186 L156 206 Z" class="st"/>
+  <path d="M72 46 L72 186 L182 186" class="st-thin"/>
+  <path d="M46 206 L72 186" class="st-thin"/>
+  <text x="86" y="238" class="labk">0°</text>
+  <text x="40" y="258" class="lab2">正面为主，侧缝很窄</text>
+  <path d="M272 72 L350 72 L350 206 L272 206 Z" class="st"/>
+  <path d="M272 72 L338 52 L416 52 L350 72 Z" class="st"/>
+  <path d="M350 72 L416 52 L416 186 L350 206 Z" class="st"/>
+  <path d="M338 52 L338 186 L416 186" class="st-thin"/>
+  <path d="M272 206 L338 186" class="st-thin"/>
+  <text x="326" y="238" class="labk">30°</text>
+  <text x="278" y="258" class="lab2">最常用：四分之三侧面</text>
+  <path d="M512 78 L548 78 L548 206 L512 206 Z" class="st"/>
+  <path d="M512 78 L610 56 L646 56 L548 78 Z" class="st"/>
+  <path d="M548 78 L646 56 L646 184 L548 206 Z" class="st"/>
+  <path d="M610 56 L610 184 L646 184" class="st-thin"/>
+  <path d="M512 206 L610 184" class="st-thin"/>
+  <text x="566" y="238" class="labk">60°</text>
+  <text x="516" y="258" class="lab2">侧面变主角，正面缩成一条</text>
+</svg>

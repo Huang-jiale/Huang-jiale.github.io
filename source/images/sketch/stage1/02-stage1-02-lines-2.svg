@@ -1,0 +1,38 @@
+<svg viewBox="0 0 760 250" role="img" aria-label="两点连线的正确方法" xmlns="http://www.w3.org/2000/svg" width="760" height="250"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="250" class="bg-paper"/>
+  <text x="18" y="24" class="labk">连两条定位点：不是"从 A 描到 B"，而是"瞄准了一次甩过去"</text>
+  <circle cx="70" cy="80" r="4" class="dot"/><circle cx="300" cy="180" r="4" class="dot"/>
+  <line x1="70" y1="80" x2="300" y2="180" class="st-thin"/>
+  <line x1="66" y1="86" x2="304" y2="172" class="st-thin"/>
+  <line x1="74" y1="76" x2="298" y2="186" class="st-thin"/>
+  <line x1="70" y1="80" x2="300" y2="180" class="st" stroke-width="1.8"/>
+  <text x="60" y="220" class="lab2">① 三根虚线试探方向（力度极轻，几乎看不见）</text>
+  <text x="60" y="238" class="lab2">② 选最准的一根，加深成实线</text>
+
+  <text x="400" y="66" class="lab">✗ 错误：慢速描过去</text>
+  <path d="M400 90 q40 22 82 40 q40 18 84 46" class="st-bad"/>
+  <text x="400" y="152" class="lab2">线会拱、会抖、中途有接头</text>
+  <text x="400" y="186" class="lab">✓ 正确：眼睛先看终点，手快速甩过去</text>
+  <line x1="400" y1="210" x2="568" y2="210" class="st-ok"/>
+  <path d="M568 210 l22 0" class="st-ok" stroke-dasharray="3 3"/>
+  <text x="580" y="204" class="lab2">出界</text>
+  <text x="400" y="232" class="lab2">末端虚线 = 手继续走的那一段，不许停在线上</text>
+</svg>

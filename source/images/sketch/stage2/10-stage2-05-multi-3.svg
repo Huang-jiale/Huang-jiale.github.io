@@ -1,0 +1,49 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="投影的作图法" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="24" class="labk">立方体投影作图四步（光从左上方来）</text>
+  <g class="st-blue"><line x1="100" y1="50" x2="170" y2="86"/><line x1="148" y1="48" x2="218" y2="84"/></g>
+  <text x="18" y="48" class="lab2">光线方向 L</text>
+  <g class="st"><path d="M120 100 L190 84 L240 100 L240 172 L190 190 L120 200 Z" fill="#f2f2f2"/>
+  <path d="M190 84 L190 190 M120 100 L190 84 M190 190 L120 200" fill="none"/></g>
+  <g class="dot"><circle cx="120" cy="200" r="3"/><circle cx="190" cy="190" r="3"/><circle cx="240" cy="172" r="3"/></g>
+  <g class="st-red"><line x1="190" y1="190" x2="268" y2="228"/><line x1="240" y1="172" x2="316" y2="210"/></g>
+  <g class="st"><path d="M120 200 L190 228 L316 210 L240 172" fill="#8f8f8f" opacity=".9"/></g>
+  <text x="18" y="252" class="lab2">① 找底面三个"外凸"顶点</text>
+  <text x="18" y="270" class="lab2">② 沿 L 方向引斜线，与地面求交</text>
+  <text x="18" y="288" class="lab2">③ 连成交线 ④ 靠近物体处最深</text>
+
+  <text x="420" y="60" class="labk">球体投影：一条"尾巴"</text>
+  <circle cx="470" cy="150" r="42" class="st" fill="#f2f2f2"/>
+  <path d="M440 182 A80 26 0 0 0 590 200" class="st" fill="#8f8f8f"/>
+  <g class="st-blue"><line x1="430" y1="112" x2="470" y2="182"/></g>
+  <text x="420" y="236" class="lab2">投影从接触点出发，向背光方向拉长变细</text>
+  <text x="420" y="254" class="lab2">接触点最深，尾端最浅</text>
+
+  <text x="640" y="60" class="labk">✗ 三种典型错法</text>
+  <g class="st-bad"><rect x="640" y="90" width="34" height="34" fill="none"/>
+  <rect x="674" y="112" width="40" height="14" fill="none"/>
+  <circle cx="660" cy="170" r="18" fill="none"/>
+  <ellipse cx="690" cy="176" rx="26" ry="8" fill="none"/></g>
+  <text x="640" y="212" class="lab2">① 方向与光线不一致</text>
+  <text x="640" y="230" class="lab2">② 比暗部还深</text>
+  <text x="640" y="248" class="lab2">③ 边缘一样硬</text>
+  <text x="640" y="278" class="lab2">④ 忘了投影会"爬"</text>
+</svg>

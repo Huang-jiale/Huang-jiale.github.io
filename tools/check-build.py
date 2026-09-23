@@ -6,7 +6,7 @@
 **构建有没有把源里的东西弄丢/弄坏**（页面数、图片、题数==答案数、分类页收全、死链、渲染残留）。
 每一步都先断言「确实取到了样本」，正则写错匹配到 0 个时一律判失败，不许假绿。
 
-2026-09-22 首导人工核对过的量：74 时政 + 38 行测 = 112 篇；行测 541 题、92 张图。
+2026-09-23 人工核对过的量：74 时政 + 38 行测 + 7 素描 = 119 篇；行测 541 题、92 图；素描 30 课、159 图。
 """
 import io, sys, os, re, glob
 import urllib.parse
@@ -143,5 +143,75 @@ for s, b in bodies.items():
             dead.add(f'{s} -> {href}')
 check(not dead, '行测文章内没有指向 404 的站内链接', str(sorted(dead)[:3]))
 
+# ---------- 7. 素描教程：7 篇（6 大模块 + 总览）、30 课、SVG 示意图 ----------
+
+sk_src = {norm(k)[len('source/_posts/素描教程/'):-3]: v for k, v in src.items() if '/素描教程/sk-' in k}
+check(len(sk_src) == 7, f'素描源 {len(sk_src)} 篇', '期望 6 个阶段 + 1 篇总览')
+sk_lost = sorted(s for s in sk_src if s not in pages)
+check(not sk_lost, f'{len(sk_src)} 篇素描都构建出了页面', str(sk_lost[:5]))
+sk_bodies = {s: pages[s] for s in sk_src if s in pages}
+check(len(sk_bodies) == len(sk_src), '取到全部素描正文')
+
+check(not [s for s, b in sk_bodies.items() if '**' in b], '素描正文没有残留的 **',
+      str([s for s, b in sk_bodies.items() if '**' in b]))
+check(not [s for s, b in sk_bodies.items() if re.search(r'src="images/', b)], '素描没有残留的相对图片路径',
+      str([s for s, b in sk_bodies.items() if re.search(r'src="images/', b)][:3]))
+thin = [s for s, b in sk_bodies.items() if len(re.sub(r'<[^>]+>', '', b).strip()) < 1500]
+check(not thin, '素描每篇正文都不薄（合并 5~6 课，去掉标签后 ≥1500 字符）', str(thin))
+
+# 课标题：源里 `## 06 课名` 的个数 == 页面里 <h2 的个数（总览那篇比 ^## ）。一个阶段一篇，
+# 所以 H2 数就是这一篇装了几课——它掉了没人发现，必须两边数。
+for s, v in sk_src.items():
+    body_md = v.split('---\n', 2)[-1]
+    want = len(re.findall(r'^## ', body_md, re.M))
+    got = len(re.findall(r'<h2', sk_bodies.get(s, '')))
+    check(want == got and want >= 1, f'{s}：{want} 个 H2 全部渲染成 <h2>', f'页面里 {got} 个')
+check(sum(len(re.findall(r'^## \d\d ', v, re.M)) for s, v in sk_src.items() if s != 'sk-intro') == 30,
+      '六个阶段篇合起来正好 30 课', str({s: len(re.findall(r'^## \d\d ', v, re.M)) for s, v in sk_src.items() if s != 'sk-intro'}))
+
+sk_src_imgs = set()
+for v in sk_src.values():
+    sk_src_imgs.update(re.findall(r'/images/sketch/[^)\s"]+', v))
+sk_page_imgs = set()
+for b in sk_bodies.values():
+    sk_page_imgs.update(re.findall(r'<img[^>]+src="(/images/sketch/[^"]+)"', b))
+check(len(sk_src_imgs) >= 100, f'素描源里引用图片 {len(sk_src_imgs)} 张')
+check(sk_src_imgs == sk_page_imgs, '素描页面里的图片集合与源一致', str(sorted(sk_src_imgs ^ sk_page_imgs)[:3]))
+check(not [p for p in sk_src_imgs if not os.path.exists(os.path.join('public', *p.lstrip('/').split('/')))], '素描引用的图都在产物里')
+sk_disk = glob.glob('public/images/sketch/*/*')
+check(len(sk_disk) == len(sk_src_imgs), f'产物里的素描图 {len(sk_disk)} 张 = 引用的 {len(sk_src_imgs)} 张')
+check(len(glob.glob('data/sketch-raw/course/images/*')) + len(glob.glob('data/sketch-raw/course/images/svg/*')) >= len(sk_disk) // 2,
+      '母本图片目录取到了样本')
+
+sk_cat = {}
+for s, v in sk_src.items():
+    for c in fm_categories(v):
+        sk_cat.setdefault(c, []).append(s)
+check(len(sk_cat) == 8, f'素描分类 {len(sk_cat)} 个（素描 + 6 阶段 + 总览）', str(sorted(sk_cat)))
+for name, slugs_ in sk_cat.items():
+    # Hexo 把分类名 slug 化后才做目录：空格变成 `-`（页面标题里还是空格），所以两边要先归一
+    dir_ = name.replace(' ', '-')
+    files = [p for key, ps in catpages.items() if key.split('/')[-1] == dir_ for p in ps]
+    links = set()
+    for p in files:
+        links.update(re.findall(r'href="[^"]*?/(sk-[a-z0-9-]+)/"', open(p, encoding='utf-8').read()))
+    check(links == set(slugs_), f'分类页 {name} 收全 {len(slugs_)} 篇', f'实际 {sorted(links)[:3]}')
+
+lost_idx = [s for s in sk_src if f'/{s}/' not in joined]
+check(not lost_idx, '每篇素描都进了首页文章流', str(lost_idx[:5]))
+sk_dead = set()
+for s, b in sk_bodies.items():
+    for href in re.findall(r'<a[^>]+href="(/[^"#]+)"', b):
+        p = os.path.join('public', *urllib.parse.unquote(href).lstrip('/').split('/'))
+        if not (os.path.exists(p) or os.path.exists(p + '.html') or os.path.isdir(p)):
+            sk_dead.add(f'{s} -> {href}')
+check(not sk_dead, '素描文章内没有指向 404 的站内链接', str(sorted(sk_dead)[:3]))
+html_dead = set()
+for s, b in sk_bodies.items():
+    for href in re.findall(r'href="([^"]+\.html)"', b):
+        html_dead.add(f'{s} -> {href}')
+check(not html_dead, '素描里没有残留的 .html 链接（母本是 HTML 课程，跨课引用要改成锚点）', str(sorted(html_dead)[:3]))
+
 print('\n%s' % ('全部通过' if not fail else f'{len(fail)} 项失败：' + '；'.join(fail)))
+sys.stdout.flush()          # stdout 被我换成 TextIOWrapper 了，sys.exit 时不一定帮你刷管道
 sys.exit(1 if fail else 0)

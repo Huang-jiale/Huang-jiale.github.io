@@ -1,0 +1,45 @@
+<svg viewBox="0 0 760 250" role="img" aria-label="平、乱、空三种画面毛病的缩略示意" xmlns="http://www.w3.org/2000/svg" width="760" height="250"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="250" class="bg-paper"/>
+  <text x="18" y="26" class="labk">退一米看：平（左）· 乱（中）· 空（右）</text>
+  <rect x="30" y="46" width="220" height="150" class="st f-white"/>
+  <circle cx="110" cy="120" r="34" class="st f-g2"/>
+  <circle cx="176" cy="136" r="22" class="st f-g2"/>
+  <ellipse cx="140" cy="168" rx="86" ry="8" class="f-g2"/>
+  <text x="34" y="218" class="lab">平：最黑只有 6 级</text>
+  <text x="34" y="236" class="lab2">急救 = 补一个 9 级点（主体交界线）</text>
+  <rect x="270" y="46" width="220" height="150" class="st f-white"/>
+  <circle cx="320" cy="106" r="26" class="st f-g2"/>
+  <path d="M338 88 Q348 106 338 124" class="st" stroke-width="4"/>
+  <circle cx="380" cy="140" r="20" class="st f-g3"/>
+  <path d="M394 126 Q402 140 394 154" class="st" stroke-width="4"/>
+  <circle cx="436" cy="100" r="22" class="st f-g4"/>
+  <path d="M450 86 Q458 100 450 114" class="st" stroke-width="4"/>
+  <ellipse cx="352" cy="164" rx="26" ry="6" class="f-g5"/>
+  <ellipse cx="436" cy="150" rx="22" ry="6" class="f-g5"/>
+  <text x="274" y="218" class="lab">乱：三处 9 级、三组硬边</text>
+  <text x="274" y="236" class="lab2">急救 = 非中心的暗部整体粘淡一级</text>
+  <rect x="510" y="46" width="220" height="150" class="st f-white"/>
+  <circle cx="596" cy="146" r="16" class="st f-g3"/>
+  <circle cx="628" cy="152" r="11" class="st f-g2"/>
+  <line x1="560" y1="170" x2="680" y2="170" class="st-thin"/>
+  <text x="514" y="218" class="lab">空：物体只占高 32%</text>
+  <text x="514" y="236" class="lab2">急救 = 暗部外扩 8mm + 桌沿下移 1/3 线</text>
+</svg>

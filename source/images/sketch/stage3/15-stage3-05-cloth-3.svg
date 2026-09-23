@@ -1,0 +1,49 @@
+<svg viewBox="0 0 760 280" role="img" aria-label="张力褶、袋状褶与堆叠褶" xmlns="http://www.w3.org/2000/svg" width="760" height="280"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="280" class="bg-paper"/>
+  <text x="18" y="26" class="labk">后三种：张力 / 袋状 / 堆叠</text>
+  <rect x="20" y="42" width="230" height="170" class="st-thin f-none"/>
+  <circle cx="52" cy="70" r="3" class="dot"/>
+  <circle cx="220" cy="104" r="3" class="dot"/>
+  <path d="M52 70 L220 104" class="st"/>
+  <path d="M56 78 L216 112" class="st-thin"/>
+  <path d="M52 70 L40 130 M52 70 L74 148 M220 104 L238 160 M220 104 L200 170 M52 70 L58 176" class="st"/>
+  <text x="30" y="236" class="lab">⑤ 张力：两点之间最亮最平</text>
+  <text x="30" y="254" class="lab2">带子上几乎没有褶，褶只在两端之外</text>
+  <rect x="270" y="42" width="230" height="170" class="st-thin f-none"/>
+  <circle cx="296" cy="72" r="3" class="dot"/>
+  <circle cx="474" cy="72" r="3" class="dot"/>
+  <path d="M296 72 C330 150 440 150 474 72" class="st"/>
+  <path d="M300 80 C336 152 434 152 470 80" class="st-thin"/>
+  <path d="M304 92 C340 156 430 156 466 92 L470 80 C434 148 336 148 300 80 Z" class="f-g4"/>
+  <text x="280" y="236" class="lab">⑥ 袋状：兜内整片压暗</text>
+  <text x="280" y="254" class="lab2">7~8 级成块，不许在兜里画小褶</text>
+  <rect x="520" y="42" width="220" height="170" class="st-thin f-none"/>
+  <line x1="524" y1="196" x2="736" y2="196" class="st"/>
+  <path d="M548 96 C560 88 596 88 606 96" class="st"/>
+  <path d="M540 122 C556 112 604 112 620 122" class="st"/>
+  <path d="M532 148 C552 136 616 136 636 148" class="st"/>
+  <path d="M526 172 C550 158 626 158 652 172" class="st"/>
+  <path d="M522 190 C548 176 634 176 664 190" class="st"/>
+  <path d="M540 126 C556 116 604 116 620 126 L616 132 C600 124 558 124 544 132 Z" class="f-g5"/>
+  <path d="M532 152 C552 140 616 140 636 152 L632 158 C614 148 554 148 536 158 Z" class="f-g5"/>
+  <text x="530" y="236" class="lab">⑦ 堆叠：一圈圈同心弧</text>
+  <text x="524" y="254" class="lab2">每圈只画上缘亮、下缘一条暗，越靠下越扁</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg viewBox="0 0 760 310" role="img" aria-label="脚的楔形与内外踝" xmlns="http://www.w3.org/2000/svg" width="760" height="310"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="310" class="bg-paper"/>
+  <text x="18" y="24" class="labk">脚：楔形加两个踝骨点</text>
+  <path d="M138 60 L138 168 L112 210 L110 248 L120 256 L232 256 L238 244 L212 232 L168 178 L160 168 L160 60" class="st"/>
+  <circle cx="150" cy="174" r="5" class="dot"/>
+  <line x1="104" y1="256" x2="244" y2="256" class="st"/>
+  <path d="M112 250 L238 244" class="st-red"/>
+  <line x1="168" y1="178" x2="212" y2="232" class="st-thin"/>
+  <text x="176" y="150" class="lab2">内踝</text>
+  <text x="214" y="208" class="lab2">脚背斜面</text>
+  <text x="120" y="230" class="lab2">跟</text>
+  <path d="M362 60 L358 160 M398 60 L402 160" class="st"/>
+  <path d="M352 172 L348 232 L344 252 L420 252 L416 236 L410 178 Z" class="st"/>
+  <line x1="352" y1="164" x2="408" y2="176" class="st-red"/>
+  <circle cx="354" cy="166" r="5" class="dot"/>
+  <circle cx="406" cy="178" r="5" class="dot"/>
+  <line x1="368" y1="252" x2="368" y2="234" class="st-thin"/>
+  <line x1="330" y1="256" x2="440" y2="256" class="st"/>
+  <text x="385" y="284" class="lab2" text-anchor="middle">正面观：踝线是斜的</text>
+  <text x="170" y="284" class="lab2" text-anchor="middle">内侧观：一块楔</text>
+  <text x="470" y="72" class="labk">脚的四条</text>
+  <text x="470" y="100" class="lab2">① 脚长≈一个头高</text>
+  <text x="470" y="122" class="lab2">② 内踝高、外踝低，差约 8mm</text>
+  <text x="470" y="144" class="lab2">③ 脚背是一个斜面，最亮</text>
+  <text x="470" y="166" class="lab2">④ 五趾分两组：大趾＋其余四趾</text>
+  <text x="470" y="200" class="labk">站住的秘密</text>
+  <text x="470" y="228" class="lab2">重量压在跟骨与前掌两点，</text>
+  <text x="470" y="250" class="lab2">脚底不是整片贴地。</text>
+  <text x="470" y="286" class="lab2">穿鞋时：鞋是脚的"体块＋楔形"，</text>
+  <text x="470" y="304" class="lab2">踝骨点仍然要能摸到。</text>
+</svg>

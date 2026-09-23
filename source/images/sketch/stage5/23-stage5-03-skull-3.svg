@@ -1,0 +1,53 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="头发的帽子轮廓、分组与错误画法对比" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="24" class="labk">左：先画帽子轮廓再分 3~5 组　右：错误（丝丝）与正确（组）的对比</text>
+
+  <circle cx="150" cy="150" r="62" class="st-thin"/>
+  <path d="M84 152 Q80 84 150 74 Q222 82 218 152" class="st"/>
+  <path d="M84 152 Q86 176 96 190" class="st"/>
+  <path d="M218 152 Q216 176 206 190" class="st"/>
+  <path d="M104 96 Q150 78 196 96" class="st-blue"/>
+  <path d="M120 82 L104 128 M150 76 L150 130 M182 84 L198 128" class="st"/>
+  <path d="M96 118 Q110 106 118 112 M182 112 Q192 104 204 118" class="st-thin"/>
+  <text x="36" y="234" class="lab2">① 帽子轮廓（比颅骨外扩 3~30mm）</text>
+  <text x="36" y="254" class="lab2">② 定生长点（头顶偏后的一处）</text>
+  <text x="36" y="274" class="lab2">③ 从生长点发出 3~5 组，组间留沟</text>
+
+  <path d="M330 96 Q360 74 400 92" class="st"/>
+  <path d="M336 92 l-4 22 M344 88 l-2 24 M352 86 l0 24 M360 85 l2 24 M368 86 l4 22 M376 88 l6 20 M384 90 l8 18" class="st"/>
+  <text x="326" y="140" class="lab2">✗ 一根根描：没有体积</text>
+  <path d="M330 176 Q360 154 400 172" class="st"/>
+  <path d="M330 176 Q360 196 400 172 L400 190 Q360 214 330 194 Z" class="f-g3 st-thin"/>
+  <path d="M338 168 q10 12 22 14 M362 160 q6 16 18 22" class="st-thin"/>
+  <text x="326" y="232" class="lab2">✓ 一整块＋组内两条沟</text>
+  <text x="326" y="252" class="lab2">✓ 边缘有几根飞出来的散丝</text>
+
+  <text x="450" y="60" class="labk">头发的三件套（第 14 课）</text>
+  <text x="450" y="88" class="lab">边缘：至少 1/3 要"散"</text>
+  <text x="450" y="108" class="lab2">全用实线＝头盔；全虚＝没形</text>
+  <text x="450" y="136" class="lab">高光：一条带，不是一个点</text>
+  <text x="450" y="156" class="lab2">高光沿帽子的圆面绕过去，</text>
+  <text x="450" y="176" class="lab2">位置在受光最强的那一圈</text>
+  <text x="450" y="204" class="lab">反光：暗部边缘要透气</text>
+  <text x="450" y="224" class="lab2">头发最黑的地方是"组与组的沟"，</text>
+  <text x="450" y="244" class="lab2">不是整片暗部</text>
+  <text x="450" y="278" class="lab2">深浅只用 3 个台阶就够：亮带 / 中灰 / 沟。</text>
+</svg>

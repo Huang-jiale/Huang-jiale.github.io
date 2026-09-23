@@ -1,0 +1,44 @@
+<svg viewBox="0 0 760 240" role="img" aria-label="同一只瓶子的轮廓从卡粗到虚断" xmlns="http://www.w3.org/2000/svg" width="760" height="240"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="240" class="bg-paper"/>
+  <text x="18" y="24" class="labk">一只瓶：近处与转折最强的边卡实加粗，远处与背光的边转虚断开</text>
+  <path d="M147 54 A18 5 0 0 0 183 54" class="st-thin"/>
+  <path d="M147 54 A18 5 0 0 1 183 54" class="st" stroke-width="1.6"/>
+  <line x1="147" y1="54" x2="147" y2="92" class="st" stroke-width="2"/>
+  <line x1="183" y1="54" x2="183" y2="92" class="st" stroke-width="1.6"/>
+  <line x1="147" y1="92" x2="120" y2="120" class="st" stroke-width="2.6"/>
+  <line x1="183" y1="92" x2="210" y2="120" class="st" stroke-width="1.6"/>
+  <line x1="120" y1="120" x2="116" y2="202" class="st" stroke-width="3.4"/>
+  <line x1="210" y1="120" x2="207" y2="160" class="st" stroke-width="1" stroke="#b4b4b4"/>
+  <line x1="207" y1="160" x2="204" y2="202" class="st" stroke-width="1" stroke="#b4b4b4" stroke-dasharray="2 6"/>
+  <line x1="116" y1="202" x2="204" y2="202" class="st" stroke-width="1.6"/>
+  <line x1="120" y1="120" x2="92" y2="120" class="st-thin"/>
+  <text x="18" y="124" class="lab">卡·粗</text>
+  <line x1="116" y1="164" x2="92" y2="164" class="st-thin"/>
+  <text x="30" y="168" class="lab2">左棱 实</text>
+  <line x1="210" y1="120" x2="236" y2="120" class="st-thin"/>
+  <text x="240" y="124" class="lab2">右肩 实（次一档）</text>
+  <line x1="207" y1="160" x2="236" y2="160" class="st-thin"/>
+  <text x="240" y="164" class="lab2">远侧边 虚</text>
+  <line x1="204" y1="202" x2="236" y2="196" class="st-thin"/>
+  <text x="240" y="200" class="lab2">右下 断·退进空气</text>
+  <text x="300" y="60" class="lab2">口沿：朝你的半圈实，背你的半圈虚——一"圈"边也不该一样重</text>
+  <text x="18" y="228" class="lab">这只瓶的左边，几乎用上了本课全部：粗、实、虚、断。轮廓一旦有了这些变化，它就厚了、退得开了、活了。</text>
+</svg>

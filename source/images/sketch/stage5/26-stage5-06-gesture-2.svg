@@ -1,0 +1,66 @@
+<svg viewBox="0 0 760 350" role="img" aria-label="四种情况下的重心垂线与支撑面" xmlns="http://www.w3.org/2000/svg" width="760" height="350"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="350" class="bg-paper"/>
+  <text x="18" y="24" class="labk">垂线从髋部挂下来：落在绿线上就站得住</text>
+  <line x1="40" y1="278" x2="720" y2="278" class="st"/>
+  <circle cx="100" cy="96" r="12" class="st-thin"/>
+  <path d="M100 108 L100 180" class="st-thin"/>
+  <path d="M88 118 L112 118" class="st-thin"/>
+  <path d="M100 180 L98 230 L98 278" class="st-thin"/>
+  <path d="M104 180 L118 226 L124 272" class="st-thin"/>
+  <circle cx="100" cy="180" r="4" class="dot"/>
+  <path d="M100 180 L100 292" class="st-red"/>
+  <path d="M84 278 L112 278" class="st-ok"/>
+  <circle cx="316" cy="142" r="12" class="st-thin"/>
+  <path d="M262 180 L304 152" class="st-thin"/>
+  <path d="M300 158 L308 194" class="st-thin"/>
+  <path d="M262 180 L252 230 L250 278" class="st-thin"/>
+  <path d="M262 180 L268 230 L266 278" class="st-thin"/>
+  <circle cx="262" cy="180" r="4" class="dot"/>
+  <path d="M262 180 L262 292" class="st-red"/>
+  <path d="M236 278 L274 278" class="st-ok"/>
+  <circle cx="446" cy="128" r="12" class="st-thin"/>
+  <path d="M450 206 L446 140" class="st-thin"/>
+  <path d="M436 150 L458 150" class="st-thin"/>
+  <path d="M450 206 L496 212 L500 278" class="st-thin"/>
+  <path d="M424 206 L478 206" class="st-ok"/>
+  <path d="M430 206 L430 278" class="st-thin"/>
+  <path d="M472 206 L472 278" class="st-thin"/>
+  <path d="M488 278 L512 278" class="st-ok"/>
+  <circle cx="450" cy="206" r="4" class="dot"/>
+  <path d="M450 206 L450 292" class="st-red"/>
+  <circle cx="606" cy="110" r="12" class="st-thin"/>
+  <path d="M636 178 L612 122" class="st-thin"/>
+  <path d="M614 128 L596 156" class="st-thin"/>
+  <path d="M636 178 L644 228 L646 278" class="st-thin"/>
+  <path d="M646 278 L672 278" class="st-thin"/>
+  <circle cx="636" cy="178" r="4" class="dot"/>
+  <path d="M636 178 L636 292" class="st-red"/>
+  <path d="M644 278 L674 278" class="st-ok"/>
+  <path d="M628 282 L644 296 M644 282 L628 296" class="st-bad"/>
+  <text x="100" y="318" class="labk" text-anchor="middle">① 站：稳</text>
+  <text x="262" y="318" class="labk" text-anchor="middle">② 弯腰：也稳</text>
+  <text x="450" y="318" class="labk" text-anchor="middle">③ 坐着：两块面</text>
+  <text x="640" y="318" class="labk" text-anchor="middle">④ 出界：浮着</text>
+  <text x="100" y="338" class="lab2" text-anchor="middle">重量全在一条腿</text>
+  <text x="262" y="338" class="lab2" text-anchor="middle">上身往前，腿往后</text>
+  <text x="450" y="338" class="lab2" text-anchor="middle">坐骨＋脚，落任一即可</text>
+  <text x="640" y="338" class="lab2" text-anchor="middle">垂线在脚尖之外</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="五官全部落在正面平面内并各有骨头依托" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="24" class="labk">五官住在"正面平面"里：越过红弦的那一侧就该被转走</text>
+  <circle cx="170" cy="132" r="72" class="st"/>
+  <path d="M214 75 A72 72 0 0 1 214 189 Z" class="f-g2 st-thin"/>
+  <line x1="214" y1="75" x2="214" y2="189" class="st-red"/>
+  <path d="M112 196 L108 244 Q170 266 228 244 L228 192" class="st"/>
+  <line x1="156" y1="62" x2="156" y2="256" class="st-blue"/>
+  <line x1="98" y1="132" x2="242" y2="132" class="st-thin"/>
+  <path d="M112 116 q20 -9 40 -2" class="st"/>
+  <path d="M162 114 q18 -7 36 2" class="st"/>
+  <path d="M116 132 q16 -10 32 0 q-16 8 -32 0" class="st"/>
+  <path d="M164 132 q16 -10 32 0 q-16 8 -32 0" class="st"/>
+  <path d="M156 138 L148 172 q8 8 20 2" class="st"/>
+  <path d="M132 200 q24 -8 48 0" class="st"/>
+  <path d="M136 204 q20 10 40 0" class="st-thin"/>
+  <circle cx="240" cy="150" r="12" class="st"/>
+  <text x="300" y="66" class="lab">每个五官的"依托"与硬尺寸（头高＝100）</text>
+  <text x="300" y="96" class="lab2">眉：贴眉弓骨（48 那条线），长≈21，厚≈4，眉头虚眉尾细</text>
+  <text x="300" y="118" class="lab2">眼：嵌在球面上，裂宽≈15、裂高≈6（3:1），外眼角略高</text>
+  <text x="300" y="140" class="lab2">鼻：方柱＋鼻尖球＋两鼻翼球，长 25（48→74）、宽 15</text>
+  <text x="300" y="162" class="lab2">耳：挂在侧面后缘，长 25（48→74）、宽≈12</text>
+  <text x="300" y="184" class="lab2">嘴：绕在颌骨圆柱上，宽 22、上下唇合计高 10</text>
+  <text x="300" y="206" class="lab2">颏：一个小方台，宽 24，前＋底两个面</text>
+  <text x="300" y="244" class="lab2">红竖线＝正面与侧面的分界。转向时五官是被这条线"切走"的，</text>
+  <text x="300" y="262" class="lab2">不是自己缩小的——先想线，再画形。</text>
+</svg>

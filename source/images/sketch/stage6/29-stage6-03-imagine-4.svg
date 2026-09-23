@@ -1,0 +1,74 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="四种光位的球体明暗与投影默写示意" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="26" class="labk">四种光位＝四种"交界线走向 + 投影方向 + 情绪"</text>
+  <text x="560" y="26" class="lab2">红箭头＝光来的方向</text>
+
+  <g>
+    <line x1="107" y1="42" x2="107" y2="60" class="st-red"/>
+    <polygon points="101,54 113,54 107,68" fill="#c0392b"/>
+    <circle cx="107" cy="120" r="44" fill="#e8e8e8"/>
+    <path d="M63 120 A44 44 0 0 0 151 120 Z" fill="#9a9a9a"/>
+    <ellipse cx="109" cy="150" rx="33" ry="14" fill="#5f5f5f"/>
+    <ellipse cx="94" cy="98" rx="15" ry="11" fill="#fafafa"/>
+    <ellipse cx="107" cy="174" rx="46" ry="7" fill="#c8c8c8"/>
+    <text x="18" y="214" class="lab">顶光（正上偏左）</text>
+    <text x="18" y="232" class="lab2">交界线是下方一条弧；</text>
+    <text x="18" y="248" class="lab2">眼窝、鼻底全黑，投影短，</text>
+    <text x="18" y="264" class="lab2">落在脚下。安静、雕塑感。</text>
+  </g>
+  <g>
+    <line x1="245" y1="54" x2="262" y2="72" class="st-red"/>
+    <polygon points="255,66 268,74 251,79" fill="#c0392b"/>
+    <circle cx="293" cy="120" r="44" fill="#e8e8e8"/>
+    <path d="M293 76 A44 44 0 0 1 293 164 Z" fill="#9a9a9a"/>
+    <ellipse cx="312" cy="120" rx="14" ry="36" fill="#5f5f5f"/>
+    <ellipse cx="275" cy="100" rx="15" ry="11" fill="#fafafa"/>
+    <ellipse cx="345" cy="166" rx="44" ry="9" fill="#c8c8c8" transform="rotate(12 345 166)"/>
+    <text x="204" y="214" class="lab">侧光（45° 最常见）</text>
+    <text x="204" y="232" class="lab2">交界线是从上到下的竖弧；</text>
+    <text x="204" y="248" class="lab2">体积最强，投影斜长；</text>
+    <text x="204" y="264" class="lab2">写生与石膏的默认光位。</text>
+  </g>
+  <g>
+    <line x1="479" y1="198" x2="479" y2="180" class="st-red"/>
+    <polygon points="473,186 485,186 479,172" fill="#c0392b"/>
+    <circle cx="479" cy="120" r="44" fill="#e8e8e8"/>
+    <path d="M435 120 A44 44 0 0 1 523 120 Z" fill="#9a9a9a"/>
+    <ellipse cx="479" cy="90" rx="33" ry="14" fill="#5f5f5f"/>
+    <ellipse cx="479" cy="150" rx="15" ry="11" fill="#fafafa"/>
+    <ellipse cx="479" cy="68" rx="42" ry="7" fill="#bfbfbf"/>
+    <text x="390" y="214" class="lab">底光（正下方）</text>
+    <text x="390" y="232" class="lab2">交界线跑到上方；</text>
+    <text x="390" y="248" class="lab2">凹陷变亮、凸出变黑，</text>
+    <text x="390" y="264" class="lab2">投影往上走：恐怖、舞台感。</text>
+  </g>
+  <g>
+    <circle cx="665" cy="120" r="44" fill="#f2f2f2"/>
+    <circle cx="665" cy="122" r="36" fill="#4f4f4f"/>
+    <ellipse cx="665" cy="178" rx="46" ry="8" fill="#8f8f8f"/>
+    <line x1="665" y1="42" x2="665" y2="58" class="st-red"/>
+    <polygon points="659,52 671,52 665,66" fill="#c0392b"/>
+    <text x="576" y="214" class="lab">逆光（正后方）</text>
+    <text x="576" y="232" class="lab2">主体几乎全黑，只有一条亮边；</text>
+    <text x="576" y="248" class="lab2">投影直冲观众，靠剪影成形。</text>
+    <text x="576" y="264" class="lab2">情绪最强，练剪影最划算。</text>
+  </g>
+</svg>

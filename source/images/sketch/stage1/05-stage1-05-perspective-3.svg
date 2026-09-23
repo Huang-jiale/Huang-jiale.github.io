@@ -1,0 +1,49 @@
+<svg viewBox="0 0 760 320" role="img" aria-label="圆的透视：扁率与弧线方向" xmlns="http://www.w3.org/2000/svg" width="760" height="320"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="320" class="bg-paper"/>
+  <text x="18" y="24" class="labk">① 扁率随高度变化：离 HL 越近越扁</text>
+  <line x1="18" y1="70" x2="360" y2="70" class="st-blue"/>
+  <text x="330" y="64" class="lab2">HL（视平线）</text>
+  <ellipse cx="120" cy="70" rx="86" ry="4" class="st" fill="none"/>
+  <text x="220" y="74" class="lab2">在 HL 上 → 成一条线</text>
+  <ellipse cx="120" cy="120" rx="86" ry="16" class="st" fill="#f2f2f2"/>
+  <text x="220" y="124" class="lab2">远于 HL 50px → 很扁</text>
+  <ellipse cx="120" cy="190" rx="86" ry="34" class="st" fill="#f2f2f2"/>
+  <text x="220" y="194" class="lab2">再往下 → 更圆</text>
+  <ellipse cx="120" cy="278" rx="86" ry="52" class="st" fill="#f2f2f2"/>
+  <text x="220" y="282" class="lab2">接近正对 → 几乎是圆</text>
+
+  <text x="420" y="24" class="labk">② 圆柱上下底：凸向相反</text>
+  <line x1="420" y1="60" x2="740" y2="60" class="st-blue"/>
+  <text x="700" y="54" class="lab2">HL</text>
+  <ellipse cx="520" cy="110" rx="60" ry="18" class="st" fill="#fff"/>
+  <path d="M460 110 v110" class="st"/><path d="M580 110 v110" class="st"/>
+  <path d="M460 220 A60 18 0 0 0 580 220" class="st" fill="none"/>
+  <path d="M460 220 A60 18 0 0 1 580 220" class="st-thin" fill="none"/>
+  <path d="M462 100 q58 -22 116 0" class="st-ok"/>
+  <text x="600" y="106" class="lab2">顶椭圆：上弧向上凸</text>
+  <text x="600" y="124" class="lab2">　看得出一整圈</text>
+  <path d="M462 232 q58 22 116 0" class="st-ok"/>
+  <text x="593.0" y="240" class="lab2">底椭圆：只画下弧，上弧被挡住</text>
+  <text x="600" y="262" class="lab2">虚线＝假想线，成稿要擦</text>
+
+  <text x="420" y="300" class="lab">✗ 两个弧同向 → 杯子像两个碗扣着</text>
+  <path d="M620 286 a30 9 0 0 1 60 0" class="st-bad" fill="none"/>
+</svg>

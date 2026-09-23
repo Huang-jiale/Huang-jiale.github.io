@@ -78,7 +78,7 @@ categories:
 
 ### 文件怎么写（越靠上越省事）
 
-- **一个文件一篇**最省事。一个文件里塞多篇（一整册、一个月）就得写切块脚本，切到哪一层由分类需要决定——时政按「一条考点一篇」、行测按「一个难题组一篇」，都是为了分类页能归类。
+- **一个文件一篇**最省事。一个文件里塞多篇（一整册、一个月）就得写切块脚本，切到哪一层由分类需要决定——时政按「一条考点一篇」、行测按「一个难题组一篇」，都是为了分类页能归类；素描反过来，母本 31 个文件**合成 7 篇**（一个阶段一篇），因为用户要的是一篇里装完一个大模块、后续只在原篇里更新。
 - **文件名用 ASCII**，例如 `xc-001.md`。URL 取的是文件名（`permalink: :year/:month/:day/:name/`），中文名会变成一长串百分号编码。
 - 头部（front-matter）可以完全不写，只靠 `title`/`date` 就能发；写了就照它，脚本不会覆盖你显式给的值。
 - **别写「详见本页」「见上文」这类引用**——拆分后「本页」就不存在了。要跨文章引用就写完整路径，或者把映射告诉我。
@@ -238,6 +238,38 @@ IMG_LIMIT=24 python tools/check-live.py       # 从公网再核一遍：文章�
 
 - 母本 152 张图里只有 92 张被正文引用，未引用的 60 张（判断上 23、判断下 19、数量上 6、数量下 4、资料上 4、资料下 4）留在 `data/xingce-raw/assets/`，不入库。
 - 图片是 PDF 整页截图（1457×2048，单张 ~700KB），一篇资料分析要加载 15~20MB。要瘦身就转 WebP/压宽度，URL 后缀由脚本统一改，重跑即可。
+
+## 素描教程导入流水线（7 篇 / 30 课 / 159 图）
+
+母本：`C:\Users\lenovo\Documents\Qoder\2026-09-21\5a01cf22` 里那套 HTML 课页导出的 markdown（`course/` 30 课一课一 MD、`basics/intro-overview.md` 入门总览、`course.manifest.js` 记录阶段↔课程的对应）。同样**只复制不修改**：
+
+```
+C:\Users\lenovo\Documents\Qoder\2026-09-21\5a01cf22\…（原件，永远不动）
+        ↓ 复制（diff -r 核过一遍）
+D:\blog\data\sketch-raw\{course,basics,course.manifest.js}    ← 转换输入（data/ 已 gitignore）
+        ↓ node tools/import-sketch.mjs --clean
+D:\blog\source\_posts\素描教程\sk-*.md（7 篇）   +   source\images\sketch\<组>\*（159 张，母本的全部）
+```
+
+切法：**一个阶段一篇**（用户 2026-09-23：按大模块分类、不要太多篇、方便后面更新）——`sk-stage1..sk-stage6` + `sk-intro` 共 7 篇，单篇 10~74KB。分类两级 `素描 / 阶段N 名称`（阶段六那篇挂 `素描 / 阶段六 创作与应试`），每篇正文里 5 个 `## NN 课名` 保住课边界，页内目录直接按课跳。日期错开在 `2026-09-23 12:0N:00`，顺序即阶段顺序；`sk-intro` 单独 12:10:00 排最后。
+
+**三处允许的改写**：① 段落软换行合并（HTML 导出把一句话拆多行，而 `hexo-renderer-marked` 默认 `breaks: true`，不合并就是满屏 `<br>`；行尾两空格的硬换行保留）；② `**x**` → `<strong>x</strong>`（紧贴汉字的星号 CommonMark 不闭合，会打印出字面星号）；③ 图片 `images/…` → `/images/sketch/<组>/<文件名>`，中文名不进 URL。除此之外内容与母本逐字一致。
+
+**两道自检**：① 逐行——31 个母本 MD 除 H1 外每一行（同规则归一后）必须在生成的文章里原样出现；② 结构——30 课全部入篇、每篇课标题数 == manifest 该阶段课数、引用图片全部落盘、无 `**` 残留、无 `](images/` 相对路径、`sk-intro` 自己的 H2 不被下沉。
+
+**重跑**（和行测那三步一样，母本更新后照抄）：
+
+```bash
+# 1) 重新复制母本到 data/sketch-raw（diff -r 确认只多了改动，没有别的东西）
+node tools/import-sketch.mjs --clean
+pnpm hexo clean && pnpm hexo generate && python tools/check-build.py
+git add -A && git commit -m "…" && git push
+python tools/check-live.py 素描教程      # 从公网再核一遍：文章页 200、图片能取到、分类页收全
+```
+
+`check-build.py` / `check-live.py` 都已同时覆盖行测和素描（素描量在 check-build 第 7 节写死：7 篇、30 课、159 图，素描改了篇数/课数要同步那三个数）。`check-live.py <模块目录名>` 的分类页核对现在是从源里现算分类链，不再写死行测那几个 URL。
+
+已知事实：图片 149 张 SVG（范画线条图，放大不糊）+ 10 张 JPG，合计 159 张**全部**被正文引用，所以「母本有图没入库」的缺口是 0（和行测那 60 张相反）。母本里跨课引用写的是 `xxx.html`，导入时改成页内锚点（check-build 会拦任何残留的 `.html` 链接）。
 
 ## 言语理解母本（已入场，尚未导入）
 

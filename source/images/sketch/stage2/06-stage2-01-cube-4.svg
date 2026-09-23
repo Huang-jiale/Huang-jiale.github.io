@@ -1,0 +1,58 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="正方体的三种摆法" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="24" class="labk">同一块方体的三种摆法（看竖线与消失点的变化）</text>
+
+  <text x="30" y="56" class="lab">① 平行透视（一个面正对你）</text>
+  <g class="st-thin"><path d="M36 112 L222 66 M104 112 L222 66 M104 178 L222 66 M36 178 L222 66" class="f-none"/></g>
+  <path d="M110 94 L151 94 L151 133 L110 133 Z" class="f-none st-thin"/>
+  <path d="M36 112 L104 112 L151 94 L110 94 Z" class="st f-g1"/>
+  <path d="M104 112 L151 94 L151 133 L104 178 Z" class="st f-g4"/>
+  <rect x="36" y="112" width="68" height="66" class="st f-g2"/>
+  <g class="st-thin"><path d="M110 94 L110 133 M110 133 L36 178 M110 133 L151 133" class="f-none"/></g>
+  <circle cx="222" cy="66" r="3.5" class="dot"/>
+  <text x="228" y="62" class="lab2">VP</text>
+  <line x1="20" y1="199" x2="240" y2="199" class="st-thin"/>
+  <text x="30" y="220" class="lab2">1 个消失点 · 正面是正方形</text>
+
+  <text x="282" y="56" class="lab">② 成角透视（一条棱正对你）</text>
+  <path d="M352 112 L288 96 L352 78 L418 100 Z" class="st f-g1"/>
+  <path d="M352 112 L288 96 L288 180 L352 196 Z" class="st f-g2"/>
+  <path d="M352 112 L418 100 L418 184 L352 196 Z" class="st f-g4"/>
+  <g class="st-thin"><path d="M288 180 L352 162 L418 184 M352 78 L352 162" class="f-none"/></g>
+  <line x1="352" y1="112" x2="352" y2="196" class="st-red"/>
+  <line x1="272" y1="199" x2="492" y2="199" class="st-thin"/>
+  <text x="282" y="220" class="lab2">2 个消失点（左右各一）· 看见 3 个面</text>
+
+  <text x="530" y="56" class="lab">③ 倾斜摆放（整块倒在角上）</text>
+  <g transform="rotate(-18 600 137)">
+    <path d="M600 112 L536 96 L600 78 L666 100 Z" class="st f-g1"/>
+    <path d="M600 112 L536 96 L536 180 L600 196 Z" class="st f-g2"/>
+    <path d="M600 112 L666 100 L666 184 L600 196 Z" class="st f-g4"/>
+    <g class="st-thin"><path d="M536 180 L600 162 L666 184 M600 78 L600 162" class="f-none"/></g>
+    <line x1="600" y1="112" x2="600" y2="196" class="st-blue"/>
+  </g>
+  <line x1="520" y1="199" x2="744" y2="199" class="st-thin"/>
+  <text x="530" y="220" class="lab2">竖棱不再垂直 · 三条边各自找交点</text>
+
+  <text x="18" y="252" class="labk">读图要点</text>
+  <text x="18" y="272" class="lab2">红线 / 蓝线都是同一条"前棱"：②里它必须与纸边平行（铅垂），③里它整组跟着物体倒——除非物体真在滚，否则不要画成③。</text>
+  <text x="18" y="290" class="lab2">①最容易、也最容易画成"贴脸平面"：正对你的那个面一旦画成菱形，整块方体立刻塌。</text>
+</svg>

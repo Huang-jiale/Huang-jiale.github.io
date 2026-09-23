@@ -1,0 +1,37 @@
+<svg viewBox="0 0 760 250" role="img" aria-label="球体被水平拉伸成椭球与长短轴" xmlns="http://www.w3.org/2000/svg" width="760" height="250"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="250" class="bg-paper"/>
+  <text x="18" y="26" class="labk">球 → 椭球：沿一根轴拉长；长轴短轴是它的骨架</text>
+  <circle cx="150" cy="145" r="66" class="st"/>
+  <line x1="150" y1="79" x2="150" y2="211" class="st-thin"/>
+  <line x1="84" y1="145" x2="216" y2="145" class="st-thin"/>
+  <circle cx="150" cy="145" r="4" class="dot"/>
+  <text x="112" y="232" class="lab2">球：两轴等长</text>
+  <line x1="238" y1="145" x2="352" y2="145" class="st-red"/>
+  <path d="M352 145 l-16 -7 M352 145 l-16 7" class="st-red"/>
+  <text x="248" y="132" class="lab2">沿水平轴拉长</text>
+  <ellipse cx="540" cy="145" rx="120" ry="66" class="st"/>
+  <line x1="420" y1="145" x2="660" y2="145" class="st-blue"/>
+  <line x1="540" y1="79" x2="540" y2="211" class="st-thin"/>
+  <circle cx="540" cy="145" r="4" class="dot"/>
+  <text x="470" y="140" class="lab2">长轴</text>
+  <text x="548" y="100" class="lab2">短轴</text>
+  <text x="470" y="232" class="lab2">椭球：长轴不等于短轴</text>
+</svg>

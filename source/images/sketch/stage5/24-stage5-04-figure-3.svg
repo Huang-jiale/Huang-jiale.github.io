@@ -1,0 +1,52 @@
+<svg viewBox="0 0 760 320" role="img" aria-label="头胸盆三块积木的扭转" xmlns="http://www.w3.org/2000/svg" width="760" height="320"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="320" class="bg-paper"/>
+  <text x="18" y="24" class="labk">三块可以各自转向的积木</text>
+  <rect x="116" y="54" width="28" height="36" class="st"/>
+  <line x1="130" y1="90" x2="130" y2="98" class="st"/>
+  <path d="M92 98 L168 98 L158 168 L102 168 Z" class="st"/>
+  <path d="M102 172 L158 172 L166 222 L94 222 Z" class="st"/>
+  <line x1="88" y1="98" x2="172" y2="98" class="st-red"/>
+  <line x1="92" y1="222" x2="168" y2="222" class="st-red"/>
+  <line x1="130" y1="54" x2="130" y2="222" class="st-thin"/>
+  <text x="130" y="252" class="labk" text-anchor="middle">① 中立位</text>
+  <text x="130" y="272" class="lab2" text-anchor="middle">肩线 ∥ 髋线</text>
+  <path d="M366 52 L396 48 L400 84 L370 88 Z" class="st"/>
+  <line x1="384" y1="86" x2="381" y2="100" class="st"/>
+  <path d="M342 110 L418 96 L408 166 L352 180 Z" class="st"/>
+  <path d="M352 184 L408 170 L416 222 L344 236 Z" class="st"/>
+  <line x1="338" y1="110" x2="422" y2="95" class="st-red"/>
+  <line x1="340" y1="237" x2="420" y2="222" class="st-red"/>
+  <path d="M383 88 Q378 130 380 172" class="st-thin"/>
+  <circle cx="418" cy="96" r="4" class="dot"/>
+  <circle cx="344" cy="236" r="4" class="dot"/>
+  <text x="380" y="252" class="labk" text-anchor="middle">② 重心压在一条腿上</text>
+  <text x="380" y="272" class="lab2" text-anchor="middle">髋抬起一侧，肩反向倾</text>
+  <path d="M596 50 L626 54 L622 90 L592 86 Z" class="st"/>
+  <path d="M578 98 L642 104 L634 172 L586 166 Z" class="st"/>
+  <path d="M582 176 L638 172 L646 222 L574 222 Z" class="st"/>
+  <line x1="574" y1="98" x2="646" y2="105" class="st-red"/>
+  <line x1="572" y1="222" x2="648" y2="222" class="st-red"/>
+  <path d="M560 132 q-12 -22 10 -36" class="st-red"/>
+  <path d="M569 97 l3 11 l-11 2" class="st-red"/>
+  <circle cx="586" cy="166" r="4" class="dot"/>
+  <text x="610" y="252" class="labk" text-anchor="middle">③ 上身转、下身不转</text>
+  <text x="610" y="272" class="lab2" text-anchor="middle">胸块变窄、盆块仍朝前</text>
+</svg>

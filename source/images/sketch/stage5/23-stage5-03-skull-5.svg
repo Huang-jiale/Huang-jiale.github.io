@@ -1,0 +1,51 @@
+<svg viewBox="0 0 760 280" role="img" aria-label="明暗交界线绕头一圈在三种朝向下的走向" xmlns="http://www.w3.org/2000/svg" width="760" height="280"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="280" class="bg-paper"/>
+  <text x="18" y="24" class="labk">光从左上来：红线＝明暗交界线，它经过颧弓与下颌角，绕到颈侧</text>
+
+  <circle cx="110" cy="120" r="56" class="st"/>
+  <path d="M84 168 L80 204 Q110 220 142 204 L142 166" class="st"/>
+  <path d="M140 68 Q162 104 154 140 Q150 168 146 200 L150 236" class="st-red"/>
+  <path d="M140 68 Q170 110 158 152 Q152 180 150 206" class="f-g2 st-thin"/>
+  <circle cx="152" cy="140" r="4" class="dot"/>
+  <circle cx="146" cy="200" r="4" class="dot"/>
+  <text x="40" y="252" class="lab2">正面：交界在脸的侧面那一竖条</text>
+
+  <circle cx="330" cy="120" r="56" class="st"/>
+  <path d="M300 168 L296 204 Q330 220 364 204 L364 166" class="st"/>
+  <path d="M356 76 Q382 116 368 152 Q360 182 358 210" class="st-red"/>
+  <path d="M356 76 Q392 122 374 162 Q366 188 364 210" class="f-g2 st-thin"/>
+  <circle cx="368" cy="152" r="4" class="dot"/>
+  <text x="256" y="252" class="lab2">四分之三：交界向后退，颧弓是拐点</text>
+
+  <circle cx="556" cy="120" r="56" class="st"/>
+  <path d="M520 168 L516 204 Q552 220 592 204 L594 166" class="st"/>
+  <path d="M520 70 Q560 88 596 108 Q606 140 592 176 Q580 200 578 218" class="st-red"/>
+  <path d="M520 70 Q566 92 600 116 Q608 150 592 180" class="f-g2 st-thin"/>
+  <circle cx="592" cy="176" r="4" class="dot"/>
+  <text x="484" y="252" class="lab2">正侧：交界从头顶绕到耳前再到下颌底</text>
+
+  <text x="640" y="90" class="labk">三个检查点</text>
+  <text x="640" y="114" class="lab2">① 头顶出发</text>
+  <text x="640" y="134" class="lab2">② 经过颧弓</text>
+  <text x="640" y="154" class="lab2">③ 经过下颌角</text>
+  <text x="640" y="186" class="lab2">断在任何一处，</text>
+  <text x="640" y="206" class="lab2">暗部就会"漏"。</text>
+</svg>

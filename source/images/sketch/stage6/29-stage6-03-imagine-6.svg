@@ -1,0 +1,48 @@
+<svg viewBox="0 0 760 286" role="img" aria-label="从临摹到独立创作的四级台阶" xmlns="http://www.w3.org/2000/svg" width="760" height="286"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="286" class="bg-paper"/>
+  <text x="18" y="26" class="labk">四级台阶：每一级都要交够数量的"作业"再上一级</text>
+  <line x1="20" y1="248" x2="740" y2="248" class="st"/>
+  <text x="20" y="268" class="lab2">时间 →</text>
+  <g stroke="#1c1c1c" stroke-width="1">
+    <rect x="30"  y="196" width="164" height="52" class="f-white"/>
+    <rect x="204" y="156" width="164" height="92" class="f-g1"/>
+    <rect x="378" y="116" width="174" height="132" class="f-g2"/>
+    <rect x="562" y="70"  width="180" height="178" class="f-g3"/>
+  </g>
+  <text x="40"  y="216" class="lab">① 精确临摹</text>
+  <text x="40"  y="234" class="lab2">20 张：把别人的决定抄下来</text>
+  <text x="214" y="176" class="lab">② 换变量临摹</text>
+  <text x="214" y="196" class="lab2">20 张：同一张换光／换角度</text>
+  <text x="214" y="214" class="lab2">换横竖构图／只留黑白灰</text>
+  <text x="388" y="136" class="lab">③ 半创作</text>
+  <text x="388" y="156" class="lab2">20 张：两张来源拼一张；</text>
+  <text x="388" y="174" class="lab2">自己的素材塞进别人构图；</text>
+  <text x="388" y="192" class="lab2">给名画改一个角色／改光源</text>
+  <text x="572" y="90" class="lab">④ 独立创作</text>
+  <text x="572" y="110" class="lab2">6~8 张：命题 → 12 格缩略图</text>
+  <text x="572" y="128" class="lab2">中稿 → 参考拼贴 → 正稿</text>
+  <text x="572" y="146" class="lab2">每张配 100 字自述</text>
+  <path d="M112 190 L112 60" class="st-blue"/>
+  <polygon points="106,72 118,72 112,54" fill="#0f6ab5"/>
+  <text x="126" y="66" class="lab2">脑内可用素材量</text>
+  <text x="252" y="56" class="lab">为什么不能跳级：④ 需要 ①②③ 攒下的"可调用的形状库"；</text>
+  <text x="252" y="76" class="lab">跳过的人画到一半会退回①，带着挫败感停笔半年。</text>
+</svg>

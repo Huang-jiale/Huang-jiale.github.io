@@ -1,0 +1,46 @@
+<svg viewBox="0 0 760 320" role="img" aria-label="水壶的结构素描：嘴与把手的中轴和剖面" xmlns="http://www.w3.org/2000/svg" width="760" height="320"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="320" class="bg-paper"/>
+  <text x="18" y="26" class="labk">附件也要有骨头：水壶的嘴与把手</text>
+  <line x1="300" y1="40" x2="300" y2="286" class="st-blue"/>
+  <ellipse cx="300" cy="70" rx="62" ry="14" class="st"/>
+  <path d="M238 70 A62 14 0 0 1 362 70" class="st-thin"/>
+  <path d="M238 70 C222 110 218 176 232 232 C240 262 258 276 276 282" class="st"/>
+  <path d="M362 70 C378 110 382 176 368 232 C360 262 342 276 324 282" class="st" stroke-width="1"/>
+  <path d="M276 282 A26 8 0 0 0 324 282" class="st"/>
+  <path d="M276 282 A26 8 0 0 1 324 282" class="st-thin"/>
+  <path d="M356 92 L418 66 L436 52" class="st"/>
+  <path d="M360 126 L420 96" class="st"/>
+  <ellipse cx="428" cy="59" rx="12" ry="6" class="st" transform="rotate(-28 428 59)"/>
+  <line x1="436" y1="52" x2="300" y2="150" class="st-blue"/>
+  <path d="M240 96 C186 104 166 148 172 190 C177 220 200 238 232 240" class="st"/>
+  <path d="M242 122 C204 130 190 160 194 192 C198 214 214 226 236 228" class="st"/>
+  <ellipse cx="180" cy="140" rx="8" ry="15" class="st-thin" transform="rotate(-24 180 140)"/>
+  <ellipse cx="172" cy="188" rx="9" ry="16" class="st-thin" transform="rotate(6 172 188)"/>
+  <ellipse cx="204" cy="232" rx="11" ry="14" class="st-thin" transform="rotate(38 204 232)"/>
+  <text x="470" y="62" class="lab">① 嘴口高度 = 壶身高度的 0.75 左右</text>
+  <text x="470" y="92" class="lab">② 嘴的中轴伸进壶身内部，不平行桌面</text>
+  <text x="470" y="130" class="lab">③ 把手 = 一串扭转的椭圆</text>
+  <text x="470" y="158" class="lab2">三个剖面椭圆的角度依次改变，</text>
+  <text x="470" y="176" class="lab2">才能画出"把手从壶身拧出来"</text>
+  <text x="470" y="212" class="lab">④ 嘴与壶身相接处必须画交界线</text>
+  <text x="470" y="240" class="lab2">相接处不画线 = 嘴是飘在旁边的</text>
+  <text x="18" y="308" class="lab2">壶嘴与把手是"附加的小体块"，各自要有中轴与剖面；把它们当独立物体画完，再补与壶身相接的交界线。</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg viewBox="0 0 760 240" role="img" aria-label="盒子到一本书和一摞书" xmlns="http://www.w3.org/2000/svg" width="760" height="240"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="240" class="bg-paper"/>
+  <text x="18" y="26" class="labk">盒子 → 书：薄盒；厚度方向的四条边必须两两平行</text>
+  <path d="M70 90 L250 90 L250 190 L70 190 Z" class="f-white st"/>
+  <path d="M70 90 L98 64 L278 64 L250 90 Z" class="f-g1 st"/>
+  <path d="M250 90 L278 64 L278 164 L250 190 Z" class="f-g2 st"/>
+  <line x1="70" y1="110" x2="250" y2="110" class="st-thin"/>
+  <text x="86" y="84" class="lab2">封面（顶上的面）</text>
+  <text x="210" y="150" class="lab2">书页（右面）</text>
+  <text x="60" y="225" class="lab">单本书：先看它是个薄盒，封面/书口/厚度是三张不同的平面</text>
+  <path d="M420 150 L560 150 L560 180 L420 180 Z" class="st"/>
+  <path d="M420 150 L440 134 L580 134 L560 150 Z" class="st"/>
+  <path d="M560 150 L580 134 L580 164 L560 180 Z" class="st"/>
+  <path d="M416 138 L556 138 L556 146 L416 146 Z" class="st"/>
+  <path d="M416 138 L436 122 L576 122 L556 138 Z" class="st"/>
+  <path d="M556 138 L576 122 L576 130 L556 146 Z" class="st"/>
+  <text x="420" y="205" class="lab2">一摞书：每本各画一个薄盒，叠起来。</text>
+  <text x="420" y="223" class="lab2">朝向略有不同 → 三张面各自透视，不能用一条外轮廓糊过去</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="排线三条纪律的正误对比" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="24" class="labk">① 方向：统一 ✓ ／ 乱换 ✗</text>
+  <g class="st-ok">
+    <line x1="30" y1="120" x2="80" y2="40"/><line x1="46" y1="124" x2="96" y2="44"/>
+    <line x1="62" y1="128" x2="112" y2="48"/><line x1="78" y1="132" x2="128" y2="52"/>
+    <line x1="94" y1="136" x2="144" y2="56"/>
+  </g>
+  <text x="46" y="152" class="lab2">✓ 干净、可读</text>
+  <g class="st-bad">
+    <line x1="230" y1="120" x2="286" y2="46"/><line x1="244" y1="52" x2="300" y2="118"/>
+    <line x1="252" y1="118" x2="262" y2="44"/><line x1="270" y1="48" x2="326" y2="122"/>
+    <line x1="286" y1="120" x2="292" y2="50"/><line x1="300" y1="52" x2="330" y2="116"/>
+  </g>
+  <text x="238" y="152" class="lab2">✗ 乱角度 → 画面"花""脏"</text>
+
+  <text x="400" y="24" class="labk">② 深浅来源：加密度 ✓ ／ 死压 ✗</text>
+  <g class="st-ok">
+    <line x1="400" y1="120" x2="440" y2="46"/><line x1="407" y1="121" x2="447" y2="47"/>
+    <line x1="414" y1="122" x2="454" y2="48"/><line x1="421" y1="123" x2="461" y2="49"/>
+    <line x1="428" y1="124" x2="468" y2="50"/><line x1="434" y1="125" x2="474" y2="51"/>
+    <line x1="440" y1="126" x2="480" y2="52"/><line x1="445" y1="127" x2="485" y2="53"/>
+    <line x1="450" y1="128" x2="490" y2="54"/><line x1="455" y1="129" x2="495" y2="55"/>
+  </g>
+  <text x="404" y="152" class="lab2">✓ 密 → 深，纸面完好</text>
+  <g class="st-bad">
+    <line x1="580" y1="120" x2="620" y2="46"/><line x1="600" y1="122" x2="640" y2="48"/><line x1="620" y1="124" x2="660" y2="50"/>
+  </g>
+  <path d="M584 116 l36 -62 M606 120 l34 -60" class="st-red" stroke-width="3"/>
+  <text x="572.9" y="152" class="lab2">✗ 稀疏但死压 → 划出沟、留白刺眼</text>
+
+  <text x="18" y="196" class="labk">③ 接头：首尾错开 ✓ ／ 对齐 ✗</text>
+  <g class="st-ok">
+    <line x1="30" y1="286" x2="110" y1="216"/><line x1="52" y1="290" x2="132" y2="220"/>
+    <line x1="74" y1="284" x2="154" y2="214"/><line x1="96" y1="292" x2="176" y2="222"/>
+    <line x1="118" y1="282" x2="198" y2="212"/>
+  </g>
+  <text x="60" y="240" class="lab2" transform="rotate(0)">✓ 边缘自然</text>
+  <g class="st-bad">
+    <line x1="280" y1="220" x2="360" y2="220"/><line x1="280" y1="238" x2="360" y2="238"/>
+    <line x1="280" y1="256" x2="360" y2="256"/><line x1="280" y1="274" x2="360" y2="274"/>
+    <line x1="280" y1="292" x2="360" y2="292"/>
+  </g>
+  <text x="286" y="206" class="lab2">✗ 每根一样长、两端齐 → 出现"栅栏"</text>
+</svg>

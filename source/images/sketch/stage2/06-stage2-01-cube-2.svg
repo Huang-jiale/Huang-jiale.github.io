@@ -1,0 +1,58 @@
+<svg viewBox="0 0 760 460" role="img" aria-label="正方体起形六步" xmlns="http://www.w3.org/2000/svg" width="760" height="460"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="460" class="bg-paper"/>
+  <text x="18" y="24" class="labk">正方体起形六步（成角摆放，看得见三个面）</text>
+
+  <text x="42" y="58" class="lab">① 立前棱</text>
+  <g class="st-thin"><line x1="42" y1="82" x2="158" y2="82"/><line x1="42" y1="212" x2="158" y2="212"/></g>
+  <line x1="100" y1="108" x2="100" y2="212" class="st-red"/>
+  <g class="dot"><circle cx="100" cy="108" r="3"/><circle cx="100" cy="212" r="3"/></g>
+  <text x="42" y="232" class="lab2">前棱最长、最实</text>
+
+  <text x="292" y="58" class="lab">② 补左右两条竖棱</text>
+  <g class="st"><line x1="350" y1="108" x2="350" y2="212"/>
+  <line x1="292" y1="92" x2="292" y2="184"/><line x1="408" y1="98" x2="408" y2="188"/></g>
+  <text x="292" y="232" class="lab2">平行，但远的更短</text>
+
+  <text x="542" y="58" class="lab">③ 顶面四条边</text>
+  <path d="M600 108 L542 92 L604 82 L658 98 Z" class="st" fill="#dcdcdc"/>
+  <line x1="600" y1="108" x2="600" y2="212" class="st-thin"/>
+  <text x="542" y="232" class="lab2">向后走必靠拢 → 菱形</text>
+
+  <text x="42" y="262" class="lab">④ 底面两条前边</text>
+  <g class="st-thin"><line x1="100" y1="316" x2="100" y2="420"/>
+  <line x1="42" y1="300" x2="42" y2="392"/><line x1="158" y1="306" x2="158" y2="396"/>
+  <path d="M42 300 L100 316 L158 306" fill="none"/></g>
+  <path d="M42 392 L100 420 L158 396" class="st" fill="none"/>
+  <text x="42" y="444" class="lab2">底面的收拢方向与顶面一致</text>
+
+  <text x="292" y="262" class="lab">⑤ 补三条看不见的边</text>
+  <path d="M350 316 L292 300 L354 290 L408 306 Z" class="st" fill="#f2f2f2"/>
+  <g class="st"><path d="M292 300 L292 392 M350 316 L350 420 M408 306 L408 396" fill="none"/>
+  <path d="M292 392 L350 420 L408 396" fill="none"/></g>
+  <g class="st-thin"><path d="M354 290 L354 378 M292 392 L354 378 M408 396 L354 378" fill="none"/></g>
+  <text x="292" y="444" class="lab2">虚线 = 透视检查仪</text>
+
+  <text x="542" y="262" class="lab">⑥ 擦虚线、留实边</text>
+  <path d="M600 316 L542 300 L604 290 L658 306 Z" class="st" fill="#f2f2f2"/>
+  <path d="M600 316 L542 300 L542 392 L600 420 Z" class="st" fill="#dcdcdc"/>
+  <path d="M600 316 L658 306 L658 396 L600 420 Z" class="st" fill="#8f8f8f"/>
+  <text x="542" y="444" class="lab2">三面分好，形就立住了</text>
+</svg>

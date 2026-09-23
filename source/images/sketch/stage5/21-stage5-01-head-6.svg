@@ -1,0 +1,73 @@
+<svg viewBox="0 0 760 470" role="img" aria-label="Loomis 法六步起形完整流程" xmlns="http://www.w3.org/2000/svg" width="760" height="470"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="470" class="bg-paper"/>
+  <text x="18" y="24" class="labk">Loomis 六步：每步只加一样东西</text>
+
+  <circle cx="110" cy="112" r="48" class="st"/>
+  <line x1="110" y1="54" x2="110" y2="208" class="st-thin"/>
+  <text x="70" y="230" class="lab">1 画球</text>
+  <text x="52" y="248" class="lab2">先定头高这条竖线</text>
+
+  <circle cx="300" cy="112" r="48" class="st"/>
+  <line x1="330" y1="68" x2="330" y2="156" class="st"/>
+  <text x="248" y="230" class="lab">2 切侧面</text>
+  <text x="240" y="248" class="lab2">一条竖直弦，切掉 1/5</text>
+
+  <circle cx="490" cy="112" r="48" class="st"/>
+  <line x1="520" y1="68" x2="520" y2="156" class="st"/>
+  <path d="M442 114 Q490 124 538 114" class="st-red"/>
+  <line x1="474" y1="66" x2="474" y2="158" class="st-blue"/>
+  <text x="436" y="230" class="lab">3 画十字线</text>
+  <text x="424" y="248" class="lab2">横线在正中＝将要放眼睛</text>
+
+  <circle cx="110" cy="326" r="48" class="st"/>
+  <line x1="140" y1="282" x2="140" y2="370" class="st"/>
+  <path d="M80 366 L78 400 Q112 414 146 400 L146 368" class="st"/>
+  <path d="M62 328 Q101 338 140 328" class="st-red"/>
+  <line x1="88" y1="280" x2="88" y2="406" class="st-blue"/>
+  <text x="62" y="452" class="lab">4 挂下颌方块</text>
+
+  <circle cx="300" cy="326" r="48" class="st"/>
+  <line x1="330" y1="282" x2="330" y2="370" class="st"/>
+  <path d="M270 366 L268 400 Q302 414 336 400 L336 368" class="st"/>
+  <path d="M252 328 Q291 338 330 328" class="st-red"/>
+  <path d="M258 356 Q294 366 330 356" class="st-thin"/>
+  <path d="M262 384 Q296 392 330 384" class="st-thin"/>
+  <line x1="284" y1="280" x2="284" y2="406" class="st-blue"/>
+  <ellipse cx="344" cy="348" rx="8" ry="17" class="st"/>
+  <path d="M256 296 Q300 276 330 292" class="st-thin"/>
+  <text x="244" y="452" class="lab">5 三等分＋耳＋发际</text>
+
+  <circle cx="490" cy="326" r="48" class="st"/>
+  <path d="M520 288 A48 48 0 0 1 520 364 Z" class="f-g3 st-thin"/>
+  <path d="M452 366 L450 400 Q484 414 518 400 L518 368" class="st"/>
+  <path d="M442 328 Q481 338 520 328" class="st-red"/>
+  <line x1="464" y1="282" x2="464" y2="404" class="st-blue"/>
+  <line x1="452" y1="404" x2="448" y2="424" class="st"/>
+  <line x1="514" y1="402" x2="518" y2="424" class="st"/>
+  <text x="430" y="452" class="lab">6 侧面压暗＋两条颈线</text>
+  <text x="596" y="120" class="lab2">前 5 步只用 2B 的轻线，</text>
+  <text x="585.5" y="140" class="lab2">第 6 步才允许出现明暗交界线。</text>
+  <text x="596" y="170" class="lab2">灰色那块＝侧面平面，</text>
+  <text x="596" y="190" class="lab2">它一出现，头就从平面</text>
+  <text x="596" y="210" class="lab2">变成立体（见第 07 课）。</text>
+  <text x="596" y="290" class="lab2">颈：两条略向内收的斜线，</text>
+  <text x="596" y="320" class="lab2">宽≈头宽的 55~60%。</text>
+</svg>

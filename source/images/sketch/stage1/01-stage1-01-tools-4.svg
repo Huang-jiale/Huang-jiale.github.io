@@ -1,0 +1,35 @@
+<svg viewBox="0 0 760 210" role="img" aria-label="笔尖削法" xmlns="http://www.w3.org/2000/svg" width="760" height="210"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="210" class="bg-paper"/>
+  <text x="18" y="24" class="labk">左：卷笔刀的针尖（只能画线）　右：美工刀削的长锥（线面两用）</text>
+  <line x1="60" y1="80" x2="200" y2="80" class="st" stroke-width="10"/>
+  <path d="M200 72 L246 80 L200 88 Z" class="st" fill="#e8e8e8"/>
+  <text x="60" y="112" class="lab2">木头剥出 3mm</text>
+  <text x="60" y="130" class="lab2">铅芯露出 2mm → 一磨就断</text>
+
+  <line x1="400" y1="80" x2="500" y2="80" class="st" stroke-width="10"/>
+  <path d="M500 68 L610 78 L610 82 L500 92 Z" class="st" fill="#e8e8e8"/>
+  <path d="M560 74 L610 78 M560 86 L610 82" class="st-thin"/>
+  <text x="400" y="118" class="lab2">木头剥出 15~18mm，铅芯露出 6~8mm</text>
+  <text x="400" y="136" class="lab2">削成扁圆锥：立起来能画细线，躺下去能用侧面铺灰</text>
+  <path d="M575 150 q18 10 36 0" class="st-blue"/>
+  <text x="540" y="172" class="lab2">芯磨平了 → 转一下笔杆又是尖的</text>
+  <text x="540" y="190" class="lab2">（"转笔"是素描的基本动作）</text>
+</svg>

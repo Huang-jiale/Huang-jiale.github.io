@@ -1,0 +1,55 @@
+<svg viewBox="0 0 760 248" role="img" aria-label="风景速写 30 分钟流程时间条" xmlns="http://www.w3.org/2000/svg" width="760" height="248"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="248" class="bg-paper"/>
+  <text x="18" y="26" class="labk">30 分钟一张：五段式时间条</text>
+  <g stroke="#1c1c1c" stroke-width="1">
+    <rect x="60"  y="48" width="68"  height="40" class="f-g1"/>
+    <rect x="128" y="48" width="113" height="40" class="f-g2"/>
+    <rect x="241" y="48" width="227" height="40" class="f-g5"/>
+    <rect x="468" y="48" width="159" height="40" class="f-g4"/>
+    <rect x="627" y="48" width="113" height="40" class="f-g3"/>
+  </g>
+  <g class="lab2">
+    <text class="lab2" x="66"  y="72">0-3 取景</text>
+    <text class="lab2" x="140" y="72">3-8 大形与地平线</text>
+    <text class="lab2" x="256" y="72">8-18 三层大关系</text>
+    <text class="lab2" x="480" y="72">18-25 视觉中心</text>
+    <text class="lab2" x="636" y="72">25-30 收边</text>
+  </g>
+  <g class="lab2" fill="#777">
+    <text class="lab2" x="60"  y="102">0 分</text><text class="lab2" x="128" y="102">3 分</text><text class="lab2" x="241" y="102">8 分</text>
+    <text class="lab2" x="468" y="102">18 分</text><text class="lab2" x="627" y="102">25 分</text><text class="lab2" x="716" y="102">30 分</text>
+  </g>
+  <text x="18" y="128" class="lab">硬规矩：0-3 分钟不许动笔（先站着看完，心里说一句主题）；8 分钟之前不许上任何调子；第 18 分钟必须开始做减法。</text>
+
+  <text x="18" y="160" class="labk">新手实际（同一处场景）</text>
+  <g stroke="#c0392b" stroke-width="1.3" fill="none">
+    <rect x="60"  y="172" width="453" height="36"/>
+    <rect x="513" y="172" width="181" height="36"/>
+    <rect x="694" y="172" width="46"  height="36"/>
+  </g>
+  <rect x="60"  y="172" width="453" height="36" class="f-white"/>
+  <rect x="513" y="172" width="181" height="36" class="f-g2"/>
+  <rect x="694" y="172" width="46"  height="36" class="f-g4"/>
+  <text x="76" y="194" class="lab">前 20 分钟一直在"改形"，还顺便找了个更好的角度</text>
+  <text x="520" y="194" class="lab2">10 分钟乱铺</text>
+  <text x="700" y="194" class="lab2">没收</text>
+  <text x="9.1" y="234" class="lab">结果：形没准、关系没立、边缘全糊——而且"看起来没画完"。超时的 40 分钟不是画得多，是把已经错掉的关系又加深了一层。</text>
+</svg>

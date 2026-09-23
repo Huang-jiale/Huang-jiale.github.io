@@ -1,0 +1,52 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="四种基本褶皱型" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="26" class="labk">前四种：管状 / 之字 / 垂坠 / 放射</text>
+  <rect x="20" y="42" width="170" height="180" class="st-thin f-none"/>
+  <path d="M52 56 C44 110 60 160 50 210" class="st"/>
+  <path d="M84 52 C76 110 92 162 84 214" class="st"/>
+  <path d="M118 52 C112 112 126 160 118 212" class="st"/>
+  <path d="M152 56 C148 110 160 158 152 208" class="st"/>
+  <path d="M84 52 C92 110 80 162 92 214 L112 212 C104 160 118 112 112 52 Z" class="f-g3"/>
+  <text x="30" y="246" class="lab">① 管状：上窄下宽，末端散开</text>
+  <text x="30" y="264" class="lab2">明暗相间，一组只用两个级数</text>
+  <rect x="210" y="42" width="170" height="180" class="st-thin f-none"/>
+  <circle cx="240" cy="60" r="3" class="dot"/>
+  <circle cx="352" cy="120" r="3" class="dot"/>
+  <circle cx="248" cy="184" r="3" class="dot"/>
+  <path d="M240 60 L300 92 L352 120 L296 152 L248 184 L300 210" class="st"/>
+  <path d="M246 56 L306 88 L356 116" class="st-thin"/>
+  <text x="220" y="246" class="lab">② 之字：每次换向都踩在支点上</text>
+  <text x="220" y="264" class="lab2">转角是硬的，不许画成圆弧</text>
+  <rect x="400" y="42" width="170" height="180" class="st-thin f-none"/>
+  <line x1="404" y1="96" x2="566" y2="96" class="st"/>
+  <path d="M430 96 L436 60 L470 56 L500 62 L506 96" class="st"/>
+  <path d="M436 96 L440 140 M458 96 L460 152 M478 96 L478 158 M496 96 L494 150 M510 96 L514 136" class="st"/>
+  <path d="M436 96 L440 140 L460 152 L478 158 L494 150 L514 136 L506 96 Z" class="f-g2"/>
+  <circle cx="470" cy="96" r="3" class="dot"/>
+  <text x="410" y="246" class="lab">③ 垂坠：越过桌沿聚成一点</text>
+  <text x="410" y="264" class="lab2">过点后散开成扇形，悬空段偏亮</text>
+  <rect x="590" y="42" width="150" height="180" class="st-thin f-none"/>
+  <circle cx="664" cy="112" r="3" class="dot"/>
+  <path d="M664 112 L628 60 M664 112 L664 56 M664 112 L700 62 M664 112 L616 130 M664 112 L712 132 M664 112 L640 200 M664 112 L690 204" class="st"/>
+  <ellipse cx="664" cy="112" rx="12" ry="6" class="f-g5"/>
+  <text x="598" y="246" class="lab">④ 放射：一个支点顶起布</text>
+  <text x="598" y="264" class="lab2">3~6 根，长短不等，支点最黑</text>
+</svg>

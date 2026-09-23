@@ -1,0 +1,63 @@
+<svg viewBox="0 0 760 330" role="img" aria-label="明度轴上的允许活动区间与越界示例" xmlns="http://www.w3.org/2000/svg" width="760" height="330"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="330" class="bg-paper"/>
+  <text x="18" y="26" class="labk">把九格当尺子摊在桌上：所有深入都必须待在自己的档位里</text>
+  <g stroke="#1c1c1c" stroke-width="1">
+    <rect x="40"  y="44" width="50" height="26" class="f-white"/>
+    <rect x="90"  y="44" width="50" height="26" fill="#ececec"/>
+    <rect x="140" y="44" width="50" height="26" fill="#d5d5d5"/>
+    <rect x="190" y="44" width="50" height="26" fill="#b8b8b8"/>
+    <rect x="240" y="44" width="50" height="26" fill="#979797"/>
+    <rect x="290" y="44" width="50" height="26" fill="#747474"/>
+    <rect x="340" y="44" width="50" height="26" fill="#4f4f4f"/>
+    <rect x="390" y="44" width="50" height="26" fill="#303030"/>
+    <rect x="440" y="44" width="50" height="26" fill="#171717"/>
+  </g>
+  <g class="lab2">
+    <text class="lab2" x="58" y="88">1</text><text class="lab2" x="108" y="88">2</text><text class="lab2" x="158" y="88">3</text>
+    <text class="lab2" x="208" y="88">4</text><text class="lab2" x="258" y="88">5</text><text class="lab2" x="308" y="88">6</text>
+    <text class="lab2" x="358" y="88">7</text><text class="lab2" x="408" y="88">8</text><text class="lab2" x="458" y="88">9</text>
+  </g>
+
+  <rect x="40"  y="100" width="200" height="18" class="st-ok"/>
+  <rect x="240" y="100" width="100" height="18" class="st-bad"/>
+  <rect x="340" y="100" width="150" height="18" class="st-ok"/>
+  <text x="40"  y="136" class="lab2">亮部 + 灰面：只能在 1~4 度里做层次</text>
+  <text x="243" y="136" class="lab2">过渡带 5~6</text>
+  <text x="340" y="156" class="lab2">暗部 + 投影：只能在 7~9 度里做层次</text>
+
+  <text x="18" y="196" class="labk">一次典型越界：暗部里的反光被提到 5 度</text>
+  <path d="M368 122 C368 164 300 158 268 126" class="st-red"/>
+  <polygon points="262,136 274,132 266,120" fill="#c0392b"/>
+  <text x="392" y="196" class="lab2">后果：暗部漏气，物体立刻变平、像贴纸</text>
+  <text x="392" y="216" class="lab2">修法：整片暗部压回 7~8 度，再重铺反光</text>
+
+  <text x="18" y="254" class="labk">另一条边界：次要物永远不许超过主体</text>
+  <g stroke="#1c1c1c" stroke-width="1">
+    <rect x="18"  y="266" width="150" height="40" class="f-g4"/>
+    <rect x="178" y="266" width="150" height="40" class="f-g5"/>
+    <rect x="338" y="266" width="150" height="40" class="f-g3"/>
+  </g>
+  <text x="26"  y="290" class="lab2 f-white">主体最黑 8~9 度</text>
+  <text x="186" y="290" class="lab2 f-white">主体灰面 3~4 度</text>
+  <text x="346" y="290" class="lab2">陪体最多 7 度</text>
+  <text x="500" y="282" class="lab2">→ 陪体只要有一处比主体黑，</text>
+  <text x="500" y="300" class="lab2">观众的眼睛就搬家了。</text>
+</svg>

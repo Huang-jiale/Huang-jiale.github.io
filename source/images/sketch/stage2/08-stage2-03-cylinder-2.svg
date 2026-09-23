@@ -1,0 +1,41 @@
+<svg viewBox="0 0 760 290" role="img" aria-label="轴、切点与出头" xmlns="http://www.w3.org/2000/svg" width="760" height="290"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="290" class="bg-paper"/>
+  <text x="18" y="24" class="labk">✓ 弧出头、轴走圆心 vs ✗ 弧被轮廓线"切平"</text>
+
+  <line x1="150" y1="60" x2="150" y2="230" class="st-blue"/>
+  <text x="156" y="70" class="lab2">轴（圆心连线）</text>
+  <ellipse cx="150" cy="86" rx="72" ry="20" class="st" fill="#fff"/>
+  <path d="M74 214 A72 20 0 0 0 218 214" class="st" fill="none"/>
+  <path d="M78 214 A72 20 0 0 1 214 214" class="st-thin" fill="none"/>
+  <g class="st"><line x1="78" y1="90" x2="78" y2="214"/><line x1="214" y1="90" x2="214" y2="214"/></g>
+  <g class="dot"><circle cx="150" cy="86" r="3"/><circle cx="150" cy="214" r="3"/></g>
+  <text x="240" y="96" class="lab">轮廓线是切线：切点在 78 / 214</text>
+  <text x="240" y="116" class="lab2">椭圆最宽处在 74 / 218，比切线各宽 4px</text>
+  <text x="240" y="134" class="lab2">→ 两端各露出一小段弧（"出头"）</text>
+  <text x="240" y="222" class="lab2">底椭圆只画前 2/3 弧，后段是假想线</text>
+
+  <g class="st-bad"><ellipse cx="560" cy="96" rx="72" ry="20" fill="none"/>
+  <line x1="488" y1="96" x2="488" y2="220"/><line x1="632" y1="96" x2="632" y2="220"/>
+  <path d="M488 220 A72 20 0 0 0 632 220" fill="none"/></g>
+  <text x="480" y="252" class="lab2">✗ 弧与轮廓线齐平 →</text>
+  <text x="480" y="268" class="lab2">顶面像被切平，罐子变方盒</text>
+  <text x="480" y="284" class="lab2">这是"杯口画得太干净"的典型症状</text>
+</svg>

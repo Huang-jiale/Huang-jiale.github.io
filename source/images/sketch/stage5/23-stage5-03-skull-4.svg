@@ -1,0 +1,53 @@
+<svg viewBox="0 0 760 340" role="img" aria-label="颈部的圆柱、遮挡与斜度" xmlns="http://www.w3.org/2000/svg" width="760" height="340"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="340" class="bg-paper"/>
+  <text x="18" y="24" class="labk">颈＝前倾的圆柱；上端藏在下颌底下，靠一条弧收住</text>
+
+  <circle cx="140" cy="110" r="58" class="st"/>
+  <path d="M100 158 L96 196 Q140 214 184 196 L184 154" class="st"/>
+  <path d="M96 196 Q140 214 184 196 Q140 204 96 196 Z" class="f-g5 st-thin"/>
+  <path d="M108 196 L104 268 Q140 282 176 268 L172 196" class="st"/>
+  <path d="M108 196 L104 268" class="st-thin"/>
+  <path d="M112 200 L128 268 M168 200 L156 268" class="st-blue"/>
+  <path d="M96 268 Q140 258 184 268" class="st-thin"/>
+  <ellipse cx="140" cy="272" rx="46" ry="10" class="st-thin"/>
+  <text x="24" y="300" class="lab2">蓝线＝胸锁乳突肌（乳突→锁骨内侧）</text>
+  <text x="24" y="320" class="lab2">黑带＝下颌底＋头的投影，它把头"坐"在颈上</text>
+
+  <path d="M330 92 L330 200 Q360 214 390 200 L390 92" class="st"/>
+  <path d="M330 92 Q360 116 390 92" class="f-g4 st"/>
+  <line x1="360" y1="92" x2="360" y2="200" class="st-thin"/>
+  <text x="312" y="234" class="lab">✗ 竖直平行＝插萝卜</text>
+  <path d="M452 96 L444 200 Q476 216 508 200 L500 96" class="st"/>
+  <path d="M452 96 Q476 120 500 96" class="f-g4 st"/>
+  <text x="448" y="234" class="lab">✓ 上细下粗＋前倾</text>
+  <line x1="476" y1="60" x2="476" y2="200" class="st-blue"/>
+  <path d="M476 60 L492 200" class="st-red"/>
+  <text x="516" y="80" class="lab2">前倾 8~10°</text>
+  <text x="516" y="100" class="lab2">（男性更斜、更粗）</text>
+
+  <text x="560" y="140" class="labk">颈的四个数字</text>
+  <text x="560" y="164" class="lab2">宽＝头宽 × 0.55~0.60</text>
+  <text x="560" y="184" class="lab2">（男 0.62，女 0.50）</text>
+  <text x="560" y="204" class="lab2">长＝头高 × 0.40</text>
+  <text x="560" y="224" class="lab2">后侧比前侧厚（肌肉）</text>
+  <text x="560" y="256" class="lab2">头重约 5kg，颈是"托"着它，</text>
+  <text x="560" y="276" class="lab2">所以颈后线永远比颈前实。</text>
+</svg>

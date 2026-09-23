@@ -1,0 +1,54 @@
+<svg viewBox="0 0 760 278" role="img" aria-label="切面法阶梯四面八面十六面" xmlns="http://www.w3.org/2000/svg" width="760" height="278"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="260" class="bg-paper"/>
+  <text x="18" y="26" class="labk">同一个蛋，切成 4 面 / 8 面 / 16 面：面数越多越圆，也越难转准（光自左上）</text>
+  <path d="M130 74 L56 148 L130 152 Z" class="f-g1 st"/>
+  <path d="M130 74 L204 148 L130 152 Z" class="f-g2 st"/>
+  <path d="M56 148 L130 224 L130 152 Z" class="f-g4 st"/>
+  <path d="M204 148 L130 224 L130 152 Z" class="f-g5 st"/>
+  <text x="96" y="246" class="labk">4 面</text>
+  <text x="46" y="262" class="lab2" font-size="11">方、硬，最好转</text>
+  <path d="M360 74 L411 99 L432 150 L411 201 L360 224 L309 201 L288 150 L309 99 Z" class="st"/>
+  <path d="M360 74 L411 99 L360 150 Z" class="f-g1 st"/>
+  <path d="M411 99 L432 150 L360 150 Z" class="f-g2 st"/>
+  <path d="M432 150 L411 201 L360 150 Z" class="f-g3 st"/>
+  <path d="M411 201 L360 224 L360 150 Z" class="f-g5 st"/>
+  <path d="M360 224 L309 201 L360 150 Z" class="f-g4 st"/>
+  <path d="M309 201 L288 150 L360 150 Z" class="f-g3 st"/>
+  <path d="M288 150 L309 99 L360 150 Z" class="f-g2 st"/>
+  <path d="M309 99 L360 74 L360 150 Z" class="f-g1 st"/>
+  <text x="326" y="246" class="labk">8 面</text>
+  <text x="290" y="262" class="lab2" font-size="11">圆了一档，够用</text>
+  <path d="M672 150 L662 114 L636 88 L600 78 L564 88 L538 114 L528 150 L538 186 L564 212 L600 224 L636 212 L662 186 Z" class="st"/>
+  <path d="M672 150 L662 114 L600 150 Z" class="f-g2 st"/>
+  <path d="M662 114 L636 88 L600 150 Z" class="f-g1 st"/>
+  <path d="M636 88 L600 78 L600 150 Z" class="f-g1 st"/>
+  <path d="M600 78 L564 88 L600 150 Z" class="f-g1 st"/>
+  <path d="M564 88 L538 114 L600 150 Z" class="f-g2 st"/>
+  <path d="M538 114 L528 150 L600 150 Z" class="f-g3 st"/>
+  <path d="M528 150 L538 186 L600 150 Z" class="f-g3 st"/>
+  <path d="M538 186 L564 212 L600 150 Z" class="f-g4 st"/>
+  <path d="M564 212 L600 224 L600 150 Z" class="f-g5 st"/>
+  <path d="M600 224 L636 212 L600 150 Z" class="f-g5 st"/>
+  <path d="M636 212 L662 186 L600 150 Z" class="f-g4 st"/>
+  <path d="M662 186 L672 150 L600 150 Z" class="f-g3 st"/>
+  <text x="566" y="246" class="labk">16 面</text>
+  <text x="524" y="262" class="lab2" font-size="11">接近真圆，最难转准</text>
+</svg>

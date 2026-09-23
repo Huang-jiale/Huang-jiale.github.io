@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200"><title>素描五个步骤示意</title><style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif}.lab{font-size:13px;fill:#333}.lab2{font-size:11.5px;fill:#777}.stroke{fill:none;stroke:#1a1a1a;stroke-width:1.4}.thin{fill:none;stroke:#888;stroke-width:.9;stroke-dasharray:4 3}.fill-g{fill:#cfcfcf}</style><rect width="100%" height="100%" fill="#fff"/>
+  <g>
+    <text x="20" y="24" class="lab">① 构图取形（HB）</text>
+    <rect x="14" y="34" width="128" height="150" class="stroke"/>
+    <rect x="40" y="70" width="72" height="72" class="thin"/>
+    <ellipse cx="76" cy="106" rx="30" ry="28" class="stroke" stroke-width="1.2"/>
+    <line x1="14" y1="150" x2="142" y2="150" class="thin"/>
+  </g>
+  <g transform="translate(152,0)">
+    <text x="20" y="24" class="lab">② 定明暗交界线</text>
+    <rect x="14" y="34" width="128" height="150" class="stroke"/>
+    <ellipse cx="76" cy="106" rx="30" ry="28" class="stroke" stroke-width="1.4"/>
+    <path d="M92 82 q12 24 2 46" fill="none" stroke="#1a1a1a" stroke-width="3.2"/>
+    <path d="M104 150 q-26 8 -50 -2" fill="none" stroke="#777" stroke-width="1.2" stroke-dasharray="4 3"/>
+  </g>
+  <g transform="translate(304,0)">
+    <text x="20" y="24" class="lab">③ 统一铺暗部+投影</text>
+    <rect x="14" y="34" width="128" height="150" class="stroke"/>
+    <ellipse cx="76" cy="106" rx="30" ry="28" class="stroke" stroke-width="1.4"/>
+    <path d="M92 80 A30 28 0 0 1 88 132 Q76 120 82 96 Z" fill="#9a9a9a" stroke="none"/>
+    <path d="M100 148 q-30 10 -58 0 l30 -12 Z" fill="#8f8f8f" stroke="none"/>
+  </g>
+  <g transform="translate(456,0)">
+    <text x="20" y="24" class="lab">④ 灰面过渡 + 反光</text>
+    <rect x="14" y="34" width="128" height="150" class="stroke"/>
+    <defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#ddd"/><stop offset="1" stop-color="#6f6f6f"/></linearGradient></defs>
+    <ellipse cx="76" cy="106" rx="30" ry="28" fill="url(#gg)" stroke="#333" stroke-width="1.2"/>
+    <path d="M60 152 q22 8 44 -2" fill="none" stroke="#a5a5a5" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(608,0)">
+    <text x="20" y="24" class="lab">⑤ 刻画、提亮、收虚实</text>
+    <rect x="14" y="34" width="128" height="150" class="stroke"/>
+    <defs><radialGradient id="rr" cx=".35" cy=".3"><stop offset="0" stop-color="#fff"/><stop offset=".65" stop-color="#cfcfcf"/><stop offset="1" stop-color="#4d4d4d"/></radialGradient></defs>
+    <ellipse cx="76" cy="106" rx="30" ry="28" fill="url(#rr)" stroke="#333" stroke-width="1"/>
+    <path d="M74 78 q6 -12 14 -14" fill="none" stroke="#333" stroke-width="2"/>
+    <ellipse cx="63" cy="95" rx="7" ry="5" fill="#fff" opacity=".85"/>
+    <path d="M50 152 q30 8 52 -3" fill="none" stroke="#555" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+  </g>
+</svg>

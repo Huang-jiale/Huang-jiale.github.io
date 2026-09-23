@@ -1,0 +1,55 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="正面头部的四个骨点位置" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="24" class="labk">四个骨点：先把钉子点上，五官与暗部才不会飘</text>
+  <circle cx="150" cy="140" r="66" class="st"/>
+  <path d="M110 194 L106 236 Q150 256 194 236 L194 190" class="st"/>
+  <path d="M112 128 q20 -9 38 -2" class="st"/>
+  <path d="M166 126 q20 -7 38 4" class="st"/>
+  <path d="M118 146 q13 -8 26 0 q-13 7 -26 0" class="st"/>
+  <path d="M162 146 q13 -8 26 0 q-13 7 -26 0" class="st"/>
+  <path d="M150 152 L143 182 q8 6 17 1" class="st"/>
+  <path d="M130 206 q20 -6 40 0" class="st"/>
+  <circle cx="126" cy="130" r="5" class="dot"/>
+  <circle cx="202" cy="162" r="5" class="dot"/>
+  <circle cx="108" cy="232" r="5" class="dot"/>
+  <circle cx="214" cy="200" r="5" class="dot"/>
+  <line x1="126" y1="130" x2="286" y2="66" class="st-thin"/>
+  <line x1="202" y1="162" x2="286" y2="114" class="st-thin"/>
+  <line x1="108" y1="232" x2="286" y2="162" class="st-thin"/>
+  <line x1="214" y1="200" x2="286" y2="210" class="st-thin"/>
+  <text x="290" y="66" class="lab">① 眉弓：眉的正下方，一条横骨脊</text>
+  <text x="290" y="86" class="lab2">　 眉与上睑都长在它上面</text>
+  <text x="290" y="114" class="lab">② 颧弓：外眼角下 10~15mm</text>
+  <text x="290" y="134" class="lab2">　 脸最宽处＝正面与侧面的分界</text>
+  <text x="290" y="162" class="lab">③ 下颌角：耳垂前下 15~25mm</text>
+  <text x="290" y="182" class="lab2">　 男性更方；它决定下颌是方是圆</text>
+  <text x="290" y="210" class="lab">④ 乳突：耳垂后方约 15mm 的硬包</text>
+  <text x="290" y="230" class="lab2">　 头与颈的交界，颈后线从它出发</text>
+  <text x="290" y="266" class="lab2">摸一摸再画：用指尖按住自己这四处，各按 5 秒，手会替你记住位置。</text>
+  <text x="560" y="66" class="labk">画法分工</text>
+  <text x="560" y="92" class="lab2">骨点 → 实、卡、可重</text>
+  <text x="560" y="112" class="lab2">软组织 → 虚、松、过渡</text>
+  <text x="560" y="146" class="lab2">"像不像"来自软组织，</text>
+  <text x="560" y="166" class="lab2">"稳不稳"来自骨点。</text>
+  <text x="560" y="200" class="lab2">颊脂垫、口轮匝肌、眼轮匝肌</text>
+  <text x="560" y="220" class="lab2">会随胖瘦与年龄改变；</text>
+  <text x="560" y="240" class="lab2">骨点不会。</text>
+</svg>

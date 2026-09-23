@@ -1,0 +1,57 @@
+<svg viewBox="0 0 760 320" role="img" aria-label="两种起手式：先画脸与先画大形" xmlns="http://www.w3.org/2000/svg" width="760" height="320"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="320" class="bg-paper"/>
+  <text x="18" y="24" class="labk">同一张纸，8 分钟后</text>
+  <line x1="380" y1="40" x2="380" y2="280" class="st-thin"/>
+  <circle cx="150" cy="120" r="52" class="st"/>
+  <path d="M98 112 Q150 96 202 112" class="st-thin"/>
+  <path d="M126 112 L126 132 M174 112 L174 132" class="st-thin"/>
+  <ellipse cx="126" cy="120" rx="9" ry="5" class="st"/>
+  <ellipse cx="174" cy="120" rx="9" ry="5" class="st"/>
+  <circle cx="126" cy="120" r="2.5" class="st"/>
+  <circle cx="174" cy="120" r="2.5" class="st"/>
+  <path d="M150 128 L144 148 L156 150" class="st"/>
+  <path d="M134 164 Q150 170 166 164" class="st"/>
+  <path d="M150 172 L150 210" class="st"/>
+  <path d="M132 186 L168 186" class="st"/>
+  <path d="M150 210 L140 244 M150 210 L162 244" class="st"/>
+  <text x="150" y="268" class="labk" text-anchor="middle">✕ 局部先行</text>
+  <text x="150" y="288" class="lab2" text-anchor="middle">头占满纸，身子没地方放</text>
+  <path d="M560 62 Q536 110 548 158 Q560 214 540 268" class="st-red"/>
+  <circle cx="560" cy="74" r="12" class="st f-g1"/>
+  <rect x="540" y="90" width="30" height="34" rx="6" class="st f-g1" transform="rotate(-9 555 107)"/>
+  <rect x="542" y="128" width="26" height="20" rx="5" class="st f-g2" transform="rotate(9 555 138)"/>
+  <path d="M550 148 L544 200 L540 268" class="st"/>
+  <path d="M562 148 L574 198 L580 266" class="st"/>
+  <path d="M544 96 L530 132 L534 164" class="st"/>
+  <path d="M570 98 L584 130 L580 160" class="st"/>
+  <path d="M536 268 L520 270 L520 276 L542 276 Z" class="st f-g2"/>
+  <path d="M580 266 L596 268 L596 276 L574 276 Z" class="st f-g2"/>
+  <circle cx="534" cy="164" r="4" class="st"/>
+  <circle cx="580" cy="160" r="4" class="st"/>
+  <path d="M556 88 L532 100 L580 102 Z" class="st-blue"/>
+  <text x="556" y="268" class="labk" text-anchor="middle">✓ 主线先行</text>
+  <text x="556" y="288" class="lab2" text-anchor="middle">先给全身，再往里塞细节</text>
+  <text x="620" y="110" class="lab2">脸只有三笔：</text>
+  <text x="620" y="132" class="lab2">中线＋两条轮廓</text>
+  <text x="620" y="154" class="lab2">（第 21 课）</text>
+  <text x="620" y="192" class="lab2">手只在 10 分钟</text>
+  <text x="620" y="214" class="lab2">档出现</text>
+</svg>

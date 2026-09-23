@@ -1,0 +1,57 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="退远眯眼回整体的循环流程图" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="26" class="labk">深入阶段的标准循环：一圈 10 分钟，一张 8 小时作业跑 30 圈</text>
+  <g stroke="#1c1c1c" stroke-width="1">
+    <rect x="25"  y="52" width="140" height="56" class="f-white"/>
+    <rect x="220" y="52" width="140" height="56" class="f-white"/>
+    <rect x="415" y="52" width="140" height="56" class="f-white"/>
+    <rect x="610" y="52" width="140" height="56" class="f-white"/>
+  </g>
+  <text x="38"  y="74" class="lab">① 画</text>
+  <text x="38"  y="94" class="lab2">8~12 分钟，只做一档</text>
+  <text x="233" y="74" class="lab">② 退</text>
+  <text x="233" y="94" class="lab2">站到 2 米外，10 秒</text>
+  <text x="428" y="74" class="lab">③ 眯</text>
+  <text x="428" y="94" class="lab2">眯眼 3 秒，问三问</text>
+  <text x="623" y="74" class="lab">④ 回</text>
+  <text x="623" y="94" class="lab2">30 秒内下笔改一处</text>
+  <g fill="#1c1c1c">
+    <polygon points="170,76 170,88 214,82"/>
+    <polygon points="365,76 365,88 409,82"/>
+    <polygon points="560,76 560,88 604,82"/>
+  </g>
+  <path d="M680 114 L680 152 L95 152 L95 120" class="st-blue"/>
+  <polygon points="89,134 101,134 95,116" fill="#0f6ab5"/>
+  <text x="240" y="172" class="lab2">一圈结束才允许开始下一圈；没改完的那处留到下一圈，不许"顺手多改两笔"</text>
+
+  <text x="18" y="206" class="labk">"三问"每次一模一样，背下来，不许临时换</text>
+  <g stroke="#1c1c1c" stroke-width="1">
+    <rect x="18"  y="218" width="230" height="56" class="f-g1"/>
+    <rect x="265" y="218" width="230" height="56" class="f-g3"/>
+    <rect x="512" y="218" width="230" height="56" class="f-g5"/>
+  </g>
+  <text x="30"  y="242" class="lab">整幅里最黑的一块</text>
+  <text x="30"  y="262" class="lab2">还是它吗？面积有这么大吗？</text>
+  <text x="277" y="242" class="lab">我想让人看的地方</text>
+  <text x="277" y="262" class="lab2">是不是明度差最大的地方？</text>
+  <text x="524" y="242" class="lab f-white">有没有两块已经</text>
+  <text x="524" y="262" class="lab2 f-white">一样灰了？（最常中）</text>
+</svg>

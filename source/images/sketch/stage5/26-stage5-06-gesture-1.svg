@@ -1,0 +1,59 @@
+<svg viewBox="0 0 760 330" role="img" aria-label="三种动态线：C 形、S 形、I 形" xmlns="http://www.w3.org/2000/svg" width="760" height="330"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}</style>
+  <rect width="760" height="330" class="bg-paper"/>
+  <text x="18" y="24" class="labk">三种线型：C 形、S 形、I 形（红线一笔到底）</text>
+  <line x1="40" y1="268" x2="540" y2="268" class="st"/>
+  <circle cx="136" cy="112" r="13" class="st-thin"/>
+  <path d="M124 122 Q104 148 102 172 Q100 192 106 208" class="st-thin"/>
+  <path d="M120 128 L134 160 L130 186" class="st-thin"/>
+  <path d="M106 208 L102 240 L104 268" class="st-thin"/>
+  <path d="M106 208 L122 238 L128 268" class="st-thin"/>
+  <path d="M138 98 Q100 140 100 208 Q100 242 104 268" class="st-red"/>
+  <circle cx="292" cy="88" r="13" class="st-thin"/>
+  <path d="M292 101 Q286 136 296 172" class="st-thin"/>
+  <path d="M284 112 L270 142 L276 168" class="st-thin"/>
+  <path d="M302 112 L316 140 L310 166" class="st-thin"/>
+  <path d="M290 172 L278 214 L272 268" class="st-thin"/>
+  <path d="M300 172 L314 212 L310 268" class="st-thin"/>
+  <path d="M292 74 Q276 112 292 148 Q310 186 300 216 Q292 246 310 268" class="st-red"/>
+  <circle cx="478" cy="86" r="13" class="st-thin"/>
+  <path d="M478 99 L476 172" class="st-thin"/>
+  <path d="M464 112 L492 112" class="st-thin"/>
+  <path d="M464 112 L458 146 L460 178" class="st-thin"/>
+  <path d="M492 112 L498 146 L496 178" class="st-thin"/>
+  <path d="M472 172 L470 220 L470 268" class="st-thin"/>
+  <path d="M484 172 L490 220 L490 268" class="st-thin"/>
+  <path d="M478 72 Q472 122 477 172 Q482 220 474 268" class="st-red"/>
+  <text x="110" y="296" class="labk" text-anchor="middle">① C 形</text>
+  <text x="110" y="316" class="lab2" text-anchor="middle">弯腰、后仰、递东西</text>
+  <text x="292" y="296" class="labk" text-anchor="middle">② S 形</text>
+  <text x="292" y="316" class="lab2" text-anchor="middle">走路、转身、放松地站</text>
+  <text x="478" y="296" class="labk" text-anchor="middle">③ I 形</text>
+  <text x="478" y="316" class="lab2" text-anchor="middle">立正、靠墙、排队</text>
+  <text x="570" y="72" class="labk">一线三问</text>
+  <text x="570" y="98" class="lab2">① 他往哪边倒？</text>
+  <text x="570" y="120" class="lab2">② 弯在哪个高度？</text>
+  <text x="570" y="142" class="lab2">③ 两端谁在前？</text>
+  <text x="570" y="180" class="labk">三秒判据</text>
+  <text x="570" y="206" class="lab2">把其余线全擦掉，</text>
+  <text x="570" y="228" class="lab2">只剩这条红线还能</text>
+  <text x="570" y="250" class="lab2">看出他在干什么，</text>
+  <text x="570" y="272" class="lab2">这张就算及格。</text>
+</svg>
