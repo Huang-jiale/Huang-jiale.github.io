@@ -221,6 +221,37 @@ Actions 成功不等于内容上线（404 常见于 CDN 传播延迟）。跑 `p
 
 NexT 把整块容器宽度写死在主题包里（`$content-desktop-large = 1160px`，≥1600px 时改为视口的 73%），改配置改不动。真要再放宽，就在上面说的 `source/_data/variables.styl` 里重写 `$content-desktop-large`，升级主题不会被覆盖。
 
+### 文章页阅读体验（侧栏目录折叠 / 顶部进度条 / 字数与预计时间）
+
+2026-09-24 加的一层。生活六项和素描那种「一篇 8～10 课、每课还有小标题」的文章，目录拉到几百条能把侧栏撑爆，
+所以按用户拍板的口径改成：**课（h2）永远显示，课内小标题（h3）默认折叠、点课才展开**。三层各自是谁：
+
+- **`_config.next.yml`**：`toc.wrap: true`（长标题换行，不再 `nowrap` + 省略号）、`toc.expand_all: true`
+  —— 注意这里**不是**「全部展开」的意思，主题把整套「滚到哪个课就自动撑开哪个」的 `.active > .nav-child`
+  CSS 包在 `if (not hexo-config('toc.expand_all'))` 里，设成 true 是把主题的折叠**关掉**，让折叠逻辑只剩我们一份，
+  不用跟它抢特异性。`reading_progress.enable: true`（3px、`position: top`）用的是主题自带组件，
+  颜色在这里填的 `#0071e3` 只影响浅色模式——深色靠下面 CSS 里那条 `.reading-progress-bar { background: var(--accent) }`。
+- **折叠样式在 `source/_data/styles.styl` 的「侧栏目录」一节**：`.nav-child` 默认 `height: 0; visibility: hidden`，
+  加上 `.toc-open` 才 `height: var(--height, auto)`（高度由 JS 按 `scrollHeight` 现算写进 `--height`，
+  这样才有动画，纯 CSS 没法从 0 过渡到 `auto`）。箭头是 `::before` 画的 6px 折角，`rotate(-45deg)` → `45deg`。
+- **折叠行为在 `source/js/toc-fold.js`**（发到 `/js/toc-fold.js`）。它不是 Hexo 脚本，靠两个钩子挂进页面：
+  `custom_file_path.bodyEnd` 指向 `tools/toc-fold.njk`，那个文件里只有一句 `{{ next_js('toc-fold.js') }}`
+  （`next_js` 解析成 `/js/…` 并带 `defer`；pjax 没开，普通 defer 脚本安全）。行为：一次只展开一课、
+  再点同一课收起、**点小标题不收起**（`closest('a')?.closest('.nav-item')` 再判 `.toc-parent`，
+  别写成 `closest(':scope > .nav-item')`——`closest` 的 `:scope` 是元素自己，语义完全不同，踩过）、
+  URL 带 `#锚点` 时自动把那一课展开。
+- **字数那一行**：`scripts/read-time.js` 注册 helper `post_readtime`，渲染口是 `custom_file_path.postMeta`
+  → `tools/post-readtime.njk`（`is_post()` 判一下，只在文章页出，位置在标题下方的 `.post-meta` 里）。
+  **自己数而不装 `hexo-word-counter`**：那插件数的是 markdown 原文，图片路径、表格竖线全算字数。这里数
+  `post.content`（渲染好的 HTML）：先剥标签、再把 HTML 实体整段当噪声丢掉（留着 `&mdash;` 里的 `mdash`
+  会被英文词正则数成一个字），汉字/假名/谚文各算 1 字，连续英文数字算 1 词。**速度口径 400 字/分钟，
+  要改就改 `scripts/read-time.js` 顶部的 `WPZ`**；超过 60 分钟显示成「约 N 小时 M 分钟」。
+
+`tools/check-build.py` 第 11 节把这些钉死：折叠脚本已发布、CSS 里主题那套自动撑开没输出、默认高度 0、
+`.toc-open` 才展开、目录换行、进度条颜色是 `var(--accent)`、137 篇文章页**逐篇**把渲染后的正文重新数一遍
+对账页面上的字数文案（切片必须从 `itemprop="articleBody"` 的 `>` **之后**开始，从属性名那里切会把
+`itemprop` / `articleBody` 各数成一个英文词，每篇虚高 2 字，把真误差盖掉）。
+
 ### 验证这套前端的机器化检查
 
 `tools/check-build.py`：第 1b 节查三层分类（一级只能是 工作/学习/生活，且每篇的分类路径都建了页）；
@@ -229,7 +260,8 @@ NexT 把整块容器宽度写死在主题包里（`$content-desktop-large = 1160
 格子数正好 52 列 364 格、格子里标的篇数加起来 == 源里窗口内的文章数（图例小方块不计入）、
 「学习」卡上的题数文案和二级分类芯片与源现算结果一致（芯片按一级模块分开比，「生活」卡单独查那 7 个二级分类——六项 + 素描，都是从 `source/_posts` 现算）、首页每个 href/src 都落盘、
 最近更新 == 全站最新 6 篇、`public/page/2/` 还是文章流、每篇行测「折叠块数 == 答案数」且速览恰好 1 块；
-第 10 节查生活六项：**期望值全部从六份 manifest 现推**（`sh-<项>-<阶段号>` 18 个 slug、每页课数、每页三级分类名、每页图数），所以母本加课只要重跑导入脚本，校验器会跟着变；逐页查 `<title>`、三级 front-matter、`<h2>` 课数、课标题逐条在渲染页里对得上、兄弟篇链接、四处图片集合（母本 svg / 源 md 引用 / `source/images` / `public/images`）完全相等、每项三段图数相加 == 母本该项目的图数（证明没有跨阶段重复或漏）、汉字 ≥ 母本这一阶段的 0.9 倍、合计 64 课 499 图、站内链接无死链。
+第 10 节查生活六项：**期望值全部从六份 manifest 现推**（`sh-<项>-<阶段号>` 18 个 slug、每页课数、每页三级分类名、每页图数），所以母本加课只要重跑导入脚本，校验器会跟着变；逐页查 `<title>`、三级 front-matter、`<h2>` 课数、课标题逐条在渲染页里对得上、兄弟篇链接、四处图片集合（母本 svg / 源 md 引用 / `source/images` / `public/images`）完全相等、每项三段图数相加 == 母本该项目的图数（证明没有跨阶段重复或漏）、汉字 ≥ 母本这一阶段的 0.9 倍、合计 64 课 499 图、站内链接无死链；
+第 11 节查上面那三层阅读体验（明细见「文章页阅读体验」一节）。共 294 项。
 
 ## 申论知识库导入流水线（第一版 259 篇，已撤回）
 
@@ -427,7 +459,7 @@ python tools/check-live.py 生活六项
 
 ## 已开启的功能
 
-深色模式切换、站内搜索（依赖 `hexo-generator-searchdb`，索引生成为 `search.json`）、文章目录 TOC、代码块复制按钮、菜单数字徽章、分类页 `/categories/`、标签页 `/tags/`、关于页 `/about/`。
+深色模式切换、站内搜索（依赖 `hexo-generator-searchdb`，索引生成为 `search.json`）、文章目录 TOC（侧栏，课内小标题点击展开，见「文章页阅读体验」）、页面顶部阅读进度条、文章标题下的字数与预计读完时间、代码块复制按钮、菜单数字徽章、分类页 `/categories/`、标签页 `/tags/`、关于页 `/about/`。评论与 pjax 都不开（见「评论（决定不启用）」）。
 
 ## 可选扩展
 

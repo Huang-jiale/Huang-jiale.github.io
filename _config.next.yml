@@ -11,13 +11,17 @@
 scheme: Pisces
 
 # ---------------------------------------------------------------
-# 自定义样式：主题的官方钩子，升级主题不会被覆盖，也不用 fork 主题
+# 自定义样式与局部模板：主题的官方钩子，升级主题不会被覆盖，也不用 fork 主题
 # variable 在 _variables/base + _variables/Pisces 之后导入（盖掉主题默认变量），
 # style 在整份主题 CSS 的最后导入（同优先级选择器这里赢）。
+# postMeta 是一个 njk 局部，渲染在文章标题下面那一行 .post-meta 里（字数/阅读时长）；
+# bodyEnd 渲染在 </body> 前，用来挂侧栏目录折叠的脚本。路径都相对站点根目录。
 # ---------------------------------------------------------------
 custom_file_path:
   variable: source/_data/variables.styl
   style: source/_data/styles.styl
+  postMeta: tools/post-readtime.njk
+  bodyEnd: tools/toc-fold.njk
 
 # 强调色：全站只留一个蓝（顶栏进度、选中文字、按钮、链接都跟着走）
 theme_color:
@@ -93,12 +97,30 @@ codeblock:
     style: default
 
 # ---------------------------------------------------------------
-# 文章侧栏目录
+# 文章侧栏目录：课（h2）常显，课内小标题（h3）默认折叠，点课名才展开
+# wrap: true 让长标题换行而不是打省略号（240px 的侧栏里省略号等于没有目录）。
+# expand_all 这里写 true 只为关掉主题那套「滚到哪个课就自动撑开哪个」的 CSS
+# （它靠 .active > .nav-child，会在滚动时自己跳动，和「默认折叠」相反）；
+# 折叠动画与 .toc-open 由 _data/styles.styl + source/js/toc-fold.js 自己实现。
 # ---------------------------------------------------------------
 toc:
   enable: true
   number: false
+  wrap: true
+  expand_all: true
   max_depth: 3
+
+# ---------------------------------------------------------------
+# 阅读进度：页面顶部一条细线，颜色在 styles.styl 里跟着 --accent 走
+# （主题自带：widgets.njk 出 .reading-progress-bar，utils.js 滚动时写 --progress）
+# ---------------------------------------------------------------
+reading_progress:
+  enable: true
+  start_at: left
+  position: top
+  reversed: false
+  color: "#0071e3"
+  height: 3px
 
 # ---------------------------------------------------------------
 # 评论：默认关闭，二选一填好后把 comments.active 写上名字

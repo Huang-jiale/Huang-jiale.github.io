@@ -1,0 +1,6 @@
+{#
+  侧栏目录折叠脚本。主题的 custom_file_path.bodyEnd 钩子把它挂在 </body> 前，
+  next_js() 用的就是主题自己的脚本地址规则（defer 加载），产物里的路径是 /js/toc-fold.js。
+  样式在 source/_data/styles.styl 的「侧栏目录」那一节，两边靠 .toc-open 这个类对接。
+#}
+{{ next_js('toc-fold.js') }}

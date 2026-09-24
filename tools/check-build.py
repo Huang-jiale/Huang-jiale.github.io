@@ -500,6 +500,75 @@ check({k: v for k, v in kids_got.items() if k in SH_TOPICS.values()} == {cn: 3 f
       '六项每项 3 篇（一阶段一篇）', str(kids_got))
 check(f'bento-kicker">{tops.get("生活", 0)} 篇' in sh_card, f'首页「生活」卡显示 {tops.get("生活")} 篇')
 
+# ---------- 11. 阅读体验：侧栏目录折叠 / 顶部进度条 / 标题下的字数与预计读完时间 ----------
+
+TF = 'public/js/toc-fold.js'
+check(os.path.exists(TF), '目录折叠脚本发到了 /js/toc-fold.js（bodyEnd 钩子挂的 tools/toc-fold.njk）')
+tj = open(TF, encoding='utf-8').read() if os.path.exists(TF) else ''
+check('.toc-parent' in tj and 'scrollHeight' in tj, '折叠脚本确实是加 .toc-open、按真实内容高度展开')
+
+# 主题的折叠靠 .active > .nav-child（滚到哪个课就自己撑开哪个），_config.next.yml 里
+# toc.expand_all: true 就是为把它整块关掉 —— 没关掉的话两套折叠会互相打架
+check('.active > .nav-child' not in css, 'CSS：主题那套「滚动时自动撑开」的折叠没有输出')
+check(re.search(r'\.post-toc \.nav \.nav-child \{[^}]*height: 0', css), 'CSS：课内小标题默认折叠（高度 0）')
+check(re.search(r'\.post-toc \.nav \.toc-open > \.nav-child \{[^}]*height: var\(--height, auto\)', css),
+      'CSS：只有 JS 加上 .toc-open 的那一课才展开')
+check(re.search(r'\.post-toc \.nav \.nav-item \{[^}]*white-space: normal', css),
+      'CSS：目录长标题换行，不是 nowrap + 省略号')
+check(re.search(r'\.reading-progress-bar \{[^}]*var\(--accent\)', css), 'CSS：进度条颜色跟着 --accent（深色模式换浅蓝）')
+
+# 哪些篇该有折叠：源正文里有 h3 小标题的（toc.max_depth: 3，h4 及以下不进目录）
+h3_slugs = {(fm_slug(v) or norm(k)[:-3].rsplit('/', 1)[1]) for k, v in src.items() if re.search(r'^### ', v, re.M)}
+fold_pages = {s for s, h in pages_full.items() if 'nav-level-3' in h}
+check(fold_pages == h3_slugs & set(pages_full),
+      f'{len(fold_pages)} 篇文章的目录里有课内小标题（折叠就是给这些用的）',
+      f'源里有 h3 的 {len(h3_slugs)} 篇 / 产物有第三层的 {len(fold_pages)} 篇 / 差集 {sorted(h3_slugs ^ fold_pages)[:3]}')
+nojs = sorted(s for s in fold_pages if '/js/toc-fold.js' not in pages_full[s])
+check(not nojs, '带小标题的文章页全都挂了折叠脚本', str(nojs[:3]))
+nobar = sorted(s for s, h in pages_full.items() if '<div class="reading-progress-bar">' not in h)
+check(not nobar, f'{len(pages_full)} 篇文章页顶部都有进度条那一格', str(nobar[:3]))
+
+# 字数与时长：脚本自己算的那个数，必须在 python 这边拿产物正文再算一遍对得上。
+# 两边规则一模一样：剥标签、吃掉 HTML 实体，汉字/假名/谚文各 1 字，一串英文或数字算 1 词。
+TAG_RE = re.compile(r'<[^>]*>')
+ENT_RE = re.compile(r'&[#A-Za-z0-9]{1,8};')
+CJK_RE = re.compile(r'[\u3400-\u4dbf\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af]')
+WORD_RE = re.compile(r'[A-Za-z0-9]+')
+
+
+def body_chars(html):
+    # 从 post-body 的 > 之后开始数：从 itemprop= 那里切，残留的 itemprop / articleBody
+    # 会被英文词正则各数成一个「字」，整站 137 篇正好每篇虚高 2，把误差全盖掉了。
+    i = html.index('>', html.index('itemprop="articleBody"')) + 1
+    j = html.index('<footer class="post-footer"', i)      # 只数正文：页脚的分类、标签、上下篇不算
+    t = ENT_RE.sub(' ', TAG_RE.sub(' ', html[i:j]))
+    return len(CJK_RE.findall(t)) + len(WORD_RE.findall(t))
+
+
+def want_readtime(chars):
+    minutes = max(1, int(chars / 400 + 0.5))              # JS 的 Math.round 是四舍五入，不是银行家舍入
+    if minutes < 60:
+        span = f'约 {minutes} 分钟读完'
+    else:
+        h, m = divmod(minutes, 60)
+        span = f'约 {h} 小时 {m} 分钟读完' if m else f'约 {h} 小时读完'
+    return f'{chars:,} 字 · {span}'
+
+
+rt_bad = []
+for slug, full in sorted(pages_full.items()):
+    got = re.search(r'<span class="post-meta-item post-readtime"[^>]*>.*?<span>([^<]+)</span>', full, re.S)
+    if not got:
+        rt_bad.append(f'{slug} 标题下没有字数行')
+        continue
+    want = want_readtime(body_chars(full))
+    if got.group(1).strip() != want:
+        rt_bad.append(f'{slug} 页面上写「{got.group(1).strip()}」，正文现算是「{want}」')
+check(len(pages_full) >= 100, f'{len(pages_full)} 篇文章页参与字数核对')
+check(not rt_bad, '标题下的字数/时长 == 拿产物正文现算的值（没数进 markdown 噪声，也没漏内容）', str(rt_bad[:3]))
+check(any('小时' in want_readtime(body_chars(h)) for h in pages_full.values()),
+      '最长的那几篇显示成「约 N 小时」，不是一串几百分钟')
+
 print('\n%s' % ('全部通过' % () if not fail else f'{len(fail)} 项失败：' + '；'.join(fail)))
 sys.stdout.flush()          # stdout 被我换成 TextIOWrapper 了，sys.exit 时不一定帮你刷管道
 sys.exit(1 if fail else 0)

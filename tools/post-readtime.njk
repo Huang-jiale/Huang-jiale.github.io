@@ -1,0 +1,17 @@
+{#
+  文章标题下方那一行的「字数 · 预计读完时间」。
+  挂在主题的官方钩子 custom_file_path.postMeta 上（见 _config.next.yml），
+  渲染位置是主题的 post-meta.njk 里 {{ next_inject('postMeta') }} 那一格，
+  也就是日期 / 分类同一行的末尾，跟着 .post-meta 的样式走。
+  只在文章页出现：分类页、归档页的文章列表每条后面跟一串字数太吵。
+  数字怎么来的见 scripts/read-time.js（400 字/分钟，改口径改那个文件）。
+#}
+{%- if is_post() %}
+  {%- set info = post_readtime(post) %}
+  {%- if info %}
+    <span class="post-meta-item post-readtime" title="字数按渲染后的正文统计，阅读时间按中文每分钟 400 字估算">
+      <span class="post-meta-item-icon"><i class="far fa-file-word"></i></span>
+      <span>{{ info }}</span>
+    </span>
+  {%- endif %}
+{%- endif %}

@@ -664,6 +664,117 @@ details.answer {
 }
 
 // ---------------------------------------------------------------
+// 侧栏目录：课（h2）常显，课内小标题（h3）默认折叠，点课名才展开
+// 展开的类 .toc-open 由 source/js/toc-fold.js 加，--height 也是它按真实内容高度写的。
+// _config.next.yml 里 toc.expand_all 设成 true，主题那套「滚到哪个课就自动撑开哪个」的
+// 折叠 CSS 整块不再输出，所以这里的 .nav-child 是全站唯一一套，不用和主题抢优先级。
+// 层级靠字重、缩进和小标题左边那条竖线，不画分割线。
+// ---------------------------------------------------------------
+.post-toc {
+  .nav {
+    padding-left: 2px;
+
+    // 长标题换行：主题默认 nowrap + 省略号，240px 的侧栏里一门课的名字只显示半截
+    .nav-item {
+      line-height: 1.45;
+      overflow: visible;
+      text-overflow: clip;
+      white-space: normal;
+    }
+
+    a {
+      border-bottom: 0;
+      border-radius: 8px;
+      color: var(--ink-soft);
+      display: block;
+      padding: 6px 8px;
+      transition: background-color .2s var(--ease), color .2s var(--ease);
+    }
+
+    a:hover {
+      background: var(--surface-2);
+      color: var(--ink);
+    }
+
+    // 课
+    > .nav-item {
+      margin-bottom: 1px;
+
+      > a {
+        font-weight: 600;
+      }
+    }
+
+    .nav-child {
+      --height: 0;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: height .28s var(--ease), opacity .2s var(--ease), visibility .28s;
+      visibility: hidden;
+    }
+
+    .toc-open > .nav-child {
+      height: var(--height, auto);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    // 小标题：缩进 + 竖线表示「属于上面那门课」
+    .nav-child > .nav-item > a {
+      border-left: 2px solid var(--hairline);
+      border-radius: 0 8px 8px 0;
+      color: var(--muted);
+      font-size: .95em;
+      margin-left: 14px;
+      padding: 4px 8px 4px 12px;
+    }
+
+    // 箭头：只有带小标题的课才有（JS 给这些条目加 .toc-parent）
+    .toc-parent > a {
+      padding-left: 22px;
+      position: relative;
+
+      &::before {
+        border-bottom: 1.6px solid var(--muted);
+        border-right: 1.6px solid var(--muted);
+        content: '';
+        height: 6px;
+        left: 8px;
+        margin-top: -4px;
+        position: absolute;
+        top: 50%;
+        transform: rotate(-45deg);
+        transition: transform .2s var(--ease);
+        width: 6px;
+      }
+    }
+
+    .toc-parent.toc-open > a::before {
+      transform: rotate(45deg);
+    }
+
+    // 当前读到哪：只换颜色，不再自动撑开（那正是原来侧栏自己跳动的原因）
+    .active > a,
+    .active-current > a {
+      color: var(--accent);
+    }
+
+    .nav-child > .active > a {
+      background: var(--surface-2);
+    }
+  }
+}
+
+// ---------------------------------------------------------------
+// 顶部阅读进度条：主题自带（_config.next.yml 的 reading_progress），
+// 颜色跟着 --accent 走，深色模式自动换成浅蓝，不用配置里写死的那个 hex
+// ---------------------------------------------------------------
+.reading-progress-bar {
+  background: var(--accent);
+}
+
+// ---------------------------------------------------------------
 // 无障碍：用户要求减少动效时，主题的入场动画（animate.css）直接落到终态
 // ---------------------------------------------------------------
 @media (prefers-reduced-motion: reduce) {
