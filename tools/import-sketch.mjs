@@ -9,7 +9,7 @@
  * 分类只到两级：`生活 / 素描`（用户 2026-09-24：素描挪进「生活」，并把原来那三个大类压掉——
  *       大类降到标签，树里不再占一层；六项那套反过来是三层，见 import-shenghuo.mjs）
  *       阶段名进标题和标签；课与课的边界靠 `## NN 课名` 保住，重跑不改内容
- *       另外生成一张横向课程总览页 source/sketch-map/index.md（大类 → 阶段 → 30 课，课名直接链到锚点）
+ *       （以前还生成一张横向课程总览页 source/sketch-map/，用户 2026-09-24 说「删掉」，生成代码已撤）
  * 允许的改写只有三处：段落软换行合并、`**x**`→`<strong>x</strong>`（紧贴汉字的星号 CommonMark 不认）、
  *                    图片路径 `images/…` → `/images/sketch/<组>/<文件名>`
  * 两道自检：① 母本每一行（同规则归一后）必须原样出现在生成的文章里；
@@ -120,15 +120,13 @@ function lessonBody(md, group, baseDir, where) {
 }
 
 const arts = [];
-// 三大类只当标签用（用户 2026-09-24：素描挪进「生活」并压成两层）；分组关系还要给课程总览页排版用
+// 三大类只当标签用（用户 2026-09-24：素描挪进「生活」并压成两层），分组关系只影响标签
 const GROUPS = [
   { name: '基础与造型', stages: ['stage1', 'stage2'], note: '线条、透视、明暗这套底层功夫，加上把平面画成立体' },
   { name: '静物写生', stages: ['stage3', 'stage4'], note: '从石膏落到真实物体，再回到体块与结构' },
   { name: '人物与创作', stages: ['stage5', 'stage6'], note: '头像与速写，以及怎么画完整、画成自己的' },
 ];
 const groupOf = (id) => GROUPS.find((g) => g.stages.includes(id)) || die(`阶段 ${id} 没归进任何二级分类`);
-const MAP = [];                             // 课程总览页的一行 = 一个阶段
-const anchorOf = (no, title) => `${no}-${title.replace(/\s+/g, '-')}`;   // Hexo 给标题加的 id：空格换成 -
 const postUrl = (slug) => `/2026/09/23/${slug}/`;
 
 for (const st of STAGES) {
@@ -155,11 +153,6 @@ for (const st of STAGES) {
     bodyLines.push(...x.body.lines, '');
   }
   const slug = `sk-stage${STAGES.indexOf(st) + 1}`;
-  MAP.push({
-    group: groupOf(st.id), cn: st.cn, name: st.name, slug, url: postUrl(slug),
-    goal: st.goal, weeks: st.weeks,
-    lessons: files.map((x) => ({ n: x.les.n, title: x.les.title, href: `${postUrl(slug)}#${anchorOf(x.les.n, x.les.title)}` })),
-  });
   arts.push({
     slug,
     cat1: '素描',
@@ -210,39 +203,9 @@ for (const [w, src] of wanted) {
   copied++;
 }
 
-// ---------- 课程总览页（横向树：大类 → 阶段 → 30 课，一格一个可点的课） ----------
-if (MAP.length !== 6) die(`课程总览页要 6 个阶段，只攒到 ${MAP.length} 个`);
-if (MAP.reduce((s, m) => s + m.lessons.length, 0) !== 30) die(`课程总览页要 30 课，只攒到 ${MAP.reduce((s, m) => s + m.lessons.length, 0)} 课`);
-const mapLines = [
-  '---',
-  'title: 素描课程总览 · 6 个阶段 30 课',
-  'date: 2026-09-23 12:00:00',
-  'description: 一张横向的课程树：三大类 → 六个阶段 → 三十课，点课名直接跳到那一课的开头。',
-  '---',
-  '',
-  '<strong>怎么用</strong>：三大类各占一节（类名是标签，分类页统一在 生活 / 素描 下面）；每个阶段一行，行末那一串就是这一阶段的所有课，点进去落在该课的标题上（也可以用文章左侧的「文章目录」在同一篇里前后翻）。顺序学就从上往下，只想补某一项就按大类挑。',
-  '',
-  `[入门总览：工具、握笔、四周练习计划 →](${postUrl('sk-intro')})`,
-  '',
-];
-for (const g of GROUPS) {
-  const rows = MAP.filter((m) => m.group.name === g.name);
-  mapLines.push(
-    `## ${g.name}`, '',
-    `<strong>这一类管什么</strong>：${g.note}。共 ${rows.length} 个阶段 ${rows.reduce((s, r) => s + r.lessons.length, 0)} 课 → 七篇都在分类页 [/categories/生活/素描/](/categories/生活/素描/) 里（「${g.name}」这一大类现在是标签，不再是分类）。`, '',
-  );
-  for (const r of rows) {
-    mapLines.push(
-      `**[阶段${r.cn} ${r.name}](${r.url})** ｜ ${r.goal}（${r.weeks}，${r.lessons.length} 课）`,
-      '',
-      r.lessons.map((l) => `[${l.n} ${l.title}](${l.href})`).join(' ｜ '),
-      '',
-    );
-  }
-}
-fs.mkdirSync(path.join(ROOT, 'source', 'sketch-map'), { recursive: true });
-fs.writeFileSync(path.join(ROOT, 'source', 'sketch-map', 'index.md'), mapLines.join('\n') + '\n');
-console.log(`课程总览页 ${MAP.length} 个阶段 / ${MAP.reduce((s, m) => s + m.lessons.length, 0)} 课 -> source/sketch-map/index.md`);
+// 课程总览页 /sketch-map/ 已删（用户 2026-09-24：「删掉」）。生成这张页的代码一并撤掉，
+// 免得下次跑脚本又把它写回来。要恢复：git show 165c3fd:source/sketch-map/index.md，
+// 再把 check-build.py 第 8 节（核 30 个课锚点）放回。
 
 // ---------- 自检 ①：母本逐行都要在文章里 ----------
 const gen = new Map(arts.map((a) => [a.slug, fs.readFileSync(path.join(POSTS, `${a.slug}.md`), 'utf8')]));
