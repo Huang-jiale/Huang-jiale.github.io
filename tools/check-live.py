@@ -101,16 +101,21 @@ check(not bad, '抽查的图片线上全部 200', str(bad[:3]))
 check(not never, '抽查没有因网络超时而漏掉', str(never[:3]))
 
 def cat_page(path):
-    """翻完一个分类页的全部分页，返回合起来看到的本模块 slug。"""
-    links, page = set(), ''
-    for _ in range(10):                                   # 分类页每页 10 条，翻到没有新文章为止
+    """翻完一个分类页的全部分页，返回合起来看到的本模块 slug。
+
+    进度只能看「这一页有没有新文章」，不能看「有没有本模块的文章」：分类页现在是 date 升序，
+    `/学习/` 第一页全是时政，行测一篇都没有，拿本模块判断会在第一页就 break（曾经误报「收全 0 篇」）。
+    """
+    mine, seen, page = set(), set(), ''
+    for _ in range(20):                                   # 每页 10 条，一级分类 112 篇要翻 12 页
         html = get(f'{path}{page}')[1].decode('utf-8', 'replace')
-        found = {s for s in re.findall(r'href="[^"]*?/([a-z][a-z0-9-]{2,})/"', html)} & set(posts)
-        if not found or found <= links:
+        arts = set(re.findall(r'href="[^"]*?/\d{4}/\d{2}/\d{2}/([a-z][a-z0-9-]{2,})/"', html))
+        if not arts - seen:
             break
-        links |= found
+        seen |= arts
+        mine |= arts & set(posts)
         page = f'page/{int(page.split("/")[1]) + 1}/' if page.startswith('page/') else 'page/2/'
-    return links
+    return mine
 
 
 # 源里挂过的每条分类链都要有线上分类页；Hexo 把分类名 slug 化后才做目录（空格变成 `-`）
