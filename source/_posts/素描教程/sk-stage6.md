@@ -5,10 +5,10 @@ tags:
   - 素描
   - 阶段六
   - 创作与精进
-categories:
-  - 学习
-  - 素描
   - 人物与创作
+categories:
+  - 生活
+  - 素描
 description: 画得完整、画得出来、画得像自己。长期，4 课。
 ---
 

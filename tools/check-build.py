@@ -6,9 +6,10 @@
 **构建有没有把源里的东西弄丢/弄坏**（页面数、图片、题数==答案数、分类页收全、死链、渲染残留）。
 每一步都先断言「确实取到了样本」，正则写错匹配到 0 个时一律判失败，不许假绿。
 
-2026-09-23 人工核对过的量：74 时政 + 38 行测 + 7 素描 = 119 篇；行测 541 题、92 图；素描 30 课、159 图。
-分类从 2026-09-23 起是三层：一级只有 工作 / 学习 / 生活（现有 119 篇全在「学习」下），
-二级是模块（行测 / 时政要点 / 素描），三级是子分类（判断推理 / 2025年11月 / 基础与造型 …）。
+2026-09-24 人工核对过的量：74 时政 + 38 行测 = 112 篇在「学习」，7 素描 + 18 生活课 = 25 篇在「生活」；
+行测 541 题、92 图；素描 30 课、159 图；生活六项 64 课、499 图（期望课数与图数从母本 manifest 现算，篇数 18 = 六项 × 3 阶段）。
+分类层数按模块定：一级只有 工作 / 学习 / 生活；「学习」下面三层（模块 / 子分类），
+「生活」下面素描是两层（大类降到标签）、六项是三层（阶段名当三级），所以规则是 2~3 层、只有「学习」强制三层。
 """
 import io, sys, os, re, glob
 import urllib.parse
@@ -49,10 +50,12 @@ check(len(src) >= 100, f'源文章 {len(src)} 篇')
 xc_src = {k: v for k, v in src.items() if '/xc-' in k}
 check(len(xc_src) >= 30, f'其中行测 {len(xc_src)} 篇')
 
-pages = {}
+pages, pages_full = {}, {}
 for f in glob.glob('public/[0-9]*/[0-9][0-9]/[0-9][0-9]/*/index.html'):   # 文章 URL 形如 /2026/09/22/<slug>/
     slug = norm(f).split('/')[-2]
-    pages[slug] = open(f, encoding='utf-8').read().split('post-body', 1)[1]
+    full = open(f, encoding='utf-8').read()
+    pages_full[slug] = full                              # 整页：查 <title> 用这个
+    pages[slug] = full.split('post-body', 1)[1]          # 只留正文：其余检查按正文判
 check(len(pages) >= 30, f'构建出的行测以外页面 {len(pages)} 个（含按日期目录铺的全部文章页）')
 
 src_slugs = {fm_slug(v) for v in xc_src.values()}
@@ -219,7 +222,7 @@ sk_cat = {}
 for s, v in sk_src.items():
     for c in fm_categories(v):
         sk_cat.setdefault(c, []).append(s)
-check(len(sk_cat) == 5, f'素描分类 {len(sk_cat)} 个（学习 + 素描 + 3 个二级大类）', str(sorted(sk_cat)))
+check(len(sk_cat) == 2, f'素描分类 {len(sk_cat)} 个（生活 + 素描，两级；三个大类已降到标签）', str(sorted(sk_cat)))
 for name, slugs_ in sk_cat.items():
     # Hexo 把分类名 slug 化后才做目录：空格变成 `-`（页面标题里还是空格），所以两边要先归一
     dir_ = name.replace(' ', '-')
@@ -394,21 +397,18 @@ for slug, html in pages.items():
 check(fold_total >= 500, f'行测折叠共 {fold_total} 块')
 check(not fold_bad, '每道行测题的答案都折在 details 里、点击才露出来', str(fold_bad[:4]))
 
-# ---------- 10. 生活六项：一项一篇，课数 / 图片按母本 manifest 现算对账 ----------
+# ---------- 10. 生活六项：一项一个阶段一篇（18 篇），课数 / 图片 / 汉字全按母本 manifest 现算 ----------
 
 import json
 
-SH_SLUG = {'sh-riddle': 'riddle', 'sh-baduanjin': 'baduanjin', 'sh-sudoku': 'sudoku',
-           'sh-xiangqi': 'xiangqi', 'sh-gomoku': 'gomoku', 'sh-calligraphy': 'calligraphy'}
-sh_src = {fm_slug(v): v for k, v in src.items() if '/生活六项/' in k}
-check(len(sh_src) == 6, f'生活六项源 {len(sh_src)} 篇', '应该是六项各一篇')
-check(set(sh_src) == set(SH_SLUG), '六篇的 slug 与母本专题一一对应', str(sorted(set(sh_src) ^ set(SH_SLUG))))
-sh_pages = {s: pages[s] for s in sh_src if s in pages}
-check(len(sh_pages) == len(sh_src), '6 篇全都构建出了页面', str(sorted(set(sh_src) - set(sh_pages))))
+SH_TOPICS = {'riddle': '猜灯谜', 'baduanjin': '八段锦', 'sudoku': '数独',
+             'xiangqi': '象棋', 'gomoku': '五子棋', 'calligraphy': '书法'}
+CN_NUM = '一二三四五六'
+esc = lambda t: (t.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('/', '&#x2F;'))
 
 
 def manifest(tid):
-    """读母本 course.manifest.js（它是课序/课名的唯一事实来源）"""
+    """读母本 course.manifest.js（它是课序/课名/阶段名的唯一事实来源）"""
     t = open(f'data/shenghuo-raw/{tid}/course.manifest.js', encoding='utf-8').read()
     m = re.search(r'module\.exports = (\{[\s\S]*\})\s*;\s*$', t)
     if not m:
@@ -422,38 +422,67 @@ def lesson_title(t):
     return re.sub(r'^阶段[一二三四五六]·\s*\d+\s*', '', t).strip()
 
 
-sh_total_lessons = sh_total_imgs = 0
-for slug, tid in SH_SLUG.items():
-    man = manifest(tid)
-    if not man:
-        continue
-    lessons = [l for st in man['stages'] for l in st['lessons']]
-    html = sh_pages.get(slug, '')
+def lesson_han(tid, l):
+    """母本这一课的汉字数（去掉图片引用），用来判生成的页面有没有把内容写薄"""
+    p = f"data/shenghuo-raw/{tid}/{l['n']}-{os.path.basename(l['file'])[:-5]}.md"
+    t = open(p, encoding='utf-8').read()
+    return len(re.findall(r'[一-鿿]', re.sub(r'!\[[^\]]*\]\([^)]*\)', '', t)))
+
+
+# 期望的 18 篇一篇不差：slug、三级分类名、课号清单全部由 manifest 推出来，不写死
+want = {}
+for tid_, cn_ in SH_TOPICS.items():
+    man_ = manifest(tid_)
+    for si_, st_ in enumerate(man_['stages']):
+        want[f'sh-{tid_}-{si_ + 1}'] = {'tid': tid_, 'cn': cn_, 'si': si_, 'cat3': st_['name'],
+                                        'no': f'阶段{CN_NUM[si_]}', 'lessons': st_['lessons']}
+check(len(want) == 18, f'manifest 推出 {len(want)} 篇（六项 × 各 3 阶段）')
+
+sh_src = {fm_slug(v): v for k, v in src.items() if '/生活六项/' in k}
+check(set(sh_src) == set(want), f'生活六项 {len(sh_src)} 篇，slug 与「项 + 阶段」一一对应',
+      str(sorted(set(sh_src) ^ set(want))[:4]))
+sh_pages = {s: pages[s] for s in sh_src if s in pages}
+check(len(sh_pages) == len(sh_src), f'{len(sh_src)} 篇全都构建出了页面', str(sorted(set(sh_src) - set(sh_pages))))
+
+sh_total_lessons = sum(len(w['lessons']) for w in want.values())
+check(sh_total_lessons == 64, f'六套课合计 {sh_total_lessons} 课', '母本 manifest 应该是 64 课')
+per_topic_imgs, sh_total_imgs = {}, 0
+for slug, w in sorted(want.items()):
+    tid, lessons, html = w['tid'], w['lessons'], sh_pages.get(slug, '')
+    check(f'categories:\n  - "生活"\n  - "{w["cn"]}"\n  - "{w["cat3"]}"' in sh_src.get(slug, ''),
+          f'{slug}：分类是三层 生活 / {w["cn"]} / {w["cat3"]}')
+    check(f'<title>{esc(w["cn"] + w["no"] + " · " + w["cat3"])}' in pages_full.get(slug, ''),
+          f'{slug}：页面标题是「{w["cn"]}{w["no"]} · {w["cat3"]}」')
     got_h2 = len(re.findall(r'<h2', html))
-    check(got_h2 == len(lessons), f'{slug}：{len(lessons)} 课全部渲染成 <h2>', f'页面里 {got_h2} 个')
-    # marked 会把标题里的 / 输出成 &#x2F;，比对时要按同样的规则转一遍
-    esc = lambda t: (t.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('/', '&#x2F;'))
+    check(got_h2 == len(lessons), f'{slug}：这一阶段 {len(lessons)} 课全部渲染成 <h2>', f'页面里 {got_h2} 个')
     lost_title = [l['n'] for l in lessons if f'>{l["n"]} {esc(lesson_title(l["title"]))}</h2>' not in html]
     check(not lost_title, f'{slug}：每课的标题都作为 H2 出现在页面上', f'缺课号 {lost_title[:4]}')
-    # 图片：源里引用几张 → 页面里几张 → 入库几张 → 母本几张，四边相等
+    # 同项另外两篇要能从这里跳过去（拆篇后靠这个横向链接串成一套课）
+    for oi in range(3):
+        if oi == w['si']:
+            continue
+        check(re.search(r'href="/[^"]*sh-%s-%d/"' % (tid, oi + 1), html) is not None,
+              f'{slug}：开头有指向本篇 {tid} 第 {oi + 1} 阶段的链接')
     pre = f'/images/shenghuo/{tid}/'
-    s_img = set(re.findall(pre.replace('/', r'\/') + r'[^)\s"]+', sh_src[slug]))
+    s_img = set(re.findall(re.escape(pre) + r'[^)\s"]+', sh_src.get(slug, '')))
     p_img = set(re.findall(r'<img[^>]+src="(' + re.escape(pre) + r'[^"]+)"', html))
+    check(s_img == p_img, f'{slug}：页面里的图片集合与源一致（{len(s_img)} 张）', str(sorted(s_img ^ p_img)[:2]))
+    per_topic_imgs.setdefault(tid, []).append(len(s_img))
+    han = len(re.findall(r'[一-鿿]', re.sub(r'<[^>]+>', '', html)))
+    exp_han = sum(lesson_han(tid, l) for l in lessons)
+    check(han >= exp_han * 0.9, f'{slug}：页面正文 {han} 汉字 ≈ 母本这一阶段 {exp_han}', f'少了 {exp_han - han}')
+    check(han > 5000, f'{slug}：页面正文够长（{han} 汉字）')
+    sh_total_imgs += len(s_img)
+check(sh_total_imgs == 499, f'六套课合计引用 {sh_total_imgs} 张示意图', '母本应该是 499 张')
+for tid, cn in SH_TOPICS.items():
+    pre = f'/images/shenghuo/{tid}/'
     disk = {pre + f for f in os.listdir(f'source/images/shenghuo/{tid}')}
     pub = {pre + f for f in os.listdir(f'public/images/shenghuo/{tid}')}
     raw = {pre + f for f in os.listdir(f'data/shenghuo-raw/{tid}/images/svg')}
-    check(len(s_img) >= 60, f'{slug} 源里引用 {len(s_img)} 张图')
-    check(s_img == p_img, f'{slug}：页面里的图片集合与源一致', str(sorted(s_img ^ p_img)[:2]))
-    check(s_img == disk and disk == pub, f'{slug}：入库与产物里的图 == 源里引用的 {len(s_img)} 张',
-          f'源 {len(s_img)} / 入库 {len(disk)} / 产物 {len(pub)}')
-    check(s_img == raw, f'{slug}：母本 {len(raw)} 张 svg 全部被引用（一张不丢、一张不多）',
-          f'差 {sorted(s_img ^ raw)[:2]}')
-    han = len(re.findall(r'[一-鿿]', re.sub(r'<[^>]+>', '', html)))
-    check(han > 20000, f'{slug}：页面正文 {han} 汉字（合并 {len(lessons)} 课，不该薄）')
-    sh_total_lessons += len(lessons)
-    sh_total_imgs += len(s_img)
-check(sh_total_lessons == 64, f'六套课合计 {sh_total_lessons} 课', '母本 manifest 应该是 64 课')
-check(sh_total_imgs == 499, f'六套课合计 {sh_total_imgs} 张示意图')
+    check(disk == pub == raw, f'{cn}：入库与产物里的图 == 母本 {len(raw)} 张 svg（一张不丢、一张不多）',
+          f'入库 {len(disk)} / 产物 {len(pub)} / 母本 {len(raw)}')
+    check(sum(per_topic_imgs[tid]) == len(raw),
+          f'{cn}：三篇各自引用 {per_topic_imgs[tid]} 张，加起来 == 母本 {len(raw)} 张（阶段之间不重复、不漏）')
 sh_dead = set()
 for slug, html in sh_pages.items():
     for href in re.findall(r'<a[^>]+href="(/[^"#]+)"', html):
@@ -461,13 +490,14 @@ for slug, html in sh_pages.items():
         if not (os.path.exists(p) or os.path.exists(p + '.html') or os.path.isdir(p)):
             sh_dead.add(f'{slug} -> {href}')
 check(not sh_dead, '生活六项内没有指向 404 的站内链接', str(sorted(sh_dead)[:3]))
-# 首页「生活」卡：六项各一篇，芯片和篇数要对得上
+# 首页「生活」卡：六项各 3 篇 + 素描 7 篇，芯片和篇数要对得上
 sh_card = next((c for c in mod_raw if '生活' in c), '')
 kids_got = {k: int(n) for k, n in re.findall(r'<li><a href="[^"]*">([^<]+)<span class="bento-count">(\d+)</span></a></li>', sh_card)}
-check(kids_got == kid_want.get('生活'), '首页「生活」卡的子分类芯片 == 六项，各 1 篇', str(kids_got))
-check(len(kids_got) == 6 and set(kids_got) == {'猜灯谜', '八段锦', '数独', '象棋', '五子棋', '书法'},
-      '芯片名字与用户给的六项一字不差', str(sorted(kids_got)))
-check(re.search(r'bento-kicker">6 篇', sh_card) is not None, '首页「生活」卡显示 6 篇')
+check(kids_got == kid_want.get('生活'), f'首页「生活」卡的子分类芯片 == 源里 {len(kid_want.get("生活", {}))} 个二级分类的篇数', str(kids_got))
+check(set(kids_got) == set(SH_TOPICS.values()) | {'素描'}, '芯片名字 = 六项 + 素描', str(sorted(kids_got)))
+check({k: v for k, v in kids_got.items() if k in SH_TOPICS.values()} == {cn: 3 for cn in SH_TOPICS.values()},
+      '六项每项 3 篇（一阶段一篇）', str(kids_got))
+check(f'bento-kicker">{tops.get("生活", 0)} 篇' in sh_card, f'首页「生活」卡显示 {tops.get("生活")} 篇')
 
 print('\n%s' % ('全部通过' % () if not fail else f'{len(fail)} 项失败：' + '；'.join(fail)))
 sys.stdout.flush()          # stdout 被我换成 TextIOWrapper 了，sys.exit 时不一定帮你刷管道

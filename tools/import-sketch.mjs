@@ -6,7 +6,8 @@
  *       原件只读；course/ 是 30 课一课一个 MD，basics/ 是入门总览那篇）
  * 切法：**一个阶段一篇**（用户 2026-09-23 要求：按大模块分类、不要太多篇、方便后面更新）
  *       → sk-stage1..sk-stage6 六篇 + sk-intro 一篇总览 = 7 篇
- *       分类只到二级：`素描 / 基础与造型 | 静物写生 | 人物与创作`（三大类，用户 2026-09-23 选的），
+ * 分类只到两级：`生活 / 素描`（用户 2026-09-24：素描挪进「生活」，并把原来那三个大类压掉——
+ *       大类降到标签，树里不再占一层；六项那套反过来是三层，见 import-shenghuo.mjs）
  *       阶段名进标题和标签；课与课的边界靠 `## NN 课名` 保住，重跑不改内容
  *       另外生成一张横向课程总览页 source/sketch-map/index.md（大类 → 阶段 → 30 课，课名直接链到锚点）
  * 允许的改写只有三处：段落软换行合并、`**x**`→`<strong>x</strong>`（紧贴汉字的星号 CommonMark 不认）、
@@ -119,7 +120,7 @@ function lessonBody(md, group, baseDir, where) {
 }
 
 const arts = [];
-// 分类只到二级（用户 2026-09-23：「分类太多了……到二级类就够了，剩下等点进去，看左边的自由选择」）
+// 三大类只当标签用（用户 2026-09-24：素描挪进「生活」并压成两层）；分组关系还要给课程总览页排版用
 const GROUPS = [
   { name: '基础与造型', stages: ['stage1', 'stage2'], note: '线条、透视、明暗这套底层功夫，加上把平面画成立体' },
   { name: '静物写生', stages: ['stage3', 'stage4'], note: '从石膏落到真实物体，再回到体块与结构' },
@@ -197,8 +198,9 @@ const slugs = new Set();
 for (const a of arts) {
   if (slugs.has(a.slug)) die(`slug 撞了：${a.slug}`);
   slugs.add(a.slug);
-  const fm = ['---', `title: ${a.title}`, `date: ${a.date}`, 'tags:', ...a.tags.map((t) => `  - ${t}`),
-    'categories:', '  - 学习', `  - ${a.cat1}`, `  - ${a.cat2}`, `description: ${a.desc}`, '---'].join('\n');
+  // 分类只到两级：生活 / 素描（用户 2026-09-24 定的，原来那三个大类降到标签，树里不再占一层）
+  const fm = ['---', `title: ${a.title}`, `date: ${a.date}`, 'tags:', [...a.tags, a.cat2].map((t) => `  - ${t}`).join('\n'),
+    'categories:', '  - 生活', `  - ${a.cat1}`, `description: ${a.desc}`, '---'].join('\n');
   fs.writeFileSync(path.join(POSTS, `${a.slug}.md`), fm + '\n\n' + a.lines.join('\n') + '\n');
 }
 let copied = 0;
@@ -218,7 +220,7 @@ const mapLines = [
   'description: 一张横向的课程树：三大类 → 六个阶段 → 三十课，点课名直接跳到那一课的开头。',
   '---',
   '',
-  '<strong>怎么用</strong>：三大类对应侧栏的三个分类页；每个阶段一行，行末那一串就是这一阶段的所有课，点进去落在该课的标题上（也可以用文章左侧的「文章目录」在同一篇里前后翻）。顺序学就从上往下，只想补某一项就按大类进去挑。',
+  '<strong>怎么用</strong>：三大类各占一节（类名是标签，分类页统一在 生活 / 素描 下面）；每个阶段一行，行末那一串就是这一阶段的所有课，点进去落在该课的标题上（也可以用文章左侧的「文章目录」在同一篇里前后翻）。顺序学就从上往下，只想补某一项就按大类挑。',
   '',
   `[入门总览：工具、握笔、四周练习计划 →](${postUrl('sk-intro')})`,
   '',
@@ -227,7 +229,7 @@ for (const g of GROUPS) {
   const rows = MAP.filter((m) => m.group.name === g.name);
   mapLines.push(
     `## ${g.name}`, '',
-    `<strong>这一类管什么</strong>：${g.note}。共 ${rows.length} 个阶段 ${rows.reduce((s, r) => s + r.lessons.length, 0)} 课 → 分类页 [/categories/学习/素描/${g.name}/](/categories/学习/素描/${g.name}/)。`, '',
+    `<strong>这一类管什么</strong>：${g.note}。共 ${rows.length} 个阶段 ${rows.reduce((s, r) => s + r.lessons.length, 0)} 课 → 七篇都在分类页 [/categories/生活/素描/](/categories/生活/素描/) 里（「${g.name}」这一大类现在是标签，不再是分类）。`, '',
   );
   for (const r of rows) {
     mapLines.push(
@@ -291,6 +293,6 @@ const orphans = allRaw.filter((f) => !referenced.has(f));
 console.log(`生成文章 ${arts.length} 篇（${arts.map((a) => a.slug).join('、')}）`);
 console.log(`课：${arts.slice(0, 6).reduce((s, a) => s + a.lessonCount, 0)} 课入 ${STAGES.length} 篇；母本图片 ${allRaw.length} 张，正文引用并已入库 ${copied} 张，未引用 ${orphans.length} 张`);
 console.log(`段落硬换行 ${hardBreaks} 处；单个星号可疑行 ${oddStars.length} 处${oddStars.length ? '：' + oddStars.slice(0, 3).join(' | ') : ''}`);
-console.log(`分类：${[...new Set(arts.map((a) => a.cat2))].join('、')}（都在「素描」下面）`);
+console.log(`分类：生活 / 素描（两级）；大类 ${[...new Set(arts.map((a) => a.cat2))].join('、')} 降到标签`);
 if (problems.length) die('自检②：\n  ' + [...new Set(problems)].slice(0, 10).join('\n  '));
 console.log('自检通过：30 课全部入篇、母本逐行都在文章里、引用图片全部落盘');

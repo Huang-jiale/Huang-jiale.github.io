@@ -5,10 +5,10 @@ tags:
   - 素描
   - 阶段五
   - 人物素描
-categories:
-  - 学习
-  - 素描
   - 人物与创作
+categories:
+  - 生活
+  - 素描
 description: 头像有结构、速写有动态。第 14–20 周，6 课。
 ---
 
