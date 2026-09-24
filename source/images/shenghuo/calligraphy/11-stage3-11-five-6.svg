@@ -1,0 +1,49 @@
+<svg viewBox="0 0 760 250" role="img" aria-label="楷书自检三轴：横竖粗细对比、中宫松紧、重心高低" xmlns="http://www.w3.org/2000/svg" width="760" height="250"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="250"/>
+  <text x="18" y="26" class="labk">楷的自检三轴：把你的字放上去，读出它落在哪一格</text>
+  <text x="40" y="62" class="labk">① 横竖粗细对比</text>
+  <rect x="40" y="74" width="300" height="12" class="f-g4"/>
+  <rect x="40" y="94" width="200" height="12" class="f-g3"/>
+  <text x="352" y="86" class="lab2">弱</text>
+  <text x="252" y="106" class="lab2">中 → 强（横细竖粗明显）</text>
+  <text x="400" y="62" class="labk">② 中宫松紧</text>
+  <rect x="400" y="72" width="40" height="40" class="guide"/>
+  <rect x="460" y="64" width="56" height="56" class="guide"/>
+  <text x="530" y="96" class="lab2">紧＝中心挤四肢伸；松＝中心空</text>
+  <text x="608" y="62" class="labk">③ 重心</text>
+  <rect x="608" y="70" width="52" height="52" class="guide"/>
+  <rect x="676" y="70" width="52" height="52" class="guide"/>
+  <rect x="612" y="84" width="44" height="8" class="f-g1"/>
+  <rect x="680" y="102" width="44" height="8" class="f-g1"/>
+  <text x="608" y="140" class="lab2">偏上 vs 偏下</text>
+  <text x="40" y="160" class="lab">把三轴读数写进纸边，例如"对比 2、中宫 4、重心偏下"，下一遍只改一项。</text>
+  <text x="40" y="188" class="lab2">三轴借自第 07、08 课的结构知识：重心、主笔、中宫。楷把这三件事看得最清楚，所以它既是入门体，也是回头体检用的体。</text>
+  <text x="40" y="214" class="lab2">楷的代价是写快容易僵：它管"动作到位"，不管"连贯"，连贯是下面行书那一节的任务。</text>
+</svg>

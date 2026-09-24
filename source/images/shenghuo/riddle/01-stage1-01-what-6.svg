@@ -1,0 +1,50 @@
+<svg viewBox="0 0 760 240" role="img" aria-label="上字与下字共用一横合成卡字的示意图" xmlns="http://www.w3.org/2000/svg" width="760" height="240"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="240" class="bg-paper"/>
+  <text x="18" y="26" class="labk">"上下一体" → "卡"：两字叠起，中间那一横合成一根</text>
+
+  <rect x="40" y="46" width="110" height="96" class="cell" stroke="#1c1c1c" stroke-width="1.3"/>
+  <text x="95" y="112" class="kai" text-anchor="middle" style="font-size:46px">上</text>
+  <text x="95" y="164" class="lab2" text-anchor="middle">下半是一长横</text>
+
+  <rect x="180" y="46" width="110" height="96" class="cell" stroke="#1c1c1c" stroke-width="1.3"/>
+  <text x="235" y="112" class="kai" text-anchor="middle" style="font-size:46px">下</text>
+  <text x="235" y="164" class="lab2" text-anchor="middle">上半是一长横</text>
+
+  <line x1="300" y1="94" x2="372" y2="94" class="arrow"/><path d="M366 89 l8 5 -8 5" class="arrow"/>
+  <text x="336" y="82" class="lab2" text-anchor="middle">叠</text>
+
+  <rect x="384" y="46" width="110" height="96" class="hl" stroke="#2f7d42" stroke-width="1.6"/>
+  <text x="439" y="112" class="kai stroke-in" text-anchor="middle" style="font-size:46px">卡</text>
+  <text x="439" y="164" class="lab2" text-anchor="middle">两横并成一横，竖与点各留一头</text>
+
+  <text x="540" y="70" class="labk">为什么"一体"两个字不能省？</text>
+  <text x="540" y="96" class="lab">它是拼合指令，要你合成一个字。</text>
+  <text x="540" y="118" class="lab">没有它，上下二字只是并列摆放。</text>
+  <text x="540" y="146" class="lab2">指令字用掉之后，面上再没有多余字</text>
+  <text x="540" y="166" class="lab2">也就是说这条谜里没有闲字。</text>
+</svg>

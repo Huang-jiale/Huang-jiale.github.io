@@ -1,0 +1,49 @@
+<svg viewBox="0 0 760 150" role="img" aria-label="三步练法：先找强关系，再缝双值格，最后加长" xmlns="http://www.w3.org/2000/svg" width="760" height="150"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+  <rect class="bg-paper" width="760" height="150"/>
+  <text class="labk" x="28" y="26">练链台阶：找强关系 → 缝双值格 → 再加长</text>
+  <rect class="hl" x="40" y="54" width="24" height="24"/>
+  <text class="cand" x="40" y="92">{5,2}</text>
+  <rect class="hl" x="104" y="54" width="24" height="24"/>
+  <text class="cand" x="104" y="92">{5,3}</text>
+  <line class="st" x1="66" y1="66" x2="102" y2="66"/>
+  <text class="lab2" x="40" y="48">一根强关系</text>
+  <rect class="cell" x="260" y="54" width="24" height="24"/>
+  <text class="cand" x="260" y="92">{5,9}</text>
+  <line class="st-thin" x1="286" y1="66" x2="322" y2="66"/>
+  <rect class="cell" x="324" y="54" width="24" height="24"/>
+  <text class="cand" x="324" y="92">{9,4}</text>
+  <text class="lab2" x="260" y="48">用双值格缝起来</text>
+  <rect class="cell" x="520" y="54" width="24" height="24"/>
+  <text class="cand" x="520" y="92">{4,1}</text>
+  <line class="st-thin" x1="546" y1="66" x2="582" y2="66"/>
+  <rect class="cell" x="584" y="54" width="24" height="24"/>
+  <text class="cand" x="584" y="92">{1,3}</text>
+  <line class="st" x1="610" y1="66" x2="646" y2="66"/>
+  <rect class="cell" x="648" y="54" width="24" height="24"/>
+  <text class="cand" x="648" y="92">{3,8}</text>
+  <text class="lab2" x="520" y="48">再一环环加长</text>
+  <text class="lab" x="40" y="128">粗实线＝强，灰虚线＝弱；先数几处能放，才敢定强弱</text>
+</svg>

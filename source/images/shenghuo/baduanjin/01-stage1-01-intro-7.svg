@@ -1,0 +1,55 @@
+<svg viewBox="0 0 760 230" role="img" aria-label="练前检查四栏图：衣着、场地、时段、热身各四条" xmlns="http://www.w3.org/2000/svg" width="760" height="230"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="230" class="bg-paper"/>
+  <text x="18" y="24" class="labk">开练前 30 秒：穿、场地、时段、热身</text>
+  <rect x="16" y="40" width="168" height="26" class="f-g2" stroke="none"/>
+  <text x="100" y="58" class="labk" text-anchor="middle">① 穿</text>
+  <text x="26" y="88" class="lab2">平底鞋或穿袜</text>
+  <text x="26" y="110" class="lab2">别穿硬底皮鞋</text>
+  <text x="26" y="132" class="lab2">腰带松一扣</text>
+  <text x="26" y="154" class="lab2">手机静音</text>
+  <rect x="202" y="40" width="168" height="26" class="f-g2" stroke="none"/>
+  <text x="286" y="58" class="labk" text-anchor="middle">② 场地</text>
+  <text x="212" y="88" class="lab2">地面平整不滑</text>
+  <text x="212" y="110" class="lab2">能展开两臂即可</text>
+  <text x="212" y="132" class="lab2">避开风口与空调</text>
+  <text x="212" y="154" class="lab2">室外留意台阶</text>
+  <rect x="388" y="40" width="168" height="26" class="f-g2" stroke="none"/>
+  <text x="472" y="58" class="labk" text-anchor="middle">③ 时段</text>
+  <text x="398" y="88" class="lab2">饭后 30 分钟起</text>
+  <text x="398" y="110" class="lab2">很饿先吃点东西</text>
+  <text x="398" y="132" class="lab2">睡前 2 小时外</text>
+  <text x="398" y="154" class="lab2">固定一个时段</text>
+  <rect x="574" y="40" width="168" height="26" class="f-g2" stroke="none"/>
+  <text x="658" y="58" class="labk" text-anchor="middle">④ 热身</text>
+  <text x="584" y="88" class="lab2">转踝转腕 20 秒</text>
+  <text x="584" y="110" class="lab2">抬头低头各 5 次</text>
+  <text x="584" y="132" class="lab2">屈伸膝盖 10 次</text>
+  <text x="584" y="154" class="lab2">肩前后绕 10 次</text>
+  <line class="st" x1="184" y1="52" x2="202" y2="52"/>
+  <line class="st" x1="370" y1="52" x2="388" y2="52"/>
+  <line class="st" x1="556" y1="52" x2="574" y2="52"/>
+  <text x="18" y="196" class="lab2">热身这一分钟不是可选项：颈、肩、腕、踝没活动开，第四式的转头和第八式的提脚跟最容易不舒服。</text>
+  <text x="18" y="216" class="lab2">时段比"练多久"更重要：连续 21 天同一时间做 8 分钟，胜过一周一次猛练 30 分钟。</text>
+</svg>

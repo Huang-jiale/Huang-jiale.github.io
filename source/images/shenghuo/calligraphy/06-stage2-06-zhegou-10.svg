@@ -1,0 +1,54 @@
+<svg viewBox="0 0 760 240" role="img" aria-label="三种点方向与起转收对照" xmlns="http://www.w3.org/2000/svg" width="760" height="240"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+    <rect class="bg-paper" width="760" height="240"/>
+    <defs><marker id="zg7" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#0f6ab5"/></marker></defs>
+    <text class="labk" x="40" y="26">左点 · 右点 · 长点：朝向各不同</text>
+    <rect x="60" y="55" width="130" height="130" fill="none" stroke="#c9c4ba" stroke-width="1.6"/>
+    <line class="guide" x1="125" y1="55" x2="125" y2="185"/>
+    <line class="guide" x1="60" y1="120" x2="190" y2="120"/>
+    <path class="stroke-in" d="M146 84 C158 98 166 118 160 132 C150 120 142 100 142 86 Z"/>
+    <path class="arrow" d="M148 84 L160 128" marker-end="url(#zg7)"/>
+    <text class="lab" x="96" y="202">右点（最常见）</text>
+    <rect x="240" y="55" width="130" height="130" fill="none" stroke="#c9c4ba" stroke-width="1.6"/>
+    <line class="guide" x1="305" y1="55" x2="305" y2="185"/>
+    <line class="guide" x1="240" y1="120" x2="370" y2="120"/>
+    <path class="stroke-in" d="M294 84 C282 98 276 118 284 132 C294 120 300 100 298 86 Z"/>
+    <path class="arrow" d="M294 84 L282 128" marker-end="url(#zg7)"/>
+    <text class="lab" x="272" y="202">左点（配右点）</text>
+    <rect x="420" y="55" width="130" height="130" fill="none" stroke="#c9c4ba" stroke-width="1.6"/>
+    <line class="guide" x1="485" y1="55" x2="485" y2="185"/>
+    <line class="guide" x1="420" y1="120" x2="550" y2="120"/>
+    <path class="stroke-in" d="M444 80 C464 98 502 126 528 144 C512 150 474 126 448 100 Z"/>
+    <path class="arrow" d="M448 82 L526 140" marker-end="url(#zg7)"/>
+    <text class="lab" x="440" y="202">长点（收笔更分明）</text>
+    <text class="lab2" x="600" y="88">点的三拍：</text>
+    <text class="lab2" x="600" y="110">起 — 侧锋斜落</text>
+    <text class="lab2" x="600" y="132">转 — 向右下按实</text>
+    <text class="lab2" x="600" y="154">收 — 回锋藏尖</text>
+  </svg>

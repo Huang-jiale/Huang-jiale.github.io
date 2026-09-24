@@ -1,0 +1,49 @@
+<svg viewBox="0 0 760 215" role="img" aria-label="象形谜的自检三问：形状、数量、位置" xmlns="http://www.w3.org/2000/svg" width="760" height="215"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="215" class="bg-paper"/>
+  <text x="18" y="26" class="labk">象形谜的自检三问，三问全过才立得住</text>
+
+  <rect x="20" y="46" width="230" height="120" class="hlb" stroke="#0f6ab5" stroke-width="1.3"/>
+  <text x="135" y="72" class="labk" text-anchor="middle">① 形状要落地</text>
+  <text x="135" y="100" class="lab2" text-anchor="middle">钩必须真是钩，点必须真是点</text>
+  <text x="135" y="124" class="lab2" text-anchor="middle">说不出笔画名就是瞎像</text>
+  <text x="135" y="150" class="lab2" text-anchor="middle">弯＝卧钩？还是竖弯钩？</text>
+
+  <rect x="265" y="46" width="230" height="120" class="hlc" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="380" y="72" class="labk" text-anchor="middle">② 数量要对齐</text>
+  <text x="380" y="100" class="lab2" text-anchor="middle">三星就是三个点，不是几点</text>
+  <text x="380" y="124" class="lab2" text-anchor="middle">数目含混，答案就有一串</text>
+  <text x="380" y="150" class="lab2" text-anchor="middle">三棵树＝三木，不多不少</text>
+
+  <rect x="510" y="46" width="230" height="120" class="hl" stroke="#2f7d42" stroke-width="1.4"/>
+  <text x="625" y="72" class="labk" text-anchor="middle">③ 位置要说清</text>
+  <text x="625" y="100" class="lab2" text-anchor="middle">并排、相背、上一下二</text>
+  <text x="625" y="124" class="lab2" text-anchor="middle">方位词决定部件摆在哪</text>
+  <text x="625" y="150" class="lab2" text-anchor="middle">带、伴、围、绕各有用处</text>
+
+  <text x="18" y="192" class="lab">三问里任何一问答不上，这条谜就还是半成品：要么回去补谜面，要么承认它多解。</text>
+</svg>

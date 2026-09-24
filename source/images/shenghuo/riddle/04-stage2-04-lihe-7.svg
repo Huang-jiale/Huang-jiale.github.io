@@ -1,0 +1,58 @@
+<svg viewBox="0 0 760 240" role="img" aria-label="拆字工作单四步模板：抄字、圈指令、照做、验字" xmlns="http://www.w3.org/2000/svg" width="760" height="240"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="240" class="bg-paper"/>
+  <text x="18" y="26" class="labk">一张拆字工作单：把题面抄下来，比在脑子里想可靠得多</text>
+
+  <rect x="20" y="44" width="170" height="72" class="hlb" stroke="#0f6ab5" stroke-width="1.3"/>
+  <text x="105" y="68" class="labk" text-anchor="middle">① 抄下题面字</text>
+  <text x="105" y="92" class="lab2" text-anchor="middle">把里面每个字写出来</text>
+  <text x="105" y="110" class="lab2" text-anchor="middle">例：人不在其位 → 位</text>
+
+  <rect x="210" y="44" width="170" height="72" class="cell" stroke="#1c1c1c" stroke-width="1.3"/>
+  <text x="295" y="68" class="labk" text-anchor="middle">② 圈指令词</text>
+  <text x="295" y="92" class="lab2" text-anchor="middle">人＝亻（部件名）</text>
+  <text x="295" y="110" class="lab2" text-anchor="middle">不在＝删除</text>
+
+  <rect x="400" y="44" width="170" height="72" class="cell" stroke="#1c1c1c" stroke-width="1.3"/>
+  <text x="485" y="68" class="labk" text-anchor="middle">③ 照做动作</text>
+  <text x="485" y="92" class="lab2" text-anchor="middle">位 划掉 亻</text>
+  <text x="485" y="110" class="lab2" text-anchor="middle">剩下 立</text>
+
+  <rect x="590" y="44" width="150" height="72" class="hl" stroke="#2f7d42" stroke-width="1.5"/>
+  <text x="665" y="68" class="labk" text-anchor="middle">④ 回查一遍</text>
+  <text x="665" y="92" class="lab2" text-anchor="middle">立是真字吗</text>
+  <text x="665" y="110" class="lab2" text-anchor="middle">题面还有闲字吗</text>
+
+  <line x1="192" y1="80" x2="206" y2="80" class="arrow"/><path d="M200 75 l8 5 -8 5" class="arrow"/>
+  <line x1="382" y1="80" x2="396" y2="80" class="arrow"/><path d="M390 75 l8 5 -8 5" class="arrow"/>
+  <line x1="572" y1="80" x2="586" y2="80" class="arrow"/><path d="M580 75 l8 5 -8 5" class="arrow"/>
+
+  <rect x="20" y="136" width="720" height="82" class="cell-g" stroke="#9a9a9a"/>
+  <text x="38" y="162" class="labk">同一张单子换成"地无三尺土"：</text>
+  <text x="38" y="186" class="lab">抄字＝地 ｜ 指令＝无、土 ｜ 照做＝地划掉土旁＝也 ｜ 回查＝也是真字，"三尺"只是形容，不算闲字</text>
+  <text x="38" y="208" class="lab2">四栏都写满，才交卷。写不满的那一栏，就是你还没想清楚的地方。</text>
+</svg>

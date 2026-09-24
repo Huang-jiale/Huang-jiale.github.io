@@ -1,0 +1,52 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="三个基础概念：看见、双值格、强链" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+<rect class="bg-paper" width="760" height="300"/>
+<text class="labk" x="24" y="34">三件工具：看见、双值格、强链</text>
+<rect class="hlb" x="60" y="64" width="64" height="64"/>
+<rect class="st" x="60" y="64" width="64" height="64"/>
+<text class="cand" x="70" y="90">2</text><text class="cand" x="92" y="90">7</text>
+<rect class="st" x="124" y="64" width="64" height="64"/>
+<text class="cand" x="132" y="90">4</text><text class="cand" x="150" y="90">6</text><text class="cand" x="168" y="90">9</text>
+<text class="lab2" x="92" y="146" text-anchor="middle">双值格</text>
+<text class="lab2" x="156" y="146" text-anchor="middle">三值格</text>
+<rect class="hl" x="60" y="170" width="64" height="64"/>
+<rect class="st" x="60" y="170" width="64" height="64"/>
+<text class="cand" x="70" y="196">5</text><text class="cand" x="92" y="196">6</text>
+<rect class="st" x="124" y="170" width="64" height="64"/>
+<text class="cand" x="134" y="196">3</text><text class="cand" x="156" y="196">8</text>
+<rect class="hl" x="188" y="170" width="64" height="64"/>
+<rect class="st" x="188" y="170" width="64" height="64"/>
+<text class="cand" x="196" y="196">1</text><text class="cand" x="214" y="196">6</text><text class="cand" x="232" y="196">9</text>
+<rect class="st" x="252" y="170" width="64" height="64"/>
+<text class="cand" x="262" y="196">4</text><text class="cand" x="284" y="196">7</text>
+<text class="lab2" x="188" y="252" text-anchor="middle">这一行里 6 只剩两格（黄格）</text>
+<text class="lab" x="430" y="80">看见：同行、同列、同宫</text>
+<text class="lab" x="430" y="106">一格填了某数，另一格就不能</text>
+<text class="lab" x="430" y="132">双值格：两个候选必居其一</text>
+<text class="lab" x="430" y="164">强链：一个数在某单元只剩两格</text>
+<text class="lab" x="430" y="190">于是这两格至少有一格填它</text>
+<text class="labk" x="430" y="224">关键是"至少"两个字</text>
+<text class="lab2" x="430" y="250">两格同处一单元，彼此互斥，所以恰好一个</text>
+</svg>

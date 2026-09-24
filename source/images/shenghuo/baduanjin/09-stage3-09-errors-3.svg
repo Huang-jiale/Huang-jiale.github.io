@@ -1,0 +1,36 @@
+<svg viewBox="0 0 760 280" role="img" aria-label="憋气喘气匀气三条呼吸曲线与自查法" xmlns="http://www.w3.org/2000/svg" width="760" height="280"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+<rect class="bg-paper" width="760" height="280"/>
+<text x="18" y="26" class="labk">自己听自己：憋、喘、匀三条曲线</text>
+<line x1="18" y1="90" x2="742" y2="90" class="st-thin"/>
+<path d="M40 90 Q65 60 90 90 L240 90" class="st-bad"/>
+<text x="258" y="94" class="lab2">憋：吸完定住不走气</text>
+<line x1="18" y1="160" x2="742" y2="160" class="st-thin"/>
+<path d="M40 160 Q52 146 64 160 T88 160 T112 160 T136 160 T160 160 T184 160" class="st-bad"/>
+<text x="202" y="164" class="lab2">喘：气全在喉咙口</text>
+<line x1="18" y1="230" x2="742" y2="230" class="st-thin"/>
+<path d="M40 230 Q70 204 100 230 T160 230 T220 230 T280 230" class="arrow"/>
+<text x="300" y="234" class="lab2">匀：一口气走完半个动作</text>
+<text x="18" y="268" class="lab2">自查法：练的时候出声念式名——念不出是憋，念得直喘是浅，能平稳念完才算这一遍合格</text>
+</svg>

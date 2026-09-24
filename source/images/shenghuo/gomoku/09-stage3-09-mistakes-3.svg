@@ -1,0 +1,46 @@
+<svg data-win="b" viewBox="0 0 760 360" role="img" aria-label="漏冲四的后果：黑棋横五连成立，黑胜" xmlns="http://www.w3.org/2000/svg" width="760" height="360"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:9.5px;fill:#777}
+ .stone-b{fill:#1c1c1c}
+.stone-w{fill:#fff;stroke:#1c1c1c;stroke-width:1.2}
+ .pc-r{fill:#fff8f0;stroke:#c0392b;stroke-width:1.8}
+ .star{fill:#1c1c1c}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}</style>
+<rect class="bg-paper" width="760" height="360"/>
+<line class="gl" x1="16" y1="16" x2="16" y2="296"/><line class="gl" x1="36" y1="16" x2="36" y2="296"/><line class="gl" x1="56" y1="16" x2="56" y2="296"/><line class="gl" x1="76" y1="16" x2="76" y2="296"/><line class="gl" x1="96" y1="16" x2="96" y2="296"/>
+<line class="gl" x1="116" y1="16" x2="116" y2="296"/><line class="gl" x1="136" y1="16" x2="136" y2="296"/><line class="gl" x1="156" y1="16" x2="156" y2="296"/><line class="gl" x1="176" y1="16" x2="176" y2="296"/><line class="gl" x1="196" y1="16" x2="196" y2="296"/>
+<line class="gl" x1="216" y1="16" x2="216" y2="296"/><line class="gl" x1="236" y1="16" x2="236" y2="296"/><line class="gl" x1="256" y1="16" x2="256" y2="296"/><line class="gl" x1="276" y1="16" x2="276" y2="296"/><line class="gl" x1="296" y1="16" x2="296" y2="296"/>
+<line class="gl" x1="16" y1="16" x2="296" y2="16"/><line class="gl" x1="16" y1="36" x2="296" y2="36"/><line class="gl" x1="16" y1="56" x2="296" y2="56"/><line class="gl" x1="16" y1="76" x2="296" y2="76"/><line class="gl" x1="16" y1="96" x2="296" y2="96"/>
+<line class="gl" x1="16" y1="116" x2="296" y2="116"/><line class="gl" x1="16" y1="136" x2="296" y2="136"/><line class="gl" x1="16" y1="156" x2="296" y2="156"/><line class="gl" x1="16" y1="176" x2="296" y2="176"/><line class="gl" x1="16" y1="196" x2="296" y2="196"/>
+<line class="gl" x1="16" y1="216" x2="296" y2="216"/><line class="gl" x1="16" y1="236" x2="296" y2="236"/><line class="gl" x1="16" y1="256" x2="296" y2="256"/><line class="gl" x1="16" y1="276" x2="296" y2="276"/><line class="gl" x1="16" y1="296" x2="296" y2="296"/>
+<circle class="star" cx="156" cy="156" r="2"/>
+<circle class="stone-b" cx="76" cy="156" r="9"/><circle class="stone-b" cx="96" cy="156" r="9"/><circle class="stone-b" cx="116" cy="156" r="9"/><circle class="stone-b" cx="136" cy="156" r="9"/><circle class="stone-b" cx="156" cy="156" r="9"/>
+<line x1="70" y1="150" x2="162" y2="150" class="st-red" stroke-width="1.6"/>
+<line x1="70" y1="162" x2="162" y2="162" class="st-red" stroke-width="1.6"/>
+<circle class="stone-w" cx="116" cy="96" r="9"/><circle class="stone-w" cx="136" cy="96" r="9"/><circle class="stone-w" cx="196" cy="196" r="9"/><circle class="stone-w" cx="56" cy="236" r="9"/><circle class="stone-w" cx="196" cy="216" r="9"/>
+<circle class="stone-b" cx="236" cy="236" r="9"/>
+<text x="324" y="52" class="labk">后果长什么样：这局已经结束了</text>
+<text x="324" y="80" class="lab">黑棋横着五颗连成一条线（上下两条</text>
+<text x="324" y="100" class="lab">红夹线标出）→ 连五成立，黑胜。</text>
+<text x="324" y="138" class="lab2">白棋上方横着两颗、右边竖着两颗，各是</text>
+<text x="324" y="156" class="lab2">一个活二，但"活二"在"五连"面前</text>
+<text x="324" y="174" class="lab2">没有任何发言权。</text>
+<text x="324" y="212" class="lab2">这就是漏一手的代价：前面十手做得</text>
+<text x="324" y="230" class="lab2">再漂亮，也换不回这一格。</text>
+<text x="324" y="268" class="lab2">复盘时把这一格回到上一张图，问自己：</text>
+<text x="324" y="286" class="lab2">上一手我为什么没扫这条线？</text>
+<text x="324" y="324" class="lab2">黑 6 颗、白 5 颗＝黑棋刚落下第 11 手。</text>
+</svg>

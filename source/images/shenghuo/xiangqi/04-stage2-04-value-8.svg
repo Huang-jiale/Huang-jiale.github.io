@@ -1,0 +1,56 @@
+<svg viewBox="0 0 760 420" role="img" aria-label="亏损交换图：红马可以吃掉黑方过河卒，但这是四分换两分，除非能解除更大威胁否则不该做" xmlns="http://www.w3.org/2000/svg" width="760" height="420"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+.cell-g{fill:#f2efe8}
+.sq{fill:#f7f0df}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+ .pc-r{fill:#fff8f0;stroke:#c0392b;stroke-width:1.8}
+.pc-b{fill:#f7f7f7;stroke:#1c1c1c;stroke-width:1.8}
+ .pc-tr{font-size:15px;fill:#c0392b;font-weight:700}
+.pc-tb{font-size:15px;fill:#1c1c1c;font-weight:700}
+ .star{fill:#1c1c1c}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .big{font-size:22px;fill:#1c1c1c}</style>
+  <rect class="bg-paper" width="760" height="420"/>
+  <rect class="sq" x="46" y="28" width="508" height="348"/>
+  <path class="st" d="M60 40H540M60 76H540M60 112H540M60 148H540M60 184H540M60 220H540M60 256H540M60 292H540M60 328H540M60 364H540"/>
+  <path class="st" d="M60 40V364M540 40V364M120 40V184M120 220V364M180 40V184M180 220V364M240 40V184M240 220V364M300 40V184M300 220V364M360 40V184M360 220V364M420 40V184M420 220V364M480 40V184M480 220V364"/>
+  <path class="st" d="M240 40L360 112M360 40L240 112M240 292L360 364M360 292L240 364"/>
+  <text x="150" y="208" class="num-g">楚河</text><text x="390" y="208" class="num-g">汉界</text>
+  <path class="st-red" d="M404 192L330 213"/>
+  <circle class="st-thin" cx="360" cy="184" r="9"/>
+  <circle class="st-bad" cx="300" cy="220" r="23"/>
+  <circle class="pc-b" cx="240" cy="40" r="18"/><text class="pc-tb" x="227" y="46">将</text>
+  <circle class="pc-r" cx="420" cy="184" r="18"/><text class="pc-tr" x="407" y="190">马</text>
+  <circle class="pc-b" cx="300" cy="220" r="18"/><text class="pc-tb" x="287" y="226">卒</text>
+  <circle class="pc-r" cx="360" cy="364" r="18"/><text class="pc-tr" x="347" y="370">帅</text>
+  <text x="60" y="166" class="lab">小圈＝马腿</text>
+  <text x="556" y="120" class="lab2">这一跳合法：马腿那一格</text>
+  <text x="556" y="142" class="lab2">空着（图中小圈标出）。</text>
+  <text x="556" y="176" class="lab2">但账面是 4 分换 2 分，</text>
+  <text x="556" y="198" class="lab2">走完这一步你就少了一</text>
+  <text x="556" y="220" class="lab2">整个马的攻击力。</text>
+  <text x="556" y="284" class="lab2">值得做的两种例外：① 这只</text>
+  <text x="556" y="306" class="lab2">卒马上要和别的子配合杀；</text>
+  <text x="556" y="328" class="lab2">② 吃它的同时解除更大威胁</text>
+</svg>

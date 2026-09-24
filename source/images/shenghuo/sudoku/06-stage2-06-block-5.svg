@@ -1,0 +1,78 @@
+<svg viewBox="0 0 760 330" role="img" aria-label="局部示意：行5 的 7 全在宫6 内，宫6 出线处的 7 被划掉" xmlns="http://www.w3.org/2000/svg" width="760" height="330"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+<rect class="bg-paper" width="760" height="330"/>
+<text class="labk" x="12" y="32">图5：行 5 的 7 全落在宫 6 里</text>
+<text class="lab2" x="64.8" y="67">4</text>
+<text class="lab2" x="116.8" y="67">5</text>
+<text class="lab2" x="168.8" y="67">6</text>
+<text class="lab2" x="220.8" y="67">7</text>
+<text class="lab2" x="272.8" y="67">8</text>
+<text class="lab2" x="324.8" y="67">9</text>
+<text class="lab2" x="14" y="102.0">4</text>
+<text class="lab2" x="14" y="154.0">5</text>
+<text class="lab2" x="14" y="206.0">6</text>
+<rect class="cell" x="44" y="74" width="48" height="48"/>
+<rect class="cell" x="96" y="74" width="48" height="48"/>
+<rect class="cell" x="148" y="74" width="48" height="48"/>
+<rect class="hl" x="200" y="74" width="48" height="48"/>
+<rect class="hl" x="252" y="74" width="48" height="48"/>
+<rect class="cell" x="304" y="74" width="48" height="48"/>
+<rect class="cell" x="44" y="126" width="48" height="48"/>
+<rect class="cell" x="96" y="126" width="48" height="48"/>
+<rect class="cell" x="148" y="126" width="48" height="48"/>
+<rect class="hlc" x="200" y="126" width="48" height="48"/>
+<rect class="hlc" x="252" y="126" width="48" height="48"/>
+<rect class="cell" x="304" y="126" width="48" height="48"/>
+<rect class="cell" x="44" y="178" width="48" height="48"/>
+<rect class="cell" x="96" y="178" width="48" height="48"/>
+<rect class="cell" x="148" y="178" width="48" height="48"/>
+<rect class="cell" x="200" y="178" width="48" height="48"/>
+<rect class="cell" x="252" y="178" width="48" height="48"/>
+<rect class="cell" x="304" y="178" width="48" height="48"/>
+<text class="cand" x="48" y="94.2">2458</text>
+<text class="num" x="115.9" y="109.5">6</text>
+<text class="cand" x="152" y="94.2">23458</text>
+<text class="cand" x="204" y="94.2">12457</text>
+<text class="cand" x="256" y="94.2">123578</text>
+<text class="cand" x="308" y="94.2">23458</text>
+<text class="cand" x="48" y="146.2">24</text>
+<text class="cand" x="100" y="146.2">34</text>
+<text class="num" x="167.9" y="161.5">1</text>
+<text class="cand" x="204" y="146.2">247</text>
+<text class="cand" x="256" y="146.2">237</text>
+<text class="num" x="323.9" y="161.5">9</text>
+<text class="num" x="63.9" y="213.5">7</text>
+<text class="num" x="115.9" y="213.5">9</text>
+<text class="cand" x="152" y="198.2">23458</text>
+<text class="cand" x="204" y="198.2">2456</text>
+<text class="cand" x="256" y="198.2">2358</text>
+<text class="cand" x="308" y="198.2">234568</text>
+<line class="st st-red" x1="222.9" y1="91.0" x2="232.1" y2="91.0"/>
+<line class="st st-red" x1="274.9" y1="91.0" x2="284.1" y2="91.0"/>
+<rect class="st-blue" x="200" y="74" width="152" height="152" fill="none"/>
+<rect class="st-red" x="44" y="126" width="308" height="48" fill="none"/>
+<text class="lab" x="12" y="268">深底两格：行 5 能放 7 的只剩这两格，都在宫 6 内。</text>
+<text class="lab" x="12" y="292">浅底两格：宫 6 里不在行 5 的两格划掉 7。局部示意。</text>
+</svg>

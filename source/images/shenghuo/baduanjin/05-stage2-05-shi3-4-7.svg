@@ -1,0 +1,73 @@
+<svg viewBox="0 0 760 412" role="img" aria-label="第四式到位图：手臂向后外旋撑开、头转向一侧后方，配呼吸时间轴与要点标注" xmlns="http://www.w3.org/2000/svg" width="760" height="412"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="412" class="bg-paper"/>
+  <text x="18" y="24" class="labk">第四式到位图（向自身左后方瞧为例）</text>
+  <g>
+    <circle class="head" cx="250" cy="118" r="18"/>
+    <path class="st" d="M266 110 l14 -6 l0 12"/>
+    <line class="body-line" x1="250" y1="136" x2="250" y2="250"/>
+    <line class="body-line" x1="206" y1="164" x2="294" y2="164"/>
+    <line class="body-line" x1="206" y1="164" x2="184" y2="204"/>
+    <line class="body-line" x1="184" y1="204" x2="166" y2="238"/>
+    <line class="body-line" x1="294" y1="164" x2="316" y2="204"/>
+    <line class="body-line" x1="316" y1="204" x2="334" y2="238"/>
+    <line class="body-line" x1="250" y1="250" x2="242" y2="300"/>
+    <line class="body-line" x1="242" y1="300" x2="240" y2="336"/>
+    <line class="body-line" x1="250" y1="250" x2="258" y2="300"/>
+    <line class="body-line" x1="258" y1="300" x2="260" y2="336"/>
+    <line class="body-line" x1="226" y1="339" x2="246" y2="339"/>
+    <line class="body-line" x1="254" y1="339" x2="274" y2="339"/>
+    <circle class="joint" cx="206" cy="164" r="4"/><circle class="joint" cx="294" cy="164" r="4"/>
+    <circle class="joint" cx="184" cy="204" r="4"/><circle class="joint" cx="316" cy="204" r="4"/>
+    <circle class="joint" cx="166" cy="238" r="5"/><circle class="joint" cx="334" cy="238" r="5"/>
+    <line class="st-thin" x1="188" y1="164" x2="312" y2="164"/>
+    <line class="st-thin" x1="228" y1="250" x2="272" y2="250"/>
+  </g>
+  <path class="arrow" d="M300 96 a46 34 0 0 1 42 26"/>
+  <path class="st-thin" d="M296 100 l58 -32"/>
+  <path class="arrow" d="M148 246 a26 22 0 0 1 -12 -24"/>
+  <path class="arrow" d="M352 246 a26 22 0 0 0 12 -24"/>
+  <text x="392" y="58" class="lab2">视线：越过左肩看身后一点</text>
+  <text x="430" y="102" class="labk">八项到位标准</text>
+  <text x="430" y="126" class="lab2">① 掌心转向后外方</text>
+  <text x="430" y="148" class="lab2">② 小指侧向外转到底</text>
+  <text x="430" y="170" class="lab2">③ 两臂在侧后下方撑开</text>
+  <text x="430" y="192" class="lab2">④ 肩胛向背中间收（夹脊）</text>
+  <text x="430" y="214" class="lab2">⑤ 胸口打开但不挺肋</text>
+  <text x="430" y="236" class="lab2">⑥ 转头 2 秒，不猛不屈</text>
+  <text x="430" y="258" class="lab2">⑦ 肩线水平、髋线不动</text>
+  <text x="430" y="280" class="lab2">⑧ 眼先到"远处一点"再停</text>
+  <rect x="40" y="300" width="275" height="26" fill="#dbeaf7" stroke="#8f8f8f"/>
+  <text x="177" y="318" class="lab" text-anchor="middle">吸气 6 秒：旋臂 + 转头</text>
+  <rect x="315" y="300" width="130" height="26" class="f-g2" stroke="#8f8f8f"/>
+  <text x="380" y="318" class="lab" text-anchor="middle">自然 2–3 秒</text>
+  <rect x="445" y="300" width="275" height="26" fill="#e3f1e6" stroke="#8f8f8f"/>
+  <text x="582" y="318" class="lab" text-anchor="middle">呼气 6 秒：回转收臂</text>
+  <text x="40" y="352" class="lab2">0 秒</text>
+  <text x="290" y="352" class="lab2">6 秒</text>
+  <text x="420" y="352" class="lab2">9 秒</text>
+  <text x="680" y="352" class="lab2">15 秒＝1 遍</text>
+  <text x="40" y="382" class="lab2">两条灰虚线是判据：上面那条（两肩连线）与下面那条（两髋连线）必须始终平行、都横在原地——头转了，这两条线不许跟着转。</text>
+  <text x="40" y="404" class="lab2">左右各 3–4 遍，合计 6–8 遍。做慢于做全：转 60 度而守住"不转体"，胜过转 120 度而把身子带歪。</text>
+</svg>

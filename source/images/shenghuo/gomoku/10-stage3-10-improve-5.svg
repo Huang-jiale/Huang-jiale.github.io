@@ -1,0 +1,53 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="复盘五步流程图：闭卷重走、标出三个关键手、逐点查漏、把错翻译成题目、写下周单一目标" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:9.5px;fill:#777}
+ .stone-b{fill:#1c1c1c}
+.stone-w{fill:#fff;stroke:#1c1c1c;stroke-width:1.2}
+ .pc-r{fill:#fff8f0;stroke:#c0392b;stroke-width:1.8}
+ .star{fill:#1c1c1c}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="300"/>
+  <rect class="st" x="20" y="40" width="132" height="72" rx="8" fill="none"/>
+  <text class="labk" x="86" y="70" text-anchor="middle">第 1 步</text>
+  <text class="lab2" x="86" y="92" text-anchor="middle">闭卷重走</text>
+  <line class="arrow" x1="152" y1="76" x2="176" y2="76"/>
+  <rect class="st" x="180" y="40" width="132" height="72" rx="8" fill="none"/>
+  <text class="labk" x="246" y="70" text-anchor="middle">第 2 步</text>
+  <text class="lab2" x="246" y="92" text-anchor="middle">圈 3 个关键点</text>
+  <line class="arrow" x1="312" y1="76" x2="336" y2="76"/>
+  <rect class="st" x="340" y="40" width="132" height="72" rx="8" fill="none"/>
+  <text class="labk" x="406" y="70" text-anchor="middle">第 3 步</text>
+  <text class="lab2" x="406" y="92" text-anchor="middle">查漏算的先手</text>
+  <line class="arrow" x1="472" y1="76" x2="496" y2="76"/>
+  <rect class="st" x="500" y="40" width="132" height="72" rx="8" fill="none"/>
+  <text class="labk" x="566" y="70" text-anchor="middle">第 4 步</text>
+  <text class="lab2" x="566" y="92" text-anchor="middle">错变题目</text>
+  <line class="arrow" x1="632" y1="76" x2="656" y2="76"/>
+  <rect class="st" x="660" y="40" width="80" height="72" rx="8" fill="none"/>
+  <text class="labk" x="700" y="70" text-anchor="middle">第 5 步</text>
+  <text class="lab2" x="700" y="92" text-anchor="middle">定目标</text>
+  <line class="arrow" x1="700" y1="112" x2="700" y2="164"/>
+  <rect class="st-thin" x="380" y="168" width="360" height="112" rx="8" fill="none"/>
+  <text class="labk" x="400" y="194">记录表只写四栏</text>
+  <text class="lab" x="400" y="218">1 我今天输在哪个形状</text>
+  <text class="lab" x="400" y="240">2 我漏了哪一个先手（写坐标）</text>
+  <text class="lab" x="400" y="262">3 下周唯一目标（一句话）</text>
+  <text class="lab2" x="40" y="180">第 1 步是全程最值钱的一步：把棋谱</text>
+  <text class="lab2" x="40" y="202">遮上，只按记忆从头走一遍，走到不</text>
+  <text class="lab2" x="40" y="224">确定的地方就停下来自己想，想完再</text>
+  <text class="lab2" x="40" y="246">掀开对照。先掀谱，就变成读别人的答</text>
+  <text class="lab2" x="40" y="268">案，只会有"我本来也能想到"的错觉。</text>
+</svg>

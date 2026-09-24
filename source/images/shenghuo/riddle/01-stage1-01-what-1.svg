@@ -1,0 +1,52 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="灯谜三要素结构图：谜面、谜目、谜底与扣合的关系" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="300" class="bg-paper"/>
+  <text x="18" y="26" class="labk">灯谜的骨架：三个零件 + 一条推导线</text>
+
+  <rect x="20" y="52" width="200" height="86" class="cell" stroke="#1c1c1c" stroke-width="1.4"/>
+  <text x="120" y="78" class="labk" text-anchor="middle">谜 面</text>
+  <text x="120" y="102" class="lab2" text-anchor="middle">已知条件（题面）</text>
+  <text x="120" y="122" class="lab2" text-anchor="middle">一个字到一句话都行</text>
+
+  <rect x="280" y="52" width="200" height="86" class="cell" stroke="#1c1c1c" stroke-width="1.4"/>
+  <text x="380" y="78" class="labk" text-anchor="middle">谜 目</text>
+  <text x="380" y="102" class="lab2" text-anchor="middle">取值范围（管类别＋字数）</text>
+  <text x="380" y="122" class="lab2" text-anchor="middle">打一字／打二字／打一成语</text>
+
+  <rect x="540" y="52" width="200" height="86" class="cell" stroke="#1c1c1c" stroke-width="1.4"/>
+  <text x="640" y="78" class="labk" text-anchor="middle">谜 底</text>
+  <text x="640" y="102" class="lab2" text-anchor="middle">答案，必须唯一</text>
+  <text x="640" y="122" class="lab2" text-anchor="middle">字数被谜目锁死</text>
+
+  <line x1="222" y1="95" x2="274" y2="95" class="arrow"/><path d="M268 91 l7 4 -7 4" class="arrow"/>
+  <line x1="482" y1="95" x2="534" y2="95" class="arrow"/><path d="M528 91 l7 4 -7 4" class="arrow"/>
+
+  <rect x="20" y="170" width="720" height="86" class="cell-g" stroke="#9a9a9a" stroke-width="1"/>
+  <text x="40" y="196" class="labk">扣合（灯谜的证明题部分）</text>
+  <text x="40" y="220" class="lab">从谜面出发，说明"哪一处转了义、哪几个部件被拆掉或拼上、哪个部件放在哪个方位"，最后正好落在谜底上。</text>
+  <text x="40" y="242" class="lab2">检验一条谜合不合规矩只有两条：① 这条推导能不能顺着走通；② 拿着谜底倒着回来，谜面是不是不多一字、不少一字。</text>
+</svg>

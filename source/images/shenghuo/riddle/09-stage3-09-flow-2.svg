@@ -1,0 +1,43 @@
+<svg viewBox="0 0 760 214" role="img" aria-label="谜目逐层缩小答案空间" xmlns="http://www.w3.org/2000/svg" width="760" height="214"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="214"/>
+  <text class="labk" x="20" y="24">同一句题面，谜目每加一条，候选就少一层</text>
+  <text class="lab2" x="20" y="50">不设限（汉语全词）</text>
+  <rect class="f-g2" x="180" y="36" width="540" height="22"/>
+  <text class="lab2" x="20" y="86">只给类别：成语</text>
+  <rect class="f-g3" x="180" y="72" width="220" height="22"/>
+  <text class="lab2" x="410" y="88">再卡字数：必须四字</text>
+  <rect class="f-g4" x="560" y="72" width="60" height="22"/>
+  <text class="lab2" x="630" y="88">候选≈几十条</text>
+  <text class="lab2" x="20" y="122">再卡结构：并列／动宾一眼分</text>
+  <rect class="hlc" x="180" y="108" width="34" height="22"/>
+  <text class="lab2" x="224" y="124">剩下 2 至 3 条</text>
+  <text class="lab" x="360" y="124">→ 这时候才轮到第 ④ 步出场</text>
+  <text class="lab2" x="20" y="158">实操记法：谜目写"打一成语"，就绝不允许自己报三个字或五个字的答案；</text>
+  <text class="lab2" x="20" y="178">写"打二字（地名）"，就先把脑子里的地名过一遍，再回头对题面。</text>
+  <text class="lab2" x="20" y="202">第 03 课讲过的这条约束，到实战里就是第一道滤网。</text>
+</svg>

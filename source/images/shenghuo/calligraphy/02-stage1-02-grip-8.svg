@@ -1,0 +1,72 @@
+<svg viewBox="0 0 760 230" role="img" aria-label="六个热身动作在米字格中的路线示意图" xmlns="http://www.w3.org/2000/svg" width="760" height="230"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="230"/>
+  <text x="18" y="24" class="labk">六个热身动作在米字格里的路线（红线＝笔尖走过的路径）</text>
+  <g>
+    <rect x="30" y="46" width="110" height="110" class="cell" stroke="#7a7a7a"/>
+    <line x1="85" y1="46" x2="85" y2="156" class="guide"/><line x1="30" y1="101" x2="140" y2="101" class="guide"/>
+    <line x1="30" y1="46" x2="140" y2="156" class="guide"/><line x1="140" y1="46" x2="30" y2="156" class="guide"/>
+    <path class="stroke-in" d="M85 101 m0 -6 a6 6 0 1 1 -0.1 0 M85 95 a10 10 0 1 1 -0.1 0 M85 91 a16 16 0 1 1 -0.1 0 M85 87 a22 22 0 1 1 -0.1 0"
+          fill="none" stroke-width="2"/>
+    <text x="30" y="176" class="lab">① 圈</text><text x="30" y="196" class="lab2">转腕不停</text>
+  </g>
+  <g>
+    <rect x="170" y="46" width="110" height="110" class="cell" stroke="#7a7a7a"/>
+    <line x1="225" y1="46" x2="225" y2="156" class="guide"/><line x1="170" y1="101" x2="280" y2="101" class="guide"/>
+    <line x1="170" y1="46" x2="280" y2="156" class="guide"/><line x1="280" y1="46" x2="170" y2="156" class="guide"/>
+    <path d="M186 74 q39 -6 78 0" class="stroke-in" stroke-width="6" fill="none"/>
+    <path d="M186 96 q39 -8 78 0" class="stroke-in" stroke-width="7" fill="none"/>
+    <path d="M186 118 q39 -5 78 0" class="stroke-in" stroke-width="5" fill="none"/>
+    <text x="170" y="176" class="lab">② 横</text><text x="170" y="196" class="lab2">按—提收尖</text>
+  </g>
+  <g>
+    <rect x="310" y="46" width="110" height="110" class="cell" stroke="#7a7a7a"/>
+    <line x1="365" y1="46" x2="365" y2="156" class="guide"/><line x1="310" y1="101" x2="420" y2="101" class="guide"/>
+    <line x1="310" y1="46" x2="420" y2="156" class="guide"/><line x1="420" y1="46" x2="310" y2="156" class="guide"/>
+    <path d="M365 56 q-3 40 -2 62 q1 18 -1 34" class="stroke-in" stroke-width="7" fill="none"/>
+    <text x="310" y="176" class="lab">③ 竖</text><text x="310" y="196" class="lab2">末端收尖</text>
+  </g>
+  <g>
+    <rect x="450" y="46" width="110" height="110" class="cell" stroke="#7a7a7a"/>
+    <line x1="505" y1="46" x2="505" y2="156" class="guide"/><line x1="450" y1="101" x2="560" y2="101" class="guide"/>
+    <line x1="450" y1="46" x2="560" y2="156" class="guide"/><line x1="560" y1="46" x2="450" y2="156" class="guide"/>
+    <path d="M462 130 q16 -46 32 -14 q16 32 32 -18" class="stroke-in" stroke-width="6" fill="none"/>
+    <text x="450" y="176" class="lab">④ 波浪</text><text x="450" y="196" class="lab2">方向连续</text>
+  </g>
+  <g>
+    <rect x="590" y="46" width="110" height="110" class="cell" stroke="#7a7a7a"/>
+    <line x1="645" y1="46" x2="645" y2="156" class="guide"/><line x1="590" y1="101" x2="700" y2="101" class="guide"/>
+    <line x1="590" y1="46" x2="700" y2="156" class="guide"/><line x1="700" y1="46" x2="590" y2="156" class="guide"/>
+    <path d="M604 76 L672 76 L672 132" class="stroke-in" stroke-width="6" fill="none"/>
+    <circle cx="672" cy="76" r="5" class="dot"/>
+    <text x="686" y="70" class="lab2">停</text>
+    <text x="590" y="176" class="lab">⑤ 折</text><text x="590" y="196" class="lab2">转角要顿住</text>
+  </g>
+  <text x="18" y="222" class="lab2">还有一种只靠"看"的自检：把写完的一页倒过来看，抖、歪、粗细乱会立刻暴露——因为这时你不再认字，只看线。</text>
+</svg>

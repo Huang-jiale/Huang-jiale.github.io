@@ -1,0 +1,104 @@
+<svg viewBox="0 0 560 520" role="img" aria-label="局部示意：宫7 的 1 挤在列3，行1列3 划掉 1 后只剩 3" xmlns="http://www.w3.org/2000/svg" width="560" height="520"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+<rect class="bg-paper" width="560" height="520"/>
+<text class="labk" x="12" y="30">图3：宫 7 的 1 挤成一列</text>
+<text class="lab2" x="84.8" y="53">1</text>
+<text class="lab2" x="132.8" y="53">2</text>
+<text class="lab2" x="180.8" y="53">3</text>
+<text class="lab2" x="36" y="86.0">1</text>
+<text class="lab2" x="36" y="134.0">2</text>
+<text class="lab2" x="36" y="182.0">3</text>
+<text class="lab2" x="36" y="230.0">4</text>
+<text class="lab2" x="36" y="278.0">5</text>
+<text class="lab2" x="36" y="326.0">6</text>
+<text class="lab2" x="36" y="374.0">7</text>
+<text class="lab2" x="36" y="422.0">8</text>
+<text class="lab2" x="36" y="470.0">9</text>
+<rect class="cell" x="66" y="60" width="44" height="44"/>
+<rect class="cell" x="114" y="60" width="44" height="44"/>
+<rect class="hl" x="162" y="60" width="44" height="44"/>
+<rect class="cell" x="66" y="108" width="44" height="44"/>
+<rect class="cell" x="114" y="108" width="44" height="44"/>
+<rect class="cell" x="162" y="108" width="44" height="44"/>
+<rect class="cell" x="66" y="156" width="44" height="44"/>
+<rect class="cell" x="114" y="156" width="44" height="44"/>
+<rect class="cell" x="162" y="156" width="44" height="44"/>
+<rect class="cell" x="66" y="204" width="44" height="44"/>
+<rect class="cell" x="114" y="204" width="44" height="44"/>
+<rect class="cell" x="162" y="204" width="44" height="44"/>
+<rect class="cell" x="66" y="252" width="44" height="44"/>
+<rect class="cell" x="114" y="252" width="44" height="44"/>
+<rect class="cell" x="162" y="252" width="44" height="44"/>
+<rect class="cell" x="66" y="300" width="44" height="44"/>
+<rect class="cell" x="114" y="300" width="44" height="44"/>
+<rect class="cell" x="162" y="300" width="44" height="44"/>
+<rect class="cell" x="66" y="348" width="44" height="44"/>
+<rect class="cell" x="114" y="348" width="44" height="44"/>
+<rect class="cell" x="162" y="348" width="44" height="44"/>
+<rect class="cell" x="66" y="396" width="44" height="44"/>
+<rect class="cell" x="114" y="396" width="44" height="44"/>
+<rect class="hlc" x="162" y="396" width="44" height="44"/>
+<rect class="cell" x="66" y="444" width="44" height="44"/>
+<rect class="cell" x="114" y="444" width="44" height="44"/>
+<rect class="hlc" x="162" y="444" width="44" height="44"/>
+<text class="cand" x="70" y="78.5">13</text>
+<text class="num" x="131.9" y="92.6">5</text>
+<text class="cand" x="166" y="78.5">13</text>
+<text class="num" x="83.9" y="140.6">8</text>
+<text class="num" x="131.9" y="140.6">7</text>
+<text class="num" x="179.9" y="140.6">6</text>
+<text class="cand" x="70" y="174.5">2</text>
+<text class="num" x="131.9" y="188.6">4</text>
+<text class="num" x="179.9" y="188.6">9</text>
+<text class="cand" x="70" y="222.5">2379</text>
+<text class="cand" x="118" y="222.5">29</text>
+<text class="cand" x="166" y="222.5">2347</text>
+<text class="num" x="83.9" y="284.6">6</text>
+<text class="num" x="131.9" y="284.6">8</text>
+<text class="num" x="179.9" y="284.6">5</text>
+<text class="cand" x="70" y="318.5">23</text>
+<text class="num" x="131.9" y="332.6">1</text>
+<text class="cand" x="166" y="318.5">234</text>
+<text class="cand" x="70" y="366.5">279</text>
+<text class="cand" x="118" y="366.5">29</text>
+<text class="cand" x="166" y="366.5">278</text>
+<text class="num" x="83.9" y="428.6">4</text>
+<text class="num" x="131.9" y="428.6">3</text>
+<text class="cand" x="166" y="414.5">1278</text>
+<text class="num" x="83.9" y="476.6">5</text>
+<text class="cand" x="118" y="462.5">269</text>
+<text class="cand" x="166" y="462.5">12</text>
+<line class="st st-red" x1="164.0" y1="75.3" x2="173.2" y2="75.3"/>
+<rect class="st-blue" x="66" y="348" width="140" height="140" fill="none"/>
+<rect class="st-red" x="162" y="60" width="44" height="428" fill="none"/>
+<text class="lab" x="230" y="96">深底＝宫 7 里 1 仅有的两格</text>
+<text class="lab" x="230" y="118">（行 8 列 3、行 9 列 3）。</text>
+<text class="lab" x="230" y="148">两格同在列 3，列 3 出宫处</text>
+<text class="lab" x="230" y="170">不许再放 1。</text>
+<text class="lab" x="230" y="200">整条列只有行 1 列 3 挂着 1，</text>
+<text class="lab" x="230" y="222">划掉后只剩 3——当场可填。</text>
+<text class="lab2" x="230" y="258">收益看压出的落点，</text>
+<text class="lab2" x="230" y="280">不看删掉的候选个数。局部示意。</text>
+</svg>

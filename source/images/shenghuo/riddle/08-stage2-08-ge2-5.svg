@@ -1,0 +1,51 @@
+<svg viewBox="0 0 760 186" role="img" aria-label="粉底格末字换音与燕尾格末字劈形的对照" xmlns="http://www.w3.org/2000/svg" width="760" height="186"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="186"/>
+  <text class="labk" x="20" y="24">都在末一字动手：一个换「音」，一个劈「形」</text>
+  <text class="lab" x="20" y="58">「粉底格」</text>
+  <rect class="cell" x="130" y="40" width="44" height="44" stroke="#1c1c1c"/>
+  <rect class="hlc" x="180" y="40" width="44" height="44" stroke="#1c1c1c"/>
+  <text class="num" x="152" y="71" text-anchor="middle">等</text>
+  <text class="num" x="202" y="71" text-anchor="middle">于</text>
+  <path class="arrow" d="M228 62 h26"/><path class="arrow" d="M248 56 l8 6 l-8 6"/>
+  <text class="num" x="296" y="71">等</text>
+  <text class="num" x="326" y="71">鱼</text>
+  <text class="lab2" x="360" y="60">字形没变，只是听成同音</text>
+  <text class="lab2" x="360" y="78">＝换音，读出来仍是两个字</text>
+  <text class="lab" x="20" y="124">「燕尾格」</text>
+  <rect class="cell" x="130" y="106" width="44" height="44" stroke="#1c1c1c"/>
+  <rect class="hlc" x="180" y="106" width="44" height="44" stroke="#1c1c1c"/>
+  <text class="num" x="152" y="137" text-anchor="middle">长</text>
+  <text class="num" x="202" y="137" text-anchor="middle">沙</text>
+  <path class="arrow" d="M228 128 h26"/><path class="arrow" d="M248 122 l8 6 l-8 6"/>
+  <text class="num" x="296" y="137">长</text>
+  <text class="num" x="326" y="137">水</text>
+  <text class="num" x="356" y="137">少</text>
+  <text class="lab2" x="388" y="126">末字真被劈成两半</text>
+  <text class="lab2" x="388" y="144">＝拆形，读出来多出一个字</text>
+  <text class="lab2" x="20" y="172">一眼分辨：把底念一遍，字数变没变？变了是「燕尾格」，没变是「粉底格」。</text>
+</svg>

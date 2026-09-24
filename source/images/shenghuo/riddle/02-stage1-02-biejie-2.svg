@@ -1,0 +1,58 @@
+<svg viewBox="0 0 760 250" role="img" aria-label="别解三种落点：谜面别解、谜底别解、两面都转" xmlns="http://www.w3.org/2000/svg" width="760" height="250"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="250" class="bg-paper"/>
+  <text x="18" y="26" class="labk">换挡只有三个位置：先找位置，再找那个词</text>
+
+  <rect x="20" y="44" width="230" height="176" class="cell" stroke="#1c1c1c" stroke-width="1.3"/>
+  <text x="135" y="68" class="labk" text-anchor="middle">① 面上转</text>
+  <text x="135" y="92" class="lab2" text-anchor="middle">题面词换第二层意思</text>
+  <text x="135" y="112" class="lab2" text-anchor="middle">答案直说新意思</text>
+  <rect x="36" y="126" width="198" height="30" class="hlc" stroke="#c0392b"/>
+  <text x="135" y="147" class="lab2" text-anchor="middle">面：铁公鸡（换档处）</text>
+  <rect x="36" y="162" width="198" height="30" class="hlb" stroke="#0f6ab5"/>
+  <text x="135" y="183" class="lab2" text-anchor="middle">底：一毛不拔（直说）</text>
+
+  <rect x="266" y="44" width="230" height="176" class="cell" stroke="#1c1c1c" stroke-width="1.3"/>
+  <text x="381" y="68" class="labk" text-anchor="middle">② 底上转</text>
+  <text x="381" y="92" class="lab2" text-anchor="middle">题面正正常常</text>
+  <text x="381" y="112" class="lab2" text-anchor="middle">答案要读成另一层</text>
+  <rect x="282" y="126" width="198" height="30" class="hlb" stroke="#0f6ab5"/>
+  <text x="381" y="147" class="lab2" text-anchor="middle">面：十五天（直给）</text>
+  <rect x="282" y="162" width="198" height="30" class="hlc" stroke="#c0392b"/>
+  <text x="381" y="183" class="lab2" text-anchor="middle">底：胖→读作"半月"</text>
+
+  <rect x="512" y="44" width="230" height="176" class="cell" stroke="#1c1c1c" stroke-width="1.3"/>
+  <text x="627" y="68" class="labk" text-anchor="middle">③ 两面都转</text>
+  <text x="627" y="92" class="lab2" text-anchor="middle">面转一次，底再转一次</text>
+  <text x="627" y="112" class="lab2" text-anchor="middle">中间靠同一逻辑对齐</text>
+  <rect x="528" y="126" width="198" height="30" class="hlc" stroke="#c0392b"/>
+  <text x="627" y="147" class="lab2" text-anchor="middle">面：零存→碎，整存→笔</text>
+  <rect x="528" y="162" width="198" height="30" class="hlc" stroke="#c0392b"/>
+  <text x="627" y="183" class="lab2" text-anchor="middle">底：少＝零头，多＝整笔</text>
+
+  <text x="18" y="242" class="lab">读谜时先问一句"哪个词有第二个意思"，找到了位置，谜就破了一半。</text>
+</svg>

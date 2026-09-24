@@ -1,0 +1,95 @@
+<svg viewBox="0 0 760 340" role="img" aria-label="唯一矩形 Type 2 与 Type 4 两组示意图" xmlns="http://www.w3.org/2000/svg" width="760" height="340"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+<rect class="bg-paper" width="760" height="340"/>
+<text class="labk" x="24" y="24">唯一矩形的两类变式：都靠「排除致命结构」这一招</text>
+<text class="labk" x="24" y="46">Type 2 屋顶多挂同一个数</text>
+<text class="labk" x="396" y="46">Type 4 数对成了强链</text>
+<rect class="hl" x="24" y="58" width="52" height="52"/>
+<rect class="st" x="24" y="58" width="52" height="52"/>
+<text class="lab2" x="29" y="72">A3</text>
+<text class="cand" x="30" y="98">1</text>
+<text class="cand" x="43" y="98">2</text>
+<text class="cand" x="56" y="98">8</text>
+<rect class="hl" x="82" y="58" width="52" height="52"/>
+<rect class="st" x="82" y="58" width="52" height="52"/>
+<text class="lab2" x="87" y="72">C3</text>
+<text class="cand" x="88" y="98">1</text>
+<text class="cand" x="101" y="98">2</text>
+<text class="cand" x="114" y="98">8</text>
+<rect class="hlb" x="164" y="58" width="52" height="52"/>
+<rect class="st" x="164" y="58" width="52" height="52"/>
+<text class="lab2" x="169" y="72">F3</text>
+<text class="cand" x="170" y="98">4</text>
+<text class="cand" x="183" y="98">6</text>
+<text class="cand" x="196" y="98">8</text>
+<line class="st-bad" x1="194" y1="92" x2="204" y2="104"/>
+<line class="st-thin" x1="20" y1="122" x2="140" y2="122"/>
+<rect class="hl" x="24" y="134" width="52" height="52"/>
+<rect class="st" x="24" y="134" width="52" height="52"/>
+<text class="lab2" x="29" y="148">A6</text>
+<text class="cand" x="30" y="174">1</text>
+<text class="cand" x="43" y="174">2</text>
+<rect class="hl" x="82" y="134" width="52" height="52"/>
+<rect class="st" x="82" y="134" width="52" height="52"/>
+<text class="lab2" x="87" y="148">C6</text>
+<text class="cand" x="88" y="174">1</text>
+<text class="cand" x="101" y="174">2</text>
+<rect class="hlb" x="396" y="58" width="52" height="52"/>
+<rect class="st" x="396" y="58" width="52" height="52"/>
+<text class="lab2" x="401" y="72">G3</text>
+<text class="cand" x="402" y="98">1</text>
+<text class="cand" x="415" y="98">2</text>
+<line class="st-bad" x1="413" y1="92" x2="423" y2="104"/>
+<text class="cand" x="428" y="98">8</text>
+<rect class="hlb" x="460" y="58" width="52" height="52"/>
+<rect class="st" x="460" y="58" width="52" height="52"/>
+<text class="lab2" x="465" y="72">I3</text>
+<text class="cand" x="466" y="98">1</text>
+<text class="cand" x="479" y="98">2</text>
+<line class="st-bad" x1="477" y1="92" x2="487" y2="104"/>
+<text class="cand" x="492" y="98">8</text>
+<line class="st-thin" x1="392" y1="122" x2="510" y2="122"/>
+<rect class="hl" x="396" y="134" width="52" height="52"/>
+<rect class="st" x="396" y="134" width="52" height="52"/>
+<text class="lab2" x="401" y="148">G6</text>
+<text class="cand" x="402" y="174">1</text>
+<text class="cand" x="415" y="174">2</text>
+<rect class="hl" x="460" y="134" width="52" height="52"/>
+<rect class="st" x="460" y="134" width="52" height="52"/>
+<text class="lab2" x="465" y="148">I6</text>
+<text class="cand" x="466" y="174">1</text>
+<text class="cand" x="479" y="174">2</text>
+<text class="lab2" x="24" y="200">上排 A3、C3 同在第 1 宫，F3 也在第 3 行；下排在第 4 宫</text>
+<text class="lab2" x="24" y="218">屋顶 A3、C3 = {1,2,8}，纯角 A6、C6 只有 1、2</text>
+<text class="lab2" x="24" y="236">如果 F3 填 8，那么 A3、C3 都不能是 8，只能分掉 1、2</text>
+<text class="lab2" x="24" y="254">四角就成了两 1 两 2，对角一换得第二个解 —— 致命形状</text>
+<text class="lab2" x="24" y="272">所以删的是 F3 里的 8：它同时看见屋顶那两格</text>
+<text class="lab2" x="396" y="200">第 3 行的 1 只剩 G3、I3 两处，本行别处放不下 1</text>
+<text class="lab2" x="396" y="218">屋顶 G3、I3 = {1,2,8}，纯角 G6、I6 只有 1、2</text>
+<text class="lab2" x="396" y="236">如果 G3 填 2，那么 I3 只能填 1，两纯角跟着定成 1、2</text>
+<text class="lab2" x="396" y="254">四角凑成两 1 两 2，对角一换又是第二个解 —— 致命形状</text>
+<text class="lab2" x="396" y="272">所以两格的 2 一起划掉；I3 填 2 时同理，两条分支都往屋顶里删</text>
+<text class="lab" x="24" y="322">⚠ 两类的删法都来自同一句：四角若能整体换成第二种摆法，这个形状就不许出现；删的仍是候选数，不是落子。</text>
+</svg>

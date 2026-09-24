@@ -1,0 +1,41 @@
+<svg viewBox="0 0 760 250" role="img" aria-label="反例图：两个弱关系连在一起，中间格落空，A到C的推断断开" xmlns="http://www.w3.org/2000/svg" width="760" height="250"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+  <rect class="bg-paper" width="760" height="250"/>
+  <text class="labk" x="28" y="28">反例：弱—弱 相连，推不出 A→C</text>
+  <rect class="cell" x="60" y="70" width="24" height="24"/>
+  <text class="labk" x="60" y="112">A</text>
+  <line class="st-thin" x1="86" y1="82" x2="292" y2="82"/>
+  <text class="lab2" x="150" y="72">弱：不能同在</text>
+  <rect class="cell" x="294" y="70" width="24" height="24"/>
+  <text class="labk" x="294" y="112">B</text>
+  <line class="st-thin" x1="320" y1="82" x2="526" y2="82"/>
+  <text class="lab2" x="388" y="72">弱：不能同在</text>
+  <rect class="cell" x="528" y="70" width="24" height="24"/>
+  <text class="labk" x="528" y="112">C</text>
+  <text class="lab" x="596" y="86">B 落空？</text>
+  <text class="lab2" x="60" y="150">A、C 都是真的时候，B 两个都不是</text>
+  <text class="lab2" x="60" y="172">弱关系只说"不能同在"，没说"必有一个"</text>
+  <text class="labk" x="60" y="206">结论：强关系才保证"至少一真"，链条才不断</text>
+</svg>

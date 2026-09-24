@@ -1,0 +1,51 @@
+<svg viewBox="0 0 760 240" role="img" aria-label="技巧档位阶梯与线索数的关系概念图" xmlns="http://www.w3.org/2000/svg" width="760" height="240"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+    <rect class="bg-paper" width="760" height="240"/>
+    <text class="labk" x="20" y="26">难度不只看线索少，更看技巧档位</text>
+    <line x1="60" y1="200" x2="720" y2="200" stroke="#666" stroke-width="1.5"/>
+    <line x1="60" y1="200" x2="60" y2="60" stroke="#666" stroke-width="1.5"/>
+    <text class="lab2" x="40" y="60">技</text>
+    <text class="lab2" x="40" y="90">巧</text>
+    <text class="lab2" x="40" y="120">档</text>
+    <text class="lab2" x="40" y="150">位</text>
+    <text class="lab2" x="40" y="180">↑</text>
+    <text class="lab2" x="700" y="220">线索数 →</text>
+    <rect x="80" y="150" width="90" height="30" fill="#e6f4ea" stroke="#2e7d32"/>
+    <text class="lab2" x="125" y="170" text-anchor="middle">扫描 / 唯一</text>
+    <rect x="200" y="120" width="90" height="60" fill="#fef7e0" stroke="#e08a2e"/>
+    <text class="lab2" x="245" y="146" text-anchor="middle">数对 / 三链数</text>
+    <text class="lab2" x="245" y="164" text-anchor="middle">区块</text>
+    <rect x="320" y="90" width="90" height="90" fill="#f3e8fd" stroke="#7b3fb0"/>
+    <text class="lab2" x="365" y="120" text-anchor="middle">XY-Wing</text>
+    <text class="lab2" x="365" y="138" text-anchor="middle">Swordfish</text>
+    <rect x="440" y="60" width="90" height="120" fill="#e8f0fe" stroke="#1565c0"/>
+    <text class="lab2" x="485" y="86" text-anchor="middle">AIC / 奇偶链</text>
+    <rect x="560" y="40" width="90" height="140" fill="#fce8e6" stroke="#c5221f"/>
+    <text class="lab2" x="605" y="66" text-anchor="middle">被迫猜测</text>
+    <text class="lab2" x="605" y="84" text-anchor="middle">分支搜索</text>
+    <text class="lab2" x="80" y="228">左：报纸易题（30–40 线索，只吃一档）</text>
+    <text class="lab2" x="360" y="228">中：比赛题（25–32 线索，吃三档）</text>
+    <text class="lab2" x="620" y="228">右：AI 极限题</text>
+  </svg>

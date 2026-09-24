@@ -1,0 +1,46 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="一周训练安排横道图：七天分别排计算题、棋感卡、两盘慢棋、一盘强手局、复盘日与休息日" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:9.5px;fill:#777}
+ .stone-b{fill:#1c1c1c}
+.stone-w{fill:#fff;stroke:#1c1c1c;stroke-width:1.2}
+ .pc-r{fill:#fff8f0;stroke:#c0392b;stroke-width:1.8}
+ .star{fill:#1c1c1c}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="300"/>
+  <text class="labk" x="24" y="30">一周 7 天 · 每天 20 分钟练习 + 计划内对局</text>
+  <line class="st" x1="150" y1="52" x2="150" y2="266"/>
+  <text class="lab2" x="24" y="76">每日题</text>
+  <rect class="hl" x="158" y="62" width="520" height="16"/>
+  <text class="lab2" x="24" y="108">棋感卡</text>
+  <rect class="hl" x="158" y="94" width="240" height="16"/>
+  <text class="lab2" x="24" y="140">慢棋 2 盘</text>
+  <rect class="st-thin" x="230" y="126" width="150" height="16" fill="none"/>
+  <text class="lab2" x="24" y="172">强手局 1 盘</text>
+  <rect class="st-thin" x="450" y="158" width="100" height="16" fill="none"/>
+  <text class="lab2" x="24" y="204">深复盘</text>
+  <rect class="st-thin" x="570" y="190" width="150" height="16" fill="none"/>
+  <text class="lab2" x="24" y="236">自制题入库</text>
+  <rect class="st-thin" x="500" y="222" width="220" height="16" fill="none"/>
+  <text class="lab2" x="24" y="262">休息/只读谱</text>
+  <rect class="st-thin" x="670" y="248" width="60" height="16" fill="none"/>
+  <text class="lab2" x="158" y="284">第1天</text>
+  <text class="lab2" x="248" y="284">第2天</text>
+  <text class="lab2" x="338" y="284">第3天</text>
+  <text class="lab2" x="428" y="284">第4天</text>
+  <text class="lab2" x="518" y="284">第5天</text>
+  <text class="lab2" x="608" y="284">第6天</text>
+  <text class="lab2" x="694" y="284">第7天</text>
+</svg>

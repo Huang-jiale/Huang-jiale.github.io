@@ -1,0 +1,37 @@
+<svg viewBox="0 0 360 240" role="img" aria-label="偏锋病笔示意：笔锋偏向一侧，一侧光一侧毛" xmlns="http://www.w3.org/2000/svg" width="360" height="240"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+      <rect class="bg-paper" width="360" height="240"/>
+      <text class="labk" x="180" y="30" text-anchor="middle">偏锋：锋跑一边</text>
+      <path class="st" d="M60,104 L300,108 L300,136 L60,132 C70,128 64,120 60,116 Z" fill="none"/>
+      <circle class="dot" cx="150" cy="108" r="5"/>
+      <circle class="dot" cx="220" cy="108" r="5"/>
+      <line class="st-thin" x1="60" y1="118" x2="300" y2="120"/>
+      <text class="lab2" x="120" y="160">锋贴一边，一边光一边毛</text>
+      <text class="lab2" x="120" y="182">扁薄无力，即"扁笔侧峰"</text>
+    </svg>

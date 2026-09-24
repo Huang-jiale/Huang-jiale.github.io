@@ -1,0 +1,45 @@
+<svg viewBox="0 0 360 258" role="img" aria-label="攒拳怒目增气力的三种常见错误：斜视、过度凸眼、憋气" xmlns="http://www.w3.org/2000/svg" width="360" height="258"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+<rect class="bg-paper" width="360" height="258"/>
+<text x="14" y="22" class="labk">✗ 三种错：斜视、凸眼、憋气</text>
+<circle cx="60" cy="82" r="22" class="head"/>
+<circle cx="68" cy="78" r="7" fill="#fff" stroke="#1c1c1c" stroke-width="1.2"/>
+<circle cx="80" cy="80" r="2.5" class="dot"/>
+<text x="24" y="122" class="lab2">眼珠偏向一侧</text>
+<circle cx="172" cy="82" r="22" class="head"/>
+<circle cx="164" cy="78" r="9" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<circle cx="182" cy="78" r="9" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<circle cx="164" cy="78" r="2" fill="#1c1c1c"/>
+<circle cx="182" cy="78" r="2" fill="#1c1c1c"/>
+<text x="146" y="122" class="lab2">眼球过度用力</text>
+<circle cx="284" cy="82" r="22" class="head"/>
+<circle cx="276" cy="78" r="3" fill="#1c1c1c"/>
+<circle cx="292" cy="78" r="3" fill="#1c1c1c"/>
+<path d="M276,94 L292,94" class="st-bad"/>
+<text x="258" y="122" class="lab2">憋住气、咬紧牙</text>
+<text x="14" y="158" class="lab2">纠正一：瞪目只做1到2秒，其余时间眼皮松</text>
+<text x="14" y="182" class="lab2">纠正二：先把呼吸走顺，再加瞪目</text>
+<text x="14" y="206" class="lab2">纠正三：颈肩一起紧，就把肩往下放</text>
+<text x="14" y="234" class="lab2">出现头晕、眼胀立即停，先咨询医生再练</text>
+</svg>

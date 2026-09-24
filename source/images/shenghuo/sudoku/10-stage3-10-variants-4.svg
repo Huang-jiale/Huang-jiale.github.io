@@ -1,0 +1,40 @@
+<svg viewBox="0 0 760 220" role="img" aria-label="杀手数独cage局部示意：和与积、笼内不重复" xmlns="http://www.w3.org/2000/svg" width="760" height="220"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+    <rect class="bg-paper" width="760" height="220"/>
+    <text class="labk" x="20" y="26">杀手 cage 局部示意（只是局部，非整题）</text>
+    <rect x="20" y="40" width="60" height="60" fill="#ffffff"/><rect x="80" y="40" width="60" height="60" fill="#ffffff"/><rect x="140" y="40" width="60" height="60" fill="#ffffff"/><rect x="200" y="40" width="60" height="60" fill="#ffffff"/>
+    <rect x="20" y="100" width="60" height="60" fill="#ffffff"/><rect x="80" y="100" width="60" height="60" fill="#ffffff"/><rect x="140" y="100" width="60" height="60" fill="#ffffff"/><rect x="200" y="100" width="60" height="60" fill="#ffffff"/>
+    <path d="M20 40 H140 V100 H80 V160 H20 Z" fill="none" stroke="#1565c0" stroke-width="2" stroke-dasharray="6 4"/>
+    <path d="M140 40 H260 V100 H200 V160 H260" fill="none" stroke="#2e7d32" stroke-width="2" stroke-dasharray="6 4"/>
+    <text class="lab" x="24" y="58">3+</text>
+    <text class="lab2" x="146" y="58">15×</text>
+    <text class="num" text-anchor="middle" x="50" y="78">1</text><text class="num" text-anchor="middle" x="110" y="78">2</text><text class="num" text-anchor="middle" x="110" y="138">3</text>
+    <text class="num" text-anchor="middle" x="170" y="78">.</text><text class="num" text-anchor="middle" x="230" y="78">.</text><text class="num" text-anchor="middle" x="230" y="138">.</text>
+    <text class="lab" x="300" y="50">蓝笼 3+：两格，和为 3 且不重</text>
+    <text class="lab2" x="300" y="72">→ 只能是 1 与 2（顺序待定）。</text>
+    <text class="lab" x="300" y="104">绿笼 15×：三格，积为 15 且不重</text>
+    <text class="lab2" x="300" y="126">→ 15 = 1×3×5，唯一组合。</text>
+    <text class="lab2" x="300" y="156">记住：同一笼内先默认"互不相同"。</text>
+  </svg>

@@ -1,0 +1,55 @@
+<svg viewBox="0 0 760 280" role="img" aria-label="第四式细节图：左侧为掌心向后的手掌，右侧为俯视图显示转头不转体" xmlns="http://www.w3.org/2000/svg" width="760" height="280"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="280" class="bg-paper"/>
+  <text x="18" y="24" class="labk">左手看手掌朝向，右手看"只有头在动"（俯视图）</text>
+  <g>
+    <path class="body-line" d="M120 84 q-14 30 0 58 q12 22 36 22"/>
+    <line class="body-line" x1="112" y1="164" x2="108" y2="200"/>
+    <line class="body-line" x1="126" y1="166" x2="126" y2="204"/>
+    <line class="body-line" x1="140" y1="164" x2="144" y2="200"/>
+    <line class="body-line" x1="152" y1="158" x2="160" y2="190"/>
+    <line class="body-line" x1="120" y1="112" x2="92" y2="98"/>
+    <circle class="joint" cx="136" cy="206" r="6"/>
+    <path class="arrow" d="M172 104 a34 26 0 0 1 12 34"/>
+  </g>
+  <text x="212" y="118" class="lab2">外旋到底：掌心朝后外</text>
+  <text x="212" y="140" class="lab2">虎口朝前，小指侧在外</text>
+  <text x="212" y="162" class="lab2">红点＝指尖，向侧后下方</text>
+  <text x="120" y="248" class="lab" text-anchor="middle">本式的手掌</text>
+  <g>
+    <line class="st" x1="456" y1="118" x2="580" y2="118"/>
+    <line class="st" x1="472" y1="196" x2="564" y2="196"/>
+    <path class="f-g2" d="M484 118 l60 0 l-8 78 l-44 0 z" stroke="#8f8f8f"/>
+    <circle class="head" cx="514" cy="92" r="18"/>
+    <path class="st" d="M498 84 l-12 -6 l4 12"/>
+    <line class="st-thin" x1="514" y1="74" x2="514" y2="40"/>
+    <path class="arrow" d="M514 52 a34 24 0 0 0 -22 -14"/>
+    <text x="514" y="30" class="lab2" text-anchor="middle">原本朝前</text>
+  </g>
+  <text x="620" y="118" class="lab2">肩线没动</text>
+  <text x="620" y="196" class="lab2">髋线没动</text>
+  <text x="620" y="80" class="lab2">头转 60–90 度</text>
+  <text x="352" y="248" class="lab2">从上往下看，这一式只允许一个部件旋转：头。</text>
+  <text x="404" y="270" class="lab2">肩线、髋线两条横线保持平行、不改变方向。</text>
+</svg>

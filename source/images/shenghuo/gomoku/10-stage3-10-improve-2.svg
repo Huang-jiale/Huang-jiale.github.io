@@ -1,0 +1,57 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="三张棋感卡片并排，分别是活三、冲四、做杀点，每张背面写着对方不应会怎样以及自身缺陷" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:9.5px;fill:#777}
+ .stone-b{fill:#1c1c1c}
+.stone-w{fill:#fff;stroke:#1c1c1c;stroke-width:1.2}
+ .pc-r{fill:#fff8f0;stroke:#c0392b;stroke-width:1.8}
+ .star{fill:#1c1c1c}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="300"/>
+  <rect class="st" x="24" y="30" width="228" height="240" rx="10" fill="none"/>
+  <text class="labk" x="138" y="58" text-anchor="middle">卡 01 活三</text>
+  <line class="st-thin" x1="56" y1="112" x2="224" y2="112"/>
+  <circle class="stone-b" cx="96" cy="112" r="9"/>
+  <circle class="stone-b" cx="120" cy="112" r="9"/>
+  <circle class="stone-b" cx="144" cy="112" r="9"/>
+  <text class="lab2" x="56" y="140">两头都空</text>
+  <text class="lab" x="56" y="170">不应：对方下一手</text>
+  <text class="lab" x="56" y="190">两头各成一四，必死</text>
+  <text class="lab2" x="56" y="226">缺陷：若己方另有</text>
+  <text class="lab2" x="56" y="246">被反先的点，先防</text>
+  <rect class="st" x="266" y="30" width="228" height="240" rx="10" fill="none"/>
+  <text class="labk" x="380" y="58" text-anchor="middle">卡 02 冲四</text>
+  <line class="st-thin" x1="298" y1="112" x2="466" y2="112"/>
+  <circle class="stone-b" cx="338" cy="112" r="9"/>
+  <circle class="stone-b" cx="362" cy="112" r="9"/>
+  <circle class="stone-b" cx="386" cy="112" r="9"/>
+  <circle class="stone-b" cx="434" cy="112" r="9"/>
+  <text class="lab2" x="298" y="140">一头被堵，缺中间</text>
+  <text class="lab" x="298" y="170">强制：对方必须</text>
+  <text class="lab" x="298" y="190">去堵那个缺口</text>
+  <text class="lab2" x="298" y="226">缺陷：先手用完就</text>
+  <text class="lab2" x="298" y="246">轮不到自己走了</text>
+  <rect class="st" x="508" y="30" width="228" height="240" rx="10" fill="none"/>
+  <text class="labk" x="622" y="58" text-anchor="middle">卡 03 做杀点</text>
+  <line class="st-thin" x1="540" y1="112" x2="708" y2="112"/>
+  <line class="st-thin" x1="600" y1="52" x2="600" y2="152"/>
+  <circle class="stone-b" cx="580" cy="112" r="9"/>
+  <circle class="stone-b" cx="620" cy="112" r="9"/>
+  <circle class="pc-r" cx="600" cy="112" r="10" fill="none"/>
+  <text class="lab2" x="540" y="180">空圈＝落这一点</text>
+  <text class="lab2" x="540" y="200">同时牵动两条线</text>
+  <text class="lab" x="540" y="230">一个点同时做出</text>
+  <text class="lab" x="540" y="250">两条先手＝四三</text>
+</svg>

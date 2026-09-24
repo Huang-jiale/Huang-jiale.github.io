@@ -1,0 +1,43 @@
+<svg viewBox="0 0 760 190" role="img" aria-label="典故熟度三档的取舍" xmlns="http://www.w3.org/2000/svg" width="760" height="190"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="190"/>
+  <text class="labk" x="20" y="24">典的三档：只用第一档，第二档要加提示，第三档不用</text>
+  <rect class="hl" x="20" y="40" width="220" height="46" stroke="#1c1c1c"/>
+  <text class="lab" x="30" y="62">第一档 公共典</text>
+  <text class="lab2" x="30" y="80">成语、常见诗句、名人事</text>
+  <rect class="f-g2" x="252" y="40" width="220" height="46" stroke="#9a9a9a"/>
+  <text class="lab" x="262" y="62">第二档 半公共</text>
+  <text class="lab2" x="262" y="80">课本里有，但要想一想</text>
+  <rect class="f-g4" x="484" y="40" width="220" height="46" stroke="#9a9a9a"/>
+  <text class="lab" x="494" y="62">第三档 私典</text>
+  <text class="lab2" x="494" y="80">冷书、家藏、生僻人名</text>
+  <text class="lab2" x="20" y="112">✓ 可以放心用</text>
+  <text class="lab2" x="252" y="112">△ 谜目写清范围再用</text>
+  <text class="lab2" x="484" y="112">✗ 不用于公开场合的谜</text>
+  <text class="lab2" x="20" y="146">一条实用建议：题面里凡是你需要"解释一遍才懂"的字，就说明它属于第三档；</text>
+  <text class="lab2" x="20" y="168">写谜的时候顺手把解释写出来，那一刻你其实已经在替读者做题了——那就换典。</text>
+</svg>

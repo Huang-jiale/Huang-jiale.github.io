@@ -1,0 +1,58 @@
+<svg viewBox="0 0 760 320" role="img" aria-label="第六式两手攀足固肾腰一遍走完后四个位置" xmlns="http://www.w3.org/2000/svg" width="760" height="320"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+<rect class="bg-paper" width="760" height="320"/>
+<text x="18" y="26" class="labk">第六式：上举、前俯、攀足、起立（吸-呼-停-吸-呼）</text>
+<line x1="20" y1="228" x2="740" y2="228" class="st-thin"/>
+<circle cx="60" cy="68" r="10" class="head"/>
+<line x1="60" y1="78" x2="60" y2="140" class="body-line"/>
+<polyline points="60,88 50,58 56,44" class="body-line"/>
+<polyline points="60,88 70,58 64,44" class="body-line"/>
+<polyline points="60,140 54,184 52,226" class="body-line"/>
+<polyline points="60,140 66,184 68,226" class="body-line"/>
+<text x="22" y="250" class="lab2">① 吸气上举</text>
+<circle cx="236" cy="118" r="10" class="head"/>
+<line x1="244" y1="122" x2="296" y2="140" class="body-line"/>
+<polyline points="244,124 240,166 246,200" class="body-line"/>
+<polyline points="296,140 292,182 294,226" class="body-line"/>
+<polyline points="296,140 300,182 302,226" class="body-line"/>
+<path d="M250,128 Q276,168 288,214" class="arrow"/>
+<polyline points="281,206 288,214 280,219" class="arrow"/>
+<text x="192" y="250" class="lab2">② 呼气前俯，掌沿腰背下运</text>
+<circle cx="436" cy="150" r="10" class="head"/>
+<line x1="444" y1="152" x2="502" y2="152" class="body-line"/>
+<polyline points="502,152 498,190 496,226" class="body-line"/>
+<polyline points="502,152 506,190 508,226" class="body-line"/>
+<polyline points="446,154 450,198 480,222" class="body-line"/>
+<circle cx="480" cy="222" r="4" class="joint"/>
+<text x="416" y="250" class="lab2">③ 攀足停 1 到 2 秒，微抬头</text>
+<circle cx="690" cy="66" r="10" class="head"/>
+<line x1="690" y1="76" x2="690" y2="138" class="body-line"/>
+<polyline points="690,86 682,56 688,44" class="body-line"/>
+<polyline points="690,86 698,56 692,44" class="body-line"/>
+<polyline points="690,138 684,182 682,226" class="body-line"/>
+<polyline points="690,138 696,182 698,226" class="body-line"/>
+<text x="628" y="250" class="lab2">④ 吸气起立，呼气落手</text>
+<text x="18" y="278" class="lab">全程6遍，每遍约12到14秒；腿后侧紧者可屈膝、手停在小腿</text>
+<text x="18" y="304" class="lab2">起身顺序：收腹、挺腰、最后抬头；不许直接仰腰</text>
+</svg>

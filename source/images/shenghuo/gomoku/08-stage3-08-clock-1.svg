@@ -1,0 +1,55 @@
+<svg viewBox="0 0 760 250" role="img" aria-label="正式连珠对局的八环节流程时间轴" xmlns="http://www.w3.org/2000/svg" width="760" height="250"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:9.5px;fill:#777}
+ .stone-b{fill:#1c1c1c}
+.stone-w{fill:#fff;stroke:#1c1c1c;stroke-width:1.2}
+ .pc-r{fill:#fff8f0;stroke:#c0392b;stroke-width:1.8}
+ .star{fill:#1c1c1c}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}</style>
+<rect class="bg-paper" width="760" height="250"/>
+<text x="18" y="24" class="labk">对局流程时间轴：越往后，"规则"越少、"计算"越多；越靠前，出错越冤</text>
+<line x1="20" y1="80" x2="740" y2="80" class="st"/>
+<g>
+<circle cx="52" cy="80" r="5" class="dot"/><circle cx="140" cy="80" r="5" class="dot"/><circle cx="228" cy="80" r="5" class="dot"/><circle cx="316" cy="80" r="5" class="dot"/>
+<circle cx="404" cy="80" r="5" class="dot"/><circle cx="492" cy="80" r="5" class="dot"/><circle cx="580" cy="80" r="5" class="dot"/><circle cx="668" cy="80" r="5" class="dot"/>
+</g>
+<text x="28" y="66" class="labk">①核对</text>
+<text x="110" y="66" class="labk">②定色</text>
+<text x="200" y="66" class="labk">③摆钟</text>
+<text x="288" y="66" class="labk">④开局</text>
+<text x="376" y="66" class="labk">⑤中盘</text>
+<text x="458" y="66" class="labk">⑥读秒</text>
+<text x="548" y="66" class="labk">⑦终局</text>
+<text x="634" y="66" class="labk">⑧复盘</text>
+<text x="16" y="104" class="lab2">规程·表</text>
+<text x="104" y="104" class="lab2">交换条款</text>
+<text x="196" y="104" class="lab2">黑方先动钟</text>
+<text x="282" y="104" class="lab2">允许区·两打</text>
+<text x="372" y="104" class="lab2">防点与先手</text>
+<text x="452" y="104" class="lab2">最易输的一格</text>
+<text x="542" y="104" class="lab2">四种判定</text>
+<text x="628" y="104" class="lab2">记谱·签字</text>
+<rect x="18" y="136" width="240" height="46" rx="6" class="f-g1"/>
+<text x="30" y="158" class="lab">规则问题：占 0%—100%</text>
+<text x="30" y="176" class="lab2">①—④ 全靠记清条文，不需要算力</text>
+<rect x="272" y="136" width="240" height="46" rx="6" class="hl"/>
+<text x="284" y="158" class="lab">计算问题：占 60% 以上</text>
+<text x="284" y="176" class="lab2">⑤—⑦ 是第 03—06 课的全部内容</text>
+<rect x="526" y="136" width="216" height="46" rx="6" class="hlb"/>
+<text x="538" y="158" class="lab">习惯问题：赢在⑧</text>
+<text x="538" y="176" class="lab2">记谱＋复盘才是涨棋的那一步</text>
+<text x="18" y="216" class="lab2">说明：不同赛事在②③⑥上的条文差别很大，本课只给"常见做法"，一切以当次规程为准。</text>
+</svg>

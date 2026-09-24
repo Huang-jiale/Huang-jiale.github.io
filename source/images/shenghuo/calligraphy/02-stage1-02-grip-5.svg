@@ -1,0 +1,67 @@
+<svg viewBox="0 0 760 260" role="img" aria-label="枕腕提腕悬腕三档手腕支撑方式与可写字径" xmlns="http://www.w3.org/2000/svg" width="760" height="260"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="260"/>
+  <text x="18" y="24" class="labk">三档支撑：接触点越靠近桌面，活动半径越小、精度越高</text>
+  <g>
+    <text x="40" y="58" class="lab">① 枕腕</text>
+    <rect x="40" y="150" width="180" height="10" class="f-g2"/>
+    <path class="body-line" d="M70 150 L120 122"/>
+    <path class="body-line" d="M120 122 L158 96"/>
+    <rect x="154" y="70" width="8" height="30" rx="4" class="f-g3" transform="rotate(24 158 85)"/>
+    <circle cx="70" cy="150" r="5" class="joint"/>
+    <text x="40" y="186" class="lab2">腕贴桌＝支点固定</text>
+    <text x="40" y="204" class="lab2">只能写小字；长竖会断</text>
+    <text x="40" y="222" class="lab2">可垫左手背，别压纸</text>
+  </g>
+  <g>
+    <text x="290" y="58" class="lab">② 提腕（入门常用）</text>
+    <rect x="290" y="150" width="180" height="10" class="f-g2"/>
+    <path class="body-line" d="M300 150 q40 -6 62 -30"/>
+    <path class="body-line" d="M362 120 L400 96"/>
+    <rect x="396" y="70" width="8" height="30" rx="4" class="f-g3" transform="rotate(24 400 85)"/>
+    <circle cx="300" cy="150" r="5" class="joint"/>
+    <path class="arrow" d="M420 110 q26 -14 34 -38 M454 72 L462 76 M454 72 L452 82"/>
+    <text x="290" y="186" class="lab2">腕离桌、肘近桌沿</text>
+    <text x="290" y="204" class="lab2">3—5cm 的字最舒服</text>
+    <text x="290" y="222" class="lab2">腕可左右摆，横捺靠它</text>
+  </g>
+  <g>
+    <text x="540" y="58" class="lab">③ 悬腕／悬肘</text>
+    <rect x="540" y="150" width="180" height="10" class="f-g2"/>
+    <path class="body-line" d="M560 148 q46 4 70 -26"/>
+    <path class="body-line" d="M630 122 L660 96"/>
+    <rect x="656" y="70" width="8" height="30" rx="4" class="f-g3" transform="rotate(24 660 85)"/>
+    <circle cx="560" cy="148" r="5" class="joint"/>
+    <path class="arrow" d="M600 62 q30 -22 60 -8 M660 54 L662 46 M660 54 L652 50"/>
+    <text x="540" y="186" class="lab2">肘离桌，靠肩肘运笔</text>
+    <text x="540" y="204" class="lab2">写大字、以后写行书要用</text>
+    <text x="540" y="222" class="lab2">初学必抖：先练画长圈</text>
+  </g>
+  <text x="18" y="250" class="lab2">练习建议：先用②把八种基本笔画练稳，再在写大字时切到③；一直用①会让你的笔画永远"出不去"。</text>
+</svg>

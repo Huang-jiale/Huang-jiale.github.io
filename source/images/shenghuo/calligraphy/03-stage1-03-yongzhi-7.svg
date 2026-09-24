@@ -1,0 +1,44 @@
+<svg viewBox="0 0 760 260" role="img" aria-label="掠即长撇的分解图" xmlns="http://www.w3.org/2000/svg" width="760" height="260"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+    <rect class="bg-paper" width="760" height="260"/>
+    <defs><marker id="yz7" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#0f6ab5"/></marker></defs>
+    <text class="labk" x="40" y="28">掠 · 长撇</text>
+    <rect x="70" y="45" width="180" height="180" fill="none" stroke="#c9c4ba" stroke-width="1.6"/>
+    <line class="guide" x1="160" y1="45" x2="160" y2="225"/>
+    <line class="guide" x1="70" y1="135" x2="250" y2="135"/>
+    <line class="guide" x1="70" y1="45" x2="250" y2="225"/>
+    <line class="guide" x1="250" y1="45" x2="70" y2="225"/>
+    <path class="stroke-in" d="M196 72 C188 118 168 160 118 202 C150 168 172 124 186 72 Z"/>
+    <path class="arrow" d="M198 78 L122 200" marker-end="url(#yz7)"/>
+    <text class="lab2" x="96" y="216">送到笔尖</text>
+    <text class="lab" x="300" y="72">起笔：右上方顿一下再出发</text>
+    <text class="lab" x="300" y="112">行笔：向左下，背微弓、渐提</text>
+    <text class="lab" x="300" y="152">收笔：出锋要送到，尖而不枯</text>
+    <text class="lab2" x="300" y="196">毛病：中段忽细、尾端断得突然</text>
+  </svg>

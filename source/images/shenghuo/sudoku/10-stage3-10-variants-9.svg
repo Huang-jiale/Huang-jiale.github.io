@@ -1,0 +1,42 @@
+<svg viewBox="0 0 760 250" role="img" aria-label="五种变体规则一句话总览卡片" xmlns="http://www.w3.org/2000/svg" width="760" height="250"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+    <rect class="bg-paper" width="760" height="250"/>
+    <text class="labk" x="20" y="26">五种变体 · 规则一句话总览</text>
+    <rect x="20" y="42" width="120" height="30" rx="6" fill="#e0ecff" stroke="#1565c0"/>
+    <text class="lab" x="80" y="62" text-anchor="middle">对角线</text>
+    <text class="lab2" x="160" y="62">两条从角到角的主对角线，各须是 1–9 各一次。</text>
+    <rect x="20" y="80" width="120" height="30" rx="6" fill="#e7f4e9" stroke="#2e7d32"/>
+    <text class="lab" x="80" y="100" text-anchor="middle">不规则宫</text>
+    <text class="lab2" x="160" y="100">宫仍是九个、仍填 1–9，只是每宫形状歪斜且一次定死。</text>
+    <rect x="20" y="118" width="120" height="30" rx="6" fill="#fff2e0" stroke="#e08a2e"/>
+    <text class="lab" x="80" y="138" text-anchor="middle">杀手</text>
+    <text class="lab2" x="160" y="138">虚线笼左上角给和或积；同笼内数字不得重复；配 45 法则。</text>
+    <rect x="20" y="156" width="120" height="30" rx="6" fill="#f3e8fd" stroke="#7b3fb0"/>
+    <text class="lab" x="80" y="176" text-anchor="middle">奇偶</text>
+    <text class="lab2" x="160" y="176">涂色格只能奇数、白格只能偶数，候选当场砍一半。</text>
+    <rect x="20" y="194" width="120" height="30" rx="6" fill="#fde3e3" stroke="#c5221f"/>
+    <text class="lab" x="80" y="214" text-anchor="middle">不等号</text>
+    <text class="lab2" x="160" y="214">相邻两格间标 &lt; 或 &gt;，尖角指较小一侧，只加方向约束。</text>
+  </svg>

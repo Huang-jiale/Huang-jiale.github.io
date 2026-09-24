@@ -1,0 +1,54 @@
+<svg viewBox="0 0 760 330" role="img" aria-label="膝内扣与正确膝位的正面腿部对照图及自查方法" xmlns="http://www.w3.org/2000/svg" width="760" height="330"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+<rect class="bg-paper" width="760" height="330"/>
+<text x="18" y="26" class="labk">膝内扣自查：腿部正面（三个马步式通用）</text>
+<line class="st" x1="140" y1="90" x2="200" y2="90"/>
+<path class="st-bad" d="M140 90 L158 168 L132 268"/>
+<path class="st-bad" d="M200 90 L182 168 L208 268"/>
+<circle class="joint" cx="158" cy="168" r="5"/>
+<circle class="joint" cx="182" cy="168" r="5"/>
+<line class="st" x1="118" y1="271" x2="146" y2="271"/>
+<line class="st" x1="194" y1="271" x2="222" y2="271"/>
+<line class="st-thin" x1="170" y1="86" x2="170" y2="272"/>
+<line class="st" x1="440" y1="90" x2="500" y2="90"/>
+<path class="st-ok" d="M440 90 L436 168 L438 268"/>
+<path class="st-ok" d="M500 90 L506 168 L508 268"/>
+<circle class="joint" cx="436" cy="168" r="5"/>
+<circle class="joint" cx="506" cy="168" r="5"/>
+<line class="st" x1="422" y1="271" x2="452" y2="271"/>
+<line class="st" x1="494" y1="271" x2="524" y2="271"/>
+<line class="st-thin" x1="100" y1="272" x2="240" y2="272"/>
+<line class="st-thin" x1="405" y1="272" x2="540" y2="272"/>
+<text x="90" y="300" class="lab2">错：膝内扣，脚外撇</text>
+<text x="400" y="300" class="lab2">对：髋膝趾一条线</text>
+<text x="596" y="94" class="labk">自查三步</text>
+<text x="596" y="122" class="lab2">拍一段正面视频，</text>
+<text x="596" y="146" class="lab2">定格在蹲得最低处：</text>
+<text x="596" y="170" class="lab2">膝盖盖过脚背、</text>
+<text x="596" y="194" class="lab2">两膝距离小于两髋，</text>
+<text x="596" y="218" class="lab2">就是内扣。</text>
+<text x="596" y="252" class="lab2">改法：站宽一点、</text>
+<text x="596" y="276" class="lab2">蹲高一点，膝尖顺着</text>
+<text x="596" y="300" class="lab2">脚尖方向外展。</text>
+</svg>

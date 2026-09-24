@@ -1,0 +1,67 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="例题A第11步盘面，第三行的数字一隐性唯一在R3C3，黄底是盘上现有的三个1" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+  <rect class="bg-paper" width="760" height="300"/>
+  <text class="labk" x="24" y="20">例题 A · 第 11 步之后：数视角还有两处</text>
+  <rect class="cell" x="24" y="34" width="234" height="234"/>
+  <rect class="hl" x="180" y="60" width="26" height="26"/><rect class="hl" x="154" y="138" width="26" height="26"/><rect class="hl" x="50" y="216" width="26" height="26"/>
+  <rect class="hlc" x="50" y="86" width="26" height="26"/><rect class="hlc" x="180" y="86" width="26" height="26"/><rect class="hlc" x="206" y="86" width="26" height="26"/>
+  <rect class="hlb" x="76" y="86" width="26" height="26"/>
+  <g class="gl">
+    <line x1="50" y1="34" x2="50" y2="268"/><line x1="76" y1="34" x2="76" y2="268"/>
+    <line x1="128" y1="34" x2="128" y2="268"/><line x1="154" y1="34" x2="154" y2="268"/>
+    <line x1="206" y1="34" x2="206" y2="268"/><line x1="232" y1="34" x2="232" y2="268"/>
+    <line x1="24" y1="60" x2="258" y2="60"/><line x1="24" y1="86" x2="258" y2="86"/>
+    <line x1="24" y1="138" x2="258" y2="138"/><line x1="24" y1="164" x2="258" y2="164"/>
+    <line x1="24" y1="216" x2="258" y2="216"/><line x1="24" y1="242" x2="258" y2="242"/>
+  </g>
+  <g class="gl-h">
+    <line x1="102" y1="34" x2="102" y2="268"/><line x1="180" y1="34" x2="180" y2="268"/>
+    <line x1="24" y1="112" x2="258" y2="112"/><line x1="24" y1="190" x2="258" y2="190"/>
+  </g>
+  <rect class="st" x="24" y="34" width="234" height="234"/>
+  <text class="num" x="33" y="52">4</text><text class="num num-g" x="59" y="52">.</text><text class="num num-g" x="85" y="52">.</text><text class="num num-g" x="111" y="52">.</text><text class="num num-g" x="137" y="52">.</text><text class="num" x="163" y="52">7</text><text class="num num-g" x="189" y="52">.</text><text class="num num-g" x="215" y="52">.</text><text class="num" x="241" y="52">5</text>
+  <text class="num num-g" x="33" y="78">.</text><text class="num num-g" x="59" y="78">.</text><text class="num num-g" x="85" y="78">.</text><text class="num" x="111" y="78">4</text><text class="num" x="137" y="78">5</text><text class="num num-g" x="163" y="78">.</text><text class="num" x="189" y="78">1</text><text class="num" x="215" y="78">7</text><text class="num num-g" x="241" y="78">.</text>
+  <text class="num" x="33" y="104">5</text><text class="num num-g" x="59" y="104">.</text><text class="num num-g" x="85" y="104">.</text><text class="num" x="111" y="104">9</text><text class="num" x="137" y="104">8</text><text class="num" x="163" y="104">6</text><text class="num num-g" x="189" y="104">.</text><text class="num num-g" x="215" y="104">.</text><text class="num" x="241" y="104">4</text>
+  <text class="num" x="33" y="130">2</text><text class="num num-g" x="59" y="130">.</text><text class="num num-g" x="85" y="130">.</text><text class="num" x="111" y="130">5</text><text class="num" x="137" y="130">9</text><text class="num" x="163" y="130">4</text><text class="num" x="189" y="130">8</text><text class="num" x="215" y="130">6</text><text class="num num-g" x="241" y="130">.</text>
+  <text class="num" x="33" y="156">9</text><text class="num" x="59" y="156">8</text><text class="num" x="85" y="156">4</text><text class="num num-g" x="111" y="156">.</text><text class="num" x="137" y="156">6</text><text class="num" x="163" y="156">1</text><text class="num" x="189" y="156">7</text><text class="num" x="215" y="156">5</text><text class="num num-g" x="241" y="156">.</text>
+  <text class="num num-g" x="33" y="182">.</text><text class="num num-g" x="59" y="182">.</text><text class="num" x="85" y="182">5</text><text class="num" x="111" y="182">7</text><text class="num num-g" x="137" y="182">.</text><text class="num" x="163" y="182">8</text><text class="num num-g" x="189" y="182">.</text><text class="num num-g" x="215" y="182">.</text><text class="num" x="241" y="182">9</text>
+  <text class="num" x="33" y="208">7</text><text class="num" x="59" y="208">4</text><text class="num num-g" x="85" y="208">.</text><text class="num num-g" x="111" y="208">.</text><text class="num num-g" x="137" y="208">.</text><text class="num num-g" x="163" y="208">.</text><text class="num" x="189" y="208">5</text><text class="num num-g" x="215" y="208">.</text><text class="num num-g" x="241" y="208">.</text>
+  <text class="num num-g" x="33" y="234">.</text><text class="num" x="59" y="234">1</text><text class="num" x="85" y="234">6</text><text class="num num-g" x="111" y="234">.</text><text class="num" x="137" y="234">7</text><text class="num" x="163" y="234">5</text><text class="num num-g" x="189" y="234">.</text><text class="num num-g" x="215" y="234">.</text><text class="num num-g" x="241" y="234">.</text>
+  <text class="num num-g" x="33" y="260">.</text><text class="num" x="59" y="260">5</text><text class="num num-g" x="85" y="260">.</text><text class="num num-g" x="111" y="260">.</text><text class="num" x="137" y="260">4</text><text class="num num-g" x="163" y="260">.</text><text class="num num-g" x="189" y="260">.</text><text class="num num-g" x="215" y="260">.</text><text class="num" x="241" y="260">7</text>
+  <line class="st-red" x1="63" y1="229" x2="63" y2="99"/>
+  <line class="st-red" x1="193" y1="73" x2="193" y2="95"/>
+  <rect class="st-red" x="180" y="34" width="78" height="78"/>
+  <text class="lab2" x="24" y="288">黄底 = 盘上已有的三个 1 ｜ 红框 = 宫 3（1 已住进去）</text>
+  <text class="lab" x="300" y="56">第 3 行已有 5、9、8、6、4，</text>
+  <text class="lab" x="300" y="76">缺 1、2、3、7，空格是 R3C2、R3C3、</text>
+  <text class="lab" x="300" y="96">R3C7、R3C8 四格。只问 1：</text>
+  <text class="lab2" x="300" y="124">· R3C2 出局：第 2 列有 R8C2=1；</text>
+  <text class="lab2" x="300" y="144">· R3C7 出局：同列有 R2C7=1；</text>
+  <text class="lab2" x="300" y="164">· R3C8 出局：与 R2C7 同在宫 3。</text>
+  <text class="labk" x="300" y="196">结论：R3C3 = 1，写下去。</text>
+  <text class="lab2" x="300" y="222">注意 R3C3 自己的候选是 1、2、3、7，</text>
+  <text class="lab2" x="300" y="242">格视角看不出任何结论 —— 这正是</text>
+  <text class="labk" x="300" y="266">第二处：第 1 列的 1 只剩 R6C1。</text>
+</svg>

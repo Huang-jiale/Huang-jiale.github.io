@@ -1,0 +1,50 @@
+<svg viewBox="0 0 760 320" role="img" aria-label="XY-Wing 骨架：轴心与两把钳" xmlns="http://www.w3.org/2000/svg" width="760" height="320"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+<rect class="bg-paper" width="760" height="320"/>
+<text class="labk" x="24" y="34">XY-Wing 骨架：三格只用三个数</text>
+<rect class="hlc" x="80" y="130" width="80" height="80"/>
+<rect class="st" x="80" y="130" width="80" height="80"/>
+<text class="cand" x="104" y="164">X</text><text class="cand" x="132" y="164">Y</text>
+<text class="lab2" x="120" y="228" text-anchor="middle">轴心 P</text>
+<rect class="hl" x="280" y="60" width="80" height="80"/>
+<rect class="st" x="280" y="60" width="80" height="80"/>
+<text class="cand" x="304" y="94">X</text><text class="cand" x="332" y="94">Z</text>
+<text class="lab2" x="320" y="52" text-anchor="middle">钳 Q</text>
+<rect class="hl" x="280" y="180" width="80" height="80"/>
+<rect class="st" x="280" y="180" width="80" height="80"/>
+<text class="cand" x="304" y="214">Y</text><text class="cand" x="332" y="214">Z</text>
+<text class="lab2" x="320" y="278" text-anchor="middle">钳 R</text>
+<line class="arrow" x1="160" y1="150" x2="278" y2="106"/>
+<line class="arrow" x1="160" y1="192" x2="278" y2="214"/>
+<text class="lab" x="430" y="64">读图三步</text>
+<text class="lab" x="430" y="94">1 轴心 P 是双值格，只有 X、Y</text>
+<text class="lab" x="430" y="120">2 钳 Q 含 X，钳 R 含 Y</text>
+<text class="lab" x="430" y="146">3 两钳的第三个数都是 Z</text>
+<text class="lab" x="430" y="178">若 P=X，则 Q 只能是 Z</text>
+<text class="lab" x="430" y="204">若 P=Y，则 R 只能是 Z</text>
+<text class="lab" x="430" y="236">所以 Z 必落在 Q 或 R 头上</text>
+<text class="lab" x="430" y="262">同时看见 Q、R 的格不能填 Z</text>
+<text class="lab2" x="430" y="290">两把钳不必互见，只需要都咬住轴心</text>
+</svg>

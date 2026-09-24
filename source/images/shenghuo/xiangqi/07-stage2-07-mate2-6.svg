@@ -1,0 +1,65 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="对照图：四种杀法各自封住老将能走的哪几格" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+.cell-g{fill:#f2efe8}
+.sq{fill:#f7f0df}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+ .pc-r{fill:#fff8f0;stroke:#c0392b;stroke-width:1.8}
+.pc-b{fill:#f7f7f7;stroke:#1c1c1c;stroke-width:1.8}
+ .pc-tr{font-size:15px;fill:#c0392b;font-weight:700}
+.pc-tb{font-size:15px;fill:#1c1c1c;font-weight:700}
+ .star{fill:#1c1c1c}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .big{font-size:22px;fill:#1c1c1c}</style>
+    <rect class="bg-paper" width="760" height="300"/>
+    <text class="labk" x="30" y="22">老将能走的三格：左、右、前进</text>
+    <text class="lab2" x="30" y="278">× 表示这一格走不得：要么被红方子力封死，要么根本在九宫之外。</text>
+    <text class="labk" x="30" y="52">马后炮：进马当架</text>
+    <text class="labk" x="220" y="52">卧槽马：车来收口</text>
+    <text class="labk" x="410" y="52">钓鱼马：先封后杀</text>
+    <text class="labk" x="600" y="52">铁门栓：兵封口</text>
+    <circle class="hlb" cx="80" cy="100" r="16"/>
+    <text class="num" x="73" y="106">将</text>
+    <text class="lab2" x="30" y="106">×</text>
+    <text class="lab2" x="130" y="106">×</text>
+    <text class="lab2" x="80" y="156">×</text>
+    <text class="lab2" x="80" y="250">马 2 格 ＋ 炮口 1 格</text>
+    <circle class="hlb" cx="270" cy="100" r="16"/>
+    <text class="num" x="263" y="106">将</text>
+    <text class="lab2" x="220" y="106">×</text>
+    <text class="lab2" x="320" y="106">×</text>
+    <text class="lab2" x="270" y="156">×</text>
+    <text class="lab2" x="270" y="250">马 1 ＋ 车 1 ＋ 兵 1</text>
+    <circle class="hlb" cx="460" cy="100" r="16"/>
+    <text class="num" x="453" y="106">将</text>
+    <text class="lab2" x="410" y="106">×</text>
+    <text class="lab2" x="510" y="106">×</text>
+    <text class="lab2" x="460" y="156">×</text>
+    <text class="lab2" x="460" y="250">马 2 格 ＋ 车 1 格</text>
+    <circle class="hlb" cx="650" cy="100" r="16"/>
+    <text class="num" x="643" y="106">将</text>
+    <text class="lab2" x="600" y="106">×</text>
+    <text class="lab2" x="700" y="106">×</text>
+    <text class="lab2" x="650" y="156">×</text>
+    <text class="lab2" x="650" y="250">车占将门，兵封口</text>
+  </svg>

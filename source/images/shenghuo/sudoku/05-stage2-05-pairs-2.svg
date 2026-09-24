@@ -1,0 +1,61 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="左上宫内第二行的显性数对2和5，删掉宫内第三行两格的候选" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+    <rect class="bg-paper" width="760" height="300"/>
+    <text class="labk" x="40" y="32">例3：宫里的显性数对</text>
+    <rect class="cell" x="60" y="60" width="66" height="66"/>
+    <rect class="cell" x="132" y="60" width="66" height="66"/>
+    <rect class="cell" x="204" y="60" width="66" height="66"/>
+    <rect class="cell" x="60" y="132" width="66" height="66"/>
+    <rect class="hl" x="60" y="132" width="66" height="66"/>
+    <rect class="cell" x="132" y="132" width="66" height="66"/>
+    <rect class="hl" x="132" y="132" width="66" height="66"/>
+    <rect class="cell" x="204" y="132" width="66" height="66"/>
+    <rect class="cell" x="60" y="204" width="66" height="66"/>
+    <rect class="cell" x="132" y="204" width="66" height="66"/>
+    <rect class="cell" x="204" y="204" width="66" height="66"/>
+    <text class="num" x="93" y="104">1</text>
+    <text class="num" x="165" y="104">4</text>
+    <text class="num" x="237" y="104">7</text>
+    <text class="num" x="93" y="176">.</text>
+    <text class="num" x="165" y="176">.</text>
+    <text class="num" x="237" y="176">.</text>
+    <text class="num" x="93" y="248">.</text>
+    <text class="num" x="165" y="248">9</text>
+    <text class="num" x="237" y="248">.</text>
+    <text class="cand" x="64" y="148">{2,5}</text>
+    <text class="cand" x="136" y="148">{2,5}</text>
+    <text class="cand" x="208" y="148">{3}</text>
+    <text class="cand" x="64" y="220">{2,6}</text>
+    <text class="cand" x="208" y="220">{5,8}</text>
+    <line class="st" x1="70" y1="216" x2="85" y2="216"/>
+    <line class="st" x1="214" y1="216" x2="229" y2="216"/>
+    <text class="lab" x="320" y="80">看左上宫：第二行的两格都只剩 {2,5}。</text>
+    <text class="lab" x="320" y="108">所以这一宫的 2 和 5 已被这两格占用。</text>
+    <text class="lab" x="320" y="134">本宫其它格：行三列 1 删 2，行三列 3 删 5。</text>
+    <text class="lab" x="320" y="162">删完第三行第 1 格只剩 6，第 3 格只剩 8。</text>
+    <text class="lab2" x="320" y="190">别漏了：这对格子同在第二行，所以第二行</text>
+    <text class="lab2" x="320" y="212">第 3 到 9 格也都不能填 2 和 5，删法一样。</text>
+    <text class="lab2" x="320" y="240">一对格子属于两条单元，数对就在两条单元生效。</text>
+  </svg>

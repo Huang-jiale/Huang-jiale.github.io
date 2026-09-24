@@ -1,0 +1,53 @@
+<svg viewBox="0 0 760 320" role="img" aria-label="耸肩错误与沉肩正确的正面比较图，以托天定势为例" xmlns="http://www.w3.org/2000/svg" width="760" height="320"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+<rect class="bg-paper" width="760" height="320"/>
+<text x="18" y="26" class="labk">端肩（错）与沉肩（对）：以两手托天理三焦定势为例</text>
+<circle class="head" cx="180" cy="82" r="15"/>
+<line class="body-line" x1="180" y1="97" x2="180" y2="190"/>
+<line class="st-bad" x1="156" y1="104" x2="204" y2="104"/>
+<path class="body-line" d="M156 104 l-12 -38 l14 -22"/>
+<path class="body-line" d="M204 104 l12 -38 l-14 -22"/>
+<line class="body-line" x1="180" y1="190" x2="170" y2="235"/>
+<line class="body-line" x1="170" y1="235" x2="168" y2="272"/>
+<line class="body-line" x1="180" y1="190" x2="190" y2="235"/>
+<line class="body-line" x1="190" y1="235" x2="192" y2="272"/>
+<line class="body-line" x1="156" y1="275" x2="180" y2="275"/>
+<line class="body-line" x1="182" y1="275" x2="206" y2="275"/>
+<circle class="head" cx="520" cy="78" r="15"/>
+<line class="body-line" x1="520" y1="93" x2="520" y2="190"/>
+<line class="st-ok" x1="486" y1="122" x2="556" y2="122"/>
+<path class="body-line" d="M486 122 l-14 -40 l16 -26"/>
+<path class="body-line" d="M556 122 l14 -40 l-16 -26"/>
+<line class="body-line" x1="520" y1="190" x2="510" y2="235"/>
+<line class="body-line" x1="510" y1="235" x2="508" y2="272"/>
+<line class="body-line" x1="520" y1="190" x2="530" y2="235"/>
+<line class="body-line" x1="530" y1="235" x2="532" y2="272"/>
+<line class="body-line" x1="496" y1="275" x2="520" y2="275"/>
+<line class="body-line" x1="522" y1="275" x2="546" y2="275"/>
+<line class="st-thin" x1="570" y1="95" x2="570" y2="120"/>
+<path class="arrow" d="M584 96 l0 24 m-5 -7 l5 7 l5 -7"/>
+<text x="262" y="204" class="lab2">量这里：耳垂到肩的空档，该有一掌宽</text>
+<text x="60" y="300" class="lab2">错：手一抬，肩先跟上来了</text>
+<text x="400" y="300" class="lab2">对：掌向上顶，肩向下落</text>
+</svg>

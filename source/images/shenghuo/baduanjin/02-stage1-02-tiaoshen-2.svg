@@ -1,0 +1,72 @@
+<svg viewBox="0 0 760 420" role="img" aria-label="正面人体简笔图，左右两栏标出调身的十个检查点" xmlns="http://www.w3.org/2000/svg" width="760" height="420"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="420" class="bg-paper"/>
+  <text x="18" y="24" class="labk">调身十检：从上往下念一遍，身体自己会修正</text>
+  <line class="st-thin" x1="380" y1="44" x2="380" y2="400"/>
+  <circle class="head" cx="380" cy="76" r="18"/>
+  <line class="body-line" x1="380" y1="94" x2="380" y2="214"/>
+  <line class="body-line" x1="345" y1="112" x2="415" y2="112"/>
+  <line class="body-line" x1="345" y1="112" x2="326" y2="164"/>
+  <line class="body-line" x1="326" y1="164" x2="322" y2="218"/>
+  <line class="body-line" x1="415" y1="112" x2="434" y2="164"/>
+  <line class="body-line" x1="434" y1="164" x2="438" y2="218"/>
+  <line class="body-line" x1="380" y1="214" x2="369" y2="284"/>
+  <line class="body-line" x1="369" y1="284" x2="367" y2="352"/>
+  <line class="body-line" x1="380" y1="214" x2="391" y2="284"/>
+  <line class="body-line" x1="391" y1="284" x2="393" y2="352"/>
+  <line class="body-line" x1="351" y1="355" x2="373" y2="355"/>
+  <line class="body-line" x1="387" y1="355" x2="409" y2="355"/>
+  <circle class="joint" cx="380" cy="58" r="4"/>
+  <circle class="joint" cx="345" cy="112" r="4"/><circle class="joint" cx="415" cy="112" r="4"/>
+  <circle class="joint" cx="326" cy="164" r="4"/><circle class="joint" cx="434" cy="164" r="4"/>
+  <circle class="joint" cx="322" cy="218" r="4"/><circle class="joint" cx="438" cy="218" r="4"/>
+  <circle class="joint" cx="380" cy="214" r="4"/>
+  <circle class="joint" cx="369" cy="284" r="4"/><circle class="joint" cx="391" cy="284" r="4"/>
+  <circle class="joint" cx="367" cy="352" r="4"/><circle class="joint" cx="393" cy="352" r="4"/>
+  <path class="arrow" d="M420 62 a46 34 0 0 1 22 22"/>
+  <path class="arrow" d="M452 130 l26 16 m-12 -1 l12 1 l-3 12"/>
+  <path class="arrow" d="M340 240 l-18 26 m9 -2 l-9 2 l-2 9"/>
+  <text x="470" y="64" class="labk">① 头顶：向上领</text>
+  <text x="470" y="84" class="lab2">下巴微收，像头顶有根线吊</text>
+  <text x="470" y="124" class="labk">② 颈与肩：往下沉</text>
+  <text x="470" y="144" class="lab2">肩头不向上抬，耳对肩</text>
+  <text x="470" y="184" class="labk">③ 肘：坠，腋留缝</text>
+  <text x="470" y="204" class="lab2">腋下能塞进一个鸡蛋</text>
+  <text x="470" y="244" class="labk">④ 胸：微内含</text>
+  <text x="470" y="264" class="lab2">不挺胸，肋骨不往外顶</text>
+  <text x="470" y="304" class="labk">⑤ 背：向上拉长</text>
+  <text x="470" y="324" class="lab2">想象脊柱被轻轻往上提</text>
+  <text x="20" y="64" class="labk">⑥ 腰：松，不塌不挺</text>
+  <text x="20" y="84" class="lab2">腰后侧是平的，不是凹的</text>
+  <text x="20" y="124" class="labk">⑦ 臀：向前收（敛臀）</text>
+  <text x="20" y="144" class="lab2">尾骨向下向前卷一点</text>
+  <text x="20" y="184" class="labk">⑧ 膝：微屈不锁死</text>
+  <text x="20" y="204" class="lab2">膝尖对着脚尖方向</text>
+  <text x="20" y="244" class="labk">⑨ 两脚：平行与肩宽</text>
+  <text x="20" y="264" class="lab2">脚尖正对前方，不外八</text>
+  <text x="20" y="304" class="labk">⑩ 脚掌：三点压实</text>
+  <text x="20" y="324" class="lab2">脚跟、前掌内、前掌外</text>
+  <text x="20" y="378" class="lab2">自检法：把十句从上到下念一遍，念到哪句，哪个部位就会自己动一下——动了的那几个，就是你僵住的部位。</text>
+  <text x="20" y="400" class="lab2">口诀：虚领、沉肩、坠肘、含胸、拔背、松腰、敛臀、屈膝、平脚、压实。</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg viewBox="0 0 760 250" role="img" aria-label="十二分钟全套的时间分配尺，格宽约等于秒数" xmlns="http://www.w3.org/2000/svg" width="760" height="250"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+<rect class="bg-paper" width="760" height="250"/>
+<text x="18" y="26" class="labk">12 分钟版怎么花掉这 12 分钟</text>
+<text x="18" y="52" class="lab2">深灰=预备与收势，中灰=八式，浅灰=式间过渡（各 10 秒）</text>
+<rect x="30" y="100" width="29" height="34" class="f-g5"/>
+<rect x="59" y="100" width="69" height="34" class="f-g3"/>
+<rect x="128" y="100" width="9" height="34" class="f-g1"/>
+<rect x="137" y="100" width="80" height="34" class="f-g3"/>
+<rect x="217" y="100" width="9" height="34" class="f-g1"/>
+<rect x="226" y="100" width="69" height="34" class="f-g3"/>
+<rect x="295" y="100" width="10" height="34" class="f-g1"/>
+<rect x="305" y="100" width="69" height="34" class="f-g3"/>
+<rect x="374" y="100" width="9" height="34" class="f-g1"/>
+<rect x="383" y="100" width="80" height="34" class="f-g3"/>
+<rect x="463" y="100" width="9" height="34" class="f-g1"/>
+<rect x="472" y="100" width="80" height="34" class="f-g3"/>
+<rect x="552" y="100" width="10" height="34" class="f-g1"/>
+<rect x="562" y="100" width="80" height="34" class="f-g3"/>
+<rect x="642" y="100" width="10" height="34" class="f-g1"/>
+<rect x="652" y="100" width="40" height="34" class="f-g3"/>
+<rect x="692" y="100" width="9" height="34" class="f-g1"/>
+<rect x="701" y="100" width="29" height="34" class="f-g5"/>
+<text x="39" y="90" class="lab2">预</text>
+<text x="87" y="90" class="lab2">一</text>
+<text x="171" y="90" class="lab2">二</text>
+<text x="255" y="90" class="lab2">三</text>
+<text x="333" y="90" class="lab2">四</text>
+<text x="417" y="90" class="lab2">五</text>
+<text x="507" y="90" class="lab2">六</text>
+<text x="596" y="90" class="lab2">七</text>
+<text x="666" y="90" class="lab2">八</text>
+<text x="710" y="90" class="lab2">收</text>
+<text x="26" y="160" class="lab2">0分</text>
+<text x="140" y="160" class="lab2">2分</text>
+<text x="255" y="160" class="lab2">4分</text>
+<text x="369" y="160" class="lab2">6分</text>
+<text x="484" y="160" class="lab2">8分</text>
+<text x="598" y="160" class="lab2">10分</text>
+<text x="712" y="160" class="lab2">12分</text>
+<text x="18" y="196" class="lab">越到后面越该慢：第五、六、七式加起来就有 252 秒</text>
+<text x="18" y="224" class="lab2">自查：如果实际 8 分钟就走完了，八成是过渡与停顿被省掉了</text>
+</svg>

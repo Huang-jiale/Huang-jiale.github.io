@@ -1,0 +1,52 @@
+<svg viewBox="0 0 760 220" role="img" aria-label="墨的浓淡三档试墨条，过淡洇、过浓滞" xmlns="http://www.w3.org/2000/svg" width="760" height="220"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="220"/>
+  <text x="18" y="24" class="labk">同一支笔在同一张纸上写三道，浓淡一眼可见（先试墨再动笔）</text>
+  <g>
+    <text x="30" y="60" class="lab">① 太淡</text>
+    <path d="M30 74 q100 -10 200 0" class="st-thin" stroke-width="7"/>
+    <text x="30" y="108" class="lab2">灰、边缘洇出一圈水痕</text>
+    <text x="30" y="126" class="lab2">原因：加水太多或纸太吸水</text>
+  </g>
+  <g>
+    <text x="290" y="60" class="lab">② 合适</text>
+    <path d="M290 74 q100 -8 200 0" stroke="#222" stroke-width="8" fill="none"/>
+    <text x="290" y="108" class="lab2">乌黑发亮，边缘干净无毛刺</text>
+    <text x="290" y="126" class="lab2">收笔处仍有细锋 → 可以用</text>
+  </g>
+  <g>
+    <text x="550" y="60" class="lab">③ 太浓（胶重）</text>
+    <path d="M550 74 q60 -6 100 -4 q30 2 50 6" stroke="#000" stroke-width="11" fill="none"/>
+    <text x="550" y="108" class="lab2">行笔发滞、笔被"粘"住</text>
+    <text x="550" y="126" class="lab2">干后发灰起壳，出锋处断开</text>
+  </g>
+  <text x="18" y="164" class="lab">调墨动作（30 秒）：倒墨 → 笔蘸水（笔肚约三分之一）→ 回碟中画圈调匀 → 试写一道</text>
+  <text x="18" y="188" class="lab2">宁可先偏淡再补浓。墨太浓时笔锋展不开，你会误判成"我手不行"，其实只是墨不行。</text>
+  <text x="18" y="212" class="lab2">用墨条的常见说法是"磨墨如病夫"，意思是慢而匀、不要急躁，力度垂直向下。</text>
+</svg>

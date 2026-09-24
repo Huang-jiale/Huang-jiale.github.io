@@ -1,0 +1,53 @@
+<svg viewBox="0 0 760 220" role="img" aria-label="反扣示意：左中右三档被否定了两头只剩中" xmlns="http://www.w3.org/2000/svg" width="760" height="220"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="220" class="bg-paper"/>
+  <text x="18" y="26" class="labk">反扣的机械动作：把被否定掉的档位划掉，剩下的那档就是答案</text>
+
+  <rect x="60" y="52" width="120" height="60" class="cell-g" stroke="#9a9a9a" stroke-width="1.2"/>
+  <text x="120" y="90" class="kai f-g4" text-anchor="middle" style="font-size:32px">左</text>
+  <line x1="66" y1="58" x2="174" y2="106" class="st-red" stroke-width="2"/>
+  <line x1="174" y1="58" x2="66" y2="106" class="st-red" stroke-width="2"/>
+  <text x="120" y="130" class="lab2" text-anchor="middle">"不左"，划掉</text>
+
+  <rect x="220" y="52" width="120" height="60" class="hl" stroke="#2f7d42" stroke-width="1.8"/>
+  <text x="280" y="90" class="kai stroke-in" text-anchor="middle" style="font-size:32px">中</text>
+  <text x="280" y="130" class="lab2" text-anchor="middle">两头都被排除</text>
+
+  <rect x="380" y="52" width="120" height="60" class="cell-g" stroke="#9a9a9a" stroke-width="1.2"/>
+  <text x="440" y="90" class="kai f-g4" text-anchor="middle" style="font-size:32px">右</text>
+  <line x1="386" y1="58" x2="494" y2="106" class="st-red" stroke-width="2"/>
+  <line x1="494" y1="58" x2="386" y2="106" class="st-red" stroke-width="2"/>
+  <text x="440" y="130" class="lab2" text-anchor="middle">"不右"，划掉</text>
+
+  <text x="540" y="76" class="labk">＝ 谜底：中</text>
+  <text x="540" y="102" class="lab2">一字，正好合"打一字"的范围</text>
+  <text x="540" y="124" class="lab2">没有动任何笔画，只做了排除</text>
+
+  <text x="18" y="164" class="labk">另一条是同义反说：无人知晓 → 默默无闻</text>
+  <text x="18" y="190" class="lab">无人说起＝默默 ｜ 没人听到＝无闻 ｜ 两段合起来正好是谜面那句话说的事</text>
+  <text x="18" y="212" class="lab2">反扣不是"猜反义"，是把否定词当成排除指令来执行；执行完剩下的那一个，才是答案。</text>
+</svg>

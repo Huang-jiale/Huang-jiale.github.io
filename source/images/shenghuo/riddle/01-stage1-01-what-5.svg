@@ -1,0 +1,59 @@
+<svg viewBox="0 0 760 260" role="img" aria-label="泵字上下结构对应水落石出成语的示意图" xmlns="http://www.w3.org/2000/svg" width="760" height="260"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="260" class="bg-paper"/>
+  <text x="18" y="26" class="labk">"泵"这类单字题面：把一个字当图画来读</text>
+
+  <rect x="60" y="46" width="120" height="120" class="cell" stroke="#1c1c1c" stroke-width="1.4"/>
+  <line x1="60" y1="106" x2="180" y2="106" class="st-thin"/>
+  <text x="120" y="88" class="kai" text-anchor="middle" style="font-size:38px">石</text>
+  <text x="120" y="148" class="kai" text-anchor="middle" style="font-size:38px">水</text>
+  <text x="120" y="188" class="lab2" text-anchor="middle">谜面就一个字</text>
+
+  <line x1="190" y1="106" x2="256" y2="106" class="arrow"/><path d="M250 101 l8 5 -8 5" class="arrow"/>
+  <text x="223" y="94" class="lab2" text-anchor="middle">读成</text>
+
+  <rect x="264" y="60" width="220" height="92" class="hlb" stroke="#0f6ab5" stroke-width="1.3"/>
+  <text x="374" y="86" class="lab" text-anchor="middle">水（落）到下面</text>
+  <text x="374" y="112" class="lab" text-anchor="middle">石（露）在上面</text>
+  <text x="374" y="138" class="lab2" text-anchor="middle">上下位置＝一句话的语序</text>
+
+  <line x1="490" y1="106" x2="524" y2="106" class="arrow"/><path d="M518 101 l8 5 -8 5" class="arrow"/>
+
+  <text x="540" y="98" class="labk">四字并排，写出来就是答案</text>
+  <g>
+    <rect x="540" y="112" width="48" height="48" class="hl" stroke="#2f7d42" stroke-width="1.4"/>
+    <rect x="590" y="112" width="48" height="48" class="hl" stroke="#2f7d42" stroke-width="1.4"/>
+    <rect x="640" y="112" width="48" height="48" class="hl" stroke="#2f7d42" stroke-width="1.4"/>
+    <rect x="690" y="112" width="48" height="48" class="hl" stroke="#2f7d42" stroke-width="1.4"/>
+    <text x="564" y="146" class="kai" text-anchor="middle" style="font-size:28px">水</text>
+    <text x="614" y="146" class="kai" text-anchor="middle" style="font-size:28px">落</text>
+    <text x="664" y="146" class="kai" text-anchor="middle" style="font-size:28px">石</text>
+    <text x="714" y="146" class="kai" text-anchor="middle" style="font-size:28px">出</text>
+  </g>
+  <text x="540" y="188" class="lab2">谜目写打一成语，答案必是四个字</text>
+  <text x="18" y="230" class="lab">注意这条谜没有露面：谜面"泵"里的笔画虽然拆成了石和水，但石、水二字并没有直接写在面上，答案不泄。</text>
+</svg>

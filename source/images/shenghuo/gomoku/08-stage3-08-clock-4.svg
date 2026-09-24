@@ -1,0 +1,46 @@
+<svg viewBox="0 0 760 230" role="img" aria-label="三种计时制在一个钟面上的形态对比" xmlns="http://www.w3.org/2000/svg" width="760" height="230"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:9.5px;fill:#777}
+ .stone-b{fill:#1c1c1c}
+.stone-w{fill:#fff;stroke:#1c1c1c;stroke-width:1.2}
+ .pc-r{fill:#fff8f0;stroke:#c0392b;stroke-width:1.8}
+ .star{fill:#1c1c1c}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}</style>
+<rect class="bg-paper" width="760" height="230"/>
+<text x="18" y="24" class="labk">同一个"剩余 20 分钟"，在三种计时制里的含义完全不同</text>
+<rect x="18" y="40" width="230" height="150" rx="8" fill="#f7f4ee" stroke="#d8d2c6"/>
+<text x="40" y="66" class="labk">纯包时</text>
+<text x="40" y="90" class="lab">钟面：20:00</text>
+<text x="40" y="112" class="lab2">每手都从这 20 分钟里扣，</text>
+<text x="40" y="130" class="lab2">用完即负。适合深算，</text>
+<text x="40" y="148" class="lab2">但必须给最后 10 手留时间。</text>
+<text x="40" y="178" class="lab2">危险：一手花 5 分钟"好看"的棋。</text>
+<rect x="266" y="40" width="230" height="150" rx="8" fill="#f0f6f1" stroke="#d5e6d8"/>
+<text x="288" y="66" class="labk">包时＋加秒</text>
+<text x="288" y="90" class="lab">钟面：20:00 ＋30s／步</text>
+<text x="288" y="112" class="lab2">走一步回 30 秒，钟很难走空，</text>
+<text x="288" y="130" class="lab2">真正的风险是"慢习惯性超时"。</text>
+<text x="288" y="148" class="lab2">准备：把威胁分级练成条件反射。</text>
+<text x="288" y="178" class="lab2">危险：每手都花掉 25 秒以上。</text>
+<rect x="514" y="40" width="228" height="150" rx="8" fill="#fbf1e9" stroke="#e8d5c6"/>
+<text x="536" y="66" class="labk">包时＋读秒</text>
+<text x="536" y="90" class="lab">钟面：20 次 × 30 秒</text>
+<text x="536" y="112" class="lab2">每一次读秒用完算一次保留，</text>
+<text x="536" y="130" class="lab2">超次数或超时就判负。</text>
+<text x="536" y="148" class="lab2">准备：只走绝对先手与直观强防。</text>
+<text x="536" y="178" class="lab2">危险：读秒里做"两手以后的计划"。</text>
+<text x="18" y="214" class="lab2">数值（30 秒、20 次等）仅为图解示例，取自常见写法；正式比赛一律以当次规程与裁判宣布为准。</text>
+</svg>

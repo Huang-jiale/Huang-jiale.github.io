@@ -1,0 +1,46 @@
+<svg viewBox="0 0 360 300" role="img" aria-label="第一式正确：肩沉肘直、掌根朝天、脚跟下踩形成上下对拉" xmlns="http://www.w3.org/2000/svg" width="360" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="360" height="300" class="bg-paper"/>
+  <text x="14" y="22" class="labk">✓ 修法：先落肩，再顶掌根</text>
+  <circle class="head" cx="180" cy="86" r="16"/>
+  <line class="body-line" x1="180" y1="102" x2="180" y2="196"/>
+  <line class="body-line" x1="154" y1="124" x2="206" y2="124"/>
+  <path class="body-line" d="M154 124 l-8 -46 l22 -18"/>
+  <path class="body-line" d="M206 124 l8 -46 l-22 -18"/>
+  <path class="st-ok" d="M168 58 q12 -6 24 0"/>
+  <line class="body-line" x1="180" y1="196" x2="172" y2="240"/>
+  <line class="body-line" x1="172" y1="240" x2="170" y2="266"/>
+  <line class="body-line" x1="180" y1="196" x2="188" y2="240"/>
+  <line class="body-line" x1="188" y1="240" x2="190" y2="266"/>
+  <path class="arrow" d="M232 52 l0 -26 m-5 6 l5 -6 l5 6"/>
+  <path class="arrow" d="M232 250 l0 26 m-5 -6 l5 6 l5 -6"/>
+  <circle class="joint" cx="154" cy="124" r="4"/><circle class="joint" cx="206" cy="124" r="4"/>
+  <text x="248" y="46" class="lab2">掌根上顶</text>
+  <text x="248" y="268" class="lab2">脚跟下踩</text>
+  <text x="14" y="158" class="lab2">肩落、肘直</text>
+  <text x="14" y="180" class="lab2">胸不挺、肋骨收</text>
+  <text x="14" y="202" class="lab2">吸气时手在上行</text>
+  <text x="14" y="224" class="lab2">定势 1–3 秒不屏气</text>
+  <text x="14" y="286" class="lab">自检：腋下是否还有一指的空隙。</text>
+</svg>

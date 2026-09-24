@@ -1,0 +1,64 @@
+<svg viewBox="0 0 760 240" role="img" aria-label="三步挖洞示意：把终盘的左上角3乘3从满到有洞到更多洞" xmlns="http://www.w3.org/2000/svg" width="760" height="240"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+    <rect class="bg-paper" width="760" height="240"/>
+    <defs><marker id="ar2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L6 3 L0 6 Z" fill="#666"/></marker></defs>
+    <text class="labk" x="20" y="26">挖洞过程（取自 SOL 左上角局部示意）</text>
+    <g>
+      <rect x="20" y="45" width="96" height="96" fill="#ffffff" stroke="none"/>
+      <line class="grid" x1="52" y1="45" x2="52" y2="141"/><line class="grid" x1="84" y1="45" x2="84" y2="141"/><line class="grid" x1="20" y1="77" x2="116" y2="77"/><line class="grid" x1="20" y1="109" x2="116" y2="109"/>
+      <rect class="st" x="20" y="45" width="96" height="96" fill="none" stroke-width="1.6"/>
+      <text class="num" text-anchor="middle" x="36" y="68">1</text><text class="num" text-anchor="middle" x="68" y="68">2</text><text class="num" text-anchor="middle" x="100" y="68">6</text>
+      <text class="num" text-anchor="middle" x="36" y="100">7</text><text class="num" text-anchor="middle" x="68" y="100">8</text><text class="num" text-anchor="middle" x="100" y="100">4</text>
+      <text class="num" text-anchor="middle" x="36" y="132">3</text><text class="num" text-anchor="middle" x="68" y="132">5</text><text class="num" text-anchor="middle" x="100" y="132">9</text>
+      <text class="lab2" x="68" y="166" text-anchor="middle">起点：9 格全满</text>
+    </g>
+    <path d="M124 96 H168" stroke="#666" stroke-width="1.5" marker-end="url(#ar2)"/>
+    <g>
+      <rect x="176" y="45" width="96" height="96" fill="#ffffff" stroke="none"/>
+      <line class="grid" x1="208" y1="45" x2="208" y2="141"/><line class="grid" x1="240" y1="45" x2="240" y2="141"/><line class="grid" x1="176" y1="77" x2="272" y2="77"/><line class="grid" x1="176" y1="109" x2="272" y2="109"/>
+      <rect class="st" x="176" y="45" width="96" height="96" fill="none" stroke-width="1.6"/>
+      <text class="num" text-anchor="middle" x="192" y="68">1</text><text class="num" text-anchor="middle" x="224" y="68">.</text><text class="num" text-anchor="middle" x="256" y="68">6</text>
+      <text class="num" text-anchor="middle" x="192" y="100">7</text><text class="num" text-anchor="middle" x="224" y="100">8</text><text class="num" text-anchor="middle" x="256" y="100">.</text>
+      <text class="num" text-anchor="middle" x="192" y="132">.</text><text class="num" text-anchor="middle" x="224" y="132">5</text><text class="num" text-anchor="middle" x="256" y="132">9</text>
+      <text class="lab2" x="224" y="166" text-anchor="middle">挖 3 格 · 6 留</text>
+    </g>
+    <path d="M280 96 H324" stroke="#666" stroke-width="1.5" marker-end="url(#ar2)"/>
+    <g>
+      <rect x="332" y="45" width="96" height="96" fill="#ffffff" stroke="none"/>
+      <line class="grid" x1="364" y1="45" x2="364" y2="141"/><line class="grid" x1="396" y1="45" x2="396" y2="141"/><line class="grid" x1="332" y1="77" x2="428" y2="77"/><line class="grid" x1="332" y1="109" x2="428" y2="109"/>
+      <rect class="st" x="332" y="45" width="96" height="96" fill="none" stroke-width="1.6"/>
+      <text class="num" text-anchor="middle" x="348" y="68">1</text><text class="num" text-anchor="middle" x="380" y="68">.</text><text class="num" text-anchor="middle" x="412" y="68">.</text>
+      <text class="num" text-anchor="middle" x="348" y="100">.</text><text class="num" text-anchor="middle" x="380" y="100">8</text><text class="num" text-anchor="middle" x="412" y="100">.</text>
+      <text class="num" text-anchor="middle" x="348" y="132">.</text><text class="num" text-anchor="middle" x="380" y="132">.</text><text class="num" text-anchor="middle" x="412" y="132">9</text>
+      <text class="lab2" x="380" y="166" text-anchor="middle">再挖 · 只剩 3 留</text>
+    </g>
+    <text class="lab" x="450" y="60">⚠ 关键：</text>
+    <text class="lab2" x="450" y="82">越挖越少，但少到某一铲</text>
+    <text class="lab2" x="450" y="104">会突然打开一整个矩形，</text>
+    <text class="lab2" x="450" y="126">题就变多解。</text>
+    <text class="lab2" x="450" y="164">所以真正挖洞时，每一铲</text>
+    <text class="lab2" x="450" y="186">后都要过一遍唯一解检查器，</text>
+    <text class="lab2" x="450" y="208">通不过就立刻还原。</text>
+  </svg>

@@ -1,0 +1,51 @@
+<svg viewBox="0 0 760 330" role="img" aria-label="读帖六十秒的四个观察问题，以永字为例" xmlns="http://www.w3.org/2000/svg" width="760" height="330"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="330"/>
+  <text x="18" y="26" class="labk">读帖只读 60 秒，但必须读出这四件事（以「永」为例）</text>
+  <rect x="36" y="52" width="210" height="210" class="st"/>
+  <line x1="141" y1="52" x2="141" y2="262" class="guide"/>
+  <line x1="36" y1="157" x2="246" y2="157" class="guide"/>
+  <line x1="36" y1="52" x2="246" y2="262" class="guide"/>
+  <line x1="246" y1="52" x2="36" y2="262" class="guide"/>
+  <text x="141" y="230" class="kai" style="font-size:140px" text-anchor="middle">永</text>
+  <path class="arrow" d="M262 100 L238 100 M246 94 L238 100 L246 106"/>
+  <path class="arrow" d="M262 150 L238 150 M246 144 L238 150 L246 156"/>
+  <path class="arrow" d="M262 200 L238 200 M246 194 L238 200 L246 206"/>
+  <path class="arrow" d="M262 246 L238 246 M246 240 L238 246 L246 252"/>
+  <text x="270" y="104" class="lab">① 第一笔落在哪里？（起笔坐标）</text>
+  <text x="270" y="154" class="lab">② 哪一笔最长、最重？（主笔）</text>
+  <text x="270" y="204" class="lab">③ 斜笔朝哪个角度张开？（方向）</text>
+  <text x="270" y="250" class="lab">④ 哪一块空最大？（留白形状）</text>
+  <text x="480" y="104" class="lab2">答：竖线偏左、上格下半</text>
+  <text x="480" y="154" class="lab2">答：中间那一笔最长</text>
+  <text x="480" y="204" class="lab2">答：左下右下对称张开</text>
+  <text x="480" y="250" class="lab2">答：左上右上两块三角</text>
+  <text x="18" y="290" class="lab2">顺序：先问①（起笔），再问②（主笔），最后问③④（方向与空）。</text>
+  <text x="18" y="314" class="lab2">过关标准：合上帖能把这个字用四句话说出来，才允许动笔；说不出来就再读 30 秒，别硬写。</text>
+</svg>

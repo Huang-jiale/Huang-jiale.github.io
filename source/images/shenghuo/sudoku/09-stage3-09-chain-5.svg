@@ -1,0 +1,56 @@
+<svg viewBox="0 0 760 340" role="img" aria-label="奇偶推理两行版与扩展矩形：全程只盯同一个数d" xmlns="http://www.w3.org/2000/svg" width="760" height="340"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+  <rect class="bg-paper" width="760" height="340"/>
+  <text class="labk" x="28" y="24">奇偶链：两行版（＝扩展矩形），只盯一个数 d</text>
+  <rect class="hl" x="60" y="60" width="24" height="24"/>
+  <text class="cand" x="60" y="98">{d}</text>
+  <text class="lab2" x="60" y="52">r2c2</text>
+  <line class="st" x1="86" y1="72" x2="284" y2="72"/>
+  <text class="lab2" x="150" y="62">强 d·第2行</text>
+  <rect class="hl" x="286" y="60" width="24" height="24"/>
+  <text class="cand" x="286" y="98">{d}</text>
+  <text class="lab2" x="286" y="52">r2c6</text>
+  <line class="st-thin" x1="72" y1="86" x2="72" y2="194"/>
+  <text class="lab2" x="94" y="140">弱 同列c2</text>
+  <line class="st-thin" x1="298" y1="86" x2="298" y2="194"/>
+  <text class="lab2" x="308" y="140">弱 同列c6</text>
+  <rect class="hl" x="60" y="196" width="24" height="24"/>
+  <text class="cand" x="60" y="234">{d}</text>
+  <text class="lab2" x="60" y="188">r8c2</text>
+  <line class="st" x1="86" y1="208" x2="284" y2="208"/>
+  <text class="lab2" x="150" y="198">强 d·第8行</text>
+  <rect class="hl" x="286" y="196" width="24" height="24"/>
+  <text class="cand" x="286" y="234">{d}</text>
+  <text class="lab2" x="286" y="188">r8c6</text>
+  <rect class="hlc" x="470" y="118" width="24" height="24"/>
+  <text class="cand" x="470" y="156">{d,x}</text>
+  <text class="lab2" x="470" y="110">删除格</text>
+  <text class="lab" x="524" y="116">同时看到左列两角</text>
+  <text class="lab" x="524" y="138">左列两角至少一个 d</text>
+  <text class="labk" x="524" y="160">这个 d 要删掉</text>
+  <text class="lab2" x="524" y="182">矩形四角本身都不删</text>
+  <text class="lab" x="60" y="300">如果左上角不是 d，就逼右上角是 d，再逼右下角不是 d，最后逼左下角是 d</text>
+  <text class="lab2" x="60" y="322">两端 r2c2、r8c2 至少一个 d，全程只有这一个数，这就是奇偶链</text>
+</svg>

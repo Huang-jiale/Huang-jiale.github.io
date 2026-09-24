@@ -1,0 +1,46 @@
+<svg viewBox="0 0 360 300" role="img" aria-label="第三式正确：躯干竖直、两肩水平、两掌根反向用力" xmlns="http://www.w3.org/2000/svg" width="360" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="360" height="300" class="bg-paper"/>
+  <text x="14" y="22" class="labk">✓ 修法：宁托得低，不托得歪</text>
+  <circle class="head" cx="180" cy="86" r="15"/>
+  <line class="body-line" x1="180" y1="101" x2="180" y2="196"/>
+  <line class="body-line" x1="152" y1="118" x2="208" y2="118"/>
+  <path class="body-line" d="M208 118 l16 -38 l-6 -28"/>
+  <path class="body-line" d="M152 118 l-12 32 l-4 28"/>
+  <line class="body-line" x1="180" y1="196" x2="171" y2="236"/>
+  <line class="body-line" x1="171" y1="236" x2="169" y2="266"/>
+  <line class="body-line" x1="180" y1="196" x2="189" y2="236"/>
+  <line class="body-line" x1="189" y1="236" x2="191" y2="266"/>
+  <line class="st-thin" x1="140" y1="118" x2="232" y2="118"/>
+  <line class="st-thin" x1="180" y1="66" x2="180" y2="272"/>
+  <circle class="joint" cx="218" cy="52" r="5"/><circle class="joint" cx="136" cy="178" r="5"/>
+  <path class="arrow" d="M240 44 l0 -22 m-5 6 l5 -6 l5 6"/>
+  <path class="arrow" d="M120 188 l0 22 m-5 -6 l5 6 l5 -6"/>
+  <text x="248" y="104" class="lab2">掌根顶</text>
+  <text x="52" y="216" class="lab2">掌根撑</text>
+  <text x="14" y="152" class="lab2">① 中轴竖直（竖虚线）</text>
+  <text x="14" y="176" class="lab2">② 肩线水平（横虚线）</text>
+  <text x="14" y="200" class="lab2">③ 眼平视，头不偏</text>
+  <text x="14" y="286" class="lab2">两箭头相反＝对拉成立</text>
+</svg>

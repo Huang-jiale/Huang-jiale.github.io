@@ -1,0 +1,34 @@
+<svg viewBox="0 0 360 196" role="img" aria-label="例题盘A第8宫位标记：数字5只剩两个落点" xmlns="http://www.w3.org/2000/svg" width="360" height="196"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+<rect class="bg-paper" width="360" height="196"/>
+<text class="labk" x="20" y="16">同一宫：位标记只写 5 的 2 个落点</text>
+<line class="grid" x1="65" y1="26" x2="65" y2="161"/>
+<line class="grid" x1="20" y1="71" x2="155" y2="71"/>
+<line class="grid" x1="110" y1="26" x2="110" y2="161"/>
+<line class="grid" x1="20" y1="116" x2="155" y2="116"/>
+<rect class="st" fill="none" x="20" y="26" width="135" height="135"/>
+<text class="num" x="128" y="99">7</text><text class="cand" x="128" y="39">5</text><text class="cand" x="128" y="143">5</text>
+<text class="lab2" x="20" y="183">一眼数得完：5 只能落在最右那一列的两格</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="课04例题盘A题面" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+<rect class="bg-paper" width="760" height="300"/>
+<text class="labk" x="20" y="16">例题盘 A（本课全程用它）</text>
+<line class="grid" x1="47" y1="28" x2="47" y2="271"/>
+<line class="grid" x1="74" y1="28" x2="74" y2="271"/>
+<line class="grid-h" x1="101" y1="28" x2="101" y2="271"/>
+<line class="grid" x1="128" y1="28" x2="128" y2="271"/>
+<line class="grid" x1="155" y1="28" x2="155" y2="271"/>
+<line class="grid-h" x1="182" y1="28" x2="182" y2="271"/>
+<line class="grid" x1="209" y1="28" x2="209" y2="271"/>
+<line class="grid" x1="236" y1="28" x2="236" y2="271"/>
+<line class="grid" x1="20" y1="55" x2="263" y2="55"/>
+<line class="grid" x1="20" y1="82" x2="263" y2="82"/>
+<line class="grid-h" x1="20" y1="109" x2="263" y2="109"/>
+<line class="grid" x1="20" y1="136" x2="263" y2="136"/>
+<line class="grid" x1="20" y1="163" x2="263" y2="163"/>
+<line class="grid-h" x1="20" y1="190" x2="263" y2="190"/>
+<line class="grid" x1="20" y1="217" x2="263" y2="217"/>
+<line class="grid" x1="20" y1="244" x2="263" y2="244"/>
+<rect class="st" fill="none" x="20" y="28" width="243" height="243"/>
+<text class="num" x="30" y="46.8">.</text><text class="num" x="57" y="46.8">.</text><text class="num" x="84" y="46.8">.</text><text class="num" x="111" y="46.8">.</text><text class="num" x="138" y="46.8">4</text><text class="num" x="165" y="46.8">6</text><text class="num" x="192" y="46.8">9</text><text class="num" x="219" y="46.8">7</text><text class="num" x="246" y="46.8">.</text>
+<text class="num" x="30" y="73.8">.</text><text class="num" x="57" y="73.8">.</text><text class="num" x="84" y="73.8">9</text><text class="num" x="111" y="73.8">.</text><text class="num" x="138" y="73.8">5</text><text class="num" x="165" y="73.8">.</text><text class="num" x="192" y="73.8">6</text><text class="num" x="219" y="73.8">.</text><text class="num" x="246" y="73.8">.</text>
+<text class="num" x="30" y="100.8">4</text><text class="num" x="57" y="100.8">.</text><text class="num" x="84" y="100.8">.</text><text class="num" x="111" y="100.8">.</text><text class="num" x="138" y="100.8">.</text><text class="num" x="165" y="100.8">9</text><text class="num" x="192" y="100.8">.</text><text class="num" x="219" y="100.8">.</text><text class="num" x="246" y="100.8">.</text>
+<text class="num" x="30" y="127.8">1</text><text class="num" x="57" y="127.8">.</text><text class="num" x="84" y="127.8">.</text><text class="num" x="111" y="127.8">.</text><text class="num" x="138" y="127.8">.</text><text class="num" x="165" y="127.8">8</text><text class="num" x="192" y="127.8">.</text><text class="num" x="219" y="127.8">9</text><text class="num" x="246" y="127.8">.</text>
+<text class="num" x="30" y="154.8">.</text><text class="num" x="57" y="154.8">9</text><text class="num" x="84" y="154.8">2</text><text class="num" x="111" y="154.8">5</text><text class="num" x="138" y="154.8">1</text><text class="num" x="165" y="154.8">.</text><text class="num" x="192" y="154.8">.</text><text class="num" x="219" y="154.8">.</text><text class="num" x="246" y="154.8">4</text>
+<text class="num" x="30" y="181.8">.</text><text class="num" x="57" y="181.8">8</text><text class="num" x="84" y="181.8">.</text><text class="num" x="111" y="181.8">.</text><text class="num" x="138" y="181.8">9</text><text class="num" x="165" y="181.8">.</text><text class="num" x="192" y="181.8">5</text><text class="num" x="219" y="181.8">.</text><text class="num" x="246" y="181.8">1</text>
+<text class="num" x="30" y="208.8">.</text><text class="num" x="57" y="208.8">.</text><text class="num" x="84" y="208.8">.</text><text class="num" x="111" y="208.8">.</text><text class="num" x="138" y="208.8">.</text><text class="num" x="165" y="208.8">.</text><text class="num" x="192" y="208.8">4</text><text class="num" x="219" y="208.8">.</text><text class="num" x="246" y="208.8">6</text>
+<text class="num" x="30" y="235.8">.</text><text class="num" x="57" y="235.8">.</text><text class="num" x="84" y="235.8">.</text><text class="num" x="111" y="235.8">.</text><text class="num" x="138" y="235.8">.</text><text class="num" x="165" y="235.8">7</text><text class="num" x="192" y="235.8">.</text><text class="num" y="235.8" x="219">.</text><text class="num" x="246" y="235.8">3</text>
+<text class="num" x="30" y="262.8">3</text><text class="num" x="57" y="262.8">.</text><text class="num" x="84" y="262.8">1</text><text class="num" x="111" y="262.8">.</text><text class="num" x="138" y="262.8">.</text><text class="num" x="165" y="262.8">.</text><text class="num" x="192" y="262.8">.</text><text class="num" x="219" y="262.8">.</text><text class="num" x="246" y="262.8">.</text>
+<text class="lab2" x="20" y="292">27 个已知数：先凭直觉扫，卡住的那一秒再动笔</text>
+</svg>

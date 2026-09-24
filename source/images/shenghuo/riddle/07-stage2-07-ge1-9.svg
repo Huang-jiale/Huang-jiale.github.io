@@ -1,0 +1,60 @@
+<svg viewBox="0 0 760 246" role="img" aria-label="求凰格对仗与附加字的结构示意" xmlns="http://www.w3.org/2000/svg" width="760" height="246"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="246"/>
+  <text class="labk" x="20" y="24">变换示意：先逐字对仗，再在底上添一只"配对字"</text>
+  <text class="lab2" x="20" y="48">题面（对仗的上半）</text>
+  <rect class="cell-g" x="20" y="58" width="46" height="46" stroke="#1c1c1c"/>
+  <rect class="cell-g" x="68" y="58" width="46" height="46" stroke="#1c1c1c"/>
+  <text class="num" x="43" y="89" text-anchor="middle">黄</text>
+  <text class="num" x="91" y="89" text-anchor="middle">金</text>
+  <path class="st-blue" d="M43 108 v28"/><path class="st-blue" d="M91 108 v28"/>
+  <text class="lab2" x="124" y="128">对仗：颜色对颜色</text>
+  <text class="lab2" x="124" y="146">　　　金石对金石</text>
+  <rect class="cell-g" x="20" y="140" width="46" height="46" stroke="#1c1c1c"/>
+  <rect class="cell-g" x="68" y="140" width="46" height="46" stroke="#1c1c1c"/>
+  <text class="num" x="43" y="171" text-anchor="middle">白</text>
+  <text class="num" x="91" y="171" text-anchor="middle">石</text>
+  <text class="lab2" x="20" y="212">对仗部分（不含附加字）</text>
+  <path class="arrow" d="M120 163 h56"/><path class="arrow" d="M170 157 l8 6 l-8 6"/>
+  <rect class="hlb" x="184" y="140" width="46" height="46" stroke="#1c1c1c"/>
+  <text class="num" x="207" y="171" text-anchor="middle">齐</text>
+  <text class="lab2" x="238" y="158">添字：表"成双作对"</text>
+  <text class="lab2" x="238" y="176">可用：对 双 偶 配 联 齐 匹</text>
+  <path class="arrow" d="M320 163 h44"/><path class="arrow" d="M358 157 l8 6 l-8 6"/>
+  <rect class="hl" x="372" y="140" width="140" height="46" stroke="#1c1c1c"/>
+  <text class="num" x="398" y="171">齐</text>
+  <text class="num" x="428" y="171">白</text>
+  <text class="num" x="458" y="171">石</text>
+  <text class="lab2" x="372" y="212">合成底（三字，画家名）✓</text>
+  <text class="lab2" x="536" y="60">三条硬杠杠：</text>
+  <text class="lab2" x="536" y="82">题面 ≥ 2 字</text>
+  <text class="lab2" x="536" y="102">底 ≥ 3 字（含附加字）</text>
+  <text class="lab2" x="536" y="122">附加字不许省</text>
+  <text class="lab2" x="536" y="146">对仗只看字面工不工，</text>
+  <text class="lab2" x="536" y="166">不看两句能否连成一句话</text>
+  <text class="lab2" x="20" y="236">另有"只对仗、不加配对字"的一种做法（表内列出但本课不展开），真要出这种谜请先查证清楚再动笔。</text>
+</svg>

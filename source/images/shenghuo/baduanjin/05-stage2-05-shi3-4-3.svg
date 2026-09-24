@@ -1,0 +1,62 @@
+<svg viewBox="0 0 760 270" role="img" aria-label="第三式两个手掌朝向细节：上托掌掌心朝天、下按掌掌心向下，均标出力达掌根" xmlns="http://www.w3.org/2000/svg" width="760" height="270"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="270" class="bg-paper"/>
+  <text x="18" y="24" class="labk">上托掌与下按掌：掌心方向完全相反，力都落在掌根</text>
+  <g>
+    <path class="body-line" d="M120 150 q-16 -30 0 -56 q16 -24 42 -20"/>
+    <line class="body-line" x1="162" y1="74" x2="164" y2="36"/>
+    <line class="body-line" x1="148" y1="72" x2="146" y2="32"/>
+    <line class="body-line" x1="134" y1="76" x2="128" y2="38"/>
+    <line class="body-line" x1="120" y1="82" x2="110" y2="52"/>
+    <line class="body-line" x1="160" y1="106" x2="192" y2="92"/>
+    <circle class="joint" cx="126" cy="150" r="6"/>
+    <path class="arrow" d="M200 118 l34 0 m-8 -5 l8 5 l-8 5"/>
+  </g>
+  <text x="236" y="122" class="lab2">掌根向上顶</text>
+  <text x="236" y="142" class="lab2">指头放松，不抠紧</text>
+  <text x="140" y="196" class="lab" text-anchor="middle">上托掌</text>
+  <text x="140" y="216" class="lab2" text-anchor="middle">掌心朝天，掌指斜向前外</text>
+  <text x="140" y="236" class="lab2" text-anchor="middle">位置在头的侧上方</text>
+  <g>
+    <path class="body-line" d="M470 74 q16 30 0 56 q-16 24 -42 20"/>
+    <line class="body-line" x1="428" y1="150" x2="426" y2="188"/>
+    <line class="body-line" x1="442" y1="152" x2="444" y2="192"/>
+    <line class="body-line" x1="456" y1="148" x2="462" y2="186"/>
+    <line class="body-line" x1="470" y1="142" x2="480" y2="172"/>
+    <line class="body-line" x1="430" y1="118" x2="398" y2="132"/>
+    <circle class="joint" cx="464" cy="74" r="6"/>
+    <path class="arrow" d="M392 96 l-34 0 m8 -5 l-8 5 l8 5"/>
+  </g>
+  <text x="300" y="92" class="lab2">掌根向下撑</text>
+  <text x="300" y="112" class="lab2">肘留一点弯</text>
+  <text x="450" y="196" class="lab" text-anchor="middle">下按掌</text>
+  <text x="450" y="216" class="lab2" text-anchor="middle">掌心向下，掌指向前</text>
+  <text x="450" y="236" class="lab2" text-anchor="middle">位置在同侧胯旁</text>
+  <text x="560" y="92" class="labk">两掌的相对关系</text>
+  <text x="560" y="116" class="lab2">掌指方向：约略平行</text>
+  <text x="560" y="138" class="lab2">掌心方向：完全相反</text>
+  <text x="560" y="160" class="lab2">两个红点＝掌根用力点</text>
+  <text x="560" y="182" class="lab2">两掌根之间＝被拉开的侧腰</text>
+  <text x="18" y="262" class="lab2">自我检查法：定势时把注意力放到上托手的掌根，如果那里没有"顶住"的感觉，说明手只是举在那儿、没有真正在对拉。</text>
+</svg>

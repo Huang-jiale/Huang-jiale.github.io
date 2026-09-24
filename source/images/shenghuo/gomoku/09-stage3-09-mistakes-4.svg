@@ -1,0 +1,34 @@
+<svg data-forbidden="three-three" viewBox="0 0 360 340" role="img" aria-label="真三三判例：黑棋一子同时做成横线活三与斜线活三，属黑棋禁手" xmlns="http://www.w3.org/2000/svg" width="360" height="340"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:9.5px;fill:#777}
+ .stone-b{fill:#1c1c1c}
+.stone-w{fill:#fff;stroke:#1c1c1c;stroke-width:1.2}
+ .pc-r{fill:#fff8f0;stroke:#c0392b;stroke-width:1.8}
+ .star{fill:#1c1c1c}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}</style>
+<rect class="bg-paper" width="360" height="340"/>
+<line class="gl" x1="16" y1="16" x2="16" y2="296"/><line class="gl" x1="36" y1="16" x2="36" y2="296"/><line class="gl" x1="56" y1="16" x2="56" y2="296"/><line class="gl" x1="76" y1="16" x2="76" y2="296"/><line class="gl" x1="96" y1="16" x2="96" y2="296"/>
+<line class="gl" x1="116" y1="16" x2="116" y2="296"/><line class="gl" x1="136" y1="16" x2="136" y2="296"/><line class="gl" x1="156" y1="16" x2="156" y2="296"/><line class="gl" x1="176" y1="16" x2="176" y2="296"/><line class="gl" x1="196" y1="16" x2="196" y2="296"/>
+<line class="gl" x1="216" y1="16" x2="216" y2="296"/><line class="gl" x1="236" y1="16" x2="236" y2="296"/><line class="gl" x1="256" y1="16" x2="256" y2="296"/><line class="gl" x1="276" y1="16" x2="276" y2="296"/><line class="gl" x1="296" y1="16" x2="296" y2="296"/>
+<line class="gl" x1="16" y1="16" x2="296" y2="16"/><line class="gl" x1="16" y1="36" x2="296" y2="36"/><line class="gl" x1="16" y1="56" x2="296" y2="56"/><line class="gl" x1="16" y1="76" x2="296" y2="76"/><line class="gl" x1="16" y1="96" x2="296" y2="96"/>
+<line class="gl" x1="16" y1="116" x2="296" y2="116"/><line class="gl" x1="16" y1="136" x2="296" y2="136"/><line class="gl" x1="16" y1="156" x2="296" y2="156"/><line class="gl" x1="16" y1="176" x2="296" y2="176"/><line class="gl" x1="16" y1="196" x2="296" y2="196"/>
+<line class="gl" x1="16" y1="216" x2="296" y2="216"/><line class="gl" x1="16" y1="236" x2="296" y2="236"/><line class="gl" x1="16" y1="256" x2="296" y2="256"/><line class="gl" x1="16" y1="276" x2="296" y2="276"/><line class="gl" x1="16" y1="296" x2="296" y2="296"/>
+<circle class="stone-b" cx="96" cy="136" r="9"/><circle class="stone-b" cx="116" cy="136" r="9"/><circle class="stone-b" cx="116" cy="156" r="9"/><circle class="stone-b" cx="96" cy="176" r="9"/>
+<circle class="stone-b" cx="136" cy="136" r="9"/><circle cx="136" cy="136" r="13" fill="none" stroke="#c8102e" stroke-width="2" stroke-dasharray="4 3"/>
+<circle class="stone-w" cx="176" cy="76" r="9"/><circle class="stone-w" cx="196" cy="196" r="9"/><circle class="stone-w" cx="56" cy="56" r="9"/><circle class="stone-w" cx="236" cy="236" r="9"/>
+<text x="150" y="122" class="labk">甲</text>
+<text x="18" y="332" class="lab2">真三三：两条线都是两头空的活三。</text>
+</svg>

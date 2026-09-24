@@ -1,0 +1,63 @@
+<svg viewBox="0 0 760 320" role="img" aria-label="摹临背核四步循环流程图与三十分钟时间分配条" xmlns="http://www.w3.org/2000/svg" width="760" height="320"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="320"/>
+  <text x="18" y="26" class="labk">四步是一个圈：摹 → 临 → 背 → 核 → 回到摹（换字或重来）</text>
+  <rect x="20" y="52" width="160" height="88" class="f-white" stroke="#8a8a8a"/>
+  <text x="34" y="76" class="labk">摹（5 分钟）</text>
+  <text x="34" y="98" class="lab2">蒙帖沿中线走</text>
+  <text x="34" y="118" class="lab2">每字 3 遍，摹完即临</text>
+  <rect x="200" y="52" width="160" height="88" class="f-white" stroke="#8a8a8a"/>
+  <text x="214" y="76" class="labk">临（12 分钟）</text>
+  <text x="214" y="98" class="lab2">读帖 60 秒，眼在手前</text>
+  <text x="214" y="118" class="lab2">一笔一停，每字 3 遍</text>
+  <rect x="380" y="52" width="160" height="88" class="f-white" stroke="#8a8a8a"/>
+  <text x="394" y="76" class="labk">背（6 分钟）</text>
+  <text x="394" y="98" class="lab2">合帖默写 2 遍</text>
+  <text x="394" y="118" class="lab2">找出断点，先空书</text>
+  <rect x="560" y="52" width="160" height="88" class="f-white" stroke="#8a8a8a"/>
+  <text x="574" y="76" class="labk">核（7 分钟）</text>
+  <text x="574" y="98" class="lab2">叠回原帖圈 3 处</text>
+  <text x="574" y="118" class="lab2">一次只改一处</text>
+  <path class="arrow" d="M182 96 L196 96 M188 90 L196 96 L188 102"/>
+  <path class="arrow" d="M362 96 L376 96 M368 90 L376 96 L368 102"/>
+  <path class="arrow" d="M542 96 L556 96 M548 90 L556 96 L548 102"/>
+  <path class="arrow" d="M640 144 L640 172 L100 172 L100 150 M106 158 L100 150 L94 158"/>
+  <text x="300" y="194" class="lab2">核出问题 → 这个字明天再摹 1 遍、临 2 遍（这就是"回圈"）</text>
+  <rect x="20" y="212" width="117" height="26" class="f-g3"/>
+  <rect x="137" y="212" width="280" height="26" class="f-g1"/>
+  <rect x="417" y="212" width="140" height="26" class="f-g2"/>
+  <rect x="557" y="212" width="163" height="26" class="f-g4"/>
+  <text x="78" y="230" class="num" text-anchor="middle">摹 5</text>
+  <text x="277" y="230" class="num" text-anchor="middle">临 12</text>
+  <text x="487" y="230" class="num" text-anchor="middle">背 6</text>
+  <text x="638" y="230" class="num" text-anchor="middle">核 7</text>
+  <text x="18" y="264" class="lab2">30 分钟怎么切：摹 5 ＋ 临 12 ＋ 背 6 ＋ 核 7 ＝ 30。一周 5 天，一组字（4 字）3 天一轮。</text>
+  <text x="18" y="288" class="lab2">时间不够时砍"摹"，不要砍"核"：宁可摹只做 2 遍，也要把比对的时间留够。</text>
+  <text x="18" y="312" class="lab2">四步的耗时比例在图里是真实的：动手只占一半多一点，剩下的全是读与比。</text>
+</svg>

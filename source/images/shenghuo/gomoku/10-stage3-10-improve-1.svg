@@ -1,0 +1,40 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="涨棋闭环图：计算训练、棋感训练、对局、复盘四个环节首尾相接，外圈是每周记录表" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:9.5px;fill:#777}
+ .stone-b{fill:#1c1c1c}
+.stone-w{fill:#fff;stroke:#1c1c1c;stroke-width:1.2}
+ .pc-r{fill:#fff8f0;stroke:#c0392b;stroke-width:1.8}
+ .star{fill:#1c1c1c}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="300"/>
+  <circle class="st" cx="200" cy="150" r="92" fill="none"/>
+  <circle class="st-thin" cx="200" cy="150" r="120" fill="none"/>
+  <text class="labk" x="200" y="146" text-anchor="middle">每日</text>
+  <text class="lab2" x="200" y="164" text-anchor="middle">20 分钟</text>
+  <line class="arrow" x1="320" y1="150" x2="366" y2="150"/>
+  <rect class="st-thin" x="372" y="66" width="150" height="44" rx="6" fill="none"/>
+  <text class="lab" x="447" y="93" text-anchor="middle">计算题（准）</text>
+  <rect class="st-thin" x="372" y="128" width="150" height="44" rx="6" fill="none"/>
+  <text class="lab" x="447" y="155" text-anchor="middle">棋感卡（快）</text>
+  <rect class="st-thin" x="372" y="190" width="150" height="44" rx="6" fill="none"/>
+  <text class="lab" x="447" y="217" text-anchor="middle">对局（执行）</text>
+  <line class="arrow" x1="530" y1="212" x2="574" y2="212"/>
+  <rect class="st" x="578" y="170" width="150" height="86" rx="6" fill="none"/>
+  <text class="labk" x="653" y="200" text-anchor="middle">复盘</text>
+  <text class="lab2" x="653" y="222" text-anchor="middle">错题变题目</text>
+  <line class="arrow" x1="653" y1="164" x2="653" y2="120"/>
+  <text class="lab2" x="662" y="112">下一周素材</text>
+</svg>

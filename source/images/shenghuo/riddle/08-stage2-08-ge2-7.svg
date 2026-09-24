@@ -1,0 +1,52 @@
+<svg viewBox="0 0 760 208" role="img" aria-label="上楼格把末字移到最前的变换示意" xmlns="http://www.w3.org/2000/svg" width="760" height="208"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="208"/>
+  <text class="labk" x="20" y="24">「上楼格」：只抬末一字，其余原地不动</text>
+  <text class="lab2" x="20" y="48">谜面「放眼全球」</text>
+  <rect class="cell" x="200" y="40" width="44" height="44" stroke="#1c1c1c"/>
+  <rect class="cell" x="250" y="40" width="44" height="44" stroke="#1c1c1c"/>
+  <rect class="hl" x="300" y="40" width="44" height="44" stroke="#1c1c1c"/>
+  <text class="num" x="222" y="71" text-anchor="middle">世</text>
+  <text class="num" x="272" y="71" text-anchor="middle">界</text>
+  <text class="num" x="322" y="71" text-anchor="middle">观</text>
+  <text class="cand" x="204" y="54">1</text>
+  <text class="cand" x="254" y="54">2</text>
+  <text class="cand" x="304" y="54">3</text>
+  <path class="arrow" d="M322 88 v14 h-120 v14"/><path class="arrow" d="M196 110 l6 6 l6 -6"/>
+  <text class="lab2" x="360" y="76">3 号位沿虚线上楼，抬到 1 号位之前</text>
+  <text class="lab2" x="360" y="98">1、2 号位整体后移一位，字序不变</text>
+  <rect class="cell" x="180" y="120" width="44" height="44" stroke="#1c1c1c"/>
+  <rect class="cell" x="230" y="120" width="44" height="44" stroke="#1c1c1c"/>
+  <rect class="cell" x="280" y="120" width="44" height="44" stroke="#1c1c1c"/>
+  <text class="num" x="202" y="151" text-anchor="middle">观</text>
+  <text class="num" x="252" y="151" text-anchor="middle">世</text>
+  <text class="num" x="302" y="151" text-anchor="middle">界</text>
+  <text class="lab2" x="180" y="182">工序后读法</text>
+  <text class="lab" x="290" y="182">观世界 ＝ 放眼全球 ✓</text>
+  <text class="lab2" x="470" y="151">对照「卷帘格」：那边是 123→321，</text>
+  <text class="lab2" x="470" y="171">这边是 123→312，只动一个字。</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg viewBox="0 0 360 262" role="img" aria-label="第六式正确：以髋为轴折下，背部保持平直" xmlns="http://www.w3.org/2000/svg" width="360" height="262"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+<rect class="bg-paper" width="360" height="262"/>
+<text x="14" y="22" class="labk">✓ 背挺：以髋为轴</text>
+<line x1="200" y1="42" x2="200" y2="222" class="st-thin"/>
+<circle cx="200" cy="140" r="5" class="joint"/>
+<polyline points="200,140 202,182 200,220" class="body-line"/>
+<line x1="200" y1="140" x2="110" y2="104" class="st-ok"/>
+<line x1="200" y1="140" x2="110" y2="104" class="body-line"/>
+<circle cx="102" cy="100" r="9" class="head"/>
+<polyline points="126,112 148,158 172,196" class="body-line"/>
+<line x1="176" y1="222" x2="246" y2="222" class="st-thin"/>
+<path d="M172,70 A46 46 0 0 1 204,122" class="arrow"/>
+<polyline points="197,113 204,122 194,126" class="arrow"/>
+<text x="118" y="60" class="lab2">折点在髋</text>
+<text x="16" y="96" class="lab2">背是一条斜直线</text>
+<text x="16" y="182" class="lab2">手下到能到的位置</text>
+<text x="212" y="184" class="lab2">腿尽量直，膝别反锁</text>
+<text x="14" y="250" class="lab2">够不到脚很正常：拉到大腿后侧就够本</text>
+</svg>

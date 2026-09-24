@@ -1,0 +1,64 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="用三个问题粗分五体的判别流程图" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="300"/>
+  <text x="18" y="26" class="labk">三问粗分五体：只看线条与连断，不问写的是什么字</text>
+  <rect x="24" y="44" width="210" height="54" class="f-white" stroke="#8a8a8a"/>
+  <text x="38" y="68" class="labk">① 线条粗细均匀吗？</text>
+  <text x="38" y="88" class="lab2">整条线一样粗、转折处圆</text>
+  <rect x="266" y="44" width="210" height="54" class="f-white" stroke="#8a8a8a"/>
+  <text x="280" y="68" class="labk">② 有蚕头雁尾吗？</text>
+  <text x="280" y="88" class="lab2">横画末端挑出一个脚</text>
+  <rect x="508" y="44" width="210" height="54" class="f-white" stroke="#8a8a8a"/>
+  <text x="522" y="68" class="labk">③ 笔画一笔一笔断开？</text>
+  <text x="522" y="88" class="lab2">字与字之间连不连</text>
+  <path class="arrow" d="M238 71 L262 71 M254 65 L262 71 L254 77"/>
+  <path class="arrow" d="M480 71 L504 71 M496 65 L504 71 L496 77"/>
+  <path class="arrow" d="M129 100 L129 120 M135 112 L129 120 L123 112"/>
+  <path class="arrow" d="M371 100 L371 120 M377 112 L371 120 L365 112"/>
+  <path class="arrow" d="M613 100 L613 120 M619 112 L613 120 L607 112"/>
+  <text x="242" y="60" class="lab2">否</text>
+  <text x="484" y="60" class="lab2">否</text>
+  <text x="138" y="116" class="lab2">是</text>
+  <text x="380" y="116" class="lab2">是</text>
+  <rect x="24" y="126" width="210" height="46" class="f-g1"/>
+  <text x="38" y="148" class="labk">篆</text>
+  <text x="38" y="166" class="lab2">小篆一路：线条如箸</text>
+  <rect x="266" y="126" width="210" height="46" class="f-g1"/>
+  <text x="280" y="148" class="labk">隶</text>
+  <text x="280" y="166" class="lab2">扁方、波磔明显</text>
+  <rect x="508" y="126" width="210" height="46" class="f-g1"/>
+  <text x="522" y="148" class="labk">楷／行／草</text>
+  <text x="522" y="166" class="lab2">再看连断与认读难度</text>
+  <text x="24" y="204" class="lab">楷：笔笔断开、字形方正，最容易认读。</text>
+  <text x="266" y="204" class="lab">行：字字独立，但带牵丝呼应。</text>
+  <text x="508" y="204" class="lab">草：笔画简省相连，认读最难。</text>
+  <text x="18" y="236" class="lab2">万能线索：按认读由易到难排，大致是 楷 → 隶 → 行 → 篆 → 草。</text>
+  <text x="18" y="260" class="lab2">篆难认是因为字形古老，草难认是因为笔画被省到看不出，原因完全不同。</text>
+  <text x="18" y="288" class="lab2">三问只能粗分：后世一直在写篆隶，这张图只解决"第一眼像哪一体"。</text>
+</svg>

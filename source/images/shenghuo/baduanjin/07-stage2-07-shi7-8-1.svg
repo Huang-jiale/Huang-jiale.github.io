@@ -1,0 +1,60 @@
+<svg viewBox="0 0 760 340" role="img" aria-label="第七式攒拳怒目增气力的马步冲拳与瞪目示意" xmlns="http://www.w3.org/2000/svg" width="760" height="340"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+<rect class="bg-paper" width="760" height="340"/>
+<text x="18" y="26" class="labk">第七式：马步扎地，出拳带"争力"</text>
+<circle cx="210" cy="98" r="14" class="head"/>
+<circle cx="204" cy="95" r="2.2" class="joint"/>
+<circle cx="216" cy="95" r="2.2" class="joint"/>
+<path d="M198,84 L208,88" class="st"/>
+<path d="M222,84 L212,88" class="st"/>
+<path d="M220,95 L252,86" class="arrow-r"/>
+<polyline points="244,82 252,86 245,92" class="arrow-r"/>
+<line x1="210" y1="112" x2="210" y2="198" class="body-line"/>
+<line x1="210" y1="134" x2="136" y2="144" class="body-line"/>
+<rect x="118" y="134" width="24" height="20" rx="7" fill="#fff" stroke="#1c1c1c" stroke-width="2"/>
+<circle cx="122" cy="136" r="3" class="joint"/>
+<line x1="210" y1="134" x2="236" y2="162" class="body-line"/>
+<line x1="236" y1="162" x2="228" y2="184" class="body-line"/>
+<circle cx="226" cy="190" r="8" class="head"/>
+<line x1="188" y1="198" x2="232" y2="198" class="body-line"/>
+<polyline points="188,198 178,242 174,292" class="body-line"/>
+<polyline points="232,198 242,242 246,292" class="body-line"/>
+<circle cx="178" cy="242" r="4" class="joint"/>
+<circle cx="242" cy="242" r="4" class="joint"/>
+<line x1="140" y1="294" x2="290" y2="294" class="st-thin"/>
+<path d="M166,304 Q174,312 182,304" class="arrow"/>
+<path d="M238,304 Q246,312 254,304" class="arrow"/>
+<path d="M248,192 L268,178" class="arrow-r"/>
+<polyline points="260,177 268,178 264,186" class="arrow-r"/>
+<text x="440" y="60" class="labk">这式真正的难点只有两个</text>
+<text x="440" y="88" class="lab">① 慢：出拳全程要看得见的慢</text>
+<text x="440" y="112" class="lab">② 争：前手出、后肘拉，两头较劲</text>
+<text x="440" y="142" class="lab2">瞪目：眼皮撑开，视线顺拳望出去</text>
+<text x="440" y="166" class="lab2">五趾抓地：脚趾像抓住地面</text>
+<text x="440" y="190" class="lab2">出拳呼气、收拳吸气，共6次</text>
+<text x="440" y="214" class="lab2">左右各3遍，每遍约10到14秒</text>
+<text x="440" y="252" class="lab">不要：抖、憋、耸肩、弹震</text>
+<text x="440" y="280" class="lab2">版本差异：冲拳方向有正前与侧前两说</text>
+<text x="18" y="330" class="lab">两拳先抱腰间，拳心向上贴住腰侧</text>
+</svg>

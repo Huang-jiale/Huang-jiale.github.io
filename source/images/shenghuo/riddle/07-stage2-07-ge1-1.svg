@@ -1,0 +1,49 @@
+<svg viewBox="0 0 760 196" role="img" aria-label="谜格在猜谜链条中的位置：只作用在谜底一侧" xmlns="http://www.w3.org/2000/svg" width="760" height="196"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="196"/>
+  <text class="labk" x="20" y="26">一整条猜谜链条里，只有最后那道工序归「谜格」管</text>
+  <rect class="cell-g" x="20" y="46" width="146" height="52" stroke="#9a9a9a"/>
+  <text class="lab" x="34" y="68">谜面（题面）</text>
+  <text class="lab2" x="34" y="88">出题人给的那句话</text>
+  <path class="arrow" d="M170 72 h32"/><path class="arrow" d="M196 66 l8 6 l-8 6"/>
+  <rect class="cell-g" x="208" y="46" width="152" height="52" stroke="#9a9a9a"/>
+  <text class="lab" x="222" y="68">法门（第 4 至 6 课）</text>
+  <text class="lab2" x="222" y="88">别解、离合、会意</text>
+  <path class="arrow" d="M364 72 h32"/><path class="arrow" d="M390 66 l8 6 l-8 6"/>
+  <rect class="cell-g" x="402" y="46" width="152" height="52" stroke="#9a9a9a"/>
+  <text class="lab" x="416" y="68">半成品（工序前）</text>
+  <text class="lab2" x="416" y="88">心里先推出的那个词</text>
+  <path class="arrow" d="M558 72 h32"/><path class="arrow" d="M584 66 l8 6 l-8 6"/>
+  <rect class="hl" x="596" y="46" width="146" height="52" stroke="#1c1c1c"/>
+  <text class="labk" x="610" y="68">执行「谜格」动作</text>
+  <text class="lab2" x="610" y="88">倒读／移字／去旁</text>
+  <text class="lab2" x="20" y="128">四大族（本课只展开其中四种，其余见第 08 课）：</text>
+  <text class="lab" x="20" y="150">读序类：「秋千格」「卷帘格」</text>
+  <text class="lab" x="250" y="150">字形类：「徐妃格」</text>
+  <text class="lab" x="420" y="150">对仗添字类：「求凰格」</text>
+  <text class="lab2" x="20" y="176">读这张图只记一句：面不动，动的是底；底动完要正好把面扣住。</text>
+</svg>

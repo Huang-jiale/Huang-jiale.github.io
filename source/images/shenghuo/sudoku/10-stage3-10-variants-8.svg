@@ -1,0 +1,45 @@
+<svg viewBox="0 0 760 240" role="img" aria-label="变体推理的通用流程：新规则先转成删候选再转成定数" xmlns="http://www.w3.org/2000/svg" width="760" height="240"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+    <rect class="bg-paper" width="760" height="240"/>
+    <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L6 3 L0 6 Z" fill="#666"/></marker></defs>
+    <text class="labk" x="20" y="26">把任意变体接回你熟的底座</text>
+    <rect x="20" y="50" width="150" height="46" rx="8" fill="#e8f0fe" stroke="#1565c0"/>
+    <text class="lab" x="95" y="78" text-anchor="middle">新规则进来</text>
+    <path d="M170 73 H210" stroke="#666" stroke-width="1.5" marker-end="url(#ar)"/>
+    <rect x="212" y="50" width="160" height="46" rx="8" fill="#e6f4ea" stroke="#2e7d32"/>
+    <text class="lab" x="292" y="70" text-anchor="middle">问题一：能删谁</text>
+    <text class="lab2" x="292" y="88" text-anchor="middle">= 过滤候选</text>
+    <path d="M372 73 H412" stroke="#666" stroke-width="1.5" marker-end="url(#ar)"/>
+    <rect x="414" y="50" width="160" height="46" rx="8" fill="#fef7e0" stroke="#e0a92e"/>
+    <text class="lab" x="494" y="70" text-anchor="middle">问题二：能定谁</text>
+    <text class="lab2" x="494" y="88" text-anchor="middle">= 唯一落点</text>
+    <path d="M574 73 H614" stroke="#666" stroke-width="1.5" marker-end="url(#ar)"/>
+    <rect x="616" y="50" width="120" height="46" rx="8" fill="#fce8e6" stroke="#c5221f"/>
+    <text class="lab" x="676" y="78" text-anchor="middle">交回底座</text>
+    <text class="lab2" x="20" y="140">底座＝你已有的扫描 / 唯一候选 / 区块 / 数对 / 链，</text>
+    <text class="lab2" x="20" y="164">变体只是给它多喂几条约束，而不是另起炉灶。</text>
+    <text class="lab" x="20" y="200">练法：拿到任一陌生变体，先只做"问题一"，</text>
+    <text class="lab" x="20" y="222">把每条新规则能删的候选全划掉，题往往就塌成标准题。</text>
+  </svg>

@@ -1,0 +1,72 @@
+<svg viewBox="0 0 760 340" role="img" aria-label="第四式起势两帧：手臂自体侧向后外旋摆开、头颈开始向后转" xmlns="http://www.w3.org/2000/svg" width="760" height="340"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="340" class="bg-paper"/>
+  <text x="18" y="24" class="labk">第四式起势：先旋臂，再转头（顺序别颠倒）</text>
+  <g>
+    <circle class="head" cx="160" cy="84" r="15"/>
+    <line class="body-line" x1="160" y1="100" x2="160" y2="198"/>
+    <line class="body-line" x1="132" y1="120" x2="188" y2="120"/>
+    <line class="body-line" x1="132" y1="120" x2="126" y2="158"/>
+    <line class="body-line" x1="126" y1="158" x2="122" y2="190"/>
+    <line class="body-line" x1="188" y1="120" x2="194" y2="158"/>
+    <line class="body-line" x1="194" y1="158" x2="198" y2="190"/>
+    <line class="body-line" x1="160" y1="198" x2="152" y2="238"/>
+    <line class="body-line" x1="152" y1="238" x2="150" y2="270"/>
+    <line class="body-line" x1="160" y1="198" x2="168" y2="238"/>
+    <line class="body-line" x1="168" y1="238" x2="170" y2="270"/>
+    <line class="body-line" x1="138" y1="273" x2="156" y2="273"/>
+    <line class="body-line" x1="164" y1="273" x2="182" y2="273"/>
+  </g>
+  <text x="160" y="304" class="lab" text-anchor="middle">第 1 帧：垂手准备</text>
+  <g>
+    <circle class="head" cx="400" cy="84" r="15"/>
+    <path class="st" d="M392 76 l-12 -6 l2 12"/>
+    <line class="body-line" x1="400" y1="100" x2="400" y2="198"/>
+    <line class="body-line" x1="372" y1="120" x2="428" y2="120"/>
+    <line class="body-line" x1="372" y1="120" x2="350" y2="152"/>
+    <line class="body-line" x1="350" y1="152" x2="334" y2="184"/>
+    <line class="body-line" x1="428" y1="120" x2="450" y2="152"/>
+    <line class="body-line" x1="450" y1="152" x2="466" y2="184"/>
+    <line class="body-line" x1="400" y1="198" x2="392" y2="238"/>
+    <line class="body-line" x1="392" y1="238" x2="390" y2="270"/>
+    <line class="body-line" x1="400" y1="198" x2="408" y2="238"/>
+    <line class="body-line" x1="408" y1="238" x2="410" y2="270"/>
+    <line class="body-line" x1="378" y1="273" x2="396" y2="273"/>
+    <line class="body-line" x1="404" y1="273" x2="422" y2="273"/>
+    <path class="arrow" d="M322 176 a26 20 0 0 1 -12 -22"/>
+    <path class="arrow" d="M478 176 a26 20 0 0 0 12 -22"/>
+  </g>
+  <text x="400" y="304" class="lab" text-anchor="middle">第 2 帧：旋臂 + 开始转头</text>
+  <path class="arrow" d="M222 170 l54 0 m-8 -5 l8 5 l-8 5"/>
+  <text x="530" y="72" class="labk">四句动作口令</text>
+  <text x="530" y="96" class="lab2">① 两臂自体侧向侧后摆开</text>
+  <text x="530" y="118" class="lab2">② 小指侧向外转到底（吸气）</text>
+  <text x="530" y="140" class="lab2">③ 同时挺胸、夹脊、肩后收</text>
+  <text x="530" y="162" class="lab2">④ 头缓缓向左（右）后转</text>
+  <text x="530" y="200" class="labk">时间分配（每遍约 12 秒）</text>
+  <text x="530" y="224" class="lab2">旋臂 4 秒 → 转头 2 秒 →</text>
+  <text x="530" y="246" class="lab2">定势看 2–3 秒 → 回转 2 秒</text>
+  <text x="530" y="268" class="lab2">→ 收臂 2 秒（呼气）</text>
+  <text x="18" y="332" class="lab2">第 2 帧的两个小手型箭头是本式的难点：手臂一边向后摆一边向外旋，所以掌心最后朝向后外方，不是朝向地面。</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg viewBox="0 0 760 400" role="img" aria-label="一个正面人体简笔图，八个编号箭头标出每一式的用力方向" xmlns="http://www.w3.org/2000/svg" width="760" height="400"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="400" class="bg-paper"/>
+  <text x="18" y="24" class="labk">看图找编号：每一式主要在往哪个方向用力</text>
+  <circle class="head" cx="380" cy="70" r="18"/>
+  <line class="body-line" x1="380" y1="88" x2="380" y2="200"/>
+  <line class="body-line" x1="345" y1="105" x2="415" y2="105"/>
+  <line class="body-line" x1="345" y1="105" x2="328" y2="155"/>
+  <line class="body-line" x1="328" y1="155" x2="324" y2="205"/>
+  <line class="body-line" x1="415" y1="105" x2="432" y2="155"/>
+  <line class="body-line" x1="432" y1="155" x2="436" y2="205"/>
+  <line class="body-line" x1="380" y1="200" x2="370" y2="265"/>
+  <line class="body-line" x1="370" y1="265" x2="368" y2="330"/>
+  <line class="body-line" x1="380" y1="200" x2="390" y2="265"/>
+  <line class="body-line" x1="390" y1="265" x2="392" y2="330"/>
+  <line class="body-line" x1="352" y1="333" x2="374" y2="333"/>
+  <line class="body-line" x1="386" y1="333" x2="408" y2="333"/>
+  <circle class="joint" cx="345" cy="105" r="4"/><circle class="joint" cx="415" cy="105" r="4"/>
+  <circle class="joint" cx="328" cy="155" r="4"/><circle class="joint" cx="432" cy="155" r="4"/>
+  <circle class="joint" cx="324" cy="205" r="4"/><circle class="joint" cx="436" cy="205" r="4"/>
+  <circle class="joint" cx="380" cy="200" r="4"/>
+  <circle class="joint" cx="370" cy="265" r="4"/><circle class="joint" cx="390" cy="265" r="4"/>
+  <circle class="joint" cx="368" cy="330" r="4"/><circle class="joint" cx="392" cy="330" r="4"/>
+  <path class="arrow" d="M380 44 l0 -26 m-5 6 l5 -6 l5 6"/>
+  <path class="arrow" d="M300 105 l-34 0 m6 -4 l-6 4 l6 4"/>
+  <path class="arrow" d="M460 105 l34 0 m-6 -4 l6 4 l-6 4"/>
+  <path class="arrow" d="M324 232 l0 30 m-5 -6 l5 6 l5 -6"/>
+  <path class="arrow" d="M436 178 l0 -34 m-5 6 l5 -6 l5 6"/>
+  <path class="arrow" d="M380 58 a30 22 0 0 1 26 14"/>
+  <path class="arrow" d="M420 230 l40 44 m-2 -10 l2 10 l-10 -2"/>
+  <path class="arrow" d="M368 352 l0 22 m-5 -6 l5 6 l5 -6"/>
+  <path class="arrow" d="M392 352 l0 22 m-5 -6 l5 6 l5 -6"/>
+  <text x="470" y="70" class="lab">① 两手托天理三焦</text>
+  <text x="470" y="90" class="lab2">两掌向上托，全身拔长</text>
+  <text x="470" y="140" class="lab">② 左右开弓似射雕</text>
+  <text x="470" y="160" class="lab2">马步，一撑一拉向左右</text>
+  <text x="470" y="210" class="lab">③ 调理脾胃须单举</text>
+  <text x="470" y="230" class="lab2">一手上托一手下按</text>
+  <text x="470" y="280" class="lab">④ 五劳七伤往后瞧</text>
+  <text x="470" y="300" class="lab2">头向后转，身体不转</text>
+  <text x="20" y="70" class="lab">⑤ 摇头摆尾去心火</text>
+  <text x="20" y="90" class="lab2">腰胯带着上身向前划弧</text>
+  <text x="20" y="140" class="lab">⑥ 两手攀足固肾腰</text>
+  <text x="20" y="160" class="lab2">从髋部向前折，手向下</text>
+  <text x="20" y="210" class="lab">⑦ 攒拳怒目增气力</text>
+  <text x="20" y="230" class="lab2">马步向前出拳、瞪眼</text>
+  <text x="20" y="280" class="lab">⑧ 背后七颠百病消</text>
+  <text x="20" y="300" class="lab2">提踵后轻轻震落脚跟</text>
+  <text x="20" y="360" class="lab2">红点是关节检查点：肩、肘、腕、髋、膝、踝——练完一站，看它们是不是还紧绷着。</text>
+</svg>

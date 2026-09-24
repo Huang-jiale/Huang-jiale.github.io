@@ -1,0 +1,45 @@
+<svg viewBox="0 0 760 200" role="img" aria-label="线索数概念数轴：17是已证下限，25到35是报纸常见带" xmlns="http://www.w3.org/2000/svg" width="760" height="200"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+    <rect class="bg-paper" width="760" height="200"/>
+    <text class="labk" x="20" y="26">线索数（题面已知数个数）数轴</text>
+    <line x1="30" y1="120" x2="720" y2="120" stroke="#1a1a1a" stroke-width="2"/>
+    <line x1="30" y1="115" x2="30" y2="125" stroke="#1a1a1a" stroke-width="2"/><text class="lab2" x="30" y="140" text-anchor="middle">0</text>
+    <line x1="173" y1="115" x2="173" y2="125" stroke="#1a1a1a" stroke-width="2"/><text class="lab2" x="173" y="140" text-anchor="middle">16</text>
+    <line x1="184" y1="105" x2="184" y2="135" stroke="#c5221f" stroke-width="3"/><text class="lab" x="184" y="158" text-anchor="middle">17</text>
+    <line x1="270" y1="115" x2="270" y2="125" stroke="#1a1a1a" stroke-width="2"/><text class="lab2" x="270" y="140" text-anchor="middle">25</text>
+    <line x1="311" y1="115" x2="311" y2="125" stroke="#1a1a1a" stroke-width="2"/><text class="lab2" x="311" y="140" text-anchor="middle">30</text>
+    <line x1="352" y1="115" x2="352" y2="125" stroke="#1a1a1a" stroke-width="2"/><text class="lab2" x="352" y="140" text-anchor="middle">35</text>
+    <line x1="475" y1="115" x2="475" y2="125" stroke="#1a1a1a" stroke-width="2"/><text class="lab2" x="475" y="140" text-anchor="middle">50</text>
+    <line x1="713" y1="115" x2="713" y2="125" stroke="#1a1a1a" stroke-width="2"/><text class="lab2" x="713" y="140" text-anchor="middle">81</text>
+    <rect x="30" y="108" width="154" height="24" fill="#fce8e6"/>
+    <text class="lab2" x="107" y="124" text-anchor="middle">不可能有唯一解</text>
+    <rect x="270" y="108" width="82" height="24" fill="#e8f0fe"/>
+    <text class="lab2" x="311" y="124" text-anchor="middle">报纸常见</text>
+    <rect x="352" y="108" width="123" height="24" fill="#eef3fa"/>
+    <text class="lab2" x="413" y="124" text-anchor="middle">偏易</text>
+    <rect x="475" y="108" width="238" height="24" fill="#f1f8e9"/>
+    <text class="lab2" x="594" y="124" text-anchor="middle">简单 / 教学盘</text>
+    <text class="lab" x="20" y="180">红竖线 = 17 线索硬下界：2012 年由研究团队通过穷举计算证明，16 线索不可能有唯一解。</text>
+  </svg>

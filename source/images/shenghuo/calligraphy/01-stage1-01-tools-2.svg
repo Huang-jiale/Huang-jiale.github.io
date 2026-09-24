@@ -1,0 +1,45 @@
+<svg viewBox="0 0 760 220" role="img" aria-label="羊毫狼毫兼毫在弹性与蓄墨两轴上的对比" xmlns="http://www.w3.org/2000/svg" width="760" height="220"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="220"/>
+  <text x="18" y="24" class="labk">两轴看清楚：软硬是一回事，锋长是另一回事</text>
+  <text x="18" y="56" class="lab">① 弹性（按下去多快回弹）→ 越右越"健"</text>
+  <rect x="18" y="66" width="120" height="18" class="f-g3"/><text x="150" y="80" class="lab2">羊毫：软，铺开慢，回弹慢</text>
+  <rect x="18" y="96" width="300" height="18" class="f-g2"/><text x="330" y="110" class="lab2">兼毫：软硬混合，中档，最容易上手</text>
+  <rect x="18" y="126" width="430" height="18" class="f-g1"/><text x="460" y="140" class="lab2">狼毫：健，一提就回锋</text>
+  <text x="18" y="176" class="lab">② 蓄墨量（一次蘸墨能写多少）→ 与①常常相反</text>
+  <text x="18" y="200" class="lab2">羊毫多 → 兼毫中 → 狼毫少（狼毫写长画要多蘸墨，但回锋快、线条易见骨）</text>
+  <text x="500" y="56" class="labk">按同样压力，笔头铺开程度</text>
+  <path d="M520 70 q30 4 44 44 q-18 12 -40 0 q-10 -24 -4 -44 Z" class="f-g2" stroke="#8a8a8a"/>
+  <text x="600" y="96" class="lab2">羊毫：一按就一大片</text>
+  <path d="M520 110 q20 2 30 26 q-12 8 -26 0 q-6 -14 -4 -26 Z" class="f-g3" stroke="#8a8a8a"/>
+  <text x="600" y="130" class="lab2">兼毫：铺得开也收得回</text>
+  <path d="M520 144 q12 2 18 14 q-8 4 -16 0 q-3 -8 -2 -14 Z" class="f-g1" stroke="#8a8a8a"/>
+  <text x="600" y="158" class="lab2">狼毫：铺开幅度小</text>
+  <text x="500" y="200" class="lab">粗细变化大的字 → 靠①②的中间值</text>
+</svg>

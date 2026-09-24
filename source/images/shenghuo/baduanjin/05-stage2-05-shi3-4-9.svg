@@ -1,0 +1,44 @@
+<svg viewBox="0 0 360 300" role="img" aria-label="第四式错误：转身带髋、耸肩、转头过猛仰头" xmlns="http://www.w3.org/2000/svg" width="360" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="360" height="300" class="bg-paper"/>
+  <text x="14" y="22" class="labk">✗ 三个错：转体 + 耸肩 + 猛转</text>
+  <circle class="head" cx="188" cy="84" r="15"/>
+  <path class="st-bad" d="M182 70 l14 -12"/>
+  <line class="body-line" x1="188" y1="100" x2="196" y2="190"/>
+  <line class="body-line" x1="162" y1="120" x2="222" y2="106"/>
+  <line class="body-line" x1="162" y1="120" x2="146" y2="156"/>
+  <line class="body-line" x1="222" y1="106" x2="244" y2="134"/>
+  <line class="body-line" x1="196" y1="190" x2="180" y2="228"/>
+  <line class="body-line" x1="180" y1="228" x2="176" y2="258"/>
+  <line class="body-line" x1="196" y1="190" x2="212" y2="228"/>
+  <line class="body-line" x1="212" y1="228" x2="216" y2="258"/>
+  <path class="st-bad" d="M170 198 l52 -14"/>
+  <circle class="joint" cx="162" cy="120" r="4"/><circle class="joint" cx="222" cy="106" r="4"/>
+  <text x="14" y="150" class="lab2">① 肩线斜了、身子转</text>
+  <text x="252" y="86" class="lab2">仰头</text>
+  <text x="14" y="176" class="lab2">② 髋跟着转（红斜线）</text>
+  <text x="14" y="200" class="lab2">③ 肩耸起、肘弯曲</text>
+  <text x="14" y="224" class="lab2">④ 0.5 秒猛转到头</text>
+  <text x="14" y="286" class="lab2">风险：颈椎被挤、练完头晕</text>
+</svg>

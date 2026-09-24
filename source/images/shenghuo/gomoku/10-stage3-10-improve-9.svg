@@ -1,0 +1,45 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="停滞期自我检查仪表盘：准确率、漏先手次数、识别速度、复盘完成率、时间失控次数、同一错误重复次数六项" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:9.5px;fill:#777}
+ .stone-b{fill:#1c1c1c}
+.stone-w{fill:#fff;stroke:#1c1c1c;stroke-width:1.2}
+ .pc-r{fill:#fff8f0;stroke:#c0392b;stroke-width:1.8}
+ .star{fill:#1c1c1c}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="300"/>
+  <text class="labk" x="24" y="32">每两周只看这 6 个数，别看输赢</text>
+  <line class="st" x1="24" y1="60" x2="24" y2="240"/>
+  <line class="st" x1="24" y1="240" x2="736" y2="240"/>
+  <rect class="hl" x="60" y="150" width="72" height="90"/>
+  <rect class="hl" x="180" y="110" width="72" height="130"/>
+  <rect class="st-thin" x="300" y="180" width="72" height="60" fill="none"/>
+  <rect class="st-thin" x="420" y="96" width="72" height="144" fill="none"/>
+  <rect class="st-thin" x="540" y="200" width="72" height="40" fill="none"/>
+  <rect class="st-thin" x="656" y="130" width="60" height="110" fill="none"/>
+  <text class="lab2" x="96" y="262" text-anchor="middle">算题准确率</text>
+  <text class="lab2" x="216" y="262" text-anchor="middle">漏先手次数</text>
+  <text class="lab2" x="336" y="262" text-anchor="middle">识别秒数</text>
+  <text class="lab2" x="456" y="262" text-anchor="middle">复盘完成</text>
+  <text class="lab2" x="576" y="262" text-anchor="middle">读钟失误</text>
+  <text class="lab2" x="686" y="262" text-anchor="middle">同错重复</text>
+  <text class="lab2" x="96" y="142" text-anchor="middle">要涨</text>
+  <text class="lab2" x="216" y="102" text-anchor="middle">要降</text>
+  <text class="lab2" x="336" y="172" text-anchor="middle">要降</text>
+  <text class="lab2" x="456" y="88" text-anchor="middle">要满</text>
+  <text class="lab2" x="576" y="192" text-anchor="middle">要降</text>
+  <text class="lab2" x="686" y="122" text-anchor="middle">要降</text>
+  <text class="lab2" x="24" y="288">只有柱子的相对高低有意义，这张图不代表任何真实统计数字。</text>
+</svg>

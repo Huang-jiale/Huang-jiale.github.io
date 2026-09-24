@@ -1,0 +1,38 @@
+<svg viewBox="0 0 360 280" role="img" aria-label="悬针竖：中锋下行，末端渐提成尖" xmlns="http://www.w3.org/2000/svg" width="360" height="280"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+      <rect class="bg-paper" width="360" height="280"/>
+      <text class="labk" x="180" y="30" text-anchor="middle">悬针竖：渐提成尖</text>
+      <path class="stroke-in" d="M136,60 L164,60 L158,196 L150,232 L142,196 Z"/>
+      <line class="arrow" x1="184" y1="150" x2="184" y2="222"/>
+      <path class="arrow" d="M184,222 L178,208 L190,208 Z"/>
+      <text class="lab2" x="58" y="66">① 逆入</text>
+      <text class="lab2" x="58" y="140">② 下行边提</text>
+      <text class="lab2" x="58" y="230">③ 锋自然收尖</text>
+      <text class="lab2" x="204" y="230">末端像针尖</text>
+    </svg>

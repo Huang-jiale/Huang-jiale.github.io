@@ -1,0 +1,53 @@
+<svg viewBox="0 0 760 240" role="img" aria-label="横画在篆隶楷行草五种书体里的形态差异示意" xmlns="http://www.w3.org/2000/svg" width="760" height="240"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="240"/>
+  <text x="18" y="26" class="labk">同一件工作——写一条"横"——五体各怎么做（形态示意，不是字形）</text>
+  <path d="M36 80 H116" class="st" style="stroke-width:7;stroke-linecap:round"/>
+  <circle cx="178" cy="82" r="6" class="f-g1"/>
+  <path d="M178 82 C205 76 236 74 250 68" class="st" style="stroke-width:6;stroke-linecap:round"/>
+  <path d="M246 60 L266 66 L248 76 Z" class="f-g1"/>
+  <rect x="316" y="72" width="11" height="16" class="f-g1"/>
+  <path d="M322 82 L398 75" class="st" style="stroke-width:9;stroke-linecap:round"/>
+  <path class="st-thin" d="M456 98 q16 -14 30 -18"/>
+  <path d="M470 78 L538 72" class="st" style="stroke-width:8;stroke-linecap:round"/>
+  <path class="st-thin" d="M538 72 q16 4 26 18"/>
+  <path d="M600 92 q22 -22 46 -14 q16 6 26 -10" class="st" style="stroke-width:5;stroke-linecap:round"/>
+  <text x="76" y="130" class="labk" text-anchor="middle">篆</text>
+  <text x="218" y="130" class="labk" text-anchor="middle">隶</text>
+  <text x="360" y="130" class="labk" text-anchor="middle">楷</text>
+  <text x="502" y="130" class="labk" text-anchor="middle">行</text>
+  <text x="644" y="130" class="labk" text-anchor="middle">草</text>
+  <text x="76" y="152" class="lab2" text-anchor="middle">粗细如一</text>
+  <text x="218" y="152" class="lab2" text-anchor="middle">起圆收挑</text>
+  <text x="360" y="152" class="lab2" text-anchor="middle">两头有顿</text>
+  <text x="502" y="152" class="lab2" text-anchor="middle">带出细丝</text>
+  <text x="644" y="152" class="lab2" text-anchor="middle">一笔带过</text>
+  <text x="18" y="184" class="lab">虚线是"牵丝"：笔快速掠过纸面留下的细线，它不是笔画，是两笔之间的路。</text>
+  <text x="18" y="214" class="lab2">本课记法：篆如箸、隶如波、楷如印、行如走、草如风——五个比喻，不是古人语录。</text>
+</svg>

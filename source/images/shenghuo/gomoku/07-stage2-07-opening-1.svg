@@ -1,0 +1,42 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="自由式五子棋与连珠两种规则的对照卡" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:9.5px;fill:#777}
+ .stone-b{fill:#1c1c1c}
+.stone-w{fill:#fff;stroke:#1c1c1c;stroke-width:1.2}
+ .pc-r{fill:#fff8f0;stroke:#c0392b;stroke-width:1.8}
+ .star{fill:#1c1c1c}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}</style>
+<rect class="bg-paper" width="760" height="300"/>
+<text x="18" y="26" class="labk">同一张 15×15 棋盘，两套规则：差别在"限制黑棋多少"</text>
+<rect x="18" y="42" width="348" height="236" rx="8" fill="#f7f4ee" stroke="#d8d2c6"/>
+<rect x="394" y="42" width="348" height="236" rx="8" fill="#f0f6f1" stroke="#d5e6d8"/>
+<text x="192" y="70" class="labk" text-anchor="middle">自由式五子棋</text>
+<text x="568" y="70" class="labk" text-anchor="middle">连珠（竞技规则）</text>
+<text x="38" y="100" class="lab">· 15×15 路，黑先</text>
+<text x="38" y="124" class="lab">· 无禁手：黑棋也能做三三</text>
+<text x="38" y="148" class="lab">· 六颗以上连成一条线也算赢</text>
+<text x="38" y="172" class="lab">· 开局不限制着点</text>
+<text x="38" y="204" class="lab2">结果：先手价值过高，高水平对局里</text>
+<text x="38" y="224" class="lab2">黑棋有可算的必胜路线，</text>
+<text x="38" y="244" class="lab2">所以竞技比赛不采用。</text>
+<text x="414" y="100" class="lab">· 15×15 路，黑先</text>
+<text x="414" y="124" class="lab">· 黑棋有禁手：三三、四四、长连</text>
+<text x="414" y="148" class="lab">· 黑棋长连不算赢，反而判负</text>
+<text x="414" y="172" class="lab">· 白棋无禁手，白棋连五即胜</text>
+<text x="414" y="204" class="lab2">再加开局限制：前几手的着点被框住，</text>
+<text x="414" y="224" class="lab2">并引入五手两打、颜色交换等办法，</text>
+<text x="414" y="244" class="lab2">把先手优势压回可对抗的范围。</text>
+</svg>

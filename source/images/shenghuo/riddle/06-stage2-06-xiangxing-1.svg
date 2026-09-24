@@ -1,0 +1,54 @@
+<svg viewBox="0 0 760 200" role="img" aria-label="象形谜四步流程：画面、形状、笔画、拼成字" xmlns="http://www.w3.org/2000/svg" width="760" height="200"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="200" class="bg-paper"/>
+  <text x="18" y="26" class="labk">象形谜的四步：先看见一幅画，再认出笔画，最后拼成字</text>
+
+  <rect x="20" y="46" width="155" height="70" class="cell" stroke="#1c1c1c" stroke-width="1.3"/>
+  <text x="97" y="72" class="labk" text-anchor="middle">① 一幅画面</text>
+  <text x="97" y="98" class="lab2" text-anchor="middle">一钩残月、三星</text>
+
+  <line x1="178" y1="80" x2="208" y2="80" class="arrow"/><path d="M202 75 l8 5 -8 5" class="arrow"/>
+
+  <rect x="213" y="46" width="155" height="70" class="cell" stroke="#1c1c1c" stroke-width="1.3"/>
+  <text x="290" y="72" class="labk" text-anchor="middle">② 认出形状</text>
+  <text x="290" y="98" class="lab2" text-anchor="middle">弯弯的钩、三个点</text>
+
+  <line x1="371" y1="80" x2="401" y2="80" class="arrow"/><path d="M395 75 l8 5 -8 5" class="arrow"/>
+
+  <rect x="406" y="46" width="155" height="70" class="hlb" stroke="#0f6ab5" stroke-width="1.3"/>
+  <text x="483" y="72" class="labk" text-anchor="middle">③ 换成笔画</text>
+  <text x="483" y="98" class="lab2" text-anchor="middle">一道卧钩加三点</text>
+
+  <line x1="564" y1="80" x2="594" y2="80" class="arrow"/><path d="M588 75 l8 5 -8 5" class="arrow"/>
+
+  <rect x="599" y="46" width="155" height="70" class="hl" stroke="#2f7d42" stroke-width="1.5"/>
+  <text x="676" y="72" class="labk" text-anchor="middle">④ 摆成字</text>
+  <text x="676" y="98" class="lab2" text-anchor="middle">就是一个心</text>
+
+  <text x="18" y="148" class="lab">四步里只有第三步是硬功夫：把形状说成笔画名。说不出笔画名的那一步，等于没猜。</text>
+  <text x="18" y="172" class="lab2">前三步靠眼力，第四步靠账：数目、形状、位置三样必须一字不差。</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg viewBox="0 0 760 290" role="img" aria-label="宫4放大图，第四行第二列的候选七被红线划掉只剩三，形成唯一候选数" xmlns="http://www.w3.org/2000/svg" width="760" height="290"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+  <rect class="bg-paper" width="760" height="290"/>
+  <text class="labk" x="24" y="22">宫 4 · 填完 R3C3=1、R3C2=7 之后</text>
+  <rect class="cell" x="24" y="40" width="192" height="192"/>
+  <rect class="hlb" x="88" y="40" width="64" height="64"/>
+  <g class="gl">
+    <line x1="88" y1="40" x2="88" y2="232"/><line x1="152" y1="40" x2="152" y2="232"/>
+    <line x1="24" y1="104" x2="216" y2="104"/><line x1="24" y1="168" x2="216" y2="168"/>
+  </g>
+  <rect class="st" x="24" y="40" width="192" height="192"/>
+  <text class="num" x="56" y="82" text-anchor="middle">2</text>
+  <text class="num" x="56" y="146" text-anchor="middle">9</text><text class="num" x="120" y="146" text-anchor="middle">8</text><text class="num" x="184" y="146" text-anchor="middle">4</text>
+  <text class="num" x="184" y="210" text-anchor="middle">5</text>
+  <text class="cand" x="136" y="62">3</text>
+  <text class="cand" x="96" y="98">7</text>
+  <line class="st-red" x1="92" y1="95" x2="104" y2="101"/>
+  <text class="cand" x="200" y="62">3</text><text class="cand" x="160" y="98">7</text>
+  <text class="cand" x="32" y="190">1</text><text class="cand" x="72" y="190">3</text><text class="cand" x="52" y="208">6</text>
+  <text class="cand" x="136" y="190">3</text><text class="cand" x="116" y="208">6</text>
+  <text class="lab2" x="24" y="256">宫 4 已有 2、9、8、4、5，</text>
+  <text class="lab2" x="24" y="278">还缺 1、3、6、7 四个数。</text>
+  <text class="lab" x="240" y="56">蓝底格 R4C2：候选本来两个 —— 3 和 7。</text>
+  <text class="lab2" x="240" y="92">第 2 列刚被 R3C2 填进一个 7（不在图里），</text>
+  <text class="lab2" x="240" y="112">同列禁止 → 这格的 7 被划掉。</text>
+  <text class="labk" x="240" y="146">候选只剩一个 → 唯一候选数：R4C2 = 3</text>
+  <text class="lab" x="240" y="180">同宫其它三格的候选还在，暂时别管：</text>
+  <text class="lab2" x="240" y="204">R4C3 还允许 3、7；R6C1 允许 1、3、6；</text>
+  <text class="lab2" x="240" y="224">R6C2 允许 3、6。</text>
+  <text class="lab2" x="240" y="256">写下去之后要做的事：图里 R4C3、R6C1、R6C2 三格的 3 全作废，</text>
+  <text class="labk" x="240" y="278">删的动作是第 04 课的内容，先记住有这个义务。</text>
+</svg>

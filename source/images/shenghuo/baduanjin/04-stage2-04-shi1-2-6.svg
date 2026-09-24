@@ -1,0 +1,70 @@
+<svg viewBox="0 0 760 360" role="img" aria-label="第二式起势两帧：两手交叉搭胸前、左脚开步下蹲成马步" xmlns="http://www.w3.org/2000/svg" width="760" height="360"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="360" class="bg-paper"/>
+  <text x="18" y="24" class="labk">第二式起势：先搭手、再开步、后下蹲</text>
+  <g>
+    <circle class="head" cx="150" cy="88" r="15"/>
+    <line class="body-line" x1="150" y1="104" x2="150" y2="200"/>
+    <line class="body-line" x1="122" y1="124" x2="178" y2="124"/>
+    <path class="body-line" d="M122 124 l0 24 q18 14 42 0"/>
+    <path class="body-line" d="M178 124 l0 24 q-18 14 -42 0"/>
+    <circle class="joint" cx="150" cy="150" r="5"/>
+    <line class="body-line" x1="150" y1="200" x2="142" y2="240"/>
+    <line class="body-line" x1="142" y1="240" x2="140" y2="272"/>
+    <line class="body-line" x1="150" y1="200" x2="158" y2="240"/>
+    <line class="body-line" x1="158" y1="240" x2="160" y2="272"/>
+    <line class="body-line" x1="128" y1="275" x2="146" y2="275"/>
+    <line class="body-line" x1="154" y1="275" x2="172" y2="275"/>
+  </g>
+  <text x="150" y="304" class="lab" text-anchor="middle">第 1 帧：交叉搭手</text>
+  <g>
+    <circle class="head" cx="392" cy="102" r="15"/>
+    <line class="body-line" x1="392" y1="118" x2="392" y2="206"/>
+    <line class="body-line" x1="362" y1="138" x2="422" y2="138"/>
+    <path class="body-line" d="M362 138 l0 24 q18 14 42 0"/>
+    <path class="body-line" d="M422 138 l0 24 q-18 14 -42 0"/>
+    <circle class="joint" cx="392" cy="164" r="5"/>
+    <line class="body-line" x1="392" y1="206" x2="368" y2="234"/>
+    <line class="body-line" x1="368" y1="234" x2="364" y2="268"/>
+    <line class="body-line" x1="392" y1="206" x2="416" y2="234"/>
+    <line class="body-line" x1="416" y1="234" x2="420" y2="268"/>
+    <line class="body-line" x1="350" y1="271" x2="372" y2="271"/>
+    <line class="body-line" x1="412" y1="271" x2="434" y2="271"/>
+    <circle class="joint" cx="368" cy="234" r="4"/><circle class="joint" cx="416" cy="234" r="4"/>
+  </g>
+  <text x="392" y="304" class="lab" text-anchor="middle">第 2 帧：开步下蹲成马步</text>
+  <path class="arrow" d="M212 182 l70 -14 m-13 -1 l13 1 l-4 12"/>
+  <path class="arrow" d="M300 250 l46 0 m-8 -5 l8 5 l-8 5"/>
+  <text x="286" y="332" class="lab2">开步方向（向侧，不向前）</text>
+  <text x="500" y="96" class="labk">四句分解</text>
+  <text x="500" y="120" class="lab2">① 两臂屈肘，两手交叉搭于胸前</text>
+  <text x="500" y="142" class="lab2">② 左脚向左侧横开一步，略宽于肩</text>
+  <text x="500" y="164" class="lab2">③ 脚尖向前摆正，两脚平行</text>
+  <text x="500" y="186" class="lab2">④ 缓缓屈膝下蹲，成高马步</text>
+  <text x="500" y="222" class="labk">马步的三个尺寸</text>
+  <text x="500" y="246" class="lab2">宽：比肩略宽（一脚半到两脚）</text>
+  <text x="500" y="268" class="lab2">深：膝弯 20–45 度，自己选一档</text>
+  <text x="500" y="290" class="lab2">直：背直立，不下垂不后坐</text>
+  <text x="500" y="332" class="lab2">先做左、后做右；两侧都做完算 1 遍。</text>
+</svg>

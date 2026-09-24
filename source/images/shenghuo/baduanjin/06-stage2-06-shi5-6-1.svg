@@ -1,0 +1,58 @@
+<svg viewBox="0 0 760 330" role="img" aria-label="第五式摇头摆尾去心火的马步身形与腰脊摆动示意" xmlns="http://www.w3.org/2000/svg" width="760" height="330"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+<rect class="bg-paper" width="760" height="330"/>
+<text x="18" y="26" class="labk">第五式：马步为根，腰脊为轴</text>
+<circle cx="230" cy="104" r="14" class="head"/>
+<line x1="230" y1="118" x2="230" y2="196" class="body-line"/>
+<polyline points="230,136 196,170 212,192" class="body-line"/>
+<polyline points="230,136 264,170 248,192" class="body-line"/>
+<line x1="208" y1="196" x2="252" y2="196" class="body-line"/>
+<polyline points="208,196 198,240 194,290" class="body-line"/>
+<polyline points="252,196 262,240 266,290" class="body-line"/>
+<line x1="140" y1="294" x2="330" y2="294" class="st-thin"/>
+<circle cx="230" cy="196" r="4" class="joint"/>
+<circle cx="198" cy="240" r="4" class="joint"/>
+<circle cx="262" cy="240" r="4" class="joint"/>
+<circle cx="212" cy="192" r="3.5" class="joint"/>
+<circle cx="248" cy="192" r="3.5" class="joint"/>
+<path d="M165,80 Q230,58 295,80" class="arrow"/>
+<polyline points="285,73 295,80 285,87" class="arrow"/>
+<path d="M244,100 L274,90" class="arrow"/>
+<polyline points="265,87 274,90 268,98" class="arrow"/>
+<path d="M256,204 L290,214" class="arrow-r"/>
+<polyline points="281,210 290,214 283,221" class="arrow-r"/>
+<text x="150" y="52" class="lab2">上体像钟摆，左右划弧</text>
+<text x="252" y="102" class="lab2">头向上后摇</text>
+<text x="150" y="220" class="lab2">骨盆往反方向坐</text>
+<text x="18" y="316" class="lab">脚距约1.5倍肩宽，脚尖正前方</text>
+<text x="430" y="60" class="labk">读这张图要看三件事</text>
+<text x="430" y="88" class="lab">① 两掌扶按髋部，拇指在后</text>
+<text x="430" y="112" class="lab">② 屈膝下蹲，膝尖对脚尖</text>
+<text x="430" y="136" class="lab">③ 头与骨盆反向，连成一条弧</text>
+<text x="430" y="166" class="lab2">前俯幅度约30°到45°，以不头晕为限</text>
+<text x="430" y="190" class="lab2">回正时吸气，俯摆时呼气</text>
+<text x="430" y="214" class="lab2">左右各3遍，每遍约6到8秒</text>
+<text x="430" y="252" class="lab">做不到就减幅度：蹲高一点，俯少一点</text>
+<text x="430" y="276" class="lab2">两脚全程不许离地、不许转动</text>
+</svg>

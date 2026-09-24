@@ -1,0 +1,67 @@
+<svg viewBox="0 0 760 320" role="img" aria-label="一幅竖式作品的构成解剖图：正文、款、引首章、姓名印与留白" xmlns="http://www.w3.org/2000/svg" width="760" height="320"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+    <rect class="bg-paper" width="760" height="320"/>
+    <text class="labk" x="40" y="26">一幅竖式作品的解剖（从右往左读）</text>
+    <rect class="st" x="120" y="42" width="190" height="250" fill="none"/>
+    <rect x="264" y="62" width="16" height="16" fill="#22211f"/>
+    <rect x="264" y="86" width="16" height="16" fill="#22211f"/>
+    <rect x="264" y="110" width="16" height="16" fill="#22211f"/>
+    <rect x="264" y="134" width="16" height="16" fill="#22211f"/>
+    <rect x="264" y="158" width="16" height="16" fill="#22211f"/>
+    <rect x="240" y="62" width="16" height="16" fill="#22211f"/>
+    <rect x="240" y="86" width="16" height="16" fill="#22211f"/>
+    <rect x="240" y="110" width="16" height="16" fill="#22211f"/>
+    <rect x="240" y="134" width="16" height="16" fill="#22211f"/>
+    <rect x="216" y="62" width="16" height="16" fill="#22211f"/>
+    <rect x="216" y="86" width="16" height="16" fill="#22211f"/>
+    <rect x="216" y="110" width="16" height="16" fill="#22211f"/>
+    <rect x="216" y="134" width="16" height="16" fill="#22211f"/>
+    <rect x="192" y="62" width="16" height="16" fill="#22211f"/>
+    <rect x="192" y="86" width="16" height="16" fill="#22211f"/>
+    <rect x="192" y="110" width="16" height="16" fill="#22211f"/>
+    <rect x="168" y="62" width="16" height="16" fill="#22211f"/>
+    <rect x="168" y="86" width="16" height="16" fill="#22211f"/>
+    <rect x="168" y="110" width="16" height="16" fill="#22211f"/>
+    <rect x="146" y="128" width="11" height="11" fill="#22211f"/>
+    <rect x="146" y="143" width="11" height="11" fill="#22211f"/>
+    <rect x="146" y="158" width="11" height="11" fill="#22211f"/>
+    <rect x="146" y="173" width="11" height="11" fill="#22211f"/>
+    <rect x="143" y="196" width="18" height="18" fill="#c0392b"/>
+    <rect x="266" y="44" width="12" height="12" fill="#c0392b"/>
+    <text class="labk" x="380" y="60">四件套，各司其职</text>
+    <text class="lab" x="380" y="92">① 正文：字数内容自定，末行宜短，</text>
+    <text class="lab2" x="412" y="112">留出写款的地方（灰方块=字）</text>
+    <text class="lab" x="380" y="142">② 款：比正文小一号的深色小方块，</text>
+    <text class="lab2" x="412" y="162">写在末行左下，地位是「配角」</text>
+    <text class="lab" x="380" y="192">③ 印：红块两方——右上=引首章，</text>
+    <text class="lab2" x="412" y="212">款下=姓名印；一方就够新手用</text>
+    <text class="lab" x="380" y="242">④ 白：四周留边、行间留缝，</text>
+    <text class="lab2" x="412" y="262">满纸黑字=窒息，白也是构件</text>
+    <text class="lab2" x="120" y="310">本课记法：正文是主角，款是谢幕词，印是红图章，白是呼吸。</text>
+  </svg>

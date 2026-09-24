@@ -1,0 +1,71 @@
+<svg viewBox="0 0 760 400" role="img" aria-label="第三式到位图：一手在上托一手在下按，配上下对拉箭头、肩线水平虚线与呼吸时间轴" xmlns="http://www.w3.org/2000/svg" width="760" height="400"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="400" class="bg-paper"/>
+  <text x="18" y="24" class="labk">第三式到位图（以左手托、右手按为例）</text>
+  <g>
+    <circle class="head" cx="250" cy="120" r="17"/>
+    <line class="body-line" x1="250" y1="137" x2="250" y2="232"/>
+    <line class="body-line" x1="208" y1="152" x2="292" y2="152"/>
+    <path class="body-line" d="M292 152 l16 -46 l-8 -42"/>
+    <path class="body-line" d="M208 152 l-14 32 l-6 44"/>
+    <path class="st" d="M292 60 q12 -8 22 2"/>
+    <path class="st" d="M180 232 q12 8 22 -2"/>
+    <line class="body-line" x1="250" y1="232" x2="243" y2="276"/>
+    <line class="body-line" x1="243" y1="276" x2="241" y2="318"/>
+    <line class="body-line" x1="250" y1="232" x2="257" y2="276"/>
+    <line class="body-line" x1="257" y1="276" x2="259" y2="318"/>
+    <line class="body-line" x1="227" y1="321" x2="247" y2="321"/>
+    <line class="body-line" x1="253" y1="321" x2="273" y2="321"/>
+    <circle class="joint" cx="208" cy="152" r="4"/><circle class="joint" cx="292" cy="152" r="4"/>
+    <circle class="joint" cx="300" cy="64" r="5"/><circle class="joint" cx="186" cy="228" r="5"/>
+    <line class="st-thin" x1="180" y1="152" x2="330" y2="152"/>
+    <line class="st-thin" x1="250" y1="40" x2="250" y2="330"/>
+  </g>
+  <path class="arrow" d="M316 48 l0 -26 m-5 6 l5 -6 l5 6"/>
+  <path class="arrow" d="M172 244 l0 28 m-5 -6 l5 6 l5 -6"/>
+  <path class="arrow" d="M240 336 l0 22 m-5 -6 l5 6 l5 -6"/>
+  <path class="arrow" d="M262 336 l0 22 m-5 -6 l5 6 l5 -6"/>
+  <text x="330" y="26" class="lab2">掌根上顶</text>
+  <text x="330" y="286" class="lab2">掌根下撑</text>
+  <text x="430" y="86" class="labk">八项到位标准</text>
+  <text x="430" y="112" class="lab2">① 上托手在头侧上方</text>
+  <text x="430" y="134" class="lab2">② 掌心朝天，掌指斜向前外</text>
+  <text x="430" y="156" class="lab2">③ 托举手伸直但肘不僵</text>
+  <text x="430" y="178" class="lab2">④ 两肩连线水平（灰虚线）</text>
+  <text x="430" y="200" class="lab2">⑤ 下按手在同侧胯旁</text>
+  <text x="430" y="222" class="lab2">⑥ 按手掌心向下、掌指向前</text>
+  <text x="430" y="244" class="lab2">⑦ 躯干不侧弯、不前倾</text>
+  <text x="430" y="266" class="lab2">⑧ 竖直灰线＝身体中轴</text>
+  <text x="430" y="292" class="lab2">定势 1–3 秒，左右各 3–4 遍。</text>
+  <rect x="40" y="330" width="280" height="26" fill="#dbeaf7" stroke="#8f8f8f"/>
+  <text x="180" y="348" class="lab" text-anchor="middle">吸气 4–5 秒：分手托按</text>
+  <rect x="320" y="330" width="140" height="26" class="f-g2" stroke="#8f8f8f"/>
+  <text x="390" y="348" class="lab" text-anchor="middle">自然 1–3 秒</text>
+  <rect x="460" y="330" width="260" height="26" fill="#e3f1e6" stroke="#8f8f8f"/>
+  <text x="590" y="348" class="lab" text-anchor="middle">呼气 4–5 秒：收回换边</text>
+  <text x="40" y="382" class="lab2">0 秒</text>
+  <text x="300" y="382" class="lab2">5 秒</text>
+  <text x="440" y="382" class="lab2">7 秒</text>
+  <text x="680" y="382" class="lab2">12 秒＝1 遍</text>
+</svg>

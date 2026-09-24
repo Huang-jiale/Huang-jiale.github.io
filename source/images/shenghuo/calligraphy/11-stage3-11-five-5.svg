@@ -1,0 +1,46 @@
+<svg viewBox="0 0 760 270" role="img" aria-label="隶书蚕头雁尾主笔的分段动作与横长竖短的排布" xmlns="http://www.w3.org/2000/svg" width="760" height="270"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .f-white{fill:#fff}
+.f-none{fill:none}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+ .num{font-size:15px;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect class="bg-paper" width="760" height="270"/>
+  <text x="18" y="26" class="labk">隶：一条主笔的三段（顶—按—送）＋ 横长竖短</text>
+  <path d="M50 120 C100 104 180 100 236 96 L258 84 L252 108 L232 104 C170 112 100 124 50 132 Z" class="stroke-in"/>
+  <path class="arrow" d="M60 152 L60 136 M66 142 L60 136 L54 142"/>
+  <text x="36" y="176" class="lab">① 逆入：先向左顶</text>
+  <path class="arrow" d="M150 152 L150 130 M156 136 L150 130 L144 136"/>
+  <text x="116" y="200" class="lab">② 按过去：中段加力</text>
+  <path class="arrow" d="M246 152 L246 122 M252 128 L246 122 L240 128"/>
+  <text x="200" y="226" class="lab">③ 挑出：提笔送锋</text>
+  <rect x="400" y="70" width="300" height="90" class="guide"/>
+  <rect x="412" y="88" width="276" height="16" class="f-g1"/>
+  <rect x="444" y="110" width="8" height="42" class="f-g3"/>
+  <rect x="580" y="108" width="8" height="44" class="f-g3"/>
+  <rect x="412" y="128" width="276" height="18" class="f-g1"/>
+  <text x="400" y="186" class="lab2">横长竖短，字就被压扁；若竖比横长，字形变方，就往楷那边去了。</text>
+  <text x="400" y="214" class="lab">转折：顿一下再折（篆是绕过去的）</text>
+  <text x="18" y="256" class="lab2">两个常见毛病：每条横都想出脚，满纸波浪（其实一字只留一条）；以为雁尾要颤着写（抖出来的是毛病，不是味道）。</text>
+</svg>

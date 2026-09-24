@@ -1,0 +1,64 @@
+<svg viewBox="0 0 760 420" role="img" aria-label="人体简笔图加六条向下箭头，标出松沉的六个环节" xmlns="http://www.w3.org/2000/svg" width="760" height="420"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="420" class="bg-paper"/>
+  <text x="18" y="24" class="labk">松沉六环节：按顺序做，10 秒就能"沉"下去</text>
+  <circle class="head" cx="380" cy="86" r="18"/>
+  <line class="body-line" x1="380" y1="104" x2="380" y2="230"/>
+  <line class="body-line" x1="345" y1="126" x2="415" y2="126"/>
+  <path class="body-line" d="M345 126 l-19 34 q16 26 30 26"/>
+  <path class="body-line" d="M415 126 l19 34 q-16 26 -30 26"/>
+  <line class="body-line" x1="380" y1="230" x2="366" y2="292"/>
+  <line class="body-line" x1="366" y1="292" x2="364" y2="352"/>
+  <line class="body-line" x1="380" y1="230" x2="394" y2="292"/>
+  <line class="body-line" x1="394" y1="292" x2="396" y2="352"/>
+  <line class="body-line" x1="350" y1="355" x2="370" y2="355"/>
+  <line class="body-line" x1="390" y1="355" x2="410" y2="355"/>
+  <path class="arrow" d="M380 42 l0 -20 m-5 6 l5 -6 l5 6"/>
+  <path class="arrow" d="M336 150 l-6 34 m0 -10 l0 10 l6 0"/>
+  <path class="arrow" d="M424 150 l6 34 m0 -10 l0 10 l-6 0"/>
+  <path class="arrow" d="M452 206 l0 40 m-5 -8 l5 8 l5 -8"/>
+  <path class="arrow" d="M452 262 l0 40 m-5 -8 l5 8 l5 -8"/>
+  <path class="arrow" d="M308 250 l0 40 m-5 -8 l5 8 l5 -8"/>
+  <path class="arrow" d="M364 372 l0 22 m-5 -6 l5 6 l5 -6"/>
+  <path class="arrow" d="M396 372 l0 22 m-5 -6 l5 6 l5 -6"/>
+  <circle class="joint" cx="345" cy="126" r="4"/><circle class="joint" cx="415" cy="126" r="4"/>
+  <circle class="joint" cx="366" cy="292" r="4"/><circle class="joint" cx="394" cy="292" r="4"/>
+  <text x="470" y="96" class="labk">① 下颌内收</text>
+  <text x="470" y="116" class="lab2">后颈变长，别仰头</text>
+  <text x="470" y="156" class="labk">② 肩往下落</text>
+  <text x="470" y="176" class="lab2">呼气时让它自己掉</text>
+  <text x="470" y="216" class="labk">③ 肘往下坠</text>
+  <text x="470" y="236" class="lab2">腋下一指空</text>
+  <text x="470" y="276" class="labk">④ 胸腔松开</text>
+  <text x="470" y="296" class="lab2">不挺胸，肋骨不顶</text>
+  <text x="20" y="156" class="labk">⑤ 腰腹部松</text>
+  <text x="20" y="176" class="lab2">不是塌，是撤掉用力</text>
+  <text x="20" y="216" class="labk">⑥ 臀向前敛</text>
+  <text x="20" y="236" class="lab2">尾骨向下向前卷</text>
+  <text x="20" y="296" class="labk">⑦ 膝不锁死</text>
+  <text x="20" y="316" class="lab2">留 10–15 度弯</text>
+  <text x="20" y="356" class="labk">⑧ 脚掌铺平</text>
+  <text x="20" y="376" class="lab2">三点各三分之一</text>
+  <text x="18" y="404" class="lab2">沉的顺序：颌 → 肩 → 肘 → 胸 → 腰 → 臀。做完一遍约 10 秒，这是每次进入预备势的路线。</text>
+</svg>

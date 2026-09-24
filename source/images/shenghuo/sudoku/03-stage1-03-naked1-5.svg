@@ -1,0 +1,48 @@
+<svg viewBox="0 0 760 215" role="img" aria-label="流程决策图：先数视角后格视角，剩一格就填，剩两格以上就记录并走开" xmlns="http://www.w3.org/2000/svg" width="760" height="215"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+  <rect class="bg-paper" width="760" height="215"/>
+  <text class="labk" x="24" y="22">一轮固定流程（把顺序背下来，比背技巧有用）</text>
+  <rect class="hl" x="24" y="40" width="150" height="42"/>
+  <text class="lab" x="99" y="66" text-anchor="middle">① 定一个数字</text>
+  <line class="arrow" x1="174" y1="61" x2="200" y2="61"/><polygon class="arrow" points="200,56 212,61 200,66"/>
+  <rect class="hlb" x="214" y="40" width="168" height="42"/>
+  <text class="lab" x="298" y="66" text-anchor="middle">② 逐宫数落脚点</text>
+  <line class="arrow" x1="382" y1="61" x2="408" y2="61"/><polygon class="arrow" points="408,56 420,61 408,66"/>
+  <rect class="f-g1" x="422" y="40" width="150" height="42"/>
+  <text class="lab" x="497" y="66" text-anchor="middle">③ 逐行逐列数</text>
+  <line class="arrow" x1="572" y1="61" x2="598" y2="61"/><polygon class="arrow" points="598,56 610,61 598,66"/>
+  <rect class="hl" x="614" y="40" width="122" height="42"/>
+  <text class="lab" x="675" y="66" text-anchor="middle">④ 格视角补刀</text>
+  <text class="lab2" x="24" y="106">②③ 是数视角（隐性唯一数）：只数一个数还剩几格可站；④ 是格视角（唯一候选数）：只对写过候选的格做。</text>
+  <rect class="f-g1" x="24" y="122" width="230" height="52"/>
+  <text class="lab" x="40" y="144">落脚点 = 1 格</text>
+  <text class="labk" x="40" y="166">→ 填，然后回到 ①（换数字）</text>
+  <rect class="f-g1" x="266" y="122" width="230" height="52"/>
+  <text class="lab" x="282" y="144">落脚点 = 2 格</text>
+  <text class="lab2" x="282" y="166">→ 记下来，走开，不许猜</text>
+  <rect class="f-g1" x="508" y="122" width="228" height="52"/>
+  <text class="lab" x="524" y="144">候选剩 2 个以上</text>
+  <text class="lab2" x="524" y="166">→ 这格暂时作废，换下一格</text>
+</svg>

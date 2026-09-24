@@ -1,0 +1,46 @@
+<svg viewBox="0 0 760 200" role="img" aria-label="告别换说法成与母分别再扣上数学名词分母" xmlns="http://www.w3.org/2000/svg" width="760" height="200"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="200" class="bg-paper"/>
+  <text x="18" y="26" class="labk">词性限定逼出唯一答案：告别 → 分母</text>
+
+  <rect x="30" y="46" width="130" height="50" class="cell" stroke="#1c1c1c" stroke-width="1.3"/>
+  <text x="95" y="78" class="kai" text-anchor="middle" style="font-size:24px">告别</text>
+  <text x="95" y="116" class="lab2" text-anchor="middle">换个说法</text>
+  <line x1="166" y1="71" x2="206" y2="71" class="arrow"/><path d="M200 66 l8 5 -8 5" class="arrow"/>
+  <rect x="214" y="46" width="190" height="50" class="hlb" stroke="#0f6ab5" stroke-width="1.3"/>
+  <text x="309" y="77" class="lab2" text-anchor="middle">与母亲分别、分离</text>
+  <line x1="410" y1="71" x2="450" y2="71" class="arrow"/><path d="M444 66 l8 5 -8 5" class="arrow"/>
+  <rect x="458" y="46" width="56" height="50" class="hl" stroke="#2f7d42" stroke-width="1.5"/>
+  <text x="486" y="82" class="kai" text-anchor="middle" style="font-size:30px">分</text>
+  <rect x="518" y="46" width="56" height="50" class="hl" stroke="#2f7d42" stroke-width="1.5"/>
+  <text x="546" y="82" class="kai stroke-in" text-anchor="middle" style="font-size:30px">母</text>
+  <text x="600" y="72" class="labk">＝ 分母</text>
+  <text x="600" y="96" class="lab2">读作"与母分别"</text>
+
+  <text x="30" y="148" class="lab">候选清单（因为谜目写了"数学名词"）：分子、分母、约数、倍数、公因数、真分数……</text>
+  <text x="30" y="174" class="lab2">同一张清单里，只有"分母"能被读成"与母分别"，所以答案唯一。少了那三个字的限定，这条路就会散。</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg viewBox="0 0 760 252" role="img" aria-label="四组同音借读：鱼余、蝠福、舅旧、书输" xmlns="http://www.w3.org/2000/svg" width="760" height="252"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .cell{fill:#fff}
+.cell-g{fill:#f2efe8}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.cand{font-size:9.5px;fill:#777}
+ .stroke-in{fill:#c0392b}
+.guide{stroke:#d9d4ca;stroke-width:1;stroke-dasharray:5 4;fill:none}
+ .kai{font-family:"KaiTi","STKaiti","Kaiti SC","AR PL UKai CN",serif}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+  <rect width="760" height="252" class="bg-paper"/>
+  <text x="18" y="26" class="labk">谐音的机关：眼前这个字，顺着读音跳到另一个字</text>
+
+  <rect x="40" y="40" width="54" height="44" class="cell-g" stroke="#1c1c1c" stroke-width="1.2"/>
+  <text x="67" y="74" class="kai" text-anchor="middle" style="font-size:26px">鱼</text>
+  <text x="104" y="74" class="lab2">yú</text>
+  <line x1="150" y1="66" x2="200" y2="66" class="arrow"/><path d="M194 61 l8 5 -8 5" class="arrow"/>
+  <text x="175" y="52" class="lab2" text-anchor="middle">同音</text>
+  <rect x="212" y="40" width="54" height="44" class="hl" stroke="#2f7d42" stroke-width="1.4"/>
+  <text x="239" y="74" class="kai" text-anchor="middle" style="font-size:26px">余</text>
+  <text x="280" y="74" class="lab2">娃娃抱鲤鱼的年画，题的却是年年有余</text>
+
+  <rect x="40" y="86" width="54" height="44" class="cell-g" stroke="#1c1c1c" stroke-width="1.2"/>
+  <text x="67" y="120" class="kai" text-anchor="middle" style="font-size:26px">蝠</text>
+  <text x="104" y="120" class="lab2">fú</text>
+  <line x1="150" y1="112" x2="200" y2="112" class="arrow"/><path d="M194 107 l8 5 -8 5" class="arrow"/>
+  <text x="175" y="98" class="lab2" text-anchor="middle">同音</text>
+  <rect x="212" y="86" width="54" height="44" class="hl" stroke="#2f7d42" stroke-width="1.4"/>
+  <text x="239" y="120" class="kai" text-anchor="middle" style="font-size:26px">福</text>
+  <text x="280" y="120" class="lab2">五只蝙蝠绕寿字的纹样，读成五福捧寿</text>
+
+  <rect x="40" y="132" width="54" height="44" class="cell-g" stroke="#1c1c1c" stroke-width="1.2"/>
+  <text x="67" y="166" class="kai" text-anchor="middle" style="font-size:26px">舅</text>
+  <text x="104" y="166" class="lab2">jiù</text>
+  <line x1="150" y1="158" x2="200" y2="158" class="arrow"/><path d="M194 153 l8 5 -8 5" class="arrow"/>
+  <text x="175" y="144" class="lab2" text-anchor="middle">同音</text>
+  <rect x="212" y="132" width="54" height="44" class="cell-g" stroke="#9a9a9a" stroke-width="1.2"/>
+  <text x="239" y="166" class="kai" text-anchor="middle" style="font-size:26px">旧</text>
+  <text x="280" y="166" class="lab2">外甥打灯笼——照舅，其实说的是照旧</text>
+
+  <rect x="40" y="178" width="54" height="44" class="cell-g" stroke="#1c1c1c" stroke-width="1.2"/>
+  <text x="67" y="212" class="kai" text-anchor="middle" style="font-size:26px">书</text>
+  <text x="104" y="212" class="lab2">shū</text>
+  <line x1="150" y1="204" x2="200" y2="204" class="arrow"/><path d="M194 199 l8 5 -8 5" class="arrow"/>
+  <text x="175" y="190" class="lab2" text-anchor="middle">同音</text>
+  <rect x="212" y="178" width="54" height="44" class="cell-g" stroke="#9a9a9a" stroke-width="1.2"/>
+  <text x="239" y="212" class="kai" text-anchor="middle" style="font-size:26px">输</text>
+  <text x="280" y="212" class="lab2">孔夫子搬家——净是书，其实说的是净输</text>
+
+  <text x="18" y="242" class="lab">前两行是图案与口彩，后两行是歇后语（不是灯谜），用的却是同一台借音的机器。</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg viewBox="0 0 360 258" role="img" aria-label="第八式正确：脚跟轻落、震动向上传导" xmlns="http://www.w3.org/2000/svg" width="360" height="258"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-ok{fill:none;stroke:#2f7d42;stroke-width:1.6}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+.f-g2{fill:#dcdcdc}
+.f-g3{fill:#bfbfbf}
+.f-g4{fill:#8f8f8f}
+.f-g5{fill:#4f4f4f}
+ .f-white{fill:#fff}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .body-line{fill:none;stroke:#1c1c1c;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+ .joint{fill:#c0392b}
+.head{fill:#fff;stroke:#1c1c1c;stroke-width:2}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .arrow-r{fill:none;stroke:#c0392b;stroke-width:1.6}</style>
+<rect class="bg-paper" width="360" height="258"/>
+<text x="14" y="22" class="labk">✓ 轻落：震感向上传</text>
+<line x1="150" y1="60" x2="150" y2="140" class="body-line"/>
+<polyline points="150,140 150,168 150,182" class="body-line"/>
+<polyline points="150,182 136,176 132,170" class="body-line"/>
+<polyline points="150,182 168,186 174,190" class="body-line"/>
+<line x1="96" y1="192" x2="230" y2="192" class="st-thin"/>
+<path d="M132,166 Q150,140 168,166" class="arrow"/>
+<path d="M124,162 Q150,126 176,162" class="arrow"/>
+<path d="M116,158 Q150,112 184,158" class="arrow"/>
+<text x="212" y="80" class="lab2">小腿收紧</text>
+<text x="212" y="104" class="lab2">膝弹一下</text>
+<text x="212" y="128" class="lab2">腰背跟着松</text>
+<text x="14" y="222" class="lab2">脚跟落下：先轻后实，声音很小</text>
+<text x="14" y="246" class="lab2">头顶有一根线往上领，身体不晃</text>
+</svg>

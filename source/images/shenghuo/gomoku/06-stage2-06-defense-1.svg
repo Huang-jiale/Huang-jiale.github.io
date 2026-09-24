@@ -1,0 +1,57 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="威胁分级与应/防/抢三步决策流程" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:9.5px;fill:#777}
+ .stone-b{fill:#1c1c1c}
+.stone-w{fill:#fff;stroke:#1c1c1c;stroke-width:1.2}
+ .pc-r{fill:#fff8f0;stroke:#c0392b;stroke-width:1.8}
+ .star{fill:#1c1c1c}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}</style>
+<rect class="bg-paper" width="760" height="300"/>
+<text x="18" y="26" class="labk">接到对方一手棋，按四级判断：该应、该防，还是可以抢</text>
+<rect x="18" y="46" width="102" height="42" rx="6" class="hlc"/>
+<text x="69" y="66" class="lab" text-anchor="middle">一级</text>
+<text x="69" y="82" class="lab2" text-anchor="middle">已有四</text>
+<text x="132" y="72" class="labk">→ 必须应</text>
+<text x="236" y="66" class="lab2">冲四只有一头能成五，堵那一头；</text>
+<text x="236" y="84" class="lab2">双头空＝活四，本手已经拦不住了。</text>
+<rect x="18" y="104" width="102" height="42" rx="6" class="hl"/>
+<text x="69" y="124" class="lab" text-anchor="middle">二级</text>
+<text x="69" y="140" class="lab2" text-anchor="middle">活三</text>
+<text x="132" y="130" class="labk">→ 必须防</text>
+<text x="236" y="124" class="lab2">活三下一手成活四，所以要在这一手处理；</text>
+<text x="236" y="142" class="lab2">两头都是合格防点，强弱差别见第 02、04 节。</text>
+<rect x="18" y="162" width="102" height="42" rx="6" class="hlb"/>
+<text x="69" y="182" class="lab" text-anchor="middle">三级</text>
+<text x="69" y="198" class="lab2" text-anchor="middle">眠三做杀</text>
+<text x="132" y="188" class="labk">→ 要算</text>
+<text x="236" y="182" class="lab2">算清楚他下一个"一子两用"的点在哪；</text>
+<text x="236" y="200" class="lab2">自己有更快的先手就可以不理。</text>
+<rect x="18" y="220" width="102" height="42" rx="6" class="f-g1"/>
+<text x="69" y="240" class="lab" text-anchor="middle">四级</text>
+<text x="69" y="256" class="lab2" text-anchor="middle">活二</text>
+<text x="132" y="246" class="labk">→ 抢先</text>
+<text x="236" y="240" class="lab2">去做自己的形状，别替对方守家。</text>
+<text x="528" y="52" class="labk">三步自问</text>
+<text x="528" y="74" class="lab">① 他这手成了什么？</text>
+<text x="528" y="96" class="lab">② 他下一手走哪里最疼？</text>
+<text x="528" y="118" class="lab">③ 我的防点自己成形状吗？</text>
+<text x="528" y="146" class="lab2">③ 问的是"反先"：同样能防住，</text>
+<text x="528" y="164" class="lab2">能顺手做成自己的活二的那一头更好。</text>
+<text x="528" y="196" class="lab2">漏掉 ② 是新手输棋的第一原因；</text>
+<text x="528" y="214" class="lab2">漏掉 ③ 是高手输棋的第一原因。</text>
+<text x="18" y="282" class="lab2">注：分级只看对方形状的危险程度，与颜色无关；唯一的颜色差别是黑棋</text>
+<text x="18" y="298" class="lab2">有三三、四四、长连三类禁手（白棋无禁手），禁手点不能算进他的威胁清单。</text>
+</svg>

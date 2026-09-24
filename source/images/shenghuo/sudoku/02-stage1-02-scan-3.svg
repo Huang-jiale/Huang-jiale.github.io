@@ -1,0 +1,61 @@
+<svg viewBox="0 0 760 300" role="img" aria-label="局部盘第1到6行，宫6高亮，第9列的5与第6行的5把宫6夹到只剩R5C8" xmlns="http://www.w3.org/2000/svg" width="760" height="300"><style> svg{display:block;width:100%;height:auto}
+ .lab2{font-size:11.5px;fill:#777}
+ .labk{font-size:13.5px;fill:#000;font-weight:600}
+ .st{fill:none;stroke:#1c1c1c;stroke-width:1.5}
+ .st-thin{fill:none;stroke:#9a9a9a;stroke-width:.9;stroke-dasharray:4 3}
+ .st-red{fill:none;stroke:#c0392b;stroke-width:1.3}
+ .st-blue{fill:none;stroke:#0f6ab5;stroke-width:1.3;stroke-dasharray:6 3}
+ .st-bad{fill:none;stroke:#c0392b;stroke-width:1.6}
+ .f-g1{fill:#f2f2f2}
+ .dot{fill:#c0392b}
+ .bg-paper{fill:#fff}
+ text{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;fill:#1c1c1c}
+ .gl-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .grid{stroke:#c9c4ba;stroke-width:1;fill:none}
+ .grid-h{stroke:#1c1c1c;stroke-width:2;fill:none}
+ .cell{fill:#fff}
+ .hl{fill:#ffe9a8}
+.hlc{fill:#f7d5d5}
+.hlb{fill:#d8e9f6}
+ .num{font-size:15px;fill:#1c1c1c}
+.num-g{font-size:15px;fill:#9a9a9a}
+.cand{font-size:8.6px;fill:#6f6f6f}
+ .arrow{fill:none;stroke:#0f6ab5;stroke-width:1.6}
+ .mid{font-size:17px;fill:#1c1c1c}</style>
+  <rect class="bg-paper" width="760" height="300"/>
+  <text class="labk" x="24" y="20">第 2 次出手：盯住数字 5，问宫 6（黄色 3×3）</text>
+  <rect class="cell" x="24" y="60" width="234" height="156"/>
+  <rect class="hl" x="180" y="138" width="78" height="78"/>
+  <rect class="hlc" x="232" y="60" width="26" height="26"/>
+  <rect class="hlc" x="232" y="138" width="26" height="26"/>
+  <rect class="hlc" x="232" y="164" width="26" height="26"/>
+  <rect class="hlc" x="76" y="190" width="26" height="26"/>
+  <rect class="hlc" x="180" y="190" width="26" height="26"/>
+  <rect class="hlc" x="206" y="190" width="26" height="26"/>
+  <rect class="hlb" x="206" y="164" width="26" height="26"/>
+  <g class="gl">
+    <line x1="50" y1="60" x2="50" y2="216"/><line x1="76" y1="60" x2="76" y2="216"/><line x1="128" y1="60" x2="128" y2="216"/>
+    <line x1="154" y1="60" x2="154" y2="216"/><line x1="206" y1="60" x2="206" y2="216"/><line x1="232" y1="60" x2="232" y2="216"/>
+    <line x1="24" y1="86" x2="258" y2="86"/><line x1="24" y1="138" x2="258" y2="138"/><line x1="24" y1="164" x2="258" y2="164"/><line x1="24" y1="190" x2="258" y2="190"/>
+  </g>
+  <g class="gl-h"><line x1="102" y1="60" x2="102" y2="216"/><line x1="180" y1="60" x2="180" y2="216"/><line x1="24" y1="138" x2="258" y2="138"/></g>
+  <rect class="st" x="24" y="60" width="234" height="156"/>
+  <text class="num" x="33" y="78">4</text><text class="num" x="163" y="78">7</text><text class="num" x="241" y="78">5</text>
+  <text class="num" x="189" y="104">1</text><text class="num" x="215" y="104">7</text>
+  <text class="num" x="33" y="130">5</text><text class="num" x="111" y="130">9</text><text class="num" x="137" y="130">8</text><text class="num" x="163" y="130">6</text><text class="num" x="241" y="130">4</text>
+  <text class="num" x="33" y="156">2</text><text class="num" x="137" y="156">9</text><text class="num" x="189" y="156">8</text><text class="num" x="215" y="156">6</text>
+  <text class="num" x="33" y="182">9</text><text class="num" x="59" y="182">8</text><text class="num" x="85" y="182">4</text><text class="num" x="137" y="182">6</text><text class="num" x="163" y="182">1</text><text class="num" x="189" y="182">7</text>
+  <text class="num" x="85" y="208">5</text><text class="num" x="111" y="208">7</text><text class="num" x="163" y="208">8</text><text class="num" x="241" y="208">9</text>
+  <line class="st-red" x1="245" y1="86" x2="245" y2="150"/>
+  <line class="st-red" x1="89" y1="196" x2="176" y2="196"/>
+  <circle class="dot" cx="219" cy="177" r="4.5"/>
+  <text class="lab2" x="300" y="66">本图只画了第 1～6 行（下半盘不出场）。</text>
+  <text class="lab" x="300" y="94">宫 6 里能考虑 5 的空格本来有 5 个，</text>
+  <text class="lab" x="300" y="114">被两条红线各剪掉两个：</text>
+  <text class="lab2" x="300" y="136">竖红线 = 第 9 列顶上的 5（R1C9）→ 关掉 R4C9、R5C9</text>
+  <text class="lab2" x="300" y="156">横红线 = 第 6 行左边的 5（R6C3）→ 关掉 R6C7、R6C8</text>
+  <text class="lab" x="300" y="186">剩下蓝格 R5C8 = 5。</text>
+  <text class="lab2" x="300" y="212">注意第 5 行原本还有 9、4、6、1、7 五个数，</text>
+  <text class="lab2" x="300" y="230">但这一行的数对本次排除不起决定作用——</text>
+  <text class="labk" x="300" y="256">决定权在「穿过宫的那 3 行 3 列」上，别乱看。</text>
+</svg>
