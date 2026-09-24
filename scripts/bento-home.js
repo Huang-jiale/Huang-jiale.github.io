@@ -30,7 +30,10 @@ const path = require('path');
 // 一个 .njk 丢进去就是「Script load failed」。
 const TEMPLATE = path.join(__dirname, '..', 'tools', 'bento-home.njk');
 
-const WEEKS = 52;
+// 首页那张卡从「一周一格」改成「一月一根柱」（2026-09-24）：52 周里只有 9 天有数据，
+// 整张图 96% 是空白，看着像坏了。按月是这套数据唯一诚实的精度——时政本来就按月归档，
+// 其余内容是按月导入的，所以柱子上标的是「这个月入库多少篇」，不是「哪天写的」。
+const MONTHS = 12;
 
 // 三个一级模块，文案写在这里；哪个模块没文章就渲染成虚线占位卡（现在只有「工作」还空着）。
 const TOPS = [
@@ -47,66 +50,45 @@ function catUrl(names) {
   return '/categories/' + names.map(n => encodeURIComponent(n.replace(/ /g, '-'))).join('/') + '/';
 }
 
-function dayKey(d) {
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-}
-
-// 一格 = 一天：篇数分 5 档（0/1/2/3–4/≥5），深色只代表「当天发得多」，不代表质量
-function levelOf(count) {
-  if (!count) return 0;
-  if (count === 1) return 1;
-  if (count === 2) return 2;
-  if (count <= 4) return 3;
-  return 4;
-}
-
-function buildHeat(posts) {
-  const byDay = new Map();
+// 一格 = 一个月：柱高按「当月入库篇数 / 最高月份」，0 篇的月份留一条矮栈
+function buildMonths(posts) {
+  const byMonth = new Map();
   posts.forEach(p => {
-    const key = p.date.format('YYYY-MM-DD');
-    const rec = byDay.get(key) || { count: 0, mods: new Set() };
+    const key = p.date.format('YYYY-MM');
+    const rec = byMonth.get(key) || { count: 0, mods: new Set() };
     rec.count++;
     // 悬停里报「模块」这一层（三层分类的第 2 层），比只说「学习」有用
     const cat = p.categories && p.categories.length > 1 ? p.categories.data[1].name : '';
     if (cat) rec.mods.add(cat);
-    byDay.set(key, rec);
+    byMonth.set(key, rec);
   });
 
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  // 网格按周对齐：末列是「今天所在那一周」，首列往前推 51 周的周一
-  const mondayOfThisWeek = new Date(today);
-  mondayOfThisWeek.setDate(today.getDate() - ((today.getDay() + 6) % 7));
-  const start = new Date(mondayOfThisWeek);
-  start.setDate(mondayOfThisWeek.getDate() - (WEEKS - 1) * 7);
-
-  const weeks = [];
-  let shown = 0;
-  let prevMonth = -1;
-  for (let w = 0; w < WEEKS; w++) {
-    const days = [];
-    for (let i = 0; i < 7; i++) {
-      const dt = new Date(start);
-      dt.setDate(start.getDate() + w * 7 + i);
-      const key = dayKey(dt);
-      const rec = byDay.get(key);
-      if (rec) shown += rec.count;
-      days.push({
-        date  : key,
-        label : `${key} · ${rec ? rec.count : 0} 篇${rec && rec.mods.size ? ` · ${[...rec.mods].join('、')}` : ''}`,
-        count : rec ? rec.count : 0,
-        level : levelOf(rec ? rec.count : 0),
-        future: dt > today
-      });
-    }
-    const first = new Date(start);
-    first.setDate(start.getDate() + w * 7);
-    // 月标签：这个月的第一格标一次，跨月才出字，不然整排都挤着
-    const month = first.getMonth() + 1;
-    weeks.push({ days, monthLabel: month !== prevMonth ? `${month}月` : '' });
-    prevMonth = month;
+  // 从本月往前推 MONTHS - 1 个月：Date 的年/月会自动向借位，不用自己处理跨年
+  const now = new Date();
+  const cells = [];
+  for (let i = MONTHS - 1; i >= 0; i--) {
+    const dt = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    const key = `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, '0')}`;
+    const rec = byMonth.get(key);
+    cells.push({
+      key  : key,
+      name : `${dt.getMonth() + 1}月`,
+      count: rec ? rec.count : 0,
+      mods : rec ? [...rec.mods] : []
+    });
   }
-  return { weeks, shown, from: dayKey(start), to: dayKey(today) };
+
+  const top = Math.max(1, ...cells.map(c => c.count));
+  let shown = 0;
+  cells.forEach(c => {
+    shown += c.count;
+    c.ratio  = c.count / top;
+    // 最低给 6%，不然「1 篇」和「0 篇」在 104px 高的图里分不出来
+    c.height = c.count ? Math.max(6, Math.round(c.ratio * 100)) : 2;
+    c.label  = `${c.key} · ${c.count} 篇${c.mods.length ? ` · ${c.mods.join('、')}` : ''}`;
+  });
+
+  return { cells, shown, top, from: cells[0].key, to: cells[MONTHS - 1].key };
 }
 
 function build(hexo) {
@@ -153,7 +135,7 @@ function build(hexo) {
 
   return {
     tops,
-    heat  : buildHeat(posts),
+    months: buildMonths(posts),
     recent,
     total : posts.length
   };
@@ -170,5 +152,5 @@ hexo.extend.filter.register('before_generate', () => {
   hexo.theme.config.bento = bento;
   hexo.theme.setView('index.njk', fs.readFileSync(TEMPLATE, 'utf8'));
   hexo.log.info(`[bento-home] 首页 ${bento.tops.map(t => `${t.name} ${t.kicker}`).join(' / ')}；`
-    + `热力图 ${bento.heat.from} → ${bento.heat.to}，52 周 ${bento.heat.shown} 篇`);
+    + `按月热度 ${bento.months.from} → ${bento.months.to}，${MONTHS} 个月合计 ${bento.months.shown} 篇，最高 ${bento.months.top} 篇/月`);
 }, 10);

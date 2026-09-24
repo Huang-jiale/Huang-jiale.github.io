@@ -21,6 +21,8 @@ custom_file_path:
   variable: source/_data/variables.styl
   style: source/_data/styles.styl
   postMeta: tools/post-readtime.njk
+  # 侧栏「站点概览」那一栏：文章页里换成同模块的其他文章（见 tools/sidebar-module.njk）
+  sidebar: tools/sidebar-module.njk
   bodyEnd: tools/toc-fold.njk
 
 # 强调色：全站只留一个蓝（顶栏进度、选中文字、按钮、链接都跟着走）
@@ -97,6 +99,17 @@ codeblock:
     style: default
 
 # ---------------------------------------------------------------
+# 文章页标题下面那一行：只留字数/预计时间（tools/post-readtime.njk 注入）
+# 日期是我跑脚本导入那天、分类面包屑侧栏和底部标签都有，两处都是重复信息 → 关掉
+# ---------------------------------------------------------------
+post_meta:
+  item_text: true
+  created_at: false
+  updated_at:
+    enable: false
+  categories: false
+
+# ---------------------------------------------------------------
 # 文章侧栏目录：课（h2）常显，课内小标题（h3）默认折叠，点课名才展开
 # wrap: true 让长标题换行而不是打省略号（240px 的侧栏里省略号等于没有目录）。
 # expand_all 这里写 true 只为关掉主题那套「滚到哪个课就自动撑开哪个」的 CSS
@@ -111,6 +124,16 @@ toc:
   max_depth: 3
 
 # ---------------------------------------------------------------
+# 一键到顶：右下角那颗圆角按钮（样式在 styles.styl 的「一键到顶」一节）。
+# 主题自带（widgets.njk 出 .back-to-top，utils.js 滚过 5% 才加 .back-to-top-on、点一下回顶）。
+# sidebar: true 会把它塞进侧栏内部（Pisces 上正好压在左栏里，看不见），所以留在页面右下角。
+# ---------------------------------------------------------------
+back2top:
+  enable: true
+  sidebar: false
+  scrollpercent: false
+
+# ---------------------------------------------------------------
 # 阅读进度：页面顶部一条细线，颜色在 styles.styl 里跟着 --accent 走
 # （主题自带：widgets.njk 出 .reading-progress-bar，utils.js 滚动时写 --progress）
 # ---------------------------------------------------------------
@@ -121,6 +144,13 @@ reading_progress:
   reversed: false
   color: "#0071e3"
   height: 3px
+
+# ---------------------------------------------------------------
+# 页脚：只留版权行，去掉「由 Hexo & NexT 强力驱动」
+# ---------------------------------------------------------------
+footer:
+  since: 2026
+  powered: false
 
 # ---------------------------------------------------------------
 # 评论：默认关闭，二选一填好后把 comments.active 写上名字

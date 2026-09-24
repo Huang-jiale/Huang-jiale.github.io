@@ -26,34 +26,21 @@
     <section class="bento">
       <div class="bento-grid">
 
-        {%- set heat = theme.bento.heat %}
+        {%- set months = theme.bento.months %}
         <article class="bento-card bento-card--heat">
-          <p class="bento-kicker">最近 52 周 · {{ heat.shown }} 篇</p>
-          <div class="heat">
-            <div class="heat-months">
-              {%- for w in heat.weeks %}
-              <span class="heat-month">{{ w.monthLabel }}</span>
-              {%- endfor %}
+          <p class="bento-kicker">近 12 个月入库 {{ months.shown }} 篇 · 最高一个月 {{ months.top }} 篇</p>
+          <div class="months">
+            {%- for m in months.cells %}
+            <div class="month-col" title="{{ m.label }}">
+              <span class="month-count">{{ m.count or '' }}</span>
+              <span class="month-track"><span class="month-bar" style="height: {{ m.height }}%"></span></span>
+              <span class="month-name">{{ m.name }}</span>
             </div>
-            <div class="heat-cols">
-              {%- for w in heat.weeks %}
-              <div class="heat-col">
-                {%- for d in w.days %}
-                {%- if d.count %}
-                <span class="heat-cell heat-l{{ d.level }}" title="{{ d.label }}"></span>
-                {%- elif d.future %}
-                <span class="heat-cell heat-cell--future"></span>
-                {%- else %}
-                <span class="heat-cell heat-l0"></span>
-                {%- endif %}
-                {%- endfor %}
-              </div>
-              {%- endfor %}
-            </div>
-            <div class="heat-foot">
-              <span class="heat-range">{{ heat.from }} → {{ heat.to }}</span>
-              <span class="heat-legend">少<i class="heat-cell heat-l0"></i><i class="heat-cell heat-l1"></i><i class="heat-cell heat-l2"></i><i class="heat-cell heat-l3"></i><i class="heat-cell heat-l4"></i>多</span>
-            </div>
+            {%- endfor %}
+          </div>
+          <div class="heat-foot">
+            <span class="heat-range">{{ months.from }} → {{ months.to }}</span>
+            <span class="heat-range">按月统计：时政按月归档，其余按导入月份</span>
           </div>
         </article>
 

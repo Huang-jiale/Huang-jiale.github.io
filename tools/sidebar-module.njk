@@ -1,0 +1,46 @@
+{#
+  侧栏「站点概览」那一栏在文章页里换成同模块的其他文章（_config.next.yml 的 custom_file_path.sidebar）。
+  注入点在 .site-overview-wrap 里面、主题自己那块概览的后面；主题那几块由 styles.styl 用
+  `.site-overview-wrap:has(.module-nav)` 隐藏 —— 只有文章页会渲染出 .module-nav，
+  所以首页/分类页的站点概览原样保留。同理那一格标签（站点概览 → 本模块文章）由
+  source/js/sidebar-module.js 改，改的判断依据也是 DOM 里有没有 .module-nav。
+
+  数据来自 scripts/module-nav.js。分组时只有当前篇所在那一组带 .is-open（styles.styl 认这个类
+  决定列开不开），点别组组名由 source/js/sidebar-module.js 换 .is-open，一次只开一组。
+#}
+{%- if is_post() %}
+  {%- set nav = module_nav(page) %}
+  {%- if nav and nav.total > 1 %}
+    <nav class="module-nav" aria-label="本模块的其他文章">
+      <p class="module-nav-head">
+        <a class="module-nav-title" href="{{ url_for(nav.url) }}">{{ nav.name }}</a>
+        <span class="module-nav-count">{{ nav.total }} 篇</span>
+      </p>
+      {%- if nav.groups %}
+        {%- for g in nav.groups %}
+          <div class="module-nav-sec{% if g.current %} is-open{% endif %}">
+            <button type="button" class="module-nav-group" aria-expanded="{{ 'true' if g.current else 'false' }}">
+              <span>{{ g.name }}</span>
+              <span class="module-nav-count">{{ g.count }}</span>
+            </button>
+            <ul class="module-nav-list">
+              {%- for p in g.list %}
+                <li{% if p.current %} class="is-current" aria-current="true"{% endif %}>
+                  <a href="{{ url_for(p.url) }}">{{ p.title }}</a>
+                </li>
+              {%- endfor %}
+            </ul>
+          </div>
+        {%- endfor %}
+      {%- else %}
+        <ul class="module-nav-list">
+          {%- for p in nav.items %}
+            <li{% if p.current %} class="is-current" aria-current="true"{% endif %}>
+              <a href="{{ url_for(p.url) }}">{{ p.title }}</a>
+            </li>
+          {%- endfor %}
+        </ul>
+      {%- endif %}
+    </nav>
+  {%- endif %}
+{%- endif %}

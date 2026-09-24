@@ -18,13 +18,6 @@
   --surface-2: #f5f5f7;    // 卡片内的次级色块、hover 底
   --accent: #0071e3;
   --accent-ink: #ffffff;
-  // 首页热力图的五档深浅（0 = 那天没发），深色模式在下面整套换掉
-  --heat-0: #ececf0;
-  --heat-1: #cfe5fb;
-  --heat-2: #9fcbf4;
-  --heat-3: #4f97e8;
-  --heat-4: #0071e3;
-  --heat-future: transparent;
   --radius-lg: 20px;
   --radius-md: 14px;
   --radius-pill: 980px;
@@ -42,11 +35,6 @@ if (hexo-config('darkmode')) {
       --surface-2: #2c2c2e;
       --accent: #6cb6ff;
       --accent-ink: #000000;
-      --heat-0: #232326;
-      --heat-1: #1d3b57;
-      --heat-2: #2a5c88;
-      --heat-3: #3f87c4;
-      --heat-4: #6cb6ff;
     }
   }
 }
@@ -471,80 +459,68 @@ details.answer {
 }
 
 // ---------------------------------------------------------------
-// 首页热力图：一列 = 一周，一格 = 一天，纯 CSS 静态渲染（不用 JS、不动画）
-// 52 列在窄屏放不下时整块横向滑，不把格子压扁——压扁就看不出周与周的边界了
+// 首页按月热度：一格 = 一个月，柱子高度 = 当月入库篇数 ÷ 最高月份
+// 纯 CSS 静态渲染（数据 scripts/bento-home.js、模板 tools/bento-home.njk），没有 JS 和动画
 // ---------------------------------------------------------------
-.heat {
-  --heat-cell: 11px;
-  --heat-gap: 3px;
-}
-
-.heat-months {
-  color: var(--muted);
+.months {
+  align-items: end;
   display: flex;
-  flex-wrap: nowrap;
-  font-feature-settings: 'tnum' 1;
-  font-size: .6875em;
-  gap: var(--heat-gap);
-  height: 1.5em;
-  // 实测这一行会被居中对齐（整排右移 ~17px，月份标签和格子对不上），显式钉左
-  justify-content: flex-start;
-  overflow: hidden;
+  gap: 8px;
 }
 
-.heat-month {
-  flex: 0 0 var(--heat-cell);
-  // flex 项默认 min-width:auto，「10月」这种两字标签会把 11px 的格子撑宽、整排错位；
-  // 放开到 0 之后格子保持一格宽，文字照常溢出盖在后面的空格上
+.month-col {
+  align-items: center;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 6px;
+  // 12 列靠 flex 收缩，不写 min-width:0 的话「10月」这种两字标签会把列撑破
   min-width: 0;
+}
+
+.month-count {
+  color: var(--muted);
+  font-feature-settings: 'tnum' 1;
+  font-size: .75em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+  // 空月份不写字也占一行，12 根柱子的顶端才齐平
+  min-height: 1.2em;
+}
+
+.month-track {
+  align-items: end;
+  background: var(--surface-2);
+  border-radius: 6px;
+  display: flex;
+  height: 104px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.month-bar {
+  background: var(--accent);
+  border-radius: 6px 6px 0 0;
+  display: block;
+  width: 100%;
+}
+
+.month-name {
+  color: var(--muted);
+  font-size: .75em;
   white-space: nowrap;
 }
-
-.heat-cols {
-  display: flex;
-  gap: var(--heat-gap);
-  overflow-x: auto;
-  padding-bottom: 2px;
-}
-
-.heat-col {
-  display: flex;
-  flex: 0 0 var(--heat-cell);
-  flex-direction: column;
-  gap: var(--heat-gap);
-}
-
-.heat-cell {
-  border-radius: 2px;
-  display: block;
-  flex: 0 0 var(--heat-cell);
-  height: var(--heat-cell);
-  width: var(--heat-cell);
-}
-
-.heat-l0 { background: var(--heat-0); }
-.heat-l1 { background: var(--heat-1); }
-.heat-l2 { background: var(--heat-2); }
-.heat-l3 { background: var(--heat-3); }
-.heat-l4 { background: var(--heat-4); }
-.heat-cell--future { background: var(--heat-future); }
 
 .heat-foot {
   align-items: center;
   color: var(--muted);
   display: flex;
+  flex-wrap: wrap;
   font-feature-settings: 'tnum' 1;
   font-size: .75em;
   gap: 8px;
   justify-content: space-between;
-  margin-top: 10px;
-}
-
-.heat-legend {
-  align-items: center;
-  display: inline-flex;
-  font-variant-numeric: tabular-nums;
-  gap: 4px;
+  margin-top: 12px;
 }
 
 .bento-kids {
@@ -657,9 +633,12 @@ details.answer {
   }
 
   // 手机上格子缩一点，52 周还是靠横向滑动看，不硬塞进屏宽
-  .heat {
-    --heat-cell: 9px;
-    --heat-gap: 2px;
+  .months {
+    gap: 4px;
+  }
+
+  .month-track {
+    height: 72px;
   }
 }
 
@@ -772,6 +751,185 @@ details.answer {
 // ---------------------------------------------------------------
 .reading-progress-bar {
   background: var(--accent);
+}
+
+// ---------------------------------------------------------------
+// 侧栏「本模块文章」：文章页里把主题的站点概览（作者名 / 日志统计 / GitHub 链接）整块让位，
+// 换成当前篇所在模块的兄弟篇（模板 tools/sidebar-module.njk，数据 scripts/module-nav.js）。
+// .module-nav 只在文章页渲染出来，所以 :has() 这个条件波及不到首页和分类页；
+// 格子标签「站点概览 → 本模块文章」由 source/js/sidebar-module.js 改，判断依据同上。
+// ---------------------------------------------------------------
+.site-overview-wrap:has(.module-nav) {
+  > :not(.module-nav) {
+    display: none;
+  }
+}
+
+.module-nav {
+  color: var(--ink-soft);
+  font-size: .9375em;
+  text-align: left;
+
+  .module-nav-head {
+    align-items: baseline;
+    display: flex;
+    gap: 8px;
+    margin: 0 0 10px;
+  }
+
+  // 模块名就是该模块的分类页，右下角那颗数字是这一栏的总篇数
+  .module-nav-title {
+    color: var(--ink);
+    font-weight: 600;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  .module-nav-count {
+    color: var(--muted);
+    flex: none;
+    font-feature-settings: 'tnum' 1;
+    font-size: .85em;
+    font-variant-numeric: tabular-nums;
+    margin-left: auto;
+  }
+
+  // 组名（题型 / 月份）：点一下展开，样式跟侧栏目录的课保持一致
+  .module-nav-group {
+    align-items: baseline;
+    background: none;
+    border: 0;
+    color: var(--muted);
+    cursor: pointer;
+    display: flex;
+    font-family: inherit;
+    font-size: .85em;
+    letter-spacing: .02em;
+    margin-top: 12px;
+    padding: 2px 8px;
+    width: 100%;
+
+    &:hover {
+      color: var(--ink);
+    }
+
+    &::before {
+      border-bottom: 1.6px solid currentColor;
+      border-right: 1.6px solid currentColor;
+      content: '';
+      flex: none;
+      height: 5px;
+      margin-right: 8px;
+      transform: rotate(-45deg);
+      transition: transform .2s var(--ease);
+      width: 5px;
+    }
+  }
+
+  .is-open > .module-nav-group {
+    color: var(--ink-soft);
+
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+
+  .module-nav-list {
+    --height: auto;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding-left: 0;
+    // visibility 一并收起：收起的组只是看不见了，链接还留在键盘 Tab 顺序里很怪
+    transition: height .28s var(--ease), visibility .28s;
+    visibility: hidden;
+
+    li {
+      list-style: none;
+      margin: 0;
+    }
+
+    a {
+      border-radius: 8px;
+      color: var(--ink-soft);
+      display: block;
+      line-height: 1.45;
+      padding: 5px 8px;
+      transition: background-color .2s var(--ease), color .2s var(--ease);
+    }
+
+    a:hover {
+      background: var(--surface-2);
+      color: var(--ink);
+    }
+  }
+
+  .is-open > .module-nav-list {
+    height: var(--height);
+    visibility: visible;
+  }
+
+  // 没有第三层分类的模块（素描）没有组，列表直接挂在 .module-nav 下面，不参与折叠
+  > .module-nav-list {
+    height: auto;
+    visibility: visible;
+  }
+
+  // 当前这篇：左边一条竖线 + 强调色，不画分割线
+  .module-nav-list .is-current > a {
+    background: var(--surface-2);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    color: var(--accent);
+    font-weight: 600;
+    margin-left: 2px;
+    padding-left: 14px;
+  }
+}
+
+// ---------------------------------------------------------------
+// 一键到顶：主题自带（_config.next.yml 的 back2top），点击和滚过 5% 才显出来
+// 都是 source/js/utils.js 现成的（.back-to-top-on），这里只搬到右下角、放大成圆角按钮。
+// 原来它在 desktop 上是 left:30px 的一颗 26px 深灰小块——正好压在 240px 宽的侧栏上，看不见。
+// ---------------------------------------------------------------
+.back-to-top {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
+  bottom: -100px;
+  box-shadow: $shadow-soft;
+  color: var(--ink-soft);
+  height: 42px;
+  left: auto;
+  opacity: 1;
+  right: 30px;
+  transition-property: bottom, color, border-color;
+  width: 42px;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  // 图标带主题的 .fa-lg（1.333em），选择器多写一层才压得住它，别让箭头顶出按钮
+  i.fa {
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    width: auto;
+  }
+}
+
+.back-to-top.back-to-top-on {
+  bottom: 30px;
+}
+
++tablet-mobile() {
+  .back-to-top {
+    right: 20px;
+  }
 }
 
 // ---------------------------------------------------------------

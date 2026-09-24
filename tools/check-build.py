@@ -11,7 +11,7 @@
 分类层数按模块定：一级只有 工作 / 学习 / 生活；「学习」下面三层（模块 / 子分类），
 「生活」下面素描是两层（大类降到标签）、六项是三层（阶段名当三级），所以规则是 2~3 层、只有「学习」强制三层。
 """
-import io, sys, os, re, glob
+import io, sys, os, re, glob, datetime
 import urllib.parse
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -304,32 +304,41 @@ want_empty = sum(1 for n in ('工作', '生活') if not tops.get(n))
 got_empty = [n for n, c in zip(card_names, mod_cls) if 'empty' in c]
 check(len(got_empty) == want_empty, f'空模块占位卡 {len(got_empty)} 张', f'源里没文章的模块有 {want_empty} 个')
 
-# 热力图：52 列 × 7 格，带悬停文本的格子 = 窗口内真正有发文的日期
+# 按月热度：一根柱子一个月，柱高 = 当月篇数 / 最高月份。
+# （2026-09-24 换掉了「近 52 周日历」：导入都是挑一天跑完，52 周里只有 9 天有发文，
+#   整张图 96% 空白，看着像坏了 —— 按月是这套数据唯一诚实的精度。）
 heat_card = [c for c, k in zip(cards_raw, card_cls) if 'heat' in k][0]
-# 只数网格里的格子：图例那 5 个小方块也是 .heat-cell，别混进来当数据格
-heat_grid = heat_card.split('heat-cols', 1)[1].split('heat-foot', 1)[0]
-heat_cols = len(re.findall(r'<div class="heat-col">', heat_grid))
-heat_cells = len(re.findall(r'class="heat-cell', heat_grid))
-check(heat_cols == 52, f'热力图 {heat_cols} 列（一列一周）', '应该 52 周')
-check(heat_cells == 52 * 7, f'热力图 {heat_cells} 格', '应该 364 格 = 52 × 7')
-titles = re.findall(r'<span class="heat-cell heat-l[1-4]" title="([^"]+)"', heat_grid)
-check(len(titles) >= 1, f'有发文的格子 {len(titles)} 个，都带悬停文本', str(titles[:2]))
-heat_days = {t.split(' · ')[0] for t in titles}
-check(len(heat_days) == len(titles), '悬停文本里的日期不重复', f'{len(titles)} 格 / {len(heat_days)} 个日期')
-check(all(re.fullmatch(r'\d{4}-\d\d-\d\d', d) for d in heat_days), '悬停文本以完整日期开头', str(sorted(heat_days)[:2]))
-rng = re.search(r'<span class="heat-range">(\d{4}-\d\d-\d\d) → (\d{4}-\d\d-\d\d)</span>', body_home)
-check(bool(rng), '热力图标了起止日期', rng.group(0) if rng else '')
-if rng:
-    src_dates = []
-    for v in src.values():
-        m = re.search(r'^date:\s*(\d{4}-\d\d-\d\d)', v, re.M)
-        if m:
-            src_dates.append(m.group(1))
-    in_win = [d for d in src_dates if rng.group(1) <= d <= rng.group(2)]
-    heat_sum = sum(int(m.group(1)) for m in re.finditer(r'·\s*(\d+) 篇', ' '.join(titles)))
-    check(heat_sum == len(in_win), f'热力图格子里的篇数合计 {heat_sum} = 起止区间内的文章数 {len(in_win)}',
-          f'{rng.group(1)} → {rng.group(2)}')
-    check(len(heat_days) == len(set(in_win)), f'有格子的天数 {len(heat_days)} = 窗口内有发文的日期数 {len(set(in_win))}')
+heat_grid = heat_card.split('class="months"', 1)[1].split('heat-foot', 1)[0]
+bars = re.findall(r'<div class="month-col" title="([^"]*)">.*?style="height: (\d+)%"', heat_grid, re.S)
+check(len(bars) == 12, f'按月热度 {len(bars)} 根柱子（一月一根）', '应该 12 根 = 近 12 个月')
+
+src_dates = []                              # 篇数一律回到 source 的 front-matter 现算，不信生成脚本
+for v in src.values():
+    m = re.search(r'^date:\s*(\d{4}-\d\d-\d\d)', v, re.M)
+    if m:
+        src_dates.append(m.group(1))
+want_month = {}
+for d in src_dates:
+    want_month[d[:7]] = want_month.get(d[:7], 0) + 1
+
+today = datetime.date.today()
+expect_keys = []                            # 本月往前数 12 个月，(月-1) 的整除/取模会自动跨年借位
+for i in range(11, -1, -1):
+    expect_keys.append('%04d-%02d' % (today.year + (today.month - i - 1) // 12, (today.month - i - 1) % 12 + 1))
+cols = [(t.split(' · ')[0], int(re.search(r'· (\d+) 篇', t).group(1)), int(h)) for t, h in bars]
+check([c[0] for c in cols] == expect_keys, '柱子是从本月往前数的 12 个月', str([c[0] for c in cols]))
+wrong = {k: (n, want_month.get(k, 0)) for k, n, _ in cols if n != want_month.get(k, 0)}
+check(not wrong, '每根柱子的篇数 = 源里那个月的发文数', str(wrong))
+top = max(1, max(n for _, n, _ in cols))
+hbad = [(k, n, h) for k, n, h in cols if h != (2 if n == 0 else max(6, int(n / top * 100 + 0.5)))]
+check(not hbad, f'柱高按「当月篇数 / 最高月份 {top} 篇」算（0 篇留矮栈、有内容最低 6%）', str(hbad[:3]))
+kicker_heat = re.search(r'<p class="bento-kicker">(.*?)</p>', heat_card).group(1)
+check(kicker_heat == f'近 12 个月入库 {sum(n for _, n, _ in cols)} 篇 · 最高一个月 {top} 篇',
+      '卡顶文案 = 柱子上那些数现算出来的合计', kicker_heat)
+rng = re.search(r'<span class="heat-range">(\d{4}-\d\d) → (\d{4}-\d\d)</span>', body_home)
+check(bool(rng) and rng.group(1) == cols[0][0] and rng.group(2) == cols[-1][0], '脚注标了统计区间',
+      rng.group(0) if rng else '')
+check('heat-cell' not in heat_card and 'heat-cols' not in heat_card, '旧的 52 周格子已经拆干净', '')
 
 # 模块卡的篇数是从 source 现算的，两边必须一致
 learn_card = dict(zip(card_names, mod_raw))['学习']
@@ -568,6 +577,101 @@ check(len(pages_full) >= 100, f'{len(pages_full)} 篇文章页参与字数核对
 check(not rt_bad, '标题下的字数/时长 == 拿产物正文现算的值（没数进 markdown 噪声，也没漏内容）', str(rt_bad[:3]))
 check(any('小时' in want_readtime(body_chars(h)) for h in pages_full.values()),
       '最长的那几篇显示成「约 N 小时」，不是一串几百分钟')
+
+# ---------- 12. 侧栏「本模块文章」/ 文章页瘦身 / 一键到顶 ----------
+
+# 每篇属于哪个模块（分类第二层）、那个模块一共几篇，全部从 source 现算
+mod_of = {}
+for k, v in src.items():
+    slug = fm_slug(v) or norm(k)[:-3].rsplit('/', 1)[1]
+    mod_of[slug] = fm_categories(v)
+mod_want = {}
+for cats in mod_of.values():
+    if len(cats) > 1:
+        mod_want[cats[1]] = mod_want.get(cats[1], 0) + 1
+
+SM = 'public/js/sidebar-module.js'
+check(os.path.exists(SM), '侧栏脚本发到了 /js/sidebar-module.js（bodyEnd 钩子挂的 tools/toc-fold.njk）')
+sj = open(SM, encoding='utf-8').read() if os.path.exists(SM) else ''
+check('.module-nav' in sj and '本模块文章' in sj and 'is-open' in sj,
+      '脚本干的活：有 .module-nav 才改格子标签 + 分组一次只开一组')
+
+check(re.search(r'\.site-overview-wrap:has\(\.module-nav\)\s*>\s*:not\(\.module-nav\)\s*\{[^}]*display: none', css),
+      'CSS：文章页把主题的站点概览（作者/统计/GitHub 链接）整块让位')
+check(re.search(r'\.module-nav \.module-nav-list \{[^}]*height: 0', css), 'CSS：分组列表默认收起')
+check(re.search(r'\.module-nav \.is-open > \.module-nav-list \{[^}]*height: var\(--height\)', css),
+      'CSS：只有 JS/服务端标了 .is-open 的那一组展开')
+check(re.search(r'\.module-nav > \.module-nav-list \{[^}]*height: auto', css),
+      'CSS：没有第三层分类的模块（素描）列表平铺，不会被折叠规则吃掉')
+check(re.search(r'\.module-nav \.module-nav-list \.is-current > a \{[^}]*var\(--accent\)', css),
+      'CSS：当前这篇有强调色 + 竖线，不靠分割线')
+check(re.search(r'\.back-to-top \{[^}]*left: auto[^}]*right: 30px', css), 'CSS：一键到顶在右下角（原来压在左侧栏上）')
+check(css.rindex('.back-to-top i.fa') > css.index('.back-to-top .fa'), 'CSS：箭头尺寸的覆写排在主题规则之后')
+
+nav_bad, meta_bad = [], []
+for slug, full in sorted(pages_full.items()):
+    cats = mod_of.get(slug) or []
+    if len(cats) < 2:
+        nav_bad.append(f'{slug} 源里分类不足两层，侧栏没得可列')
+        continue
+    mod, grp = cats[1], (cats[2] if len(cats) > 2 else '')
+    total = mod_want[mod]
+    i = full.find('<nav class="module-nav"')
+    if i < 0:
+        nav_bad.append(f'{slug} 侧栏没有 .module-nav')
+        continue
+    seg = full[i:full.find('</nav>', i) + 6]
+    name = re.search(r'<a class="module-nav-title" href="([^"]*)">([^<]*)</a>', seg)
+    count = re.search(r'class="module-nav-count">([^<]*)</span>', seg)
+    items = re.findall(r'<li([^>]*)>\s*<a href="([^"]*)">([^<]*)</a>', seg)
+    cur = [u for a, u, t in items if 'is-current' in a]
+    secs = re.findall(r'<div class="module-nav-sec( is-open)?">\s*<button[^>]*>\s*<span>([^<]*)</span>', seg)
+    grouped = total > 6 and bool(grp)
+    open_secs = [c[1] for c in secs if c[0]]
+    if not name or name.group(2) != mod:
+        nav_bad.append(f'{slug} 栏目标题不是模块名 {mod}：{name.group(2) if name else None}')
+    elif count.group(1) != f'{total} 篇':
+        nav_bad.append(f'{slug} 「{mod}」标了 {count.group(1)}，源里是 {total} 篇')
+    elif len(items) != total:
+        nav_bad.append(f'{slug} 列了 {len(items)} 篇，源里 {mod} 有 {total} 篇')
+    elif len(cur) != 1 or not cur[0].endswith(f'/{slug}/'):
+        nav_bad.append(f'{slug} 当前篇高亮不对：{cur}')
+    elif bool(secs) != grouped or (grouped and (len(open_secs) != 1 or open_secs[0] != grp)):
+        nav_bad.append(f'{slug} 分组不对：该分组={grouped}，实际 {len(secs)} 组，开着的 {open_secs}')
+    elif [t.strip() for a, u, t in items if 'is-current' in a][0] != re.search(r'<h1 class="post-title"[^>]*>([^<]*)</h1>', full).group(1).strip():
+        nav_bad.append(f'{slug} 高亮那条的文字跟本页标题不一致')
+
+    # 标题下面那一行只留字数/时长；日期、分类面包屑都不要再出现
+    m = re.search(r'<div class="post-meta">(.*?)</div>', full, re.S)
+    if not m:
+        meta_bad.append(f'{slug} 找不到 .post-meta')
+        continue
+    line = m.group(1)
+    # `post-meta-item-icon` 里也含 "post-meta-item"，所以只认后面紧跟空格或引号的那个类
+    n_items = len(re.findall(r'class="post-meta-item[\s"]', line))
+    if n_items != 1 or 'post-readtime' not in line:
+        meta_bad.append(f'{slug} 标题下不止字数行：{n_items} 项')
+    elif '<time' in line or 'fa-folder' in line:
+        meta_bad.append(f'{slug} 标题下还有日期或分类')
+    if 'class="post-tags"' not in full:
+        meta_bad.append(f'{slug} 底部的标签被误删了（用户要保留）')
+    if 'powered-by' in full:
+        meta_bad.append(f'{slug} 页脚还有「由 Hexo 强力驱动」')
+
+check(len(mod_of) >= 100 and mod_want, f'模块篇数表算出来了：{len(mod_want)} 个模块 / {sum(mod_want.values())} 篇')
+check(not nav_bad, f'{len(pages_full)} 篇文章页的侧栏都列全本模块的兄弟篇', str(nav_bad[:3]))
+check(not meta_bad, '标题下只剩字数行：日期 / 分类面包屑 / 页脚驱动信息都没了，底部标签留着', str(meta_bad[:3]))
+
+# 首页 / 分类页 / 归档页没有 .module-nav，那一栏还是主题的站点概览
+static_pages = ['public/index.html', 'public/categories/index.html', 'public/archives/index.html', 'public/tags/index.html']
+left = [p for p in static_pages if not os.path.exists(p)]
+check(not left, '对照用的静态页都在', str(left))
+keep = [p for p in static_pages if os.path.exists(p) and ('module-nav' in open(p, encoding='utf-8').read()
+                                                          or 'site-author-name' not in open(p, encoding='utf-8').read())]
+check(not keep, '首页/分类/归档/标签页仍是「站点概览」，没被文章页的规则波及', str(keep))
+
+b2t = sorted(s for s, h in pages_full.items() if '<div class="back-to-top"' not in h)
+check(not b2t, f'{len(pages_full)} 篇文章页都挂了「一键到顶」那颗按钮', str(b2t[:3]))
 
 print('\n%s' % ('全部通过' % () if not fail else f'{len(fail)} 项失败：' + '；'.join(fail)))
 sys.stdout.flush()          # stdout 被我换成 TextIOWrapper 了，sys.exit 时不一定帮你刷管道
