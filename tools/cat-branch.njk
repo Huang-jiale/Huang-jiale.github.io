@@ -1,0 +1,69 @@
+{#
+  点进某个分类之后的那一页（/categories/学习/行测/）：主题的 layout/category.njk 整张顶掉
+  —— scripts/cat-tree.js 里 setView('category.njk', …)；hexo-generator-category 取的 layout 名
+  就是 ['category', 'archive', 'index']。不改 node_modules 里的文件：Actions 上 pnpm install 会拿回原版。
+
+  上半截是一棵小树：从一级模块顺着缩进走到本页（那一行是 <h1>，高亮、不自链），
+  有子分类的话接着往下展开一层。画法同总览页（一行一节点，styles.styl 里配折线）。
+  下半截是本页的文章列表：主题的 posts-collapse 那套年份表头 + MM-DD 日期不保留
+  —— 日期是导入那天写的，读者要的是顺序；顺序由 _config.yml 的 category_generator.order_by: date
+  定成升序，所以「第 2 页」接着「第 1 页」往后排，翻页不会乱。
+#}
+{% extends '_layout.njk' %}
+{% import '_macro/sidebar.njk' as sidebar_template with context %}
+
+{% block title %}{{ __('title.category') }}: {{ page.category }} | {{ title }}{% endblock %}
+
+{% block class %}category posts-collapse{% endblock %}
+
+{% block content %}
+  {%- set here = cat_here(page) %}
+  {%- set n = page.posts.toArray() %}
+  <div class="post-block">
+    <div class="post-content">
+      {%- if here and here.node %}
+      <section class="cat-card cat-card--here">
+        {%- for c in here.crumbs %}
+        {# 面包屑每一层在这页上都只有这一个孩子，所以一律是「└」不是「├」 #}
+        <div class="cat-row cat-row--l{{ loop.index0 }} is-tail">
+          <a class="cat-node cat-node--crumb" href="{{ url_for(c.url) }}">{{ c.name }}</a>
+        </div>
+        {%- endfor %}
+        {%- set d = here.crumbs.length %}
+        <div class="cat-row cat-row--l{{ d }} is-tail">
+          <h1 class="cat-node cat-node--here">{{ here.node.name }}<span class="cat-num">{{ here.node.count }}</span></h1>
+        </div>
+        {%- for leaf in here.node.children %}
+        <div class="cat-row cat-row--l{{ d + 1 }}{% if leaf.last %} is-tail{% endif %}">
+          <a class="cat-node cat-node--leaf" href="{{ url_for(leaf.url) }}">{{ leaf.name }}<span class="cat-num">{{ leaf.count }}</span></a>
+        </div>
+        {%- endfor %}
+      </section>
+      {%- else %}
+      <div class="collection-title">
+        <h1 class="collection-header">{{ page.category }}<small>{{ __('title.category') }}</small></h1>
+      </div>
+      {%- endif %}
+
+      <p class="cat-list-note">
+        {%- if here and here.node and here.node.children.length %}
+        下面 {{ here.node.children.length }} 个子分类、共 {{ here.node.count }} 篇；
+        {%- else %}
+        共 {{ n.length }} 篇；
+        {%- endif %}
+        这一页列 {{ n.length }} 篇，按导入顺序排。
+      </p>
+      <ul class="cat-posts">
+        {%- for post in n %}
+        <li><a href="{{ url_for(post.path) }}">{{ post.title }}</a></li>
+        {%- endfor %}
+      </ul>
+
+      {%- include '_partials/pagination.njk' -%}
+    </div>
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  {{ sidebar_template.render(false) }}
+{% endblock %}

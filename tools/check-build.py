@@ -304,41 +304,87 @@ want_empty = sum(1 for n in ('工作', '生活') if not tops.get(n))
 got_empty = [n for n, c in zip(card_names, mod_cls) if 'empty' in c]
 check(len(got_empty) == want_empty, f'空模块占位卡 {len(got_empty)} 张', f'源里没文章的模块有 {want_empty} 个')
 
-# 按月热度：一根柱子一个月，柱高 = 当月篇数 / 最高月份。
-# （2026-09-24 换掉了「近 52 周日历」：导入都是挑一天跑完，52 周里只有 9 天有发文，
-#   整张图 96% 空白，看着像坏了 —— 按月是这套数据唯一诚实的精度。）
+# GitHub 式日历：52 列 × 7 行，一格一天，周一在第一行。
+# （2026-09-24 用户点名要回日历，撤了中间那版按月柱状图。它确实「96% 是空白」——
+#   137 篇只落在 9 天里，因为导入是挑一天跑完的。这是数据的真实形状，不是 bug，
+#   所以脚注老老实实写「一格一天」，空白留白，不靠换口径把图填满。）
 heat_card = [c for c, k in zip(cards_raw, card_cls) if 'heat' in k][0]
-heat_grid = heat_card.split('class="months"', 1)[1].split('heat-foot', 1)[0]
-bars = re.findall(r'<div class="month-col" title="([^"]*)">.*?style="height: (\d+)%"', heat_grid, re.S)
-check(len(bars) == 12, f'按月热度 {len(bars)} 根柱子（一月一根）', '应该 12 根 = 近 12 个月')
+heat_grid = heat_card.split('class="heat-grid"', 1)[1].split('heat-foot', 1)[0]
+# 一行一个格子：class 里要么是 heat-l0..4（有日期的），要么是 is-future（还没到的）
+cells = re.findall(r'<span class="heat-cell ([a-z0-9-]+)"(?: title="([^"]*)")?></span>', heat_grid)
+check(len(cells) == 364, f'日历 {len(cells)} 格（应为 52 列 × 7 行 = 364）', str(len(cells)))
 
-src_dates = []                              # 篇数一律回到 source 的 front-matter 现算，不信生成脚本
+today = datetime.date.today()
+# 末列是本周：本周一往前数 51 周 = 第一格
+start = today - datetime.timedelta(days=today.weekday() + 51 * 7)
+want_day = {}                                 # 篇数一律回到 source 的 front-matter 现算，不信生成脚本
 for v in src.values():
     m = re.search(r'^date:\s*(\d{4}-\d\d-\d\d)', v, re.M)
     if m:
-        src_dates.append(m.group(1))
-want_month = {}
-for d in src_dates:
-    want_month[d[:7]] = want_month.get(d[:7], 0) + 1
+        want_day[m.group(1)] = want_day.get(m.group(1), 0) + 1
 
-today = datetime.date.today()
-expect_keys = []                            # 本月往前数 12 个月，(月-1) 的整除/取模会自动跨年借位
-for i in range(11, -1, -1):
-    expect_keys.append('%04d-%02d' % (today.year + (today.month - i - 1) // 12, (today.month - i - 1) % 12 + 1))
-cols = [(t.split(' · ')[0], int(re.search(r'· (\d+) 篇', t).group(1)), int(h)) for t, h in bars]
-check([c[0] for c in cols] == expect_keys, '柱子是从本月往前数的 12 个月', str([c[0] for c in cols]))
-wrong = {k: (n, want_month.get(k, 0)) for k, n, _ in cols if n != want_month.get(k, 0)}
-check(not wrong, '每根柱子的篇数 = 源里那个月的发文数', str(wrong))
-top = max(1, max(n for _, n, _ in cols))
-hbad = [(k, n, h) for k, n, h in cols if h != (2 if n == 0 else max(6, int(n / top * 100 + 0.5)))]
-check(not hbad, f'柱高按「当月篇数 / 最高月份 {top} 篇」算（0 篇留矮栈、有内容最低 6%）', str(hbad[:3]))
+peak = max(want_day.values())
+bad_seq, bad_count, bad_level, bad_tip = [], [], [], []
+for i, (cls, tip) in enumerate(cells):
+    day = (start + datetime.timedelta(days=i)).isoformat()
+    if day > today.isoformat():               # 还没到的日子：只留白，不标篇数
+        if cls != 'is-future' or tip:
+            bad_seq.append((i, day, cls, tip))
+        continue
+    lvl = cls[7:]
+    n = want_day.get(day, 0)
+    if cls != f'heat-l{n and min(4, -(-n * 4 // peak))}':
+        bad_level.append((day, cls, n))
+    # 悬停必须报日期（用户原话：鼠标放上去有显示日期），有内容的日子再报篇数和模块
+    if not tip.startswith(f'{day} · {n} 篇'):
+        bad_tip.append((day, tip))
+    if n and f'· {n} 篇' not in tip:
+        bad_count.append((day, n, tip))
+check(not bad_seq, f'{len(cells)} 格逐日连续，从 {start.isoformat()} 那周的周一排到今天之后', str(bad_seq[:3]))
+check(not bad_count, '每格的 tooltip 报出了那天的篇数', str(bad_count[:3]))
+check(not bad_level, f'色阶按「单日最多 {peak} 篇」四等分（空格子=l0）', str(bad_level[:3]))
+check(not bad_tip, 'tooltip 一律以「日期 · N 篇」开头，没内容的那天也标日期', str(bad_tip[:3]))
+
+got_days = {}
+for _, t in cells:
+    if t:
+        got_days[t.split(' · ')[0]] = int(re.search(r'· (\d+) 篇', t).group(1))
+check({k: v for k, v in got_days.items() if v} == want_day,
+      f'tooltip 里的 {len(want_day)} 个有内容的日子（及其篇数）= 源里的发文日',
+      str(sorted(set(k for k, v in got_days.items() if v) ^ set(want_day))[:3]))
+check(len(got_days) == 51 * 7 + today.weekday() + 1, f'带日期的格子 {len(got_days)} 格 = 起点到今天，剩下 {364 - len(got_days)} 格是本周还没到的那几天', '')
+check(heat_grid.count('heat-l4') == sum(1 for n in want_day.values() if min(4, -(-n * 4 // peak)) == 4),
+      '最深那一档的格子数和「达到峰值档」的天数一致', str(heat_grid.count('heat-l4')))
+
+# 月首标签：贴在自己那一列的头上，两枚之间至少隔两周，不然会叠字
+marks = [(int(c) - 1, lab) for c, lab in
+         re.findall(r'<span class="heat-month" style="grid-column: (\d+)">([^<]+)</span>', heat_card)]
+check(bool(marks), f'日历上方 {len(marks)} 个月首标签', '')
+check(all(b[0] - a[0] >= 2 for a, b in zip(marks, marks[1:])), '月首标签不重叠（相邻至少隔 2 列）', str(marks))
+for col, lab in marks:
+    d = start + datetime.timedelta(days=col * 7)
+    check(lab == f'{d.month}月', f'第 {col + 1} 列的标签 {lab} = 那一列周一起始的月份', d.isoformat())
+
+check(heat_card.split('heat-foot', 1)[1].count('heat-cell') == 5, '图例五档（少 → 多）在脚注里', '')
+
 kicker_heat = re.search(r'<p class="bento-kicker">(.*?)</p>', heat_card).group(1)
-check(kicker_heat == f'近 12 个月入库 {sum(n for _, n, _ in cols)} 篇 · 最高一个月 {top} 篇',
-      '卡顶文案 = 柱子上那些数现算出来的合计', kicker_heat)
-rng = re.search(r'<span class="heat-range">(\d{4}-\d\d) → (\d{4}-\d\d)</span>', body_home)
-check(bool(rng) and rng.group(1) == cols[0][0] and rng.group(2) == cols[-1][0], '脚注标了统计区间',
-      rng.group(0) if rng else '')
-check('heat-cell' not in heat_card and 'heat-cols' not in heat_card, '旧的 52 周格子已经拆干净', '')
+check(kicker_heat == f'近 52 周入库 {sum(want_day.values())} 篇 · 有内容 {len(want_day)} 天 · 单日最多 {peak} 篇',
+      '卡顶文案 = 格子上那些数现算出来的合计', kicker_heat)
+rng = re.search(r'<span class="heat-range">(\d{4}-\d\d-\d\d) → (\d{4}-\d\d-\d\d)，一格一天，周一起排</span>', body_home)
+check(bool(rng) and rng.group(1) == start.isoformat() and rng.group(2) == today.isoformat(),
+      '脚注标了统计区间（起止日 + 一格一天）', rng.group(0) if rng else '')
+check('class="months"' not in heat_card and 'month-col' not in heat_card,
+      '上一版的 12 根月度柱子已经拆干净', '')
+
+# 日历的 CSS：五档颜色 + 横向滚 + 竖着填的网格，浅色深色各一套 token
+for token, why in [('--heat-0', '日历空格那档'), ('--heat-3', '日历第四档'),
+                   ('--heat-future', '还没到的那几天'), ('repeat(52, minmax(11px, 1fr))', '52 列网格')]:
+    check(css.count(token) >= 1, f'CSS：{why}进了产物', token)
+check(css.count('--heat-0:') == 2 and css.count('--heat-future:') == 2,
+      '日历色阶在浅色/深色两套 token 里都有（深色不是照搬浅色）', str(css.count('--heat-0:')))
+check(re.search(r'\.heat-grid\s*\{[^}]*grid-auto-flow:\s*column', css),
+      'CSS：网格是竖着填的（模板按周输出，一列才是一周）')
+check(re.search(r'\.heat-scroll\s*\{[^}]*overflow-x:\s*auto', css), 'CSS：窄屏靠横向滚动，不压扁格子')
 
 # 模块卡的篇数是从 source 现算的，两边必须一致
 learn_card = dict(zip(card_names, mod_raw))['学习']
@@ -525,6 +571,14 @@ check(re.search(r'\.post-toc \.nav \.toc-open > \.nav-child \{[^}]*height: var\(
 check(re.search(r'\.post-toc \.nav \.nav-item \{[^}]*white-space: normal', css),
       'CSS：目录长标题换行，不是 nowrap + 省略号')
 check(re.search(r'\.reading-progress-bar \{[^}]*var\(--accent\)', css), 'CSS：进度条颜色跟着 --accent（深色模式换浅蓝）')
+# 主题把 .reading-progress-bar 输出在**所有**页面（首页/分类/归档也有一条），
+# 那条线在非文章页滚起来毫无意义，所以默认收掉、只有 .main-inner.post 的页面放回来。
+# DOM 不删：主题的 utils.js 滚动时要给它写 --progress，找不到元素会报错。
+check(re.search(r'\.reading-progress-bar \{[^}]*display: none', css), 'CSS：进度条默认不画')
+check(re.search(r'body:has\(\.main-inner\.post\) \.reading-progress-bar \{[^}]*display: block', css),
+      'CSS：只有文章页把进度条放回来')
+nobar = sorted(s for s, h in pages_full.items() if '<div class="reading-progress-bar">' not in h)
+check(not nobar, f'{len(pages_full)} 篇文章页顶部都有进度条那一格（DOM 还在，靠 CSS 决定画不画）', str(nobar[:3]))
 
 # 哪些篇该有折叠：源正文里有 h3 小标题的（toc.max_depth: 3，h4 及以下不进目录）
 h3_slugs = {(fm_slug(v) or norm(k)[:-3].rsplit('/', 1)[1]) for k, v in src.items() if re.search(r'^### ', v, re.M)}
@@ -534,8 +588,6 @@ check(fold_pages == h3_slugs & set(pages_full),
       f'源里有 h3 的 {len(h3_slugs)} 篇 / 产物有第三层的 {len(fold_pages)} 篇 / 差集 {sorted(h3_slugs ^ fold_pages)[:3]}')
 nojs = sorted(s for s in fold_pages if '/js/toc-fold.js' not in pages_full[s])
 check(not nojs, '带小标题的文章页全都挂了折叠脚本', str(nojs[:3]))
-nobar = sorted(s for s, h in pages_full.items() if '<div class="reading-progress-bar">' not in h)
-check(not nobar, f'{len(pages_full)} 篇文章页顶部都有进度条那一格', str(nobar[:3]))
 
 # 字数与时长：脚本自己算的那个数，必须在 python 这边拿产物正文再算一遍对得上。
 # 两边规则一模一样：剥标签、吃掉 HTML 实体，汉字/假名/谚文各 1 字，一串英文或数字算 1 词。
@@ -607,6 +659,10 @@ check(re.search(r'\.module-nav \.module-nav-list \.is-current > a \{[^}]*var\(--
       'CSS：当前这篇有强调色 + 竖线，不靠分割线')
 check(re.search(r'\.back-to-top \{[^}]*left: auto[^}]*right: 30px', css), 'CSS：一键到顶在右下角（原来压在左侧栏上）')
 check(css.rindex('.back-to-top i.fa') > css.index('.back-to-top .fa'), 'CSS：箭头尺寸的覆写排在主题规则之后')
+# 主题的居中靠「图标宽度 = 老按钮宽度 26px + text-align:center」。按钮放大到 42px 后那 26px
+# 就偏左了（上一版就是这么坏的：字形盒量出来在按钮里偏左 15px），居中交给 flex 管。
+check(re.search(r'\.back-to-top \{[^}]*justify-content: center', css), 'CSS：箭头靠 justify-content 居中')
+check(re.search(r'\.back-to-top i\.fa \{[^}]*width: auto', css), 'CSS：主题那 26px 的图标宽度已经交还')
 
 nav_bad, meta_bad = [], []
 for slug, full in sorted(pages_full.items()):
@@ -672,6 +728,148 @@ check(not keep, '首页/分类/归档/标签页仍是「站点概览」，没被
 
 b2t = sorted(s for s, h in pages_full.items() if '<div class="back-to-top"' not in h)
 check(not b2t, f'{len(pages_full)} 篇文章页都挂了「一键到顶」那颗按钮', str(b2t[:3]))
+
+# ---------- 13. 分类页树状图（总览 + 每个分类点进去那一页） ----------
+
+# 整棵树从 source 现算：节点顺序 = 分类链第一次出现的顺序（文章按 date 升序排），
+# 篇数是「含全部子孙」的那个数。和 scripts/cat-tree.js 用的是同一套口径，各算各的才对得上。
+def cat_date(text):
+    m = re.search(r'^date:\s*(\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}(:\d{2})?)', text, re.M)
+    return (m.group(1).replace('T', ' ') if m else '9999')
+
+
+def src_tree():
+    order, counts = [], {}
+    for k, v in sorted(src.items(), key=lambda kv: cat_date(kv[1])):
+        cats = fm_categories(v)
+        for i in range(1, len(cats) + 1):
+            p = tuple(cats[:i])
+            if p not in counts:
+                counts[p] = 0
+                order.append(p)
+            counts[p] += 1
+    return order, counts
+
+
+tree_order, tree_counts = src_tree()
+children_of = {}
+for p in tree_order:
+    if len(p) > 1:
+        children_of.setdefault(p[:-1], []).append(p)
+
+
+def cat_href(path):
+    return '/categories/' + '/'.join(urllib.parse.quote(n.replace(' ', '-')) for n in path) + '/'
+
+
+def rows_of(html):
+    """把页面上的一行行节点读成 [(深度, 是否收尾, 有没有竖线穿过, 层级样式, href, 文字, 篇数)]"""
+    out = []
+    for chunk in html.split('<div class="cat-row ')[1:]:
+        chunk = chunk[:chunk.index('</div>')] if '</div>' in chunk else chunk
+        depth = int(re.match(r'cat-row--l(\d)', chunk).group(1))
+        head = chunk.split('<a ', 1)[0] + chunk.split('<h1 ', 1)[0]
+        m = re.search(r'class="cat-node cat-node--([a-z]+)"(?: href="([^"]*)")?>([^<]*)<span class="cat-num">(\d+)</span>',
+                      chunk)
+        if not m:      # 面包屑那几行没有篇数
+            m = re.search(r'class="cat-node cat-node--([a-z]+)" href="([^"]*)">([^<]*)</a>', chunk)
+            out.append((depth, 'is-tail' in head, 'cat-rail' in head, m.group(1), m.group(2), m.group(3), None))
+            continue
+        out.append((depth, 'is-tail' in head, 'cat-rail' in head, m.group(1), m.group(2), m.group(3).strip(),
+                    int(m.group(4))))
+    return out
+
+
+# 13a. 总览页：/categories/ 应该是整棵树，主题原来那个平铺的 .category-all-page 不该再出现
+all_html = open('public/categories/index.html', encoding='utf-8').read()
+body_all = all_html[all_html.index('cat-cards'):]
+check('category-all' not in all_html and 'cat-cards' in all_html,
+      '总览页换成树了（主题的平铺分类列表已经不走）')
+got = rows_of(body_all[:body_all.index('</main>')])
+want = []
+for root in [p for p in tree_order if len(p) == 1]:
+    kids = children_of.get(root, [])
+    want.append((0, False, False, 'top', cat_href(root), root[-1], tree_counts[root]))
+    for mod in kids:
+        mod_kids = children_of.get(mod, [])
+        want.append((1, mod == kids[-1], False, 'mod', cat_href(mod), mod[-1], tree_counts[mod]))
+        for leaf in mod_kids:
+            want.append((2, leaf == mod_kids[-1], mod != kids[-1], 'leaf', cat_href(leaf), leaf[-1], tree_counts[leaf]))
+check(len(got) == len(want) == len(tree_order), f'总览页 {len(got)} 行 = 源里的 {len(tree_order)} 个分类', f'产物 {len(got)}')
+check(got == want, '每一行的层级/顺序/篇数/链接/折线收尾都和源里的树对得上',
+      str([(a, b) for a, b in zip(got, want) if a != b][:3]))
+check(sum(1 for r in got if r[2]) == sum(len(children_of.get(m, [])) for top in [p for p in tree_order if len(p) == 1]
+                                        for m in children_of.get(top, [])[:-1]),
+      '竖线穿过的只有「上面还有兄弟的模块」那些子孙行', str(sum(1 for r in got if r[2])))
+cards = len(re.findall(r'<section class="cat-card"', body_all))
+check(cards == len([p for p in tree_order if len(p) == 1]), f'总览页 {cards} 张卡 = 一级模块数')
+lede = re.search(r'<p class="cat-lede">.*?class="cat-lede-strong">([^<]+)<', all_html, re.S).group(1)
+check(lede == f'{len(src)} 篇 · {len(tree_order)} 个分类', '卡顶那行统计 = 现算的篇数和分类数', lede)
+
+# 13b. 每个分类点进去的那一页：路径一行、本页一行（<h1>）、子分类各一行
+bad_cat_page = []
+for path in tree_order:
+    f = os.path.join('public', *['categories', *[n.replace(' ', '-') for n in path]], 'index.html')
+    if not os.path.exists(f):
+        bad_cat_page.append(f'{"/".join(path)} 页面不在产物里')
+        continue
+    html = open(f, encoding='utf-8').read()
+    seg = html[html.index('cat-card--here'):]
+    seg = seg[:seg.index('</main>')]
+    rows = rows_of(seg)
+    exp = [(i, True, False, 'crumb', cat_href(path[:i + 1]), path[i], None) for i in range(len(path) - 1)]
+    kids = children_of.get(path, [])
+    exp.append((len(path) - 1, True, False, 'here', None, path[-1], tree_counts[path]))
+    exp += [(len(path), k == kids[-1], False, 'leaf', cat_href(k), k[-1], tree_counts[k]) for k in kids]
+    if rows != exp:
+        bad_cat_page.append(f'{"/".join(path)}: {[(a, b) for a, b in zip(rows, exp) if a != b][:2]}')
+    if '<time' in seg or 'collection-year' in seg:
+        bad_cat_page.append(f'{"/".join(path)}: 列表里还有日期')
+    if 'class="post-title-link"' in seg:
+        bad_cat_page.append(f'{"/".join(path)}: 还在用主题的 posts-collapse 那套')
+check(len(tree_order) >= 30, f'{len(tree_order)} 个分类页都要核对')
+check(not bad_cat_page, '每个分类页的树（路径 + 本页 + 子分类）都对，且列表不带日期', str(bad_cat_page[:3]))
+
+# 13c. 文章列表：翻页合起来要收全该分类的篇，顺序按 date 升序（_config.yml 的 category_generator）
+src_by_path = {}
+for k, v in src.items():
+    cats = fm_categories(v)
+    for i in range(1, len(cats) + 1):
+        src_by_path.setdefault(tuple(cats[:i]), []).append((cat_date(v), fm_slug(v) or norm(k)[:-3].rsplit('/', 1)[1]))
+order_bad = []
+for path in [p for p in tree_order if len(children_of.get(p, [])) == 0]:
+    files = sorted(glob.glob(os.path.join('public', *['categories', *[n.replace(' ', '-') for n in path]],
+                                          'index.html')) +
+                   sorted(glob.glob(os.path.join('public', *['categories', *[n.replace(' ', '-') for n in path]],
+                                                 'page', '*', 'index.html'))))
+    listed = []
+    for fp in files:
+        h = open(fp, encoding='utf-8').read()
+        listed += re.findall(r'<ul class="cat-posts">(.*?)</ul>', h, re.S)[0:1]
+    slugs = [s for blk in listed for s in re.findall(r'href="[^"]*?/([a-z0-9][a-z0-9-]+)/"', blk)]
+    want_slugs = [s for _, s in sorted(src_by_path[path])]
+    if sorted(slugs) != sorted(want_slugs):
+        order_bad.append(f'{"/".join(path)} 少了/多了 {sorted(set(slugs) ^ set(want_slugs))[:3]}')
+    elif slugs != want_slugs:
+        order_bad.append(f'{"/".join(path)} 第一页不是按导入顺序排：{slugs[:3]} vs {want_slugs[:3]}')
+check(len(order_bad) == 0, f'{len([p for p in tree_order if not children_of.get(p, [])])} 个叶子分类页：文章收全且按升序排',
+      str(order_bad[:3]))
+
+# 13d. 分类页里的站内链接不能指到 404
+dead_cat = set()
+for path in tree_order:
+    f = os.path.join('public', *['categories', *[n.replace(' ', '-') for n in path]], 'index.html')
+    for href in set(re.findall(r'href="(/[^"#]+)"', open(f, encoding='utf-8').read())):
+        p = os.path.join('public', *urllib.parse.unquote(href).lstrip('/').split('/'))
+        if not (os.path.exists(p) or os.path.exists(p + '.html') or os.path.isdir(p)):
+            dead_cat.add(f'{"/".join(path)} -> {href}')
+check(not dead_cat, '分类页上的链接没有 404', str(sorted(dead_cat)[:3]))
+
+for token, why in [('.cat-row--l2::before {\n  left: 33px;', '第三层的折线在自己的那一竖上'),
+                   ('.cat-row.is-tail::after {\n  content: none;', '组里最后一个节点不再往下接线'),
+                   ('.cat-rail {', '祖先的竖线穿过子孙子行'),
+                   ('.cat-node--here', '本页那个节点是 <h1> 长成的胶囊')]:
+    check(token in css, f'CSS：{why}', token[:28])
 
 print('\n%s' % ('全部通过' % () if not fail else f'{len(fail)} 项失败：' + '；'.join(fail)))
 sys.stdout.flush()          # stdout 被我换成 TextIOWrapper 了，sys.exit 时不一定帮你刷管道

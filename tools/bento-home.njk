@@ -26,21 +26,30 @@
     <section class="bento">
       <div class="bento-grid">
 
-        {%- set months = theme.bento.months %}
+        {%- set heat = theme.bento.heat %}
         <article class="bento-card bento-card--heat">
-          <p class="bento-kicker">近 12 个月入库 {{ months.shown }} 篇 · 最高一个月 {{ months.top }} 篇</p>
-          <div class="months">
-            {%- for m in months.cells %}
-            <div class="month-col" title="{{ m.label }}">
-              <span class="month-count">{{ m.count or '' }}</span>
-              <span class="month-track"><span class="month-bar" style="height: {{ m.height }}%"></span></span>
-              <span class="month-name">{{ m.name }}</span>
+          <p class="bento-kicker">近 52 周入库 {{ heat.shown }} 篇 · 有内容 {{ heat.active }} 天 · 单日最多 {{ heat.peak }} 篇</p>
+          <div class="heat-scroll">
+            <div class="heat-months">
+              {%- for m in heat.monthMarks %}
+              <span class="heat-month" style="grid-column: {{ m.col + 1 }}">{{ m.label }}</span>
+              {%- endfor %}
             </div>
-            {%- endfor %}
+            <div class="heat-grid">
+              {%- for wk in heat.weeks %}
+              {%- for c in wk.cells %}
+              {%- if c.future %}
+              <span class="heat-cell is-future"></span>
+              {%- else %}
+              <span class="heat-cell heat-l{{ c.level }}"{% if c.label %} title="{{ c.label }}"{% endif %}></span>
+              {%- endif %}
+              {%- endfor %}
+              {%- endfor %}
+            </div>
           </div>
           <div class="heat-foot">
-            <span class="heat-range">{{ months.from }} → {{ months.to }}</span>
-            <span class="heat-range">按月统计：时政按月归档，其余按导入月份</span>
+            <span class="heat-range">{{ heat.from }} → {{ heat.to }}，一格一天，周一起排</span>
+            <span class="heat-legend">少<i class="heat-cell heat-l0"></i><i class="heat-cell heat-l1"></i><i class="heat-cell heat-l2"></i><i class="heat-cell heat-l3"></i><i class="heat-cell heat-l4"></i>多</span>
           </div>
         </article>
 

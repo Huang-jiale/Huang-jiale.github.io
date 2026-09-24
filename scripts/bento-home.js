@@ -30,10 +30,11 @@ const path = require('path');
 // 一个 .njk 丢进去就是「Script load failed」。
 const TEMPLATE = path.join(__dirname, '..', 'tools', 'bento-home.njk');
 
-// 首页那张卡从「一周一格」改成「一月一根柱」（2026-09-24）：52 周里只有 9 天有数据，
-// 整张图 96% 是空白，看着像坏了。按月是这套数据唯一诚实的精度——时政本来就按月归档，
-// 其余内容是按月导入的，所以柱子上标的是「这个月入库多少篇」，不是「哪天写的」。
-const MONTHS = 12;
+// 52 周 × 7 天的 GitHub 式日历（2026-09-24 用户点名要回来）。中间那一版改成过按月柱状图，
+// 撤了：日历是「什么时候入库的」，柱子是「入库了多少」，他要的是前者。
+// 代价说清楚：137 篇集中在 9 天里，整张图绝大多数格子是空的——这不是算错，是这套数据的
+// 真实形状（内容按批导入，不是日更）。格子只读，悬停出日期。
+const WEEKS = 52;
 
 // 三个一级模块，文案写在这里；哪个模块没文章就渲染成虚线占位卡（现在只有「工作」还空着）。
 const TOPS = [
@@ -50,45 +51,86 @@ function catUrl(names) {
   return '/categories/' + names.map(n => encodeURIComponent(n.replace(/ /g, '-'))).join('/') + '/';
 }
 
-// 一格 = 一个月：柱高按「当月入库篇数 / 最高月份」，0 篇的月份留一条矮栈
-function buildMonths(posts) {
-  const byMonth = new Map();
+// 一格 = 一天，7 行一列 = 一周（周一起）。列数固定 WEEKS 列，末列是本周，
+// 所以今天之后的格子留空并标成 future，整张图始终是方的。
+function pad2(n) {
+  return String(n).padStart(2, '0');
+}
+
+function dayKey(dt) {
+  return `${dt.getFullYear()}-${pad2(dt.getMonth() + 1)}-${pad2(dt.getDate())}`;
+}
+
+function buildHeat(posts) {
+  const byDay = new Map();
   posts.forEach(p => {
-    const key = p.date.format('YYYY-MM');
-    const rec = byMonth.get(key) || { count: 0, mods: new Set() };
+    // moment 对象转本地日历日：入库日期给人看的，别按 UTC 差 8 小时挪到前一天
+    const js = p.date.toDate();
+    const key = dayKey(js);
+    const rec = byDay.get(key) || { count: 0, mods: new Set() };
     rec.count++;
     // 悬停里报「模块」这一层（三层分类的第 2 层），比只说「学习」有用
     const cat = p.categories && p.categories.length > 1 ? p.categories.data[1].name : '';
     if (cat) rec.mods.add(cat);
-    byMonth.set(key, rec);
+    byDay.set(key, rec);
   });
 
-  // 从本月往前推 MONTHS - 1 个月：Date 的年/月会自动向借位，不用自己处理跨年
   const now = new Date();
-  const cells = [];
-  for (let i = MONTHS - 1; i >= 0; i--) {
-    const dt = new Date(now.getFullYear(), now.getMonth() - i, 1);
-    const key = `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, '0')}`;
-    const rec = byMonth.get(key);
-    cells.push({
-      key  : key,
-      name : `${dt.getMonth() + 1}月`,
-      count: rec ? rec.count : 0,
-      mods : rec ? [...rec.mods] : []
-    });
+  // getDay(): 周日=0，减 1 再取模把周一摆到第 0 行
+  const mondayOfThisWeek = now.getDate() - ((now.getDay() + 6) % 7);
+  const start = new Date(now.getFullYear(), now.getMonth(), mondayOfThisWeek - (WEEKS - 1) * 7);
+  const todayKey = dayKey(now);
+
+  // 色阶按「单日最多那天」四等分，篇数整体涨上去也不用回来改阈值。
+  // 先乘后除：和校验器里 Python 的 -(-n*4//peak) 同一个算法，别让浮点误差把边界天挪一档。
+  const peak = Math.max(1, ...[...byDay.values()].map(r => r.count));
+  const levelOf = n => (!n ? 0 : Math.min(4, Math.ceil(n * 4 / peak)));
+
+  const weeks = [];
+  const monthMarks = [];
+  let lastMonth = -1;
+  let shown = 0;
+  for (let w = 0; w < WEEKS; w++) {
+    const cells = [];
+    for (let d = 0; d < 7; d++) {
+      const dt = new Date(start.getFullYear(), start.getMonth(), start.getDate() + w * 7 + d);
+      const key = dayKey(dt);
+      const rec = byDay.get(key);
+      const count = rec ? rec.count : 0;
+      shown += count;
+      // 本周之外（未来）的格子留空：它们不是「那天没写」，是「那天还没到」
+      const future = key > todayKey;
+      cells.push({
+        date  : key,
+        count,
+        future,
+        level : future ? -1 : levelOf(count),
+        label : future ? '' : `${key} · ${count} 篇${rec && rec.mods.size ? ` · ${[...rec.mods].join('、')}` : ''}`
+      });
+    }
+    // 月首标签：这一列的周一换了月份就标一次，够稀疏也够定位
+    const month = cells[0].date.slice(5, 7);
+    if (Number(month) !== lastMonth) {
+      lastMonth = Number(month);
+      monthMarks.push({ col: w, label: `${lastMonth}月` });
+    }
+    weeks.push({ cells });
   }
 
-  const top = Math.max(1, ...cells.map(c => c.count));
-  let shown = 0;
-  cells.forEach(c => {
-    shown += c.count;
-    c.ratio  = c.count / top;
-    // 最低给 6%，不然「1 篇」和「0 篇」在 104px 高的图里分不出来
-    c.height = c.count ? Math.max(6, Math.round(c.ratio * 100)) : 2;
-    c.label  = `${c.key} · ${c.count} 篇${c.mods.length ? ` · ${c.mods.join('、')}` : ''}`;
-  });
+  // 月首标签挨太近会叠字，丢季后面的那个
+  const marks = monthMarks.filter((m, i) => !i || m.col - monthMarks[i - 1].col >= 2);
 
-  return { cells, shown, top, from: cells[0].key, to: cells[MONTHS - 1].key };
+  return {
+    weeks,
+    monthMarks : marks,
+    shown,
+    peak,
+    active     : [...byDay].filter(([, r]) => r.count).length,
+    from       : dayKey(start),
+    to         : todayKey,
+    // 整张图 WEEKS*7 格，有内容的那几天之外全是空格子——把比例摆在脚注里，别让人自己数
+    idle       : WEEKS * 7 - [...byDay.values()].filter(r => r.count).length
+  };
 }
 
 function build(hexo) {
@@ -135,7 +177,7 @@ function build(hexo) {
 
   return {
     tops,
-    months: buildMonths(posts),
+    heat  : buildHeat(posts),
     recent,
     total : posts.length
   };
@@ -152,5 +194,6 @@ hexo.extend.filter.register('before_generate', () => {
   hexo.theme.config.bento = bento;
   hexo.theme.setView('index.njk', fs.readFileSync(TEMPLATE, 'utf8'));
   hexo.log.info(`[bento-home] 首页 ${bento.tops.map(t => `${t.name} ${t.kicker}`).join(' / ')}；`
-    + `按月热度 ${bento.months.from} → ${bento.months.to}，${MONTHS} 个月合计 ${bento.months.shown} 篇，最高 ${bento.months.top} 篇/月`);
+    + `日历 ${bento.heat.from} → ${bento.heat.to}，${WEEKS} 周合计 ${bento.heat.shown} 篇，`
+    + `有内容的 ${bento.heat.active} 天，单日最多 ${bento.heat.peak} 篇`);
 }, 10);

@@ -125,6 +125,26 @@ for k, links in got:
     check(links == cat_want[k], f'分类页 /{" / ".join(k)} 收全 {len(links)} 篇',
           f'期望 {len(cat_want[k])}，缺 {sorted(cat_want[k] - links)[:3]}')
 
+# 前端这一版的「指纹」：Pages 有传播延迟，旧版不会报错、只会少了这些类名，所以逐个点名
+home = get('')[1].decode('utf-8', 'replace')
+n_cells = home.count('class="heat-cell') - 5          # 图例那 5 格也用 .heat-cell
+check(n_cells == 364, f'首页日历 52×7 = 364 格（线上数到 {n_cells} 格）')
+check('heat-months' in home and 'heat-legend' in home, '首页日历的月首标签和图例都在')
+check('class="months"' not in home, '首页已经没有上一版按月柱状图')
+overview = get('categories/')[1].decode('utf-8', 'replace')
+check('cat-row cat-row--l0' in overview and 'cat-node--top' in overview, '分类总览页是树状图')
+branch_path = paths[max(cat_want, key=lambda k: (len(cat_want[k]), len(k)))]   # 文章最多的那条链
+branch = get(branch_path)[1].decode('utf-8', 'replace')
+check('cat-node--here' in branch and '<time' not in branch, '分类页顶部有本分支的树，列表不画日期')
+css = get('css/main.css')[1].decode('utf-8', 'replace')
+# 产物里有好几条 .back-to-top（主题的、我的、移动端的），要找「我那条」= 带 42px 的那一条
+mine = [b for b in re.findall(r'\.back-to-top \{([^}]*)\}', css) if '42px' in b]
+check(bool(mine) and 'justify-content: center' in mine[0], '一键到顶的箭头居中规则已生效')
+check('body:has(.main-inner.post) .reading-progress-bar' in css, '进度条只在文章页画的规则已生效')
+art = get(posts[sorted(posts)[0]][0])[1].decode('utf-8', 'replace')
+check('back-to-top' in art and 'module-nav' in art and 'class="post-tags"' in art,
+      '文章页：一键到顶 + 本模块文章 + 底部标签都在')
+
 print('\n%s' % ('线上核对全部通过' if not fail else f'{len(fail)} 项失败'))
 sys.stdout.flush()          # stdout 被我换成 TextIOWrapper 了，sys.exit 时不一定帮你刷管道
 sys.exit(1 if fail else 0)

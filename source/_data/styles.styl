@@ -22,6 +22,11 @@
   --radius-md: 14px;
   --radius-pill: 980px;
   --ease: cubic-bezier(.25, .1, .25, 1);
+  --heat-0: #f2f2f5;      // 日历五档：没入库 / 少 / 略多 / 多 / 峰值那档用 --accent
+  --heat-1: #d6e9fb;
+  --heat-2: #a3cdf3;
+  --heat-3: #4f9fe0;
+  --heat-future: #fafafb; // 还没到的那几天，比空格子更淡一档
 }
 
 if (hexo-config('darkmode')) {
@@ -35,6 +40,11 @@ if (hexo-config('darkmode')) {
       --surface-2: #2c2c2e;
       --accent: #6cb6ff;
       --accent-ink: #000000;
+      --heat-0: #2c2c2e;
+      --heat-1: #1e3a55;
+      --heat-2: #2a5f8f;
+      --heat-3: #3f87c9;
+      --heat-future: #232326;
     }
   }
 }
@@ -459,56 +469,70 @@ details.answer {
 }
 
 // ---------------------------------------------------------------
-// 首页按月热度：一格 = 一个月，柱子高度 = 当月入库篇数 ÷ 最高月份
-// 纯 CSS 静态渲染（数据 scripts/bento-home.js、模板 tools/bento-home.njk），没有 JS 和动画
+// 首页 GitHub 式日历：52 列 × 7 行，一格一天，周一在第一行
+// 纯 CSS 静态渲染（数据 scripts/bento-home.js、模板 tools/bento-home.njk），没有 JS 和动画。
+// 只读：不链到归档，悬停出「日期 · 篇数 · 模块」的原生 title。
 // ---------------------------------------------------------------
-.months {
-  align-items: end;
-  display: flex;
-  gap: 8px;
+.heat-scroll {
+  // 52 列在窄屏放不进，让它横向滚而不是把格子压成一条线
+  overflow-x: auto;
+  padding-bottom: 4px;
 }
 
-.month-col {
-  align-items: center;
-  display: flex;
-  flex: 1 1 0;
-  flex-direction: column;
-  gap: 6px;
-  // 12 列靠 flex 收缩，不写 min-width:0 的话「10月」这种两字标签会把列撑破
-  min-width: 0;
+// 月首标签和格子用同一个 52 列网格，才能对齐到那一列的头上
+.heat-months {
+  display: grid;
+  grid-template-columns: repeat(52, minmax(11px, 1fr));
+  gap: 3px;
+  height: 16px;
 }
 
-.month-count {
+.heat-month {
   color: var(--muted);
   font-feature-settings: 'tnum' 1;
-  font-size: .75em;
-  font-variant-numeric: tabular-nums;
-  line-height: 1.2;
-  // 空月份不写字也占一行，12 根柱子的顶端才齐平
-  min-height: 1.2em;
-}
-
-.month-track {
-  align-items: end;
-  background: var(--surface-2);
-  border-radius: 6px;
-  display: flex;
-  height: 104px;
-  overflow: hidden;
-  width: 100%;
-}
-
-.month-bar {
-  background: var(--accent);
-  border-radius: 6px 6px 0 0;
-  display: block;
-  width: 100%;
-}
-
-.month-name {
-  color: var(--muted);
-  font-size: .75em;
+  font-size: .6875em;
+  line-height: 16px;
   white-space: nowrap;
+}
+
+.heat-grid {
+  display: grid;
+  // 竖着填：模板按「一周 7 格」的顺序输出，所以每一列自动就是一周
+  grid-auto-flow: column;
+  grid-template-columns: repeat(52, minmax(11px, 1fr));
+  grid-template-rows: repeat(7, 11px);
+  gap: 3px;
+}
+
+.heat-cell {
+  border-radius: 2px;
+  display: block;
+  height: 11px;
+  width: 100%;
+}
+
+.heat-l0 {
+  background: var(--heat-0);
+}
+
+.heat-l1 {
+  background: var(--heat-1);
+}
+
+.heat-l2 {
+  background: var(--heat-2);
+}
+
+.heat-l3 {
+  background: var(--heat-3);
+}
+
+.heat-l4 {
+  background: var(--accent);
+}
+
+.heat-cell.is-future {
+  background: var(--heat-future);
 }
 
 .heat-foot {
@@ -521,6 +545,17 @@ details.answer {
   gap: 8px;
   justify-content: space-between;
   margin-top: 12px;
+}
+
+.heat-legend {
+  align-items: center;
+  display: inline-flex;
+  gap: 3px;
+
+  // 图例里那五格是 flex 子项，.heat-cell 的 width:100% 会变成「占满整行」
+  .heat-cell {
+    width: 10px;
+  }
 }
 
 .bento-kids {
@@ -632,13 +667,9 @@ details.answer {
     padding: 22px;
   }
 
-  // 手机上格子缩一点，52 周还是靠横向滑动看，不硬塞进屏宽
-  .months {
-    gap: 4px;
-  }
-
-  .month-track {
-    height: 72px;
+  // 手机上格子缩到最小一档，52 周还是靠横向滑动看，不硬塞进屏宽
+  .heat-months, .heat-grid {
+    grid-template-columns: repeat(52, 11px);
   }
 }
 
@@ -747,10 +778,20 @@ details.answer {
 
 // ---------------------------------------------------------------
 // 顶部阅读进度条：主题自带（_config.next.yml 的 reading_progress），
-// 颜色跟着 --accent 走，深色模式自动换成浅蓝，不用配置里写死的那个 hex
+// 颜色跟着 --accent 走，深色模式自动换成浅蓝，不用配置里写死的那个 hex。
+// 主题把这个 div 输出在**所有**页面（layout/_partials/head 之外没有判断），首页/分类/归档
+// 那条线滚起来毫无意义，所以要按页面类型收掉。开关选 .main-inner.post 而不是 body 上的类：
+// 产物里各页 <body> 都是 `class="use-motion"`，区分不了；.main-inner 的第二/三个类
+// （post/index/archive/category/tag + posts-expand/posts-collapse）才是每类页面各自的。
+// :has() 是「命中祖先的后代」，浏览器都支持了（2023+）。
 // ---------------------------------------------------------------
 .reading-progress-bar {
   background: var(--accent);
+  display: none;
+}
+
+body:has(.main-inner.post) .reading-progress-bar {
+  display: block;
 }
 
 // ---------------------------------------------------------------
@@ -895,6 +936,7 @@ details.answer {
 // 原来它在 desktop 上是 left:30px 的一颗 26px 深灰小块——正好压在 240px 宽的侧栏上，看不见。
 // ---------------------------------------------------------------
 .back-to-top {
+  align-items: center;
   background: var(--surface);
   border: 1px solid var(--hairline);
   border-radius: var(--radius-md);
@@ -902,6 +944,7 @@ details.answer {
   box-shadow: $shadow-soft;
   color: var(--ink-soft);
   height: 42px;
+  justify-content: center;
   left: auto;
   opacity: 1;
   right: 30px;
@@ -913,11 +956,12 @@ details.answer {
     color: var(--accent);
   }
 
-  // 图标带主题的 .fa-lg（1.333em），选择器多写一层才压得住它，别让箭头顶出按钮
+  // 主题的居中机制是「图标宽度 = 按钮宽度 26px + text-align:center」，按钮放大到 42px 后
+  // 那 26px 就偏左了；居中的活儿交给上面的 justify-content，这里只管字号。
+  // .fa-lg 是 1.333em，选择器多写一层才压得住它。
   i.fa {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1;
-    text-align: center;
     width: auto;
   }
 }
@@ -929,6 +973,229 @@ details.answer {
 +tablet-mobile() {
   .back-to-top {
     right: 20px;
+  }
+}
+
+// ---------------------------------------------------------------
+// 分类页：树状图（数据 + 模板 scripts/cat-tree.js、tools/cat-tree.njk、tools/cat-branch.njk）
+//
+// 一行一个分类节点，行高固定 30px，缩进就是层级；父子之间是一条圆角折线（├ / └）。
+// 折线的竖段分成上下两半分开画：上半 + 横段是 ::before 的左边框和下边框（拐角再圆一下），
+// 下半是 ::after。因为每行等高，「上一行中心 → 本行中心」正好就是 15px + 15px，
+// 纯 CSS 就能接准，不用 JS 量位置。
+// 组里最后一个节点 (::after 那条继续往下的线) 由模板加 .is-tail 停掉；
+// 子孙还要穿过父辈那一竖时，模板另外塞一个 <i class="cat-rail">（只有总览页的第三层会用到）。
+// 深色模式不用另写一套：线色走 --hairline、胶囊走 --surface / --accent。
+// ---------------------------------------------------------------
+.cat-lede {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 20px;
+}
+
+.cat-lede-strong {
+  color: var(--ink);
+  font-feature-settings: 'tnum' 1;
+  font-size: 1.0625em;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.cat-lede-note {
+  color: var(--muted);
+  font-size: .875em;
+}
+
+// 一张卡 = 一个一级模块；宽屏两列，窄列放不下就自己掉回一列。
+// align-items:start：不拉平两列的高度，否则「学习」那张只有 14 行的卡会被撑到 26 行高，底下空一块。
+.cat-cards {
+  align-items: start;
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.cat-card {
+  background: var(--surface-2);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  padding: 18px 20px;
+}
+
+.cat-row {
+  align-items: center;
+  display: flex;
+  height: 30px;
+  position: relative;
+}
+
+.cat-row--l1 {
+  padding-left: 22px;
+}
+
+.cat-row--l2 {
+  padding-left: 44px;
+}
+
+// ├─ / └─ 的转角：竖着下来 15px，再横着进胶囊
+.cat-row--l1::before,
+.cat-row--l2::before {
+  border-bottom: 1px solid var(--hairline);
+  border-bottom-left-radius: 6px;
+  border-left: 1px solid var(--hairline);
+  content: '';
+  height: 15px;
+  position: absolute;
+  top: 0;
+  width: 11px;
+}
+
+.cat-row--l1::before {
+  left: 11px;
+}
+
+.cat-row--l2::before {
+  left: 33px;
+}
+
+// 同一组下面还有兄弟：从本行中心再往下 15px，正好接到下一行的转角
+.cat-row--l1::after,
+.cat-row--l2::after {
+  background: var(--hairline);
+  content: '';
+  height: 15px;
+  position: absolute;
+  top: 15px;
+  width: 1px;
+}
+
+.cat-row--l1::after {
+  left: 11px;
+}
+
+.cat-row--l2::after {
+  left: 33px;
+}
+
+.cat-row.is-tail::after {
+  content: none;
+}
+
+// 祖先那一竖要穿过我这行接着往下走
+.cat-rail {
+  background: var(--hairline);
+  height: 30px;
+  left: 11px;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.cat-node {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  flex: none;
+  font-size: .875em;
+  gap: 6px;
+  height: 28px;
+  line-height: 1;
+  padding: 0 11px;
+  transition: background-color $transition-ease, color $transition-ease, border-color $transition-ease;
+  white-space: nowrap;
+}
+
+.cat-num {
+  font-feature-settings: 'tnum' 1;
+  font-size: .8125em;
+  font-variant-numeric: tabular-nums;
+  opacity: .62;
+}
+
+.cat-node--top {
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: .9375em;
+  font-weight: 600;
+  padding: 0 14px;
+}
+
+.cat-node--mod {
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.cat-node--leaf {
+  background: transparent;
+  border-color: var(--hairline);
+  color: var(--ink-soft);
+}
+
+.cat-node--crumb {
+  background: transparent;
+  border-color: transparent;
+  color: var(--muted);
+  padding: 0 6px;
+}
+
+.cat-node--crumb:hover {
+  color: var(--accent);
+}
+
+.cat-node--top:hover,
+.cat-node--mod:hover,
+.cat-node--leaf:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.cat-node--top:hover {
+  color: var(--accent-ink);
+  opacity: .92;
+}
+
+// 分类页的本页标题就是树上那一个节点，所以 <h1> 直接长成胶囊
+.cat-node--here {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--ink);
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: -.014em;
+  margin: 0;
+  padding: 0 14px;
+}
+
+.cat-list-note {
+  color: var(--muted);
+  font-feature-settings: 'tnum' 1;
+  font-size: .8125em;
+  font-variant-numeric: tabular-nums;
+  margin: 22px 0 4px;
+}
+
+// 文章列表：不写日期（那是导入那天），一行一篇，hover 才出色块
+.cat-posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    border-radius: 10px;
+    color: var(--ink-soft);
+    display: block;
+    line-height: 1.5;
+    padding: 7px 10px;
+    transition: background-color $transition-ease, color $transition-ease;
+  }
+
+  a:hover {
+    background: var(--surface);
+    color: var(--accent);
   }
 }
 

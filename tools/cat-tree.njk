@@ -1,0 +1,61 @@
+{#
+  /categories/ 总览页：整棵分类树（一级模块 → 板块 → 板块里的一层），节点是胶囊、父子之间画圆角折线。
+  由 scripts/cat-tree.js 用 hexo.theme.setView('cat-tree.njk', …) 注册，
+  source/categories/index.md 的 front-matter 写 `layout: cat-tree` 指到这张模板
+  —— 主题的 layout/page.njk 就此绕开，tags / about 那些页面不受影响。
+  骨架（extends + sidebar 宏 + class 块）和主题原版对齐，头部/侧栏/页脚照旧。
+  数据来自 helper cat_forest()（scripts/cat-tree.js 从文章的分类链现算）。
+
+  为什么是一行一行的「文件树」而不是左右展开的图：折线的竖段要接住上下两行的中心，
+  只有每行等高（一行一个胶囊 = 30px）才能用纯 CSS 算准。左右展开的话父节点那一行会被
+  它自己的子树撑高，竖线要么断开要么戳出去，只能靠 JS 量位置。
+  行数、缩进层级和竖线位置在 styles.styl 里是一一对上的（--l0/--l1/--l2 + .cat-rail），
+  分类超过三层这里会少画一层，check-build.py 第 13 节按 source 现算钉死了「最深三层」。
+#}
+{% extends '_layout.njk' %}
+{% import '_macro/sidebar.njk' as sidebar_template with context %}
+
+{% block title %}{{ __('title.category') }} | {{ title }}{% endblock %}
+
+{% block class %}page posts-expand{% endblock %}
+
+{% block content %}
+  {%- set f = cat_forest() %}
+  <div class="post-block">
+    <div class="post-content">
+      <div class="cat-all">
+        <p class="cat-lede">
+          <span class="cat-lede-strong">{{ f.total }} 篇 · {{ f.kinds }} 个分类</span>
+          <span class="cat-lede-note">一行一个分类，缩进就是父子关系；括号里的篇数含它下面所有子分类。点任意一个胶囊进那个分类。</span>
+        </p>
+
+        <div class="cat-cards">
+          {%- for top in f.roots %}
+          <section class="cat-card">
+            <div class="cat-row cat-row--l0">
+              <a class="cat-node cat-node--top" href="{{ url_for(top.url) }}">{{ top.name }}<span class="cat-num">{{ top.count }}</span></a>
+            </div>
+            {%- set mods = top.children %}
+            {%- for mod in mods %}
+            <div class="cat-row cat-row--l1{% if mod.last %} is-tail{% endif %}">
+              <a class="cat-node cat-node--mod" href="{{ url_for(mod.url) }}">{{ mod.name }}<span class="cat-num">{{ mod.count }}</span></a>
+            </div>
+            {%- for leaf in mod.children %}
+            <div class="cat-row cat-row--l2{% if leaf.last %} is-tail{% endif %}">
+              {# 上一级模块下面还有兄弟时，它那一竖要穿过我的整行继续往下走 #}
+              {% if not mod.last %}<i class="cat-rail" aria-hidden="true"></i>{% endif %}
+              <a class="cat-node cat-node--leaf" href="{{ url_for(leaf.url) }}">{{ leaf.name }}<span class="cat-num">{{ leaf.count }}</span></a>
+            </div>
+            {%- endfor %}
+            {%- endfor %}
+          </section>
+          {%- endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  {{ sidebar_template.render(false) }}
+{% endblock %}
