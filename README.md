@@ -167,7 +167,9 @@ Actions 成功不等于内容上线（404 常见于 CDN 传播延迟）。跑 `p
 内容：去掉头部的深色横幅（`.site-brand-container` 透明、站名左对齐）、菜单胶囊、正文排章节奏（h2 上边距、
 表格数字 `tabular-nums`、引用条）、`.post-eof { display: none }`、分页胶囊、移动端吸顶毛玻璃头部、
 `details.answer` 折叠样式、`.bento-*` + `.heat-*` 首页栅格与 52 周日历、`.module-nav*` 侧栏本模块文章、
-`.back-to-top` 一键到顶（搬到右下角、箭头居中）、`.cat-*` 分类页树状图、`reading-progress-bar` 只在文章页画、
+`.back-to-top` 一键到顶（搬到右下角、箭头居中）、`.cat-*` 分类页三层卡片墙（`.cat-top` / `.cat-card` /
+`.cat-kid` / `.cat-crumb`）、`reading-progress-bar` 只在文章页画、手机那一档（`+mobile()`，≤767px）不画日历卡
+并把点按目标垫到 44px、
 `prefers-reduced-motion` 兜底。深色模式统一用
 `if (hexo-config('darkmode')) { @media (prefers-color-scheme: dark) { … } }` 包，颜色走 `:root` 自定义属性。
 
@@ -311,52 +313,66 @@ NexT 把整块容器宽度写死在主题包里（`$content-desktop-large = 1160
 各页的 `<body class="use-motion">` 完全没有区分度，而 `.main-inner` 的第二个 class 就是页面类型
 （`post` / `index` / `archive` / `category` / `tag`），一条选择器把首页、分类、归档、标签页全排除掉。
 
-### 分类页：树状图（2026-09-24）
+### 分类页：三层「分组卡片墙」（2026-09-27，顶掉 09-24 那版树状图）
 
-用户口径：「分类的 UI 重新设计一下，给个方案」→ 他自选「思维导图，树状图」，范围「两个都改」：
-`/categories/` 总览页 + 点进某个分类后的文章列表页。
+用户口径：「分类的格式不是我喜欢的，你再优化一下，给多选择，一共就 3 级目录」→ 他选了
+**分组卡片墙**：不画连线、不靠缩进，一级 = 一节（`.cat-top`）、二级 = 一张卡（`.cat-card`）、
+三级 = 卡里一排芯片（`.cat-kid`）。上一版那棵带折线的树整个拆掉（`cat-row` / `cat-node` / `cat-rail`
+在产物里已经找不到了，校验器盯着这一条）。
 
 **① 数据：`scripts/cat-tree.js`**。`before_generate`（优先级 12）里把全站文章按 `date` **升序**遍历，
-逐篇把它的分类链塞进一棵字典树，节点是 `{name, path, url, count, children, last}`；注册两个 helper：
-`cat_forest()` 给总览页整棵树，`cat_here(page)` 从 `page.path` 反解出当前分类链（去掉 `categories/` 和
+逐篇把它的分类链塞进一棵字典树，节点是 `{name, path, url, count, children}`；注册两个 helper：
+`cat_forest()` 给总览页整片森林，`cat_here(page)` 从 `page.path` 反解出当前分类链（去掉 `categories/` 和
 `index.html`，逐段 `decodeURIComponent`），返回 `{total, node, crumbs}`，`node` 为 `null` 时模板回落到主题原来的
 `.collection-title` 结构。同一个钩子里 `hexo.theme.setView()` 挂两份模板。
 **不缓存 `forest()` 的结果**：`hexo server` 下加了文章要立刻能看到（生成器场景这点开销无所谓）。
+树状图那版给每个节点打的 `last`（这组最后一个要断尾）已经删了——没有折线就没有「收尾」这回事。
 **当前形态**：2 个一级有内容（学习 112 = 时政要点 74 + 行测 38；生活 25 = 素描 7 + 六项各 3），
-共 40 个分类节点、最深 3 层。`工作` 一篇没有，所以不进树（模块卡上以 `bento-card--empty` 出现）。
+共 40 个分类节点、最深 3 层。`工作` 一篇没有，所以不进墙（模块卡上以 `bento-card--empty` 出现）。
 
 **② 模板**：`tools/cat-tree.njk`（总览，`source/categories/index.md` 的 front-matter 加 `layout: cat-tree`
 才走它，主题的 `layout/page.njk` 那套 `.category-all-page` 列表就不参与了）+ `tools/cat-branch.njk`
-（`setView('category.njk', …)` **顶掉主题的分类页模板**）。两份都 `{% extends '_layout.njk' %}` +
-`{% import '_macro/sidebar.njk' as sidebar_template with context %}`，和主题自己的模板同一条路，
-所以侧栏、菜单徽章、深色模式全都跟着。
+（`setView('category.njk', …)` **顶掉主题的分类页模板**，`hexo-generator-category` 取的 layout 名就是
+`['category','archive','index']`；不改 `node_modules`，Actions 上 `pnpm install` 会拿回原版）。
+两份都 `{% extends '_layout.njk' %}` + `{% import '_macro/sidebar.njk' as sidebar_template with context %}`，
+和主题自己的模板同一条路，所以侧栏、菜单徽章、深色模式全都跟着。
+总览页**只到三级芯片为止**，不把 137 个标题铺上来（要全文列表有归档页）；没有下级的二级卡（素描）
+写一句「没有再分层，点进去就是全部 7 篇」，不留一个空芯片区。
 
-**③ 为什么是「一行一节点、行高固定 30px」的文件树，不是左右展开的思维导图**：
-折线的竖段要接住上下两行的中心点，**只有等高才能纯 CSS 算准**（`::before` 画「左下折角」=
-`border-bottom + border-left` + `border-bottom-left-radius: 6px`，高 15px 正好半行；`::after` 画折角往下
-续到下一行的那 15px，`.is-tail` 时 `content: none` 断尾；父节点没排完时子行左边压一条 `.cat-rail` 穿层竖线
-把它和后面的兄弟连起来）。左右展开会让父行被整棵子树撑高，位置只能靠 JS 量 DOM，
-一屏 40 个节点不值得引这份复杂度。层级靠 `padding-left`（一级 22px、二级 44px）+ `::before` 的
-`left`（11px / 33px）成对写死，两级错位就是这两个数没配套。缩进列在窄屏上会被 `.cat-card { overflow-x: auto }`
-接住。三种节点用色区分：一级 = `--accent` 实心、二级模块 = `--surface-2` 底加粗、叶子 = 透明 + 描边，
-当前分类在列表页里是 `<h1 class="cat-node--here">`（描 accent 色），面包屑上的祖先用无框灰字。
+**③ 点进分类那一页**（`/categories/学习/行测/`）：面包屑（`.cat-crumb`，末端是 `<b>` 不是又指回本页的链接）
++ 本页那张卡（`<h1 class="cat-card-head">`，高亮描边 `.cat-card--here`）+ 子分类芯片 + 文章列表。
+**一级分类页不画面包屑**：那一层只有它自己，和下面的 `<h1>` 重复。列表不要主题的年份表头 + `MM-DD` 日期，
+条目就是一行一篇标题。
 
 **④ 排序**：`_config.yml` 里 `category_generator: order_by: date`（默认 `-date` 会把最后一课排最前）。
-升序 = 教学顺序，理由和侧栏兄弟篇同一个（导入脚本给每篇写当天的不同分钟）。
-**分页在模板之前切**，所以第 2 页自然接着排，跨页顺序也是对的。列表页顶部一句 `.cat-list-note`
-交代「几个子分类、共几篇、这一页列几篇、按导入顺序排」，条目不再重复日期（日期在这里没意义）。
+用户 09-27 明确「文章排序还是按日期来，不要按导入的」——而 `date` 就是导入脚本写进去的那天，
+所以**顺序一件没动**，只把列表页那句文案从「按导入顺序排」改成「按日期先后排」，别再让他以为有一套独立的导入序。
+**分页在模板之前切**，所以第 2 页自然接着排，跨页顺序也是对的。
+`.cat-list-note` 里「共 N 篇」用**分类的总数**（`here.node.count`）而不是本页条数：叶子分类一页只列 10 篇，
+写 `n.length` 会变成「共 10 篇」，读者以为这个月只有 10 条（校验器把这句钉死了）。
 
-**⑤ 两个坑**：
-- **nunjucks 的 `loop.parent` 不工作**：模板里写 `loop.parent.value.last` 静默得到 `undefined`，
-  结果是所有 29 个叶子行都拿到 `.cat-rail`（应为 21 个）。改成在 `forest()` 里递归给每个节点打
-  `n.last = i === list.length - 1`，模板读 `mod.last` / `leaf.last`。**别指望框架模板语言有嵌套循环的父循环变量**。
-- 分类页的树画在 `.cat-cards` 网格里，`grid` 默认 `align-items: stretch` 会把两张卡拉到等高，
-  「学习」那张 14 行的卡被撑到 26 行高、底下空一大块 → `align-items: start`。
+**⑤ 三个坑（都是量出来的，不是读代码读出来的）**：
+- **`1fr` 轨道的最小尺寸是 `auto`**（按内容算），所以首页那张 52 列 × 11px 的日历会把栅格轨道顶到 725px，
+  整页横向滚动（320 的手机上 `document.scrollWidth = 789`）。写 `repeat(6, minmax(0, 1fr))` + 卡片自身
+  `min-width: 0` 之后，`overflow-x: auto` 才回到 `.heat-scroll` 上（它自己 669px 装 725px，横滚在卡内）。
+- **styl 自己有 `min()` 数学函数**：`minmax(min(300px, 100%), 1fr)` 写进 `.styl` 会被**编译期**吃掉，
+  产物变成 `minmax(100%, 1fr)` —— 桌面也永远只有一列，而在浏览器里只表现为「卡片高了点」，很容易当成设计如此。
+  整条值必须 `unquote("…")` 原样透传。校验器两条一起看：那条 `repeat(...)` 在、`minmax(100%, 1fr)` 不在。
+- **触屏点按目标**：卡片头和芯片在桌面上 32~34px 够用，手机上不够。`+mobile()`（NexT 的 mobile = ≤767px）
+  把 `.cat-card-head, .cat-kid` 垫到 `min-height: 44px`、`.cat-posts a` 给 `12px` 上下 padding、
+  标签云的 `a` 给 `padding: 12px 8px`（最小那颗从 24px 高垫到 46px）。
+  窄屏另一条：列宽别再写死 `minmax(320px, 1fr)`，320 的屏上「最小 320」比可视区还宽，页面直接被撑破。
+
+**⑥ 手机端首页那张日历**：用户拍板「手机上隐藏这张卡」。`+mobile() { .bento-card--heat { display: none } }`，
+桌面/平板横屏（≥768）留着，768~991 那档靠卡内横滚。这是「撑不住精度/宽度就撤掉形状」的例外：
+他点名要日历这个形状（见上一节热力日历那段的教训），所以**桌面保留原样，只在手机上不画**，
+而不是换成月柱。
 
 **一个没走的弯路，记一下**：想换掉侧栏模板本来可以 `hexo.theme.setView('_macro/sidebar.njk', …)`，
 但主题的 `njk` 渲染器是 `nunjucks.configure(dirname(data.path))` —— `{% import %}` / `{% extends %}`
 按**真实文件系统**解析，`setView` 对它们无效；只有 `partial()` 走 `ctx.theme.getView()`，`setView` 才拦得住。
 所以选官方 `custom_file_path.sidebar` 注入口 + CSS `:has()`，绕开 `theme.cache.enable` 的 `fragment_cache` 隐患。
+
 
 
 
@@ -383,12 +399,17 @@ CSS 里 `:has()` 让位规则和折叠/平铺两条都在、一键到顶是 `lef
 「图标宽 = 按钮宽」居中，改按钮尺寸不补 `justify-content` 就偏）、进度条默认 `display: none` 且
 `body:has(.main-inner.post)` 才放回来、进度条那个 DOM 还在（删了它主题的滚动脚本每帧写 null）、
 每篇文章页都挂着那颗按钮和 `/js/sidebar-module.js`；
-第 13 节查分类页树状图：**期望树完全从 `source/_posts` 现算**（分类链 → 字典树 → 逐行层级/顺序/篇数/链接/
-`is-tail`/`cat-rail`），13a 比 `/categories/` 总览页的整棵树和卡数（== 一级模块数）、lede 文案逐字对得上；
-13b 比 **40 个**分类页各自的「祖先面包屑 + 本页 `<h1>` + 子分类行」，并确认列表里没有 `<time` /
-`collection-year` / `post-title-link`（日期和主题的老列表真的不画了）；13c 把 30 个叶子分类页翻页合起来
-收全文章且第一页按 `date` 升序；13d 分类页上的链接无死链；再加四条 CSS 断言（第三层折线的 `left: 33px`、
-`is-tail` 断尾、`.cat-rail`、`.cat-node--here`）。**共 352 项。**
+第 13 节查分类页卡片墙：**期望结构完全从 `source/_posts` 现算**（分类链 → 字典树 → 每节的卡数、
+每张卡的芯片、每个节点的篇数与链接），13a 把 `/categories/` 的墙整个反解出来逐字段比，并确认
+上一版树状图的零件（`cat-row` / `cat-node` / `cat-rail` / `cat-num`）在产物里一个都不剩、总览页不铺文章标题；
+13b 比 **40 个**分类页各自的「面包屑 + 本页 `<h1>` + 芯片 + 说明行」（一级的面包屑应当**不存在**，
+「共 N 篇」必须是分类总数而不是本页条数），并确认列表里没有 `<time` / `collection-year` / `post-title-link`；
+13c 把 30 个叶子分类页翻页合起来收全文章且第一页按 `date` 升序；13d 分类页上的链接无死链；
+再加五条 CSS 断言（列宽带着 `min()`、`minmax(100%, 1fr)` 不出现、芯片/面包屑/高亮卡的类都在）。
+第 9 节里还钉着这一轮手机端那几条：`repeat(6, minmax(0, 1fr))` 和 `.bento-card { min-width: 0 }`、
+日历卡的 `display: none` **恰好出现一次且落在 ≤767px 那一档**（别把桌面那份也藏了）、
+卡片头和芯片 44px、标签云的 padding、≤991 收成单列。
+**这一轮共 363 项**（上一版 352）；另有「知识库六套（10b）」一节是同时另一批导入加的检查，不计在这里。
 
 ## 申论知识库导入流水线（第一版 259 篇，已撤回）
 
@@ -586,7 +607,7 @@ python tools/check-live.py 生活六项
 
 ## 已开启的功能
 
-深色模式切换、站内搜索（依赖 `hexo-generator-searchdb`，索引生成为 `search.json`）、文章目录 TOC（侧栏，课内小标题点击展开，见「文章页阅读体验」）、侧栏第二格在文章页换成「本模块文章」（同模块兄弟篇，见上一节）、页面顶部阅读进度条（**只在文章页画**，首页/分类/归档/标签页不画）、文章标题下的字数与预计读完时间（标题下只有这一行，日期/分类都关了）、右下角一键到顶（箭头已居中）、代码块复制按钮、菜单数字徽章、分类页 `/categories/`（**树状图**：一行一分类、缩进表父子、括号里是含子分类的篇数，点进去那一页顶部也带本分支的树 + 面包屑，见「分类页：树状图」一节）、首页顶部 52 周入库日历（纯只读、悬停看当天日期与篇数）、标签页 `/tags/`、关于页 `/about/`、页脚只留版权行（`footer.powered: false`）。评论与 pjax 都不开（见「评论（决定不启用）」）。
+深色模式切换、站内搜索（依赖 `hexo-generator-searchdb`，索引生成为 `search.json`）、文章目录 TOC（侧栏，课内小标题点击展开，见「文章页阅读体验」）、侧栏第二格在文章页换成「本模块文章」（同模块兄弟篇，见上一节）、页面顶部阅读进度条（**只在文章页画**，首页/分类/归档/标签页不画）、文章标题下的字数与预计读完时间（标题下只有这一行，日期/分类都关了）、右下角一键到顶（箭头已居中）、代码块复制按钮、菜单数字徽章、分类页 `/categories/`（**三层分组卡片墙**：一级一节、二级一张卡、三级一排芯片，卡上不写连线也不靠缩进，点进分类那一页是面包屑 + 本页那张卡 + 芯片 + 文章列表，见「分类页：三层「分组卡片墙」」一节）、首页顶部 52 周入库日历（纯只读、悬停看当天日期与篇数，**手机宽度不画这张卡**）、标签页 `/tags/`、关于页 `/about/`、页脚只留版权行（`footer.powered: false`）。评论与 pjax 都不开（见「评论（决定不启用）」）。
 
 ## 可选扩展
 

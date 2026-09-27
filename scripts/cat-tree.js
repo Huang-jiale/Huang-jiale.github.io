@@ -1,16 +1,17 @@
 /*
- * 分类页重做成树状图（2026-09-24 用户拍板：「思维导图，树状图」，总览页和点进去的列表页都要改）。
+ * 分类页：三层「分组卡片墙」（2026-09-24 用户要树状图，2026-09-27 看完说不喜欢、
+ * 要求「一共就3级目录」的重排 → 改成大分类分节 + 板块卡 + 小分类芯片）。
  *
- * 这里只出数据和挂模板，画线全在 source/_data/styles.styl：
- *   - /categories/           → 自己的 tools/cat-tree.njk（整棵树，三层铺开），
+ * 这里只出数据和挂模板，长相全在 source/_data/styles.styl：
+ *   - /categories/           → 自己的 tools/cat-tree.njk（整片森林，三层铺开），
  *                             由 source/categories/index.md 的 `layout: cat-tree` 指过去
- *   - /categories/学习/行测/  → 顶掉主题的 layout/category.njk（hexo-generator-category
- *                             按 layout 名 'category' 取视图，只能这么换）。
+ *   - /categories/学习/行测/  → 顶掉主题的 layout/category.njk（hexo-generator-category 取的
+ *                             layout 名就是 ['category', 'archive', 'index']，只能这么换）。
  *                             node_modules 里的文件不能直接改：Actions 上 pnpm install 会拿回原版。
  *
- * 树的形状从文章的分类链现算（主题的 site.categories 是一张平表，父子关系得自己拼），
- * 顺序按 date 升序：导入脚本给每篇写的是当天的不同分钟，所以升序就是教学顺序，
- * 时政也才会 2025年11月 → 2026年2月 顺着排；主题默认按分类名排会把汉字数字排乱。
+ * 形状从文章的分类链现算（主题的 site.categories 是一张平表，父子关系得自己拼），
+ * 兄弟顺序 = 文章第一次挂上这一层的先后，也就是 date 升序：导入脚本给每篇写的是当天的不同分钟，
+ * 所以升序就是教学顺序，时政也才会 2025年11月 → 2026年2月 顺着排；按分类名排会把汉字数字排乱。
  */
 
 /* global hexo */
@@ -67,13 +68,6 @@ function forest(hexo) {
       siblings = node.children;
     });
   });
-
-  // 每组最后一个节点：折线到此为止（模板里要读 node.last，nunjucks 的 loop.parent 不靠谱）
-  const mark = list => list.forEach((n, i) => {
-    n.last = i === list.length - 1;
-    mark(n.children);
-  });
-  mark(roots);
 
   return { roots, total: hexo.locals.get('posts').filter(p => p.published !== false).length, kinds: index.size };
 }

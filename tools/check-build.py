@@ -10,7 +10,7 @@
 行测 541 题、92 图；素描 30 课、159 图；生活六项 64 课、499 图（期望课数与图数从母本 manifest 现算，篇数 18 = 六项 × 3 阶段）。
 2026-09-27 加了知识库六套：一套一篇 = 6 篇、18 图，母本 data/kb-raw/<id>/（见 tools/import-kb.mjs）。
 分类层数按模块定：一级只有 工作 / 学习 / 生活；「学习」下面三层（模块 / 子分类），
-「生活」下面素描是两层（大类降到标签）、六项是三层（阶段名当三级），所以规则是 2~3 层、只有「学习」强制三层。
+「生活」下面素描是两层（大类降到标签）、六项是三层（阶段名当三级）、知识库是两层（用户 2026-09-27 定：一套一篇，不再拆阶段），所以规则是 2~3 层、只有「学习」强制三层。
 """
 import io, sys, os, re, glob, datetime
 import urllib.parse
@@ -388,6 +388,40 @@ check(re.search(r'\.heat-grid\s*\{[^}]*grid-auto-flow:\s*column', css),
       'CSS：网格是竖着填的（模板按周输出，一列才是一周）')
 check(re.search(r'\.heat-scroll\s*\{[^}]*overflow-x:\s*auto', css), 'CSS：窄屏靠横向滚动，不压扁格子')
 
+# 手机端（NexT 的 mobile 断点 = ≤767px）。这几条都是量出来的 bug 钉成规则：
+#   - 栅格轨道写 1fr 时，它的最小尺寸是「内容撑出来的」，52 列日历会把整页顶出横向滚动，
+#     所以必须 minmax(0, 1fr) + 卡片自身 min-width:0，让 .heat-scroll 自己滚；
+#   - 手机屏宽摆不下 52×11px，用户拍板：这张卡手机上干脆不画。
+def media_css(css, cond):
+    """把某个断点下的所有 @media 块拼成一段文本（大括号要配平，块里还有块）"""
+    out = []
+    for m in re.finditer(r'@media \(' + re.escape(cond) + r'\)\s*\{', css):
+        i, depth = m.end(), 1
+        while depth:
+            if css[i] == '{':
+                depth += 1
+            elif css[i] == '}':
+                depth -= 1
+            i += 1
+        out.append(css[m.end():i - 1])
+    return '\n'.join(out)
+
+
+check('repeat(6, minmax(0, 1fr))' in css, 'CSS：首页栅格的列宽允许被压到 0（不被日历撑破）', 'minmax(0, 1fr)')
+check(re.search(r'\.bento-card\s*\{[^}]*min-width:\s*0', css), 'CSS：卡片自己也不许撑破栅格')
+m767 = media_css(css, 'max-width: 767px')
+check(bool(m767), f'产物里有 767px 断点（手机端规则挂在这里）', '')
+check(len(re.findall(r'\.bento-card--heat\s*\{[^}]*display:\s*none', css)) == 1,
+      'CSS：日历卡只在一个地方被隐藏（别把桌面那份也顺手藏了）', '')
+check(re.search(r'\.bento-card--heat\s*\{[^}]*display:\s*none', m767),
+      'CSS：隐藏发生在 ≤767px 那一档，手机上不画 52 周日历')
+check(re.search(r'\.cat-card-head,\s*\.cat-kid\s*\{[^}]*min-height:\s*44px', m767),
+      'CSS：卡片头和芯片在手机垫到 44px（手指点得着）')
+check(re.search(r'\.tag-cloud-tags a\s*\{[^}]*padding:\s*12px 8px', m767),
+      'CSS：标签云在手机也是 44px 级别的点按目标')
+check('grid-template-columns: minmax(0, 1fr)' in media_css(css, 'max-width: 991px'),
+      'CSS：平板竖屏/手机（≤991）首页收成单列')
+
 # 模块卡的篇数是从 source 现算的，两边必须一致
 learn_card = dict(zip(card_names, mod_raw))['学习']
 learn_kicker = re.search(r'<p class="bento-kicker">(.*?)</p>', learn_card).group(1)
@@ -628,7 +662,6 @@ for kid, cn in KB_CN.items():
             kb_dead.add(f'{slug} -> {href}')
 check(not kb_dead, '知识库六篇内没有指向 404 的站内链接', str(sorted(kb_dead)[:3]))
 
-
 # 首页「生活」卡：六项各 3 篇 + 知识库各 1 篇 + 素描 7 篇，芯片和篇数要对得上
 sh_card = next((c for c in mod_raw if '生活' in c), '')
 kids_got = {k: int(n) for k, n in re.findall(r'<li><a href="[^"]*">([^<]+)<span class="bento-count">(\d+)</span></a></li>', sh_card)}
@@ -854,51 +887,81 @@ def cat_href(path):
     return '/categories/' + '/'.join(urllib.parse.quote(n.replace(' ', '-')) for n in path) + '/'
 
 
-def rows_of(html):
-    """把页面上的一行行节点读成 [(深度, 是否收尾, 有没有竖线穿过, 层级样式, href, 文字, 篇数)]"""
-    out = []
-    for chunk in html.split('<div class="cat-row ')[1:]:
-        chunk = chunk[:chunk.index('</div>')] if '</div>' in chunk else chunk
-        depth = int(re.match(r'cat-row--l(\d)', chunk).group(1))
-        head = chunk.split('<a ', 1)[0] + chunk.split('<h1 ', 1)[0]
-        m = re.search(r'class="cat-node cat-node--([a-z]+)"(?: href="([^"]*)")?>([^<]*)<span class="cat-num">(\d+)</span>',
-                      chunk)
-        if not m:      # 面包屑那几行没有篇数
-            m = re.search(r'class="cat-node cat-node--([a-z]+)" href="([^"]*)">([^<]*)</a>', chunk)
-            out.append((depth, 'is-tail' in head, 'cat-rail' in head, m.group(1), m.group(2), m.group(3), None))
-            continue
-        out.append((depth, 'is-tail' in head, 'cat-rail' in head, m.group(1), m.group(2), m.group(3).strip(),
-                    int(m.group(4))))
-    return out
+def wall_of(html):
+    """把总览页那面墙读回结构：
+    [(一级 href, 名, 篇数, 板块数, [(二级 href, 名, 篇数, [(三级 href, 名, 篇数)], 没有子分类时那句说明)])]
+    """
+    tops = []
+    for chunk in html.split('<section class="cat-top">')[1:]:
+        chunk = chunk[:chunk.index('</section>')]
+        head = re.search(r'<a class="cat-top-name" href="([^"]*)">([^<]*)</a>\s*'
+                         r'<span class="cat-top-num">(\d+) 篇 · (\d+) 个板块</span>', chunk)
+        cards = []
+        for c in chunk.split('<article class="cat-card">')[1:]:
+            c = c[:c.index('</article>')]
+            h = re.search(r'<a class="cat-card-head" href="([^"]*)">\s*<span>([^<]*)</span>\s*'
+                          r'<span class="cat-card-num">(\d+) 篇</span>', c)
+            kids = [(u, k, int(n)) for u, k, n in re.findall(
+                r'<li><a class="cat-kid" href="([^"]*)">([^<]*)<span class="cat-kid-num">(\d+)</span></a></li>', c)]
+            note = re.search(r'<p class="cat-card-note">(.*?)</p>', c)
+            cards.append((h.group(1), h.group(2), int(h.group(3)), kids, note.group(1).strip() if note else None))
+        tops.append((head.group(1), head.group(2), int(head.group(3)), int(head.group(4)), cards))
+    return tops
 
 
-# 13a. 总览页：/categories/ 应该是整棵树，主题原来那个平铺的 .category-all-page 不该再出现
+def here_card(html):
+    """分类页上半截：(面包屑 [(href, 名)], 本页名, 本页篇数, 子分类芯片 [(href, 名, 篇数)], 说明行, 本页列出的篇数)"""
+    m = re.search(r'<nav class="cat-crumb"[^>]*>(.*?)</nav>', html, re.S)
+    crumbs = re.findall(r'<a class="cat-crumb-item" href="([^"]*)">([^<]*)</a>', m.group(1)) if m else []
+    b = re.search(r'<b class="cat-crumb-here">([^<]*)</b>', html) if m else None
+    art = html.split('<article class="cat-card cat-card--here">')[1]
+    art = art[:art.index('</article>')]
+    h = re.search(r'<h1 class="cat-card-head">([^<]*)<span class="cat-card-num">(\d+) 篇</span></h1>', art)
+    chips = [(u, k, int(n)) for u, k, n in re.findall(
+        r'<li><a class="cat-kid" href="([^"]*)">([^<]*)<span class="cat-kid-num">(\d+)</span></a></li>', art)]
+    note = re.search(r'<p class="cat-list-note">(.*?)</p>', html, re.S).group(1)
+    listed = re.search(r'<ul class="cat-posts">(.*?)</ul>', html, re.S).group(1)
+    return (crumbs, b.group(1) if b else None, h.group(1), int(h.group(2)), chips,
+            ' '.join(note.split()), listed.count('<li>'))
+
+
+# 13a. 总览页：/categories/ 应该是一面墙（一级一节 → 二级一张卡 → 三级一排芯片），
+#      主题原来那个平铺的 .category-all-page 和上一版树状的 .cat-row 都不该再出现
 all_html = open('public/categories/index.html', encoding='utf-8').read()
-body_all = all_html[all_html.index('cat-cards'):]
-check('category-all' not in all_html and 'cat-cards' in all_html,
-      '总览页换成树了（主题的平铺分类列表已经不走）')
-got = rows_of(body_all[:body_all.index('</main>')])
-want = []
-for root in [p for p in tree_order if len(p) == 1]:
-    kids = children_of.get(root, [])
-    want.append((0, False, False, 'top', cat_href(root), root[-1], tree_counts[root]))
-    for mod in kids:
-        mod_kids = children_of.get(mod, [])
-        want.append((1, mod == kids[-1], False, 'mod', cat_href(mod), mod[-1], tree_counts[mod]))
-        for leaf in mod_kids:
-            want.append((2, leaf == mod_kids[-1], mod != kids[-1], 'leaf', cat_href(leaf), leaf[-1], tree_counts[leaf]))
-check(len(got) == len(want) == len(tree_order), f'总览页 {len(got)} 行 = 源里的 {len(tree_order)} 个分类', f'产物 {len(got)}')
-check(got == want, '每一行的层级/顺序/篇数/链接/折线收尾都和源里的树对得上',
-      str([(a, b) for a, b in zip(got, want) if a != b][:3]))
-check(sum(1 for r in got if r[2]) == sum(len(children_of.get(m, [])) for top in [p for p in tree_order if len(p) == 1]
-                                        for m in children_of.get(top, [])[:-1]),
-      '竖线穿过的只有「上面还有兄弟的模块」那些子孙行', str(sum(1 for r in got if r[2])))
-cards = len(re.findall(r'<section class="cat-card"', body_all))
-check(cards == len([p for p in tree_order if len(p) == 1]), f'总览页 {cards} 张卡 = 一级模块数')
+body_all = all_html[all_html.index('cat-lede'):]
+check('category-all' not in all_html and 'cat-top' in all_html,
+      '总览页换成分组卡片墙了（主题的平铺分类列表已经不走）')
+leftover = [c for c in ('cat-row', 'cat-node', 'cat-rail', 'cat-num') if c in all_html]
+check(not leftover, '总览页上找不到上一版树状图的零件', str(leftover))
+
+tops = wall_of(body_all)
+roots = [p for p in tree_order if len(p) == 1]
+
+
+def want_top(root):
+    mods = children_of.get(root, [])
+    return (cat_href(root), root[-1], tree_counts[root], len(mods), [
+        (cat_href(mo), mo[-1], tree_counts[mo],
+         [(cat_href(lf), lf[-1], tree_counts[lf]) for lf in children_of.get(mo, [])],
+         None if children_of.get(mo) else f'没有再分层，点进去就是全部 {tree_counts[mo]} 篇')
+        for mo in mods])
+
+
+check(len(tops) == len(roots), f'总览页 {len(tops)} 节 = 源里的 {len(roots)} 个一级分类', str([t[1] for t in tops]))
+check(sum(len(t[4]) for t in tops) == len([p for p in tree_order if len(p) == 2]),
+      f'总览页 {sum(len(t[4]) for t in tops)} 张卡 = 源里的二级分类数')
+check(tops == [want_top(r) for r in roots],
+      f'{len(tree_order)} 个分类的名字/篇数/链接/层级全部对得上（三级芯片也算）',
+      str([(a, b) for a, b in zip(tops, [want_top(r) for r in roots]) if a != b][:1]))
+check(sum(1 for t in tops for c in t[4] if c[4]) == len([p for p in tree_order
+                                                       if len(p) == 2 and not children_of.get(p)]),
+      '没有子分类的二级卡（素描那种）写了一句「没有再分层」', '')
+check('class="cat-posts"' not in all_html,
+      '总览页只到三级芯片为止，不把 137 个标题全铺上来（要全文列表去归档页）')
 lede = re.search(r'<p class="cat-lede">.*?class="cat-lede-strong">([^<]+)<', all_html, re.S).group(1)
 check(lede == f'{len(src)} 篇 · {len(tree_order)} 个分类', '卡顶那行统计 = 现算的篇数和分类数', lede)
 
-# 13b. 每个分类点进去的那一页：路径一行、本页一行（<h1>）、子分类各一行
+# 13b. 每个分类点进去的那一页：面包屑 + 本页那张卡（<h1>）+ 子分类芯片 + 说明行，列表不带日期
 bad_cat_page = []
 for path in tree_order:
     f = os.path.join('public', *['categories', *[n.replace(' ', '-') for n in path]], 'index.html')
@@ -906,21 +969,28 @@ for path in tree_order:
         bad_cat_page.append(f'{"/".join(path)} 页面不在产物里')
         continue
     html = open(f, encoding='utf-8').read()
-    seg = html[html.index('cat-card--here'):]
-    seg = seg[:seg.index('</main>')]
-    rows = rows_of(seg)
-    exp = [(i, True, False, 'crumb', cat_href(path[:i + 1]), path[i], None) for i in range(len(path) - 1)]
+    if 'cat-card--here' not in html:
+        bad_cat_page.append(f'{"/".join(path)} 没有本页那张卡（helper 没认出分类链）')
+        continue
+    crumbs, crumb_here, name, count, chips, note, listed = here_card(html)
+    exp_crumb = [(cat_href(path[:i + 1]), path[i]) for i in range(len(path) - 1)]
+    if crumbs != exp_crumb or crumb_here != (path[-1] if len(path) > 1 else None):
+        bad_cat_page.append(f'{"/".join(path)}: 面包屑 {crumbs}/{crumb_here} != {exp_crumb}')
     kids = children_of.get(path, [])
-    exp.append((len(path) - 1, True, False, 'here', None, path[-1], tree_counts[path]))
-    exp += [(len(path), k == kids[-1], False, 'leaf', cat_href(k), k[-1], tree_counts[k]) for k in kids]
-    if rows != exp:
-        bad_cat_page.append(f'{"/".join(path)}: {[(a, b) for a, b in zip(rows, exp) if a != b][:2]}')
-    if '<time' in seg or 'collection-year' in seg:
+    if name != path[-1] or count != tree_counts[path]:
+        bad_cat_page.append(f'{"/".join(path)}: 卡头 {name} {count} 篇 != {path[-1]} {tree_counts[path]} 篇')
+    if chips != [(cat_href(k), k[-1], tree_counts[k]) for k in kids]:
+        bad_cat_page.append(f'{"/".join(path)}: 芯片 {[c[1] for c in chips]} != {[k[-1] for k in kids]}')
+    want_note = (f'下面 {len(kids)} 个子分类、共 {tree_counts[path]} 篇' if kids
+                 else f'共 {tree_counts[path]} 篇')
+    if want_note not in note or f'这一页列 {listed} 篇' not in note or '按日期先后排' not in note:
+        bad_cat_page.append(f'{"/".join(path)}: 说明行 «{note}» 对不上（期望 {want_note} / 本页 {listed} 篇）')
+    if '<time' in html[html.index('cat-list-note'):] or 'collection-year' in html:
         bad_cat_page.append(f'{"/".join(path)}: 列表里还有日期')
-    if 'class="post-title-link"' in seg:
+    if 'class="post-title-link"' in html:
         bad_cat_page.append(f'{"/".join(path)}: 还在用主题的 posts-collapse 那套')
 check(len(tree_order) >= 30, f'{len(tree_order)} 个分类页都要核对')
-check(not bad_cat_page, '每个分类页的树（路径 + 本页 + 子分类）都对，且列表不带日期', str(bad_cat_page[:3]))
+check(not bad_cat_page, '每个分类页的（面包屑 + 本页卡 + 芯片 + 说明行）都对，且列表不带日期', str(bad_cat_page[:3]))
 
 # 13c. 文章列表：翻页合起来要收全该分类的篇，顺序按 date 升序（_config.yml 的 category_generator）
 src_by_path = {}
@@ -943,8 +1013,8 @@ for path in [p for p in tree_order if len(children_of.get(p, [])) == 0]:
     if sorted(slugs) != sorted(want_slugs):
         order_bad.append(f'{"/".join(path)} 少了/多了 {sorted(set(slugs) ^ set(want_slugs))[:3]}')
     elif slugs != want_slugs:
-        order_bad.append(f'{"/".join(path)} 第一页不是按导入顺序排：{slugs[:3]} vs {want_slugs[:3]}')
-check(len(order_bad) == 0, f'{len([p for p in tree_order if not children_of.get(p, [])])} 个叶子分类页：文章收全且按升序排',
+        order_bad.append(f'{"/".join(path)} 第一页不是按日期升序排：{slugs[:3]} vs {want_slugs[:3]}')
+check(len(order_bad) == 0, f'{len([p for p in tree_order if not children_of.get(p, [])])} 个叶子分类页：文章收全且按日期升序排',
       str(order_bad[:3]))
 
 # 13d. 分类页里的站内链接不能指到 404
@@ -957,11 +1027,16 @@ for path in tree_order:
             dead_cat.add(f'{"/".join(path)} -> {href}')
 check(not dead_cat, '分类页上的链接没有 404', str(sorted(dead_cat)[:3]))
 
-for token, why in [('.cat-row--l2::before {\n  left: 33px;', '第三层的折线在自己的那一竖上'),
-                   ('.cat-row.is-tail::after {\n  content: none;', '组里最后一个节点不再往下接线'),
-                   ('.cat-rail {', '祖先的竖线穿过子孙子行'),
-                   ('.cat-node--here', '本页那个节点是 <h1> 长成的胶囊')]:
-    check(token in css, f'CSS：{why}', token[:28])
+for token, why in [('repeat(auto-fit, minmax(min(300px, 100%), 1fr))',
+                    '卡片墙自动换列，且窄屏退化成一列（styl 里的 unquote 生效了，min() 没被编译掉）'),
+                   ('.cat-card-head', '二级卡的头（点它进那个分类）'),
+                   ('.cat-kid {', '三级芯片'),
+                   ('.cat-crumb-here', '面包屑末端是纯文本，不是又指回本页的链接'),
+                   ('.cat-card--here', '本页那张卡高亮')]:
+    check(token in css, f'CSS：{why}', token[:34])
+# min() 一旦被 styl 的数学函数吃掉，产物就变成 minmax(100%, 1fr) —— 桌面也永远一列，
+# 而这在浏览器里只是「卡片变高」，脚本不盯这一行根本发现不了。
+check('minmax(100%, 1fr)' not in css, 'CSS：列宽没被 styl 编译成「永远一列」', 'minmax(100%, 1fr)')
 
 print('\n%s' % ('全部通过' % () if not fail else f'{len(fail)} 项失败：' + '；'.join(fail)))
 sys.stdout.flush()          # stdout 被我换成 TextIOWrapper 了，sys.exit 时不一定帮你刷管道

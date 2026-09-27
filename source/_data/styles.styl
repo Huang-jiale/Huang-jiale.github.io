@@ -402,13 +402,17 @@ details.answer {
 .bento-grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(6, 1fr);
+  // minmax(0, 1fr) 不是可有可无：`1fr` 的最小宽度是 auto（内容说了算），
+  // 日历那张卡里 52 列 × 11px 的格子要 725px，于是整条栅格被顶到 767px、首页左右能拖。
+  // 给 0 当下限，格子就被关回 .heat-scroll 的 overflow-x 里，只在自己卡内滚。
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .bento-card {
   background: var(--surface-2);
   border-radius: var(--radius-lg);
   grid-column: span 2;
+  min-width: 0;
   padding: 26px;
   transition: transform $transition-ease, box-shadow $transition-ease;
 
@@ -658,7 +662,7 @@ details.answer {
 
 +tablet-mobile() {
   .bento-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .bento-card, .bento-card--heat, .bento-card--feed {
@@ -667,9 +671,17 @@ details.answer {
     padding: 22px;
   }
 
-  // 手机上格子缩到最小一档，52 周还是靠横向滑动看，不硬塞进屏宽
+  // 平板横屏那档（768~991）还留着日历：格子缩到最小一档，52 周靠在卡里横向滑动看
   .heat-months, .heat-grid {
     grid-template-columns: repeat(52, 11px);
+  }
+}
+
++mobile() {
+  // 手机上整张日历卡不放（用户 2026-09-27 拍板）：52 周 × 11px 比任何手机屏都宽，
+  // 留着就得左右滑，而滑掉的那半是「过去 49 周」，手机上没意义。DOM 照旧渲染，只是不画。
+  .bento-card--heat {
+    display: none;
   }
 }
 
@@ -977,29 +989,31 @@ body:has(.main-inner.post) .reading-progress-bar {
 }
 
 // ---------------------------------------------------------------
-// 分类页：树状图（数据 + 模板 scripts/cat-tree.js、tools/cat-tree.njk、tools/cat-branch.njk）
+// 分类页：三层「分组卡片墙」（数据 scripts/cat-tree.js，模板 tools/cat-tree.njk / tools/cat-branch.njk）
 //
-// 一行一个分类节点，行高固定 30px，缩进就是层级；父子之间是一条圆角折线（├ / └）。
-// 折线的竖段分成上下两半分开画：上半 + 横段是 ::before 的左边框和下边框（拐角再圆一下），
-// 下半是 ::after。因为每行等高，「上一行中心 → 本行中心」正好就是 15px + 15px，
-// 纯 CSS 就能接准，不用 JS 量位置。
-// 组里最后一个节点 (::after 那条继续往下的线) 由模板加 .is-tail 停掉；
-// 子孙还要穿过父辈那一竖时，模板另外塞一个 <i class="cat-rail">（只有总览页的第三层会用到）。
-// 深色模式不用另写一套：线色走 --hairline、胶囊走 --surface / --accent。
+// 一共只有三级，所以不画连线也不靠缩进：一级 = 一节（.cat-top），二级 = 一张卡（.cat-card），
+// 三级 = 卡里的一排芯片（.cat-kid）。点进分类那一页用同一套零件：面包屑 + 本页那张卡 + 子分类芯片 + 文章列表。
+// 两个尺寸坑：
+//  ① 列宽写 minmax(min(300px, 100%), 1fr) —— 上一版写死 minmax(320px, 1fr)，在 320px 的手机上
+//     「最小 320」比屏幕本身还宽，整页被撑出横向滚动；套一层 min() 窄屏就自动退化成 100%。
+//     整条值必须 unquote("…")：styl 自己有个 min() 数学函数，会当场把 min(300px, 100%) 算成
+//     100%（百分比它不会比大小，直接拿第二个），产物退化成永远一列。
+//  ② 触屏点按目标：卡片头和芯片在手机上垫到 44px 高（桌面不用那么大，手指才需要）。
+// 深色模式不另写一套：底色走 --surface / --surface-2、描边走 --hairline。
 // ---------------------------------------------------------------
 .cat-lede {
   align-items: baseline;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 0 0 20px;
+  margin: 0 0 22px;
 }
 
 .cat-lede-strong {
   color: var(--ink);
   font-feature-settings: 'tnum' 1;
-  font-size: 1.0625em;
   font-variant-numeric: tabular-nums;
+  font-size: 1.0625em;
   font-weight: 600;
 }
 
@@ -1008,174 +1022,177 @@ body:has(.main-inner.post) .reading-progress-bar {
   font-size: .875em;
 }
 
-// 一张卡 = 一个一级模块；宽屏两列，窄列放不下就自己掉回一列。
-// align-items:start：不拉平两列的高度，否则「学习」那张只有 14 行的卡会被撑到 26 行高，底下空一块。
-.cat-cards {
+// 一节 = 一个一级模块
+.cat-top + .cat-top {
+  margin-top: 30px;
+}
+
+.cat-top-head {
+  align-items: baseline;
+  border-bottom: 1px solid var(--hairline);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+}
+
+.cat-top-name {
+  color: var(--ink);
+  font-size: 1.1875em;
+  font-weight: 600;
+  letter-spacing: -.018em;
+}
+
+a.cat-top-name:hover {
+  color: var(--accent);
+}
+
+.cat-top-num {
+  color: var(--muted);
+  font-feature-settings: 'tnum' 1;
+  font-variant-numeric: tabular-nums;
+  font-size: .8125em;
+}
+
+// 一张卡 = 一个二级分类；窄列放不下就自己掉回一列
+.cat-wall {
   align-items: start;
   display: grid;
-  gap: 22px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  grid-template-columns: unquote("repeat(auto-fit, minmax(min(300px, 100%), 1fr))");
 }
 
 .cat-card {
   background: var(--surface-2);
   border-radius: var(--radius-lg);
-  overflow-x: auto;
-  padding: 18px 20px;
+  padding: 6px 6px 14px;
+  transition: box-shadow $transition-ease;
 }
 
-.cat-row {
+.cat-card:hover {
+  box-shadow: $shadow-soft;
+}
+
+.cat-card-head {
   align-items: center;
+  border-radius: 12px;
+  color: var(--ink);
   display: flex;
-  height: 30px;
-  position: relative;
+  font-weight: 600;
+  justify-content: space-between;
+  letter-spacing: -.014em;
+  margin: 0 8px;
+  min-height: 40px;
+  padding: 6px 12px;
+  transition: background-color $transition-ease, color $transition-ease;
 }
 
-.cat-row--l1 {
-  padding-left: 22px;
+a.cat-card-head:hover {
+  background: var(--surface);
+  color: var(--accent);
 }
 
-.cat-row--l2 {
-  padding-left: 44px;
+.cat-card-num {
+  color: var(--muted);
+  font-feature-settings: 'tnum' 1;
+  font-variant-numeric: tabular-nums;
+  font-size: .8125em;
+  font-weight: 500;
+  margin-left: 10px;
 }
 
-// ├─ / └─ 的转角：竖着下来 15px，再横着进胶囊
-.cat-row--l1::before,
-.cat-row--l2::before {
-  border-bottom: 1px solid var(--hairline);
-  border-bottom-left-radius: 6px;
-  border-left: 1px solid var(--hairline);
-  content: '';
-  height: 15px;
-  position: absolute;
-  top: 0;
-  width: 11px;
+// 三级芯片：一排，放不下自己换行
+.cat-kids {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 4px 8px 0;
+  padding: 0;
 }
 
-.cat-row--l1::before {
-  left: 11px;
-}
-
-.cat-row--l2::before {
-  left: 33px;
-}
-
-// 同一组下面还有兄弟：从本行中心再往下 15px，正好接到下一行的转角
-.cat-row--l1::after,
-.cat-row--l2::after {
-  background: var(--hairline);
-  content: '';
-  height: 15px;
-  position: absolute;
-  top: 15px;
-  width: 1px;
-}
-
-.cat-row--l1::after {
-  left: 11px;
-}
-
-.cat-row--l2::after {
-  left: 33px;
-}
-
-.cat-row.is-tail::after {
-  content: none;
-}
-
-// 祖先那一竖要穿过我这行接着往下走
-.cat-rail {
-  background: var(--hairline);
-  height: 30px;
-  left: 11px;
-  position: absolute;
-  top: 0;
-  width: 1px;
-}
-
-.cat-node {
+.cat-kid {
   align-items: center;
-  border: 1px solid transparent;
+  border: 1px solid var(--hairline);
   border-radius: var(--radius-pill);
+  color: var(--ink-soft);
   display: inline-flex;
-  flex: none;
-  font-size: .875em;
+  font-size: .8125em;
   gap: 6px;
-  height: 28px;
-  line-height: 1;
-  padding: 0 11px;
-  transition: background-color $transition-ease, color $transition-ease, border-color $transition-ease;
+  min-height: 32px;
+  padding: 0 12px;
+  transition: background-color $transition-ease, border-color $transition-ease, color $transition-ease;
   white-space: nowrap;
 }
 
-.cat-num {
+a.cat-kid:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.cat-kid-num {
   font-feature-settings: 'tnum' 1;
-  font-size: .8125em;
   font-variant-numeric: tabular-nums;
   opacity: .62;
 }
 
-.cat-node--top {
-  background: var(--accent);
-  color: var(--accent-ink);
-  font-size: .9375em;
-  font-weight: 600;
-  padding: 0 14px;
-}
-
-.cat-node--mod {
-  background: var(--surface);
-  color: var(--ink);
-  font-weight: 600;
-}
-
-.cat-node--leaf {
-  background: transparent;
-  border-color: var(--hairline);
-  color: var(--ink-soft);
-}
-
-.cat-node--crumb {
-  background: transparent;
-  border-color: transparent;
+// 二级没有三级（素描）时，卡里那句「点进去看课文」
+.cat-card-note {
   color: var(--muted);
-  padding: 0 6px;
+  font-size: .8125em;
+  margin: 6px 20px 0;
 }
 
-.cat-node--crumb:hover {
+// 点进分类那一页：面包屑（最多三级）
+.cat-crumb {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .875em;
+  gap: 2px;
+  margin: 0 0 14px;
+}
+
+.cat-crumb-item {
+  border-radius: var(--radius-pill);
+  color: var(--muted);
+  padding: 4px 10px;
+}
+
+a.cat-crumb-item:hover {
+  background: var(--surface-2);
   color: var(--accent);
 }
 
-.cat-node--top:hover,
-.cat-node--mod:hover,
-.cat-node--leaf:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+.cat-crumb-sep {
+  color: var(--hairline);
 }
 
-.cat-node--top:hover {
-  color: var(--accent-ink);
-  opacity: .92;
-}
-
-// 分类页的本页标题就是树上那一个节点，所以 <h1> 直接长成胶囊
-.cat-node--here {
-  background: var(--surface);
-  border-color: var(--accent);
+.cat-crumb-here {
   color: var(--ink);
-  font-size: 1em;
   font-weight: 600;
-  letter-spacing: -.014em;
-  margin: 0;
-  padding: 0 14px;
+  padding: 4px 10px;
+}
+
+// 本页这张卡（标题就是 h1，不再画第二遍名字）
+.cat-card--here {
+  padding-bottom: 8px;
+}
+
+.cat-card--here .cat-card-head {
+  color: var(--ink);
+  font-size: 1.0625em;
+  min-height: 44px;
 }
 
 .cat-list-note {
   color: var(--muted);
   font-feature-settings: 'tnum' 1;
-  font-size: .8125em;
   font-variant-numeric: tabular-nums;
-  margin: 22px 0 4px;
+  font-size: .8125em;
+  margin: 20px 0 4px;
 }
 
 // 文章列表：不写日期（那是导入那天），一行一篇，hover 才出色块
@@ -1196,6 +1213,29 @@ body:has(.main-inner.post) .reading-progress-bar {
   a:hover {
     background: var(--surface);
     color: var(--accent);
+  }
+}
+
++mobile() {
+  // 手机上点按目标垫到 44px（桌面用不着那么大）
+  .cat-card-head,
+  .cat-kid {
+    min-height: 44px;
+  }
+
+  .cat-posts a {
+    padding: 12px 10px;
+  }
+}
+
+// ---------------------------------------------------------------
+// 标签页：字云按词频给字号，最小的那批整颗只有 24~27px 高，手机上点不准
+// （上下 12px 是量出来的：垫到最小那颗 46px 高，44 是点得准的底线）
+// ---------------------------------------------------------------
++mobile() {
+  .tag-cloud-tags a {
+    display: inline-block;
+    padding: 12px 8px;
   }
 }
 

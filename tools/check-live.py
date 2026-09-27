@@ -137,11 +137,24 @@ check(n_cells == 364, f'首页日历 52×7 = 364 格（线上数到 {n_cells} �
 check('heat-months' in home and 'heat-legend' in home, '首页日历的月首标签和图例都在')
 check('class="months"' not in home, '首页已经没有上一版按月柱状图')
 overview = get('categories/')[1].decode('utf-8', 'replace')
-check('cat-row cat-row--l0' in overview and 'cat-node--top' in overview, '分类总览页是树状图')
-branch_path = paths[max(cat_want, key=lambda k: (len(cat_want[k]), len(k)))]   # 文章最多的那条链
+check('cat-top-name' in overview and 'cat-card-head' in overview and 'cat-kid' in overview,
+      '分类总览页是三层卡片墙（一级一节 + 二级一张卡 + 三级一排芯片）')
+check('cat-row' not in overview and 'cat-node' not in overview, '线上已经不是上一版带连线的那棵树')
+# 挑一篇最多的「二级及以下」链：一级页不画面包屑（只有它自己，和下面的卡重复），验不了那条
+branch_path = paths[max([k for k in cat_want if len(k) > 1], key=lambda k: (len(cat_want[k]), len(k)))]
 branch = get(branch_path)[1].decode('utf-8', 'replace')
-check('cat-node--here' in branch and '<time' not in branch, '分类页顶部有本分支的树，列表不画日期')
+check('cat-card--here' in branch and 'cat-crumb-item' in branch and '<time' not in branch,
+      '分类页顶部是面包屑 + 本页那张卡，列表不画日期')
+root_page = get(paths[[k for k in cat_want if len(k) == 1][0]])[1].decode('utf-8', 'replace')
+check('cat-crumb' not in root_page and 'cat-card--here' in root_page,
+      '一级分类页不画只有一格的面包屑')
 css = get('css/main.css')[1].decode('utf-8', 'replace')
+check('minmax(min(300px, 100%), 1fr)' in css, '线上 CSS：卡片墙列宽带着 min()（没被 styl 编译成一列）',
+      'minmax(100%, 1fr)' in css and '被编译掉了' or '')
+heat_hide = [b for b in css.split('@media ')
+             if '.bento-card--heat {' in b and 'display: none' in b.split('.bento-card--heat {')[1][:40]]
+check(len(heat_hide) == 1 and heat_hide[0].startswith('(max-width: 767px'),
+      '线上 CSS：52 周日历只在手机那一档不画', heat_hide[0][:22] if heat_hide else '一条都没找到')
 # 产物里有好几条 .back-to-top（主题的、我的、移动端的），要找「我那条」= 带 42px 的那一条
 mine = [b for b in re.findall(r'\.back-to-top \{([^}]*)\}', css) if '42px' in b]
 check(bool(mine) and 'justify-content: center' in mine[0], '一键到顶的箭头居中规则已生效')
