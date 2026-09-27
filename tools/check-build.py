@@ -64,19 +64,20 @@ check(len(src_slugs) == len(xc_src), f'行测 slug 无重复：{len(src_slugs)}'
 lost = sorted(s for s in src_slugs if s not in pages)
 check(not lost, f'{len(src_slugs)} 篇行测都构建出了页面', str(lost[:5]))
 
-# ---------- 1b. 分类：一级只能出现 工作 / 学习 / 生活；学习三层、生活两层 ----------
+# ---------- 1b. 分类：一级只能出现 工作 / 学习 / 生活；学习与工作三层、生活两层 ----------
 
 TOPS_OK = {'工作', '学习', '生活'}
 tops = {}
 bad_cat = []
 for k, v in src.items():
     cats = fm_categories(v)
-    # 学习下面走三层（模块 / 子分类），生活下面用户 2026-09-24 定的口径是两层（六项本身就是二级）
-    if cats[0] not in TOPS_OK or len(cats) < 2 or len(cats) > 3 or (cats[0] == '学习' and len(cats) != 3):
+    # 学习、工作下面走三层（模块 / 子分类），生活下面用户 2026-09-24 定的口径是两层（六项本身就是二级）
+    if cats[0] not in TOPS_OK or len(cats) < 2 or len(cats) > 3 or (cats[0] in ('学习', '工作') and len(cats) != 3):
         bad_cat.append(f'{norm(k)} -> {cats}')
     tops[cats[0]] = tops.get(cats[0], 0) + 1
-check(not bad_cat, f'{len(src)} 篇分类合规（一级 ∈ 工作/学习/生活，学习三层、生活两层）', str(bad_cat[:3]))
-check(tops.get('学习', 0) + tops.get('生活', 0) == len(src), f'文章都挂在「学习」或「生活」下：{tops}')
+check(not bad_cat, f'{len(src)} 篇分类合规（一级 ∈ 工作/学习/生活，学习与工作三层、生活两层）', str(bad_cat[:3]))
+check(tops.get('学习', 0) + tops.get('生活', 0) + tops.get('工作', 0) == len(src),
+      f'文章都挂在三个一级模块下：{tops}')
 # 二、三级不能撞名（撞了分类页会混在一起，篇数对不上）
 path_seen = {}
 for k, v in src.items():
@@ -399,6 +400,40 @@ for v in src.values():
 kid_got = dict(re.findall(r'<a href="[^"]*">([^<]+)<span class="bento-count">(\d+)</span>', learn_card))
 check({k: int(n) for k, n in kid_got.items()} == kid_want['学习'],
       f'学习卡上的子分类胶囊 = 源里 {len(kid_want["学习"])} 个模块的篇数', f'{kid_got} vs {kid_want["学习"]}')
+
+# 「工作」模块：亚马逊运营知识库 21 篇（tools/import-amazon-kb.py 生成）。
+# 篇数与板块芯片按 source 现算，和「学习」那一节同一套算法。
+work_card = dict(zip(card_names, mod_raw))['工作']
+am_src = {k: v for k, v in src.items() if '/am-kb-' in k}
+check(len(am_src) == 21, f'源里亚马逊运营 {len(am_src)} 篇（应为 21）')
+am_slugs = {fm_slug(v) for v in am_src.values()}
+check(len(am_slugs) == len(am_src), '亚马逊运营 slug 无重复')
+am_lost = sorted(s for s in am_slugs if s not in pages)
+check(not am_lost, f'{len(am_slugs)} 篇都构建出了页面', str(am_lost[:5]))
+check(f'{tops.get("工作", 0)} 篇' in re.search(r'<p class="bento-kicker">(.*?)</p>', work_card).group(1),
+      '工作卡的篇数 = 源里挂在工作下的文章数', str(tops))
+work_kid = dict(re.findall(r'<a href="[^"]*">([^<]+)<span class="bento-count">(\d+)</span>', work_card))
+check({k: int(n) for k, n in work_kid.items()} == kid_want.get('工作', {}),
+      f'工作卡上的板块胶囊 = 源里 {len(kid_want.get("工作", {}))} 个板块的篇数', f'{work_kid}')
+# 369 张卡的对账在导入脚本里做（它拿《00》主题地图逐主题比过），这里核三级板块的形状：
+# 二级只有「亚马逊运营知识库」一个模块（首页卡上的芯片就是它），20 个主题按 A~E 字母挂 5 个板块，
+# 总纲那一篇自己占一个板块，不混进业务板块里
+AM_BLOCK = {'A': '账号与主体', 'B': '合规与权利', 'C': '流量与履约', 'D': '钱与税', 'E': '经营与人'}
+am_cat3, block_bad = {}, []
+for k, v in am_src.items():
+    c = fm_categories(v)
+    am_cat3[c[2]] = am_cat3.get(c[2], 0) + 1
+    m = re.search(r'亚马逊运营知识库 ([A-E])\d? ·', v) if c[2] != '总纲与索引' else None
+    if m and AM_BLOCK[m.group(1)] != c[2]:
+        block_bad.append(f'{norm(k)} 主题 {m.group(1)} 挂到了「{c[2]}」')
+    if not m and c[2] != '总纲与索引':
+        block_bad.append(f'{norm(k)} 标题里没有主题编号')
+check(not block_bad, '20 个主题的板块 = 主题编号首字母（A~E → 五个板块名）', str(block_bad[:3]))
+check(am_cat3.get('总纲与索引') == 1 and len(am_cat3) == 6,
+      '三级板块 6 个：五个业务板块 + 总纲与索引单独一档', str(am_cat3))
+# 用户 2026-09-27 拍板：帖子编号保留，但不公开点名数据源站点——产物里出现站名就是导入脚本被改坏了
+leak = sorted(s for s in am_slugs if any(w in pages_full.get(s, '') for w in ('知无不言', 'wearesellers')))
+check(not leak, f'{len(am_slugs)} 篇产物里没有站点名（编号保留、出处不点名）', str(leak[:3]))
 
 # 首页上每个站内链接与封面图都要存在
 home_dead = set()
