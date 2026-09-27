@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 210" role="img" aria-label="一局的目标：把自己这一方的子全部搬进正对面的三角营地" width="720" height="210"><style>
+svg{display:block;width:100%;height:auto}
+.bg-paper {fill: #fffdf6;}
+.st {stroke: #6f6252; stroke-width: 1.4; fill: none;}
+svg text {font-family: system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;}
+svg text.t {font-size: 15px; fill: #221d16;}
+svg text.lab {font-size: 13px; fill: #221d16;}
+svg text.lab2 {font-size: 11.5px; fill: #5b5348;}
+svg text.hd {font-size: 13px; font-weight: 700; fill: #9a3b2e;}
+svg .ln {stroke: #6f6252; stroke-width: 1.6; fill: none;}
+svg .ln2 {stroke: #b8a98f; stroke-width: 1.2; fill: none;}
+svg .lnr {stroke: #9a3b2e; stroke-width: 2; fill: none;}
+svg .box {fill: #f6f0e4; stroke: #9d8a68; stroke-width: 1.4;}
+svg .box2 {fill: #ffffff; stroke: #9d8a68; stroke-width: 1.2;}
+svg .ball {stroke: #ffffff; stroke-width: 1.5;}
+</style>
+    <rect class="bg-paper" width="720" height="210"/>
+    <text class="hd" x="24" y="32">一局的目标</text>
+    <circle class="ball" cx="76" cy="130" r="9" fill="#9a3b2e"/>
+    <circle class="ball" cx="100" cy="130" r="9" fill="#9a3b2e"/>
+    <circle class="ball" cx="124" cy="130" r="9" fill="#9a3b2e"/>
+    <circle class="ball" cx="148" cy="130" r="9" fill="#9a3b2e"/>
+    <circle class="ball" cx="88" cy="108" r="9" fill="#9a3b2e"/>
+    <circle class="ball" cx="112" cy="108" r="9" fill="#9a3b2e"/>
+    <circle class="ball" cx="136" cy="108" r="9" fill="#9a3b2e"/>
+    <circle class="ball" cx="100" cy="86" r="9" fill="#9a3b2e"/>
+    <circle class="ball" cx="124" cy="86" r="9" fill="#9a3b2e"/>
+    <text class="lab2" x="52" y="170">自己这一方的营地</text>
+    <path class="lnr" d="M200 120H450"/>
+    <path class="lnr" d="M449 114L458 120L449 126"/>
+    <text class="lab2" x="252" y="104">全部搬过去</text>
+    <path class="st" d="M500 70H660L580 165Z"/>
+    <circle class="box2" cx="556" cy="95" r="8"/>
+    <circle class="box2" cx="580" cy="95" r="8"/>
+    <circle class="box2" cx="604" cy="95" r="8"/>
+    <text class="lab" x="504" y="58">正对面的三角营地</text>
+    <text class="lab2" x="24" y="195">先把自己所有的子搬满对面那个三角营地的一方获胜</text>
+  </svg>

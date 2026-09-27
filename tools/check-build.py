@@ -8,6 +8,7 @@
 
 2026-09-24 人工核对过的量：74 时政 + 38 行测 = 112 篇在「学习」，7 素描 + 18 生活课 = 25 篇在「生活」；
 行测 541 题、92 图；素描 30 课、159 图；生活六项 64 课、499 图（期望课数与图数从母本 manifest 现算，篇数 18 = 六项 × 3 阶段）。
+2026-09-27 加了知识库六套：一套一篇 = 6 篇、18 图，母本 data/kb-raw/<id>/（见 tools/import-kb.mjs）。
 分类层数按模块定：一级只有 工作 / 学习 / 生活；「学习」下面三层（模块 / 子分类），
 「生活」下面素描是两层（大类降到标签）、六项是三层（阶段名当三级），所以规则是 2~3 层、只有「学习」强制三层。
 """
@@ -546,13 +547,63 @@ for slug, html in sh_pages.items():
         if not (os.path.exists(p) or os.path.exists(p + '.html') or os.path.isdir(p)):
             sh_dead.add(f'{slug} -> {href}')
 check(not sh_dead, '生活六项内没有指向 404 的站内链接', str(sorted(sh_dead)[:3]))
-# 首页「生活」卡：六项各 3 篇 + 素描 7 篇，芯片和篇数要对得上
+# ---------- 10b. 知识库六套：一套一篇（6 篇），标题 / 汉字 / 图片全按母本 data/kb-raw 现算 ----------
+KB_CN = {'werewolf': '狼人杀', 'mahjong': '麻将', 'pool8': '黑八', 'snooker': '斯诺克',
+         'origami': '折纸', 'chinesecheckers': '跳棋'}
+kb_src = {fm_slug(v): v for k, v in src.items() if '/知识库/' in k}
+kb_han = lambda t: sum(1 for c in t if 0x3400 <= ord(c) <= 0x4dbf or 0x4e00 <= ord(c) <= 0x9fff)
+check(len(kb_src) == len(KB_CN), f'知识库 {len(kb_src)} 篇（六套 × 一套一篇）', str(sorted(kb_src)))
+check(set(kb_src) == {'kb-' + k for k in KB_CN}, 'slug = kb-<母本目录名>', str(sorted(set(kb_src))))
+kb_dead = set()
+for kid, cn in KB_CN.items():
+    slug = 'kb-' + kid
+    raw = open(f'data/kb-raw/{kid}/index.md', encoding='utf-8').read()
+    t = kb_src.get(slug, '')
+    raw_h1 = re.search(r'^# (.*)$', raw, re.M).group(1)
+    raw_lead = re.search(r'^> (.*)$', raw, re.M).group(1)
+    check(f'  - "生活"\n  - "{cn}"\n' in t, f'{slug}：分类是两层 生活 / {cn}')
+    check(re.search(r'^categories:\n  - "[^"]+"\n  - "[^"]+"\ntags:', t, re.M) is not None,
+          f'{slug}：分类正好两层（第三层出现就该改导入脚本的口径）')
+    check(f'title: "{raw_h1}"' in t, f'{slug}：title == 母本 H1', raw_h1)
+    check(f'description: "{raw_lead}"' in t, f'{slug}：description == 母本导语')
+    # 正文 = 母本去掉那一行 H1 和那一行导语（它们搬进了 front-matter）；导入不许增删汉字。
+    # 只按整行相等删这两行 —— 正文里的 > 是「提醒框」，删不得。
+    drop = {raw.split('\n')[raw.split('\n').index('# ' + raw_h1)], raw.split('\n')[raw.split('\n').index('> ' + raw_lead)]}
+    raw_body = re.sub(r'!\[[^\]]*\]\([^)]*\)', '', '\n'.join(l for l in raw.split('\n') if l not in drop))
+    post_body = re.sub(r'!\[[^\]]*\]\([^)]*\)', '', t.split('---\n', 2)[-1])
+    check(kb_han(post_body) == kb_han(raw_body),
+          f'{slug}：正文汉字 {kb_han(post_body)} == 母本 {kb_han(raw_body)}')
+    check(len(re.findall(r'^## ', t, re.M)) == len(re.findall(r'^## ', raw, re.M)),
+          f'{slug}：H2 小节数 == 母本 {len(re.findall(r"^## ", raw, re.M))} 节')
+    raw_imgs = sorted(f for f in os.listdir(f'data/kb-raw/{kid}/images/svg') if f.endswith('.svg'))
+    refs = re.findall(r'!\[[^\]]*\]\((/images/kb/[^)]+)\)', t)
+    check(sorted(os.path.basename(r) for r in refs) == raw_imgs,
+          f'{slug}：引用的图 == 母本 {len(raw_imgs)} 张 svg', str(sorted(set(raw_imgs) ^ {os.path.basename(x) for x in refs})))
+    check(all(r == f'/images/kb/{kid}/' + os.path.basename(r) for r in refs), f'{slug}：图片 URL 前缀对')
+    disk = sorted(f'source/images/kb/{kid}/{f}' for f in raw_imgs)
+    pub = sorted(f'public/images/kb/{kid}/{f}' for f in raw_imgs)
+    check(all(os.path.exists(p) for p in disk) and all(os.path.exists(p) for p in pub),
+          f'{cn}：{len(raw_imgs)} 张图入库且进了产物')
+    body = pages.get(slug, '')
+    got_imgs = len(re.findall(rf'<img src="/images/kb/{kid}/', body))
+    check(got_imgs == len(raw_imgs), f'{slug}：产物正文里 {len(raw_imgs)} 个 <img>', f'实际 {got_imgs}')
+    for href in re.findall(r'<a[^>]+href="(/[^"#]+)"', body):
+        p = os.path.join('public', *urllib.parse.unquote(href).lstrip('/').split('/'))
+        if not (os.path.exists(p) or os.path.exists(p + '.html') or os.path.isdir(p)):
+            kb_dead.add(f'{slug} -> {href}')
+check(not kb_dead, '知识库六篇内没有指向 404 的站内链接', str(sorted(kb_dead)[:3]))
+
+
+# 首页「生活」卡：六项各 3 篇 + 知识库各 1 篇 + 素描 7 篇，芯片和篇数要对得上
 sh_card = next((c for c in mod_raw if '生活' in c), '')
 kids_got = {k: int(n) for k, n in re.findall(r'<li><a href="[^"]*">([^<]+)<span class="bento-count">(\d+)</span></a></li>', sh_card)}
 check(kids_got == kid_want.get('生活'), f'首页「生活」卡的子分类芯片 == 源里 {len(kid_want.get("生活", {}))} 个二级分类的篇数', str(kids_got))
-check(set(kids_got) == set(SH_TOPICS.values()) | {'素描'}, '芯片名字 = 六项 + 素描', str(sorted(kids_got)))
+check(set(kids_got) == set(SH_TOPICS.values()) | set(KB_CN.values()) | {'素描'},
+      '芯片名字 = 生活六项 + 知识库六套 + 素描', str(sorted(kids_got)))
 check({k: v for k, v in kids_got.items() if k in SH_TOPICS.values()} == {cn: 3 for cn in SH_TOPICS.values()},
       '六项每项 3 篇（一阶段一篇）', str(kids_got))
+check({k: v for k, v in kids_got.items() if k in KB_CN.values()} == {cn: 1 for cn in KB_CN.values()},
+      '知识库每套 1 篇（一套一篇）', str(kids_got))
 check(f'bento-kicker">{tops.get("生活", 0)} 篇' in sh_card, f'首页「生活」卡显示 {tops.get("生活")} 篇')
 
 # ---------- 11. 阅读体验：侧栏目录折叠 / 顶部进度条 / 标题下的字数与预计读完时间 ----------
@@ -673,6 +724,12 @@ for slug, full in sorted(pages_full.items()):
     mod, grp = cats[1], (cats[2] if len(cats) > 2 else '')
     total = mod_want[mod]
     i = full.find('<nav class="module-nav"')
+    if total == 1:
+        # 只有一篇的模块（知识库一套一篇）没得可列：模板故意只在 nav.total > 1 时渲染，侧栏退回
+        # 主题的「站点概览」。反过来盯：不许出现空的或自指的 .module-nav。
+        if i >= 0:
+            nav_bad.append(f'{slug} 模块只有 1 篇却渲染出了 .module-nav')
+        continue
     if i < 0:
         nav_bad.append(f'{slug} 侧栏没有 .module-nav')
         continue

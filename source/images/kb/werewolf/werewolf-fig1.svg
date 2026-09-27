@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 176" role="img" aria-label="流程示意图：入夜行动、公布死讯、发言讨论、投票放逐、判定胜负五步用线依次连接，最后一步回到第一步" width="720" height="176"><style>
+svg{display:block;width:100%;height:auto}
+.bg-paper {fill: #fffdf6;}
+svg text {font-family: system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;}
+svg text.t {font-size: 15px; fill: #221d16;}
+svg text.lab {font-size: 13px; fill: #221d16;}
+svg text.lab2 {font-size: 11.5px; fill: #5b5348;}
+svg text.hd {font-size: 13px; font-weight: 700; fill: #9a3b2e;}
+svg .ln {stroke: #6f6252; stroke-width: 1.6; fill: none;}
+svg .ln2 {stroke: #b8a98f; stroke-width: 1.2; fill: none;}
+svg .lnr {stroke: #9a3b2e; stroke-width: 2; fill: none;}
+svg .box {fill: #f6f0e4; stroke: #9d8a68; stroke-width: 1.4;}
+svg .box2 {fill: #ffffff; stroke: #9d8a68; stroke-width: 1.2;}
+svg .ball {stroke: #ffffff; stroke-width: 1.5;}
+</style>
+    <rect class="bg-paper" width="720" height="176"/>
+    <text class="hd" x="24" y="28">一局的循环</text>
+    <rect class="box" x="24" y="44" width="104" height="58" rx="8"/>
+    <text class="t" x="36" y="70">① 入夜行动</text>
+    <text class="lab2" x="32" y="98">各身份夜里动</text>
+    <path class="lnr" d="M132 72H164"/>
+    <rect class="box" x="168" y="44" width="104" height="58" rx="8"/>
+    <text class="t" x="180" y="70">② 公布死讯</text>
+    <text class="lab2" x="176" y="98">昨晚谁出局</text>
+    <path class="lnr" d="M276 72H308"/>
+    <rect class="box" x="312" y="44" width="104" height="58" rx="8"/>
+    <text class="t" x="324" y="70">③ 发言讨论</text>
+    <text class="lab2" x="320" y="98">依次说看法</text>
+    <path class="lnr" d="M420 72H452"/>
+    <rect class="box" x="456" y="44" width="104" height="58" rx="8"/>
+    <text class="t" x="468" y="70">④ 投票放逐</text>
+    <text class="lab2" x="464" y="98">票多者出局</text>
+    <path class="lnr" d="M564 72H596"/>
+    <rect class="box" x="600" y="44" width="104" height="58" rx="8"/>
+    <text class="t" x="612" y="70">⑤ 判定胜负</text>
+    <text class="lab2" x="608" y="98">达标一方胜</text>
+    <path class="lnr" d="M652 102V122H76V102"/>
+    <path class="lnr" d="M76 102l-5 9M76 102l5 9"/>
+    <text class="lab2" x="24" y="150">没人达成胜负条件，就回到夜晚再走一轮</text>
+  </svg>

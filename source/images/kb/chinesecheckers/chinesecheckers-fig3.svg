@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" role="img" aria-label="反例示意：自己的子挤在营地口，后面的子进不去" width="720" height="200"><style>
+svg{display:block;width:100%;height:auto}
+.bg-paper {fill: #fffdf6;}
+.st {stroke: #6f6252; stroke-width: 1.4; fill: none;}
+svg text {font-family: system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;}
+svg text.t {font-size: 15px; fill: #221d16;}
+svg text.lab {font-size: 13px; fill: #221d16;}
+svg text.lab2 {font-size: 11.5px; fill: #5b5348;}
+svg text.hd {font-size: 13px; font-weight: 700; fill: #9a3b2e;}
+svg .ln {stroke: #6f6252; stroke-width: 1.6; fill: none;}
+svg .ln2 {stroke: #b8a98f; stroke-width: 1.2; fill: none;}
+svg .lnr {stroke: #9a3b2e; stroke-width: 2; fill: none;}
+svg .box {fill: #f6f0e4; stroke: #9d8a68; stroke-width: 1.4;}
+svg .box2 {fill: #ffffff; stroke: #9d8a68; stroke-width: 1.2;}
+svg .ball {stroke: #ffffff; stroke-width: 1.5;}
+</style>
+    <rect class="bg-paper" width="720" height="200"/>
+    <text class="hd" x="24" y="30">营地口被自己挤住</text>
+    <circle class="ball" cx="120" cy="148" r="9" fill="#9a3b2e"/>
+    <path class="lnr" d="M132 148H222"/>
+    <path class="lnr" d="M221 143L228 148L221 153"/>
+    <path class="lnr" d="M244 136L260 160"/>
+    <path class="lnr" d="M260 136L244 160"/>
+    <text class="lab2" x="24" y="112">还在外面的子</text>
+    <text class="lab2" x="232" y="120">进不去</text>
+    <path class="st" d="M430 55L570 155H290Z"/>
+    <circle class="ball" cx="320" cy="148" r="8" fill="#9a3b2e"/>
+    <circle class="ball" cx="345" cy="148" r="8" fill="#9a3b2e"/>
+    <circle class="ball" cx="370" cy="148" r="8" fill="#9a3b2e"/>
+    <circle class="ball" cx="395" cy="148" r="8" fill="#9a3b2e"/>
+    <circle class="ball" cx="420" cy="148" r="8" fill="#9a3b2e"/>
+    <circle class="box2" cx="372" cy="122" r="8"/>
+    <circle class="box2" cx="400" cy="122" r="8"/>
+    <circle class="box2" cx="428" cy="122" r="8"/>
+    <text class="lab2" x="470" y="62">里面还空着</text>
+    <text class="lab2" x="24" y="180">入口那一排先留位，别把自己最后几步的路堵死</text>
+  </svg>
