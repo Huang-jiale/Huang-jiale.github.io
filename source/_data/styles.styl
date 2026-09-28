@@ -27,6 +27,8 @@
   --heat-2: #a3cdf3;
   --heat-3: #4f9fe0;
   --heat-future: #fafafb; // 还没到的那几天，比空格子更淡一档
+  // 空格子靠这圈描边才看得出是张日历（原因见下面 .heat-l0 那条）
+  --heat-track: rgba(0, 0, 0, .07);
 }
 
 if (hexo-config('darkmode')) {
@@ -45,6 +47,7 @@ if (hexo-config('darkmode')) {
       --heat-2: #2a5f8f;
       --heat-3: #3f87c9;
       --heat-future: #232326;
+      --heat-track: rgba(255, 255, 255, .13);
     }
   }
 }
@@ -537,6 +540,14 @@ details.answer {
 
 .heat-cell.is-future {
   background: var(--heat-future);
+}
+
+// 空格子和还没到的日子原本只有底色可看，而 --heat-0 和卡片是同一级灰（深色下和 --surface-2
+// 逐字节相等，浅色下差 1.04:1）——一年里绝大多数格子是空的，不补一圈描边就看不出这是张日历。
+// 只描空档：五档实色是他定过的形状，一个像素不动。
+.heat-l0,
+.heat-cell.is-future {
+  box-shadow: inset 0 0 0 1px var(--heat-track);
 }
 
 .heat-foot {
@@ -1225,6 +1236,26 @@ a.cat-crumb-item:hover {
 
   .cat-posts a {
     padding: 12px 10px;
+  }
+}
+
+// ---------------------------------------------------------------
+// 归档页：年份旁边那颗计数胶囊（文章数）在主题的 badge() 里写死成浅灰 #e8e8ed
+// （Pisces 的 $grey-light），深色卡片上是一块亮斑——字色会跟着翻，读得通，纯观感问题。
+// 同一页还有颗 10px 的月份圆点带 1px 白描边（主题的 border: 1px solid white），深色下是白圈。
+// 选择器必须把主题那条链数齐了才赢得了：.posts-collapse .post-content .collection-year。
+// 只写深色：浅色下描边本来就是白的、贴在白卡片上看不见，一行都不用改。
+// ---------------------------------------------------------------
+if (hexo-config('darkmode')) {
+  @media (prefers-color-scheme: dark) {
+    .posts-collapse .post-content .collection-year .collection-year-count {
+      background: var(--hairline);
+      color: var(--ink-soft);
+    }
+
+    .posts-collapse .post-content .collection-title::before {
+      border-color: var(--surface);
+    }
   }
 }
 
