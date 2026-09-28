@@ -21,7 +21,7 @@ description: "判断推理 · 图形推理 第 6 组，共 15 题（题号 1–1
 
 <strong>1.（2026 事业单位）</strong> 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。
 
-![图形推理原题页](/images/xingce/pd-xia/p31.png)
+![图形推理原题页](/images/xingce/pd-xia/p31.webp)
 
 <details class="answer">
 <summary>看答案</summary>
@@ -47,7 +47,7 @@ description: "判断推理 · 图形推理 第 6 组，共 15 题（题号 1–1
 
 <strong>3.（2026 事业单位）</strong> 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。
 
-![图形推理原题页](/images/xingce/pd-xia/p32.png)
+![图形推理原题页](/images/xingce/pd-xia/p32.webp)
 
 <details class="answer">
 <summary>看答案</summary>
@@ -86,7 +86,7 @@ description: "判断推理 · 图形推理 第 6 组，共 15 题（题号 1–1
 
 <strong>6.（2025 浙江）</strong> 已知 5 个完全相同的纸盒依次摆在一起，如下图所示，则与纸盒的面①相对的面为：
 
-![图形推理原题页](/images/xingce/pd-xia/p33.png)
+![图形推理原题页](/images/xingce/pd-xia/p33.webp)
 
 <details class="answer">
 <summary>看答案</summary>
@@ -125,7 +125,7 @@ description: "判断推理 · 图形推理 第 6 组，共 15 题（题号 1–1
 
 <strong>9.（2021 事业单位）</strong> 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。
 
-![图形推理原题页](/images/xingce/pd-xia/p34.png)
+![图形推理原题页](/images/xingce/pd-xia/p34.webp)
 
 <details class="answer">
 <summary>看答案</summary>
@@ -151,7 +151,7 @@ description: "判断推理 · 图形推理 第 6 组，共 15 题（题号 1–1
 
 <strong>11.（2023 事业单位）</strong> 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。
 
-![图形推理原题页](/images/xingce/pd-xia/p35.png)
+![图形推理原题页](/images/xingce/pd-xia/p35.webp)
 
 <details class="answer">
 <summary>看答案</summary>
@@ -200,7 +200,7 @@ D. ①④⑤，②③⑥
 
 <strong>14.（2025 浙江）</strong> 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：
 
-![图形推理原题页](/images/xingce/pd-xia/p36.png)
+![图形推理原题页](/images/xingce/pd-xia/p36.webp)
 
 A. ①②，④⑤⑥
 B. ①②⑤，③④

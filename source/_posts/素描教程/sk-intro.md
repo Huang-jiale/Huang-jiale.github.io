@@ -32,7 +32,7 @@ description: 从握笔、排线、透视到明暗五大面，一份能直接照�
 
 ### 两种握法，用不同的地方
 
-![写字握法与执棒握法对比](/images/sketch/intro/01-pencil-grip.jpg)
+![写字握法与执棒握法对比](/images/sketch/intro/01-pencil-grip.webp)
 
 - <strong>执棒握法（握长）</strong>：像握方向盘，手掌在铅笔尾端，笔尖轻搭纸面，笔杆与纸面只夹 15°~30°，用笔芯的<strong>侧面</strong>蹭纸。靠<strong>手腕和手肘</strong>带动，用于铺调子、画长直线、排线。线条松弛、有虚实。
 - <strong>写字握法（握短）</strong>：用于最后阶段刻画小细节、眼睛、边缘转折。此时才捏短。
@@ -43,7 +43,7 @@ description: 从握笔、排线、透视到明暗五大面，一份能直接照�
 
 素描的全部语言就是<strong>线条的疏密</strong>。同一支 4B，靠「线挤得紧不紧」就能画出一整个灰度范围。
 
-![五度明暗阶与四种排线方式](/images/sketch/intro/02-value-and-hatching.jpg)
+![五度明暗阶与四种排线方式](/images/sketch/intro/02-value-and-hatching.webp)
 
 ### 先练三件事（各 10 分钟，每天）
 
@@ -86,7 +86,7 @@ description: 从握笔、排线、透视到明暗五大面，一份能直接照�
 
 素描里的明暗只有一套规则，叫<strong>「三大面五调子」</strong>。把它记死，画苹果和画石膏像用的是同一套公式。
 
-![球体明暗五大面与明暗交界线分析](/images/sketch/intro/03-sphere-terminator.jpg)
+![球体明暗五大面与明暗交界线分析](/images/sketch/intro/03-sphere-terminator.webp)
 
 | 名称 | 在哪 | 画多重 | 作用 |
 | --- | --- | --- | --- |

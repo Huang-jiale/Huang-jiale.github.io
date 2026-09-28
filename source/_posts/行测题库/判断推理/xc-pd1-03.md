@@ -23,7 +23,7 @@ description: "判断推理 · 定义判断 第 3 组，共 15 题（题号 1–1
 
 根据上述定义，下列属于伞房花序的是：
 
-![伞房花序/伞形花序选项示意图（原题页）](/images/xingce/pd-shang/p17.png)
+![伞房花序/伞形花序选项示意图（原题页）](/images/xingce/pd-shang/p17.webp)
 
 A、B、C、D 为花序示意图，见上方原题页。
 

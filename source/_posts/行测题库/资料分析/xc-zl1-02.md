@@ -21,7 +21,7 @@ description: "资料分析 第 2 组，共 15 题（题号 1–15），答案随
 
 ### 材料一
 
-![材料一原题页](/images/xingce/zl-shang/p13.png)
+![材料一原题页](/images/xingce/zl-shang/p13.webp)
 
 <strong>1.（2021 联考）</strong> 与 2009 年相比，2019 年城镇非私营单位就业人员平均工资增长的倍数约为：
 
@@ -41,9 +41,9 @@ D. 3.2 倍
 
 ### 材料二
 
-![材料二原题页](/images/xingce/zl-shang/p13.png)
+![材料二原题页](/images/xingce/zl-shang/p13.webp)
 
-![材料二原题页（选项）](/images/xingce/zl-shang/p14.png)
+![材料二原题页（选项）](/images/xingce/zl-shang/p14.webp)
 
 <strong>2.（2023 联考）</strong> 2021 年 7 月至 9 月软件业务收入最高的月份，嵌入式系统软件收入环比增速约为：
 
@@ -63,7 +63,7 @@ D. 3%
 
 ### 材料三
 
-![材料三原题页](/images/xingce/zl-shang/p14.png)
+![材料三原题页](/images/xingce/zl-shang/p14.webp)
 
 <strong>3.（2026 国考）</strong> 2024 年，职工基本医疗保险统筹基金支出占全国基本医疗保险统筹基金支出比重最大的月份，当月职工基本医疗保险支出比上月：
 
@@ -83,9 +83,9 @@ D. 减少了不到 5%
 
 ### 材料四
 
-![材料四原题页](/images/xingce/zl-shang/p14.png)
+![材料四原题页](/images/xingce/zl-shang/p14.webp)
 
-![材料四原题页（题干）](/images/xingce/zl-shang/p15.png)
+![材料四原题页（题干）](/images/xingce/zl-shang/p15.webp)
 
 <strong>4.（2020 广东）</strong> 2014—2019 年，我国农民工规模增加了约：
 
@@ -105,7 +105,7 @@ D. 7.8%
 
 ### 材料五
 
-![材料五原题页](/images/xingce/zl-shang/p15.png)
+![材料五原题页](/images/xingce/zl-shang/p15.webp)
 
 <strong>5.（2026 联考）</strong> 2025 年 11 月，我国动力和储能电池产量比销量：
 
@@ -125,9 +125,9 @@ D. 低不到 4%
 
 ### 材料六
 
-![材料六原题页](/images/xingce/zl-shang/p15.png)
+![材料六原题页](/images/xingce/zl-shang/p15.webp)
 
-![材料六原题页（图 2、题干）](/images/xingce/zl-shang/p16.png)
+![材料六原题页（图 2、题干）](/images/xingce/zl-shang/p16.webp)
 
 <strong>6.（2022 国考）</strong> 2021 年 1—2 月 J 省累计发电量同比增速比同期风力发电量同比增速：
 
@@ -147,7 +147,7 @@ D. 低 10 个百分点以上
 
 ### 材料七
 
-![材料七原题页](/images/xingce/zl-shang/p16.png)
+![材料七原题页](/images/xingce/zl-shang/p16.webp)
 
 <strong>7.（2021 联考）</strong> 2019 年第一季度，131 家证券公司客户交易结算资金余额（含信用交易资金）的同比增速与受托管理资金本金总额的同比降速相比约：
 
@@ -167,9 +167,9 @@ D. 少了 11.2%
 
 ### 材料八
 
-![材料八原题页](/images/xingce/zl-shang/p16.png)
+![材料八原题页](/images/xingce/zl-shang/p16.webp)
 
-![材料八原题页（表格续、题干）](/images/xingce/zl-shang/p17.png)
+![材料八原题页（表格续、题干）](/images/xingce/zl-shang/p17.webp)
 
 <strong>8.（2025 深圳）</strong> 2023 年，上表 10 个城市中，城市轨道交通客运周转量同比增长超过 50% 的有多少个？
 
@@ -189,7 +189,7 @@ D. 3
 
 ### 材料九
 
-![材料九原题页](/images/xingce/zl-shang/p17.png)
+![材料九原题页](/images/xingce/zl-shang/p17.webp)
 
 <strong>9.（2021 四川）</strong> 2017 年，表中国家和地区自上海市货物进口额同比增速超过 10% 的有多少个？
 
@@ -209,9 +209,9 @@ D. 5
 
 ### 材料十
 
-![材料十原题页](/images/xingce/zl-shang/p17.png)
+![材料十原题页](/images/xingce/zl-shang/p17.webp)
 
-![材料十原题页（表格续、选项）](/images/xingce/zl-shang/p18.png)
+![材料十原题页（表格续、选项）](/images/xingce/zl-shang/p18.webp)
 
 <strong>10.（2019 国考）</strong> 下列折线图中，能准确反映 2018 年第一季度 CN 域名钓鱼网站处理数量同比增速变化趋势的是：
 
@@ -231,9 +231,9 @@ D. （折线图，见原页图）
 
 ### 材料十一
 
-![材料十一原题页](/images/xingce/zl-shang/p18.png)
+![材料十一原题页](/images/xingce/zl-shang/p18.webp)
 
-![材料十一原题页（题干）](/images/xingce/zl-shang/p19.png)
+![材料十一原题页（题干）](/images/xingce/zl-shang/p19.webp)
 
 <strong>11.（2026 天津）</strong> 与 2020 年相比，下列哪个价位的新能源乘用车 2024 年全国销量增速最慢？
 
@@ -253,7 +253,7 @@ D. 30 万元以上
 
 ### 材料十二
 
-![材料十二原题页](/images/xingce/zl-shang/p19.png)
+![材料十二原题页](/images/xingce/zl-shang/p19.webp)
 
 <strong>12.（2020 深圳）</strong> 2012—2018 年，国家财政支出同比增速最快的年份是：
 
@@ -273,7 +273,7 @@ D. 2012 年
 
 ### 材料十三
 
-![材料十三原题页](/images/xingce/zl-shang/p20.png)
+![材料十三原题页](/images/xingce/zl-shang/p20.webp)
 
 <strong>13.（2026 联考）</strong> 以下折线图反映了 2025 年哪 4 个月全国实物商品当期网上零售额环比增速的变化趋势？
 
@@ -293,9 +293,9 @@ D. 8—11 月
 
 ### 材料十四
 
-![材料十四原题页](/images/xingce/zl-shang/p20.png)
+![材料十四原题页](/images/xingce/zl-shang/p20.webp)
 
-![材料十四原题页（表格续、题干）](/images/xingce/zl-shang/p21.png)
+![材料十四原题页（表格续、题干）](/images/xingce/zl-shang/p21.webp)
 
 <strong>14.（2025 联考）</strong> 下图为 2024 年全国白酒或啤酒哪个季度各月当期环比增长率的变化趋势？
 
@@ -315,7 +315,7 @@ D. 啤酒、第三季度
 
 ### 材料十五
 
-![材料十五原题页](/images/xingce/zl-shang/p21.png)
+![材料十五原题页](/images/xingce/zl-shang/p21.webp)
 
 <strong>15.（2024 联考）</strong> 以下折线图中，能准确反映 2022 年第四季度各月全国铁矿石的环比增长率变化趋势的是：
 

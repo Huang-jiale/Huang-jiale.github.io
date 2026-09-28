@@ -21,7 +21,7 @@ description: "判断推理 · 图形推理 第 5 组，共 15 题（题号 1–1
 
 <strong>1.（2022 事业单位）</strong> 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。
 
-![图形推理原题页](/images/xingce/pd-xia/p25.png)
+![图形推理原题页](/images/xingce/pd-xia/p25.webp)
 
 <details class="answer">
 <summary>看答案</summary>
@@ -47,7 +47,7 @@ description: "判断推理 · 图形推理 第 5 组，共 15 题（题号 1–1
 
 <strong>3.（2026 事业单位）</strong> 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。
 
-![图形推理原题页](/images/xingce/pd-xia/p26.png)
+![图形推理原题页](/images/xingce/pd-xia/p26.webp)
 
 <details class="answer">
 <summary>看答案</summary>
@@ -86,7 +86,7 @@ description: "判断推理 · 图形推理 第 5 组，共 15 题（题号 1–1
 
 <strong>6.（2023 联考）</strong> 下面四个正方体纸盒的外表面展开图中，与其他三个折叠成的纸盒不相同的是：
 
-![图形推理原题页](/images/xingce/pd-xia/p27.png)
+![图形推理原题页](/images/xingce/pd-xia/p27.webp)
 
 <details class="answer">
 <summary>看答案</summary>
@@ -125,7 +125,7 @@ description: "判断推理 · 图形推理 第 5 组，共 15 题（题号 1–1
 
 <strong>9.（2024 浙江）</strong> 左边的立体图形是由①、②和③组成的，下列哪项可以填入问号处？
 
-![图形推理原题页](/images/xingce/pd-xia/p28.png)
+![图形推理原题页](/images/xingce/pd-xia/p28.webp)
 
 <details class="answer">
 <summary>看答案</summary>
@@ -169,7 +169,7 @@ D. ①④⑥，②③⑤
 
 <strong>12.（2021 事业单位）</strong> 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：
 
-![图形推理原题页](/images/xingce/pd-xia/p29.png)
+![图形推理原题页](/images/xingce/pd-xia/p29.webp)
 
 A. ①②，③⑤⑥
 B. ①③⑥，②④⑤
@@ -223,7 +223,7 @@ D. ①④⑤⑥，②③
 
 <strong>15.（2026 国考）</strong> 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：
 
-![图形推理原题页](/images/xingce/pd-xia/p30.png)
+![图形推理原题页](/images/xingce/pd-xia/p30.webp)
 
 A. ①④⑤，②③⑥
 B. ①③⑥，②④⑤

@@ -122,6 +122,9 @@ categories:
 
 无论哪条，**母本原件永远不改**：先 `cp` 到 `data/<模块>-raw/`（`data/` 已 gitignore），只对副本动手，复制后核对 md5。
 
+导入的素材里带位图（PNG/JPG）的话，**再多跑一步** `python tools/to-webp.py`：把 `source/images/` 下的位图压成 WebP、
+顺手把正文里的 `![…](/images/….png)` 改成 `.webp`，SVG 一张不碰。细节和它的代价在「图片瘦身」一节。
+
 ### 分类要求怎么写给我
 
 ```
@@ -416,8 +419,8 @@ CSS 里 `:has()` 让位规则和折叠/平铺两条都在、一键到顶是 `lef
 第 9 节里还钉着这一轮手机端那几条：`repeat(6, minmax(0, 1fr))` 和 `.bento-card { min-width: 0 }`、
 日历卡的 `display: none` **恰好出现一次且落在 ≤767px 那一档**（别把桌面那份也藏了）、
 卡片头和芯片 44px、标签云的 padding、≤991 收成单列。
-**这一轮跑完 436 项全部通过**（上一版树状图那轮是 352；中间并进来的「知识库六套 10b」「工作模块」
-两节检查也算在同一个数里，所以这两个数不能直接相减）。
+**这一轮跑完 453 项全部通过**（上一版树状图那轮是 352；中间并进来的「知识库六套 10b」「工作模块」两节检查、深色模式那 4 条、
+以及另一轮加的亚马逊选品那节也算在同一个数里，所以这些数不能直接相减）。
 
 ## 申论知识库导入流水线（第一版 259 篇，已撤回）
 
@@ -498,11 +501,12 @@ D:\blog\source\_posts\行测题库\<模块>\xc-*.md   +   source\images\xingce\<
 
 **两道自检**（和时政同套路）：① 逐行——9 个母本除标题行外每行都必须在某篇文章里原样出现（`**`→`<strong>`、图片路径改写两侧同用）；② 结构——每个 `##` 成篇、每个 `###` 留在正文、每组题数 == 答案数、答案都是单个 A–D、slug 不撞、入库图片存在。另外脚本会**如实报缺口**（不当失败）：答案键里有组在母本找不到题目、正文出现「如下图所示」却一张图都没有、母本里未被引用的图片张数。
 
-**用户补件后怎么增量重跑**（2026-09-22 走过一轮，就三步）：
+**用户补件后怎么增量重跑**（2026-09-22 走过一轮；2026-09-28 转 WebP 之后多一步）：
 
 ```bash
 python tools/sync-xingce-raw.py        # 源→ data/xingce-raw 的差集复制，逐个核 md5，只报改了哪几个文件
 node tools/import-xingce.mjs --clean   # 全量重切（不是打补丁：切法/顺序/slug 都按母本当前状态重来）
+python tools/to-webp.py                # 重切会吐出一堆新 .png，必须再转一次（见「图片瘦身」）
 pnpm hexo clean && pnpm hexo generate && python tools/check-build.py
 git add -A && git commit -m "…" && git push   # Actions 绿了以后
 IMG_LIMIT=24 python tools/check-live.py       # 从公网再核一遍：文章页 200、图片能取到、分类页收全
@@ -515,7 +519,7 @@ IMG_LIMIT=24 python tools/check-live.py       # 从公网再核一遍：文章�
 剩下的已知事实（不是缺陷）：
 
 - 母本 152 张图里只有 92 张被正文引用，未引用的 60 张（判断上 23、判断下 19、数量上 6、数量下 4、资料上 4、资料下 4）留在 `data/xingce-raw/assets/`，不入库。
-- 图片是 PDF 整页截图（1457×2048，单张 ~700KB），一篇资料分析要加载 15~20MB。要瘦身就转 WebP/压宽度，URL 后缀由脚本统一改，重跑即可。
+- 图片是 PDF 整页截图（1457×2048），原来 92 张 PNG 共 40.65MB，一页资料分析要下载十几 MB。**2026-09-28 已整体转成 WebP**（见「图片瘦身」一节），最重的一页现在 3.2MB（21 张图）。
 
 ## 素描教程导入流水线（7 篇 / 30 课 / 159 图）
 
@@ -542,6 +546,7 @@ D:\blog\source\_posts\素描教程\sk-*.md（7 篇）   +   source\images\sketch
 ```bash
 # 1) 重新复制母本到 data/sketch-raw（diff -r 确认只多了改动，没有别的东西）
 node tools/import-sketch.mjs --clean
+python tools/to-webp.py                # 同上：重切会重新吐出那 10 张 JPG，再转一次
 pnpm hexo clean && pnpm hexo generate && python tools/check-build.py
 git add -A && git commit -m "…" && git push
 python tools/check-live.py 素描教程      # 从公网再核一遍：文章页 200、图片能取到、分类页收全
@@ -589,7 +594,34 @@ git add -A && git commit -m "…" && git push
 python tools/check-live.py 生活六项
 ```
 
-**页面重量**：拆篇之后最重的一页是象棋阶段二，HTML 约 150KB、40 张 SVG；`public/` 整站 54MB（未拆前那版是 57MB，因为一项一篇时重复的「这套课」开头和总表被摊薄了）。手机上首屏没问题（图是矢量、按需解码），一页 3~5 课在微信里翻着也不长。母本加了课就改 `LESSON_TOTAL`（脚本顶部会拿它对账），其余不用动。
+**页面重量**：拆篇之后最重的一页是象棋阶段二，HTML 约 150KB、40 张 SVG；`public/` 整站当时 54MB（未拆前那版是 57MB，因为一项一篇时重复的「这套课」开头和总表被摊薄了）。位图转 WebP 之后现在整站 30.09MB（见「图片瘦身」一节，SVG 一张没动）。手机上首屏没问题（图是矢量、按需解码），一页 3~5 课在微信里翻着也不长。母本加了课就改 `LESSON_TOTAL`（脚本顶部会拿它对账），其余不用动。
+
+## 图片瘦身：位图转 WebP（2026-09-28，102 张省 30.9MB）
+
+**为什么做**：这台机器到 GitHub 的实测带宽只有 40~105 KB/s（`github.com` 本身经常 22 秒 0 字节），文字页 ~2 秒能开，
+图片页就是转圈。站里 42.24MB 的位图（行测 92 张扫描页 PNG 40.65MB + 素描 10 张 JPG 1.59MB）占了绝大部分重量。
+
+**先拿一张做样张再批量**：`source/images/xingce/pd-xia/p29.png`（754KB）转 q80 是 142KB（原文件的 18.9%），
+裁同一段文字放大对比，q80 和 q70 肉眼分不出、q60 开始能在笔画边缘看出涂抹 —— 所以定 **quality=80、method=6，像素尺寸一个不改，只换编码**。
+
+```bash
+cd /d/blog && python tools/to-webp.py            # 转图片 + 改写正文引用，末尾打印对账
+cd /d/blog && python tools/to-webp.py --report   # 只看当前状态，不写任何文件
+```
+
+**为什么是单独一个后置步骤、不写进导入脚本**：`data/*-raw` 是他给的原件的拷贝、导入脚本拿它做 md5 对照，一个字节都不能改，
+所以转换只能发生在「已经复制进 `source/images/` 之后」。**代价：重跑 `import-xingce.mjs` / `import-sketch.mjs` 会重新吐出一堆 `.png`，
+必须再跑一次这个脚本**，否则正文里既指 `.png` 又指 `.webp`（脚本按磁盘状态判：「原件没了、同名 `.webp` 在」才换扩展名，
+各模块都有 `p29.png` 这种重名页，按文件名表判会串）。
+
+三条不影响观感的兜底：带 alpha 的 PNG 先查有没有真透明像素，有就贴白底（`convert('RGB')` 会把透明区合成黑的，扫描页不该这样）；
+转完反而变大的（小图标会这样）删掉 WebP 留原样、引用也不改；末尾对账 `raster_left` 和 `dangling_refs` 必须都是 0，`dangling` 非 0 就 `exit 1`。
+明细写在 `data/webp-report.json`（`data/` 不入库）。
+
+**这一轮的结果**：102 张 → 11.31MB（省 30.93MB）、正文 204 条引用改写、`raster_left=0`、`dangling=0`；
+`public/` 整站从 54MB 到 30.09MB；最重的一页资料分析从十几 MB 到 3.2MB。生活六项那 499 张和素描那 149 张是 **SVG，一张没动**（矢量、本来就小）。
+验收：`hexo clean && hexo generate` 1337 个文件、`check-build.py` **453 项全绿**，再用浏览器开最重的 `xc-zl1-02` 实读页面 ——
+22 张图 `broken: []`、全部 `.webp` 解码成功。
 
 ## 「工作」两套知识库（运营 21 篇 + 选品 8 篇）
 

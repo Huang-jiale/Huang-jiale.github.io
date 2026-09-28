@@ -21,7 +21,7 @@ description: "资料分析 第 4 组，共 15 题（题号 1–15），答案随
 
 ### 材料一
 
-![材料一原题页](/images/xingce/zl-shang/p32.png)
+![材料一原题页](/images/xingce/zl-shang/p32.webp)
 
 <strong>1.（2023 国考）</strong> 2021 年末，我国固定互联网宽带接入用户中，使用 xDSL 和光纤以外接入方式的用户数量比上半年末：
 
@@ -41,9 +41,9 @@ D. 减少了 200 万户以上
 
 ### 材料二
 
-![材料二原题页](/images/xingce/zl-shang/p32.png)
+![材料二原题页](/images/xingce/zl-shang/p32.webp)
 
-![材料二原题页（材料续、题干）](/images/xingce/zl-shang/p33.png)
+![材料二原题页（材料续、题干）](/images/xingce/zl-shang/p33.webp)
 
 <strong>2.（2021 重庆选调）</strong> 2017 年 M 省固定资产投资（不含农户）中，基础设施投资同比增量约为多少亿元？
 
@@ -63,7 +63,7 @@ D. 1190
 
 ### 材料三
 
-![材料三原题页](/images/xingce/zl-shang/p33.png)
+![材料三原题页](/images/xingce/zl-shang/p33.webp)
 
 <strong>3.（2018 江苏）</strong> 2017 年全国贫困地区农村居民人均可支配收入比上年增加的金额是：
 
@@ -83,7 +83,7 @@ D. 1069 元
 
 ### 材料四
 
-![材料四原题页](/images/xingce/zl-shang/p33.png)
+![材料四原题页](/images/xingce/zl-shang/p33.webp)
 
 <strong>4.（2024 江西）</strong> 相比 2021 年，2022 年我国十个品种再生资源回收总金额同比下降了约：
 
@@ -103,9 +103,9 @@ D. 578 亿元
 
 ### 材料五
 
-![材料五原题页](/images/xingce/zl-shang/p33.png)
+![材料五原题页](/images/xingce/zl-shang/p33.webp)
 
-![材料五原题页（表格续、题干）](/images/xingce/zl-shang/p34.png)
+![材料五原题页（表格续、题干）](/images/xingce/zl-shang/p34.webp)
 
 <strong>5.（2019 联考）</strong> 2018 年 4 月四个直辖市的手机产量之和同比：
 
@@ -125,7 +125,7 @@ D. 下降了 1000 万部以上
 
 ### 材料六
 
-![材料六原题页](/images/xingce/zl-shang/p34.png)
+![材料六原题页](/images/xingce/zl-shang/p34.webp)
 
 <strong>6.（2018 北京）</strong> 2015 年 1—11 月，规模以上互联网信息服务行业月均同比约增收多少亿元？
 
@@ -145,9 +145,9 @@ D. 30
 
 ### 材料七
 
-![材料七原题页](/images/xingce/zl-shang/p34.png)
+![材料七原题页](/images/xingce/zl-shang/p34.webp)
 
-![材料七原题页（选项）](/images/xingce/zl-shang/p35.png)
+![材料七原题页（选项）](/images/xingce/zl-shang/p35.webp)
 
 <strong>7.（2016 上海）</strong> 如所有数据均为年末数据，则“十一五”期间（2006—2010 年），我国平均每年约新增多少人口？
 
@@ -167,7 +167,7 @@ D. 700 万以上
 
 ### 材料八
 
-![材料八原题页](/images/xingce/zl-shang/p35.png)
+![材料八原题页](/images/xingce/zl-shang/p35.webp)
 
 <strong>8.（2023 湖北选调）</strong> 2016—2021 年，我国一次能源生产总量中，非化石能源产量年均增长约多少亿吨标准煤？
 
@@ -187,9 +187,9 @@ D. 0.71
 
 ### 材料九
 
-![材料九原题页](/images/xingce/zl-shang/p35.png)
+![材料九原题页](/images/xingce/zl-shang/p35.webp)
 
-![材料九原题页（选项续）](/images/xingce/zl-shang/p36.png)
+![材料九原题页（选项续）](/images/xingce/zl-shang/p36.webp)
 
 <strong>9.（2025 天津）</strong> 2023 年 3—12 月，我国天然气月度进口量同比增量超过 200 万吨的月份有几个？
 
@@ -209,7 +209,7 @@ D. 4
 
 ### 材料十
 
-![材料十原题页](/images/xingce/zl-shang/p36.png)
+![材料十原题页](/images/xingce/zl-shang/p36.webp)
 
 <strong>10.（2017 福建选调）</strong> 2011—2015 年民航基本建设和技术改造投资增长额超过 30 亿元的有几个？
 
@@ -229,9 +229,9 @@ D. 3
 
 ### 材料十一
 
-![材料十一原题页](/images/xingce/zl-shang/p36.png)
+![材料十一原题页](/images/xingce/zl-shang/p36.webp)
 
-![材料十一原题页（选项）](/images/xingce/zl-shang/p37.png)
+![材料十一原题页（选项）](/images/xingce/zl-shang/p37.webp)
 
 <strong>11.（2023 国考）</strong> 以下折线图中，最能准确反映 2018—2021 年我国木材进口额同比增量变化趋势的是：
 
@@ -251,7 +251,7 @@ D. （折线图，见原页图）
 
 ### 材料十二
 
-![材料十二原题页](/images/xingce/zl-shang/p37.png)
+![材料十二原题页](/images/xingce/zl-shang/p37.webp)
 
 <strong>12.（2022 山东）</strong> 2018 年我国各种运输方式货物运输总量同比增量从高到低排序正确的是：
 
@@ -271,7 +271,7 @@ D. 民航、公路、铁路、水运
 
 ### 材料十三
 
-![材料十三原题页](/images/xingce/zl-shang/p38.png)
+![材料十三原题页](/images/xingce/zl-shang/p38.webp)
 
 <strong>13.（2017 辽宁公安）</strong> 分地区看，东部、中部、西部中小企业户数增长从小到大排列为：
 
@@ -291,7 +291,7 @@ D. 中部、西部、东部
 
 ### 材料十四
 
-![材料十四原题页](/images/xingce/zl-shang/p38.png)
+![材料十四原题页](/images/xingce/zl-shang/p38.webp)
 
 <strong>14.（2022 四川）</strong> 2019 年，A 市居民人均可支配收入同比增量约是同期人均消费支出同比增量的多少倍？
 
@@ -311,7 +311,7 @@ D. 2.2
 
 ### 材料十五
 
-![材料十五原题页](/images/xingce/zl-shang/p38.png)
+![材料十五原题页](/images/xingce/zl-shang/p38.webp)
 
 <strong>15.（2025 湖北选调）</strong> 2023 年，全国黑茶内销额同比增量约是白茶的多少倍？
 

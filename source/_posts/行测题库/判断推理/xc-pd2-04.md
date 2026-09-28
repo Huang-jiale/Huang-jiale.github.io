@@ -21,7 +21,7 @@ description: "判断推理 · 图形推理 第 4 组，共 15 题（题号 1–1
 
 <strong>1.（2026 事业单位）</strong> 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。
 
-![图形推理原题页](/images/xingce/pd-xia/p20.png)
+![图形推理原题页](/images/xingce/pd-xia/p20.webp)
 
 <details class="answer">
 <summary>看答案</summary>
@@ -47,7 +47,7 @@ description: "判断推理 · 图形推理 第 4 组，共 15 题（题号 1–1
 
 <strong>3.（2025 事业单位）</strong> 从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。
 
-![图形推理原题页](/images/xingce/pd-xia/p21.png)
+![图形推理原题页](/images/xingce/pd-xia/p21.webp)
 
 <details class="answer">
 <summary>看答案</summary>
@@ -86,7 +86,7 @@ description: "判断推理 · 图形推理 第 4 组，共 15 题（题号 1–1
 
 <strong>6.（2024 国考）</strong> 左图为 8 个白色正方体和 4 个灰色正方体拼接而成的长方体，右边哪一项可能是其外表面展开图？
 
-![图形推理原题页](/images/xingce/pd-xia/p22.png)
+![图形推理原题页](/images/xingce/pd-xia/p22.webp)
 
 <details class="answer">
 <summary>看答案</summary>
@@ -138,7 +138,7 @@ description: "判断推理 · 图形推理 第 4 组，共 15 题（题号 1–1
 
 <strong>10.（2019 浙江）</strong> 左图是给定的立体图形，哪个选项是该立体图形的外表面展开图？
 
-![图形推理原题页](/images/xingce/pd-xia/p23.png)
+![图形推理原题页](/images/xingce/pd-xia/p23.webp)
 
 <details class="answer">
 <summary>看答案</summary>
@@ -187,7 +187,7 @@ D. ①⑤⑥，②③④
 
 <strong>13.（2026 事业单位）</strong> 把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：
 
-![图形推理原题页](/images/xingce/pd-xia/p24.png)
+![图形推理原题页](/images/xingce/pd-xia/p24.webp)
 
 A. ①③④，②⑤⑥
 B. ①②⑥，③④⑤
