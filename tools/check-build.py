@@ -14,7 +14,7 @@
 分类层数按模块定：一级只有 工作 / 学习 / 生活；「学习」下面三层（模块 / 子分类），
 「生活」下面素描是两层（大类降到标签）、六项是三层（阶段名当三级）、知识库是两层（用户 2026-09-27 定：一套一篇，不再拆阶段），所以规则是 2~3 层、只有「学习」强制三层。
 """
-import io, sys, os, re, glob, datetime
+import io, sys, os, re, glob, datetime, json as jsonlib
 import urllib.parse
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -770,7 +770,7 @@ for kid, cn in KB_CN.items():
     check(all(os.path.exists(p) for p in disk) and all(os.path.exists(p) for p in pub),
           f'{cn}：{len(raw_imgs)} 张图入库且进了产物')
     body = pages.get(slug, '')
-    got_imgs = len(re.findall(rf'<img src="/images/kb/{kid}/', body))
+    got_imgs = len(re.findall(rf'<img[^>]+src="/images/kb/{kid}/', body))   # 属性顺序不固定：第 3 张起带 loading="lazy"（见第 14 节）
     check(got_imgs == len(raw_imgs), f'{slug}：产物正文里 {len(raw_imgs)} 个 <img>', f'实际 {got_imgs}')
     for href in re.findall(r'<a[^>]+href="(/[^"#]+)"', body):
         p = os.path.join('public', *urllib.parse.unquote(href).lstrip('/').split('/'))
@@ -1153,6 +1153,41 @@ for token, why in [('repeat(auto-fit, minmax(min(300px, 100%), 1fr))',
 # min() 一旦被 styl 的数学函数吃掉，产物就变成 minmax(100%, 1fr) —— 桌面也永远一列，
 # 而这在浏览器里只是「卡片变高」，脚本不盯这一行根本发现不了。
 check('minmax(100%, 1fr)' not in css, 'CSS：列宽没被 styl 编译成「永远一列」', 'minmax(100%, 1fr)')
+
+# ---------- 14. 加载速度：正文图片懒加载 / 搜索索引瘦身 ----------
+# 这两条都是「页面看着一样、但首屏下载量差几倍」的改动，产物不查就会悄悄退回去。
+img_pages = {}                      # slug → 正文里按顺序排开的 <img> 标签
+for key, text in src.items():
+    refs = len(re.findall(r'!\[[^\]]*\]\(/images/', text))
+    if not refs:
+        continue
+    slug = fm_slug(text) or os.path.splitext(os.path.basename(key))[0]
+    body = pages.get(slug)
+    if body is not None:
+        img_pages[slug] = re.findall(r'<img\b[^>]*>', body)
+check(len(img_pages) >= 20, f'{len(img_pages)} 篇正文里有图片（懒加载闸门的采样）', str(len(img_pages)))
+src_ref_count = {}                  # slug → 源里引用了几张图（顺手拿来核对懒加载没吞图）
+for key, text in src.items():
+    slug = fm_slug(text) or os.path.splitext(os.path.basename(key))[0]
+    src_ref_count[slug] = len(re.findall(r'!\[[^\]]*\]\(/images/', text))
+lazy_bad = [f'{slug} 第{n}张 {"该带 lazy 却没带" if n > 2 else "不该带 lazy 却带了"}'
+            for slug, tags in img_pages.items()
+            for n, tag in enumerate(tags, 1)
+            if (n > 2) != ('loading="lazy"' in tag)]      # 前两张首屏一定出现，照常立即下载
+check(not lazy_bad, '每篇第 3 张起的 <img> 带 loading="lazy"、前两张不带', str(lazy_bad[:4]))
+lost_img = [f'{s} 源 {src_ref_count[s]} 张 / 页面 {len(img_pages[s])} 张'
+            for s in img_pages if src_ref_count[s] != len(img_pages[s])]
+check(not lost_img, '懒加载没吞图：每篇正文的 <img> 张数 == 源里引用的张数', str(lost_img[:4]))
+
+sj_path = os.path.join('public', 'search.json')
+check(os.path.exists(sj_path), '产物里有 search.json（站内搜索的索引）')
+sj = jsonlib.load(open(sj_path, encoding='utf-8'))
+check(len(sj) == len(src), f'search.json 的条数 == 源文章数（{len(sj)} vs {len(src)}）')
+check({'title', 'url', 'content', 'categories', 'tags'} <= set(sj[0]), '索引的键还是 NexT 的 search.js 认的那五个')
+longest = max(len(x.get('content', '')) for x in sj)
+check(longest <= 301, f'索引里每条正文最长 {longest} 字（截到 300 字 + 一个省略号）', str(longest))
+sj_kb = os.path.getsize(sj_path) / 1024
+check(sj_kb < 400, f'search.json {sj_kb:.0f} KB（全文索引时是 3537 KB，点开搜索框要等 5 秒）', f'{sj_kb:.0f} KB')
 
 print('\n%s' % ('全部通过' % () if not fail else f'{len(fail)} 项失败：' + '；'.join(fail)))
 sys.stdout.flush()          # stdout 被我换成 TextIOWrapper 了，sys.exit 时不一定帮你刷管道
