@@ -9,6 +9,8 @@
 2026-09-24 人工核对过的量：74 时政 + 38 行测 = 112 篇在「学习」，7 素描 + 18 生活课 = 25 篇在「生活」；
 行测 541 题、92 图；素描 30 课、159 图；生活六项 64 课、499 图（期望课数与图数从母本 manifest 现算，篇数 18 = 六项 × 3 阶段）。
 2026-09-27 加了知识库六套：一套一篇 = 6 篇、18 图，母本 data/kb-raw/<id>/（见 tools/import-kb.mjs）。
+2026-09-28 加了亚马逊选品知识库：8 篇（七主题 + 一篇总纲），母本 data/sel-raw/posts.jsonl = 231 个提问帖全文，
+同一轮加了两条通用闸门：正文里的站内链接逐个查存在性、跨篇引用帖号回母本对账。
 分类层数按模块定：一级只有 工作 / 学习 / 生活；「学习」下面三层（模块 / 子分类），
 「生活」下面素描是两层（大类降到标签）、六项是三层（阶段名当三级）、知识库是两层（用户 2026-09-27 定：一套一篇，不再拆阶段），所以规则是 2~3 层、只有「学习」强制三层。
 """
@@ -308,7 +310,7 @@ check(len(got_empty) == want_empty, f'空模块占位卡 {len(got_empty)} 张', 
 
 # GitHub 式日历：52 列 × 7 行，一格一天，周一在第一行。
 # （2026-09-24 用户点名要回日历，撤了中间那版按月柱状图。它确实「96% 是空白」——
-#   164 篇只落在 10 天里，因为导入是挑一天跑完的。这是数据的真实形状，不是 bug，
+# 172 篇只落在 11 天里，因为导入是挑一天跑完的。这是数据的真实形状，不是 bug，
 #   所以脚注老老实实写「一格一天」，空白留白，不靠换口径把图填满。）
 heat_card = [c for c, k in zip(cards_raw, card_cls) if 'heat' in k][0]
 heat_grid = heat_card.split('class="heat-grid"', 1)[1].split('heat-foot', 1)[0]
@@ -482,6 +484,72 @@ check(am_cat3.get('总纲与索引') == 1 and len(am_cat3) == 6,
 # 用户 2026-09-27 拍板：帖子编号保留，但不公开点名数据源站点——产物里出现站名就是导入脚本被改坏了
 leak = sorted(s for s in am_slugs if any(w in pages_full.get(s, '') for w in ('知无不言', 'wearesellers')))
 check(not leak, f'{len(am_slugs)} 篇产物里没有站点名（编号保留、出处不点名）', str(leak[:3]))
+
+# 「工作」模块第二个二级：亚马逊选品知识库 8 篇（2026-09-28，231 个产品开发提问帖压成七篇 + 一篇总纲）。
+# 芯片篇数由上面 kid_want['工作'] 那一条一起核掉（它按 source 现算，新二级自动进表），这里核形状与来源。
+sel_src = {k: v for k, v in src.items() if '/am-sel-' in k}
+check(len(sel_src) == 8, f'源里亚马逊选品 {len(sel_src)} 篇（应为 8：7 主题 + 1 总纲）')
+sel_slugs = {fm_slug(v) for v in sel_src.values()}
+check(len(sel_slugs) == len(sel_src), '亚马逊选品 slug 无重复')
+sel_lost = sorted(s for s in sel_slugs if s not in pages)
+check(not sel_lost, f'{len(sel_slugs)} 篇都构建出了页面', str(sel_lost[:5]))
+SEL_TOPIC = {'S1': '选品硬门槛', 'S2': '市场调研口径', 'S3': '需求与差异化', 'S4': '供应链与开模',
+             'S5': '季节款与热点', 'S6': '避坑清单', 'S7': '节奏与组织'}
+sel_cat3, sel_bad = {}, []
+for k, v in sel_src.items():
+    c = fm_categories(v)
+    sel_cat3[c[2]] = sel_cat3.get(c[2], 0) + 1
+    if c[2] == '总纲与索引':
+        continue
+    m = re.search(r'亚马逊选品知识库 (S\d) ·', v)
+    ttl = re.search(r'^title: "(.*?)"', v, re.M)
+    if not m or not ttl:
+        sel_bad.append(f'{norm(k)} 标题里没有主题编号')
+    elif SEL_TOPIC.get(m.group(1)) != c[2] or c[2] not in ttl.group(1):
+        sel_bad.append(f'{norm(k)} 主题 {m.group(1)} 挂到了「{c[2]}」')
+check(not sel_bad, '7 个主题板块 = 标题里的 S1~S7（一篇一板块，板块名在标题里）', str(sel_bad[:3]))
+check(sel_cat3.get('总纲与索引') == 1 and len(sel_cat3) == 8,
+      '三级板块 8 个：七个主题 + 总纲与索引单独一档', str(sel_cat3))
+# 总纲的篇目表是这套的唯一入口，七行链接必须各指向一篇真页面、且编号不串行
+sel_home = pages_full.get('am-sel-00', '')
+sel_rows = re.findall(r'<a href="(/[^"]*?/am-sel-0(\d)/)">S(\d) ', sel_home)
+check(len(sel_rows) == 7, '总纲篇目表 7 行都是可点链接', str(len(sel_rows)))
+sel_row_bad = [f'表上写 S{j} 却指向 am-sel-0{k}' for _, k, j in sel_rows if k != j]
+sel_row_dead = [u for u, _, _ in sel_rows if not os.path.isdir(os.path.join('public', *u.strip('/').split('/')))]
+check(not sel_row_bad and not sel_row_dead, '总纲表里编号与目标页一致、页面都在', f'{sel_row_bad[:3]} {sel_row_dead[:3]}')
+sel_leak = sorted(s for s in sel_slugs if any(w in pages_full.get(s, '') for w in ('知无不言', 'wearesellers')))
+check(not sel_leak, f'{len(sel_slugs)} 篇产物里没有站点名（同上口径）', str(sel_leak[:3]))
+# 帖号是从母本抄来的，写手若编了一个不存在的号，这里拦住（母本 data/sel-raw/posts.jsonl 不入库）
+SEL_RAW = 'data/sel-raw/posts.jsonl'
+if os.path.exists(SEL_RAW):
+    import json as _json
+    raw_text = open(SEL_RAW, encoding='utf-8').read()
+    qids = {str(_json.loads(l).get('qid')) for l in raw_text.splitlines() if l.strip()}
+    cited = set()
+    for s in sel_slugs:
+        cited |= set(re.findall(r'帖(\d{4,6})', pages_full.get(s, '')))
+    check(len(qids) == 231, f'母本 {len(qids)} 帖（应为 231）')
+    check(len(cited) > 100, f'产物里引用到 {len(cited)} 个帖号（采样不为空才算核过）')
+    outside = sorted(c for c in cited if c not in qids)
+    fake = sorted(c for c in cited if c not in raw_text)
+    check(not fake, '产物里的每个帖号都在母本里出现过（写手没编号；题主转链的别人帖也算在母本里）', str(fake[:6]))
+    print(f'INFO 其中 {len(outside)} 个帖号不是这 231 帖本身，是帖文里引用的别人帖子')
+else:
+    print(f'SKIP 帖号对账跳过：没有 {SEL_RAW}（母本不入库，干净克隆需自行放回）')
+
+# 全站文章正文里的站内链接（2026-09-28 加：手写跨篇链接时把 /2026/09/28/ 写成了 /2026-09-28/，
+# 页面数、分类页、首页闸门全都看不出来，只有拿 href 去 public/ 下找一个真实文件才露出来）
+dead_ref, refs_seen = {}, 0
+for s, body_txt in pages.items():
+    for ref in re.findall(r'(?:href|src)="(/[^"#]+)', body_txt):
+        refs_seen += 1
+        if ref == '/':
+            continue
+        p = os.path.join('public', *urllib.parse.unquote(ref).lstrip('/').split('/'))
+        if not (os.path.exists(p) or os.path.isdir(p) or os.path.exists(p + '.html')):
+            dead_ref.setdefault(ref, []).append(s)
+check(refs_seen > 500, f'{len(pages)} 篇正文里核到 {refs_seen} 个站内链接（采样不为空）')
+check(not dead_ref, '正文里的站内链接都指向真实页面', str(sorted(dead_ref)[:4]))
 
 # 首页上每个站内链接与封面图都要存在
 home_dead = set()
