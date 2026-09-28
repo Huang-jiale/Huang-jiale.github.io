@@ -308,7 +308,7 @@ check(len(got_empty) == want_empty, f'空模块占位卡 {len(got_empty)} 张', 
 
 # GitHub 式日历：52 列 × 7 行，一格一天，周一在第一行。
 # （2026-09-24 用户点名要回日历，撤了中间那版按月柱状图。它确实「96% 是空白」——
-#   137 篇只落在 9 天里，因为导入是挑一天跑完的。这是数据的真实形状，不是 bug，
+#   164 篇只落在 10 天里，因为导入是挑一天跑完的。这是数据的真实形状，不是 bug，
 #   所以脚注老老实实写「一格一天」，空白留白，不靠换口径把图填满。）
 heat_card = [c for c, k in zip(cards_raw, card_cls) if 'heat' in k][0]
 heat_grid = heat_card.split('class="heat-grid"', 1)[1].split('heat-foot', 1)[0]
@@ -718,7 +718,7 @@ WORD_RE = re.compile(r'[A-Za-z0-9]+')
 
 def body_chars(html):
     # 从 post-body 的 > 之后开始数：从 itemprop= 那里切，残留的 itemprop / articleBody
-    # 会被英文词正则各数成一个「字」，整站 137 篇正好每篇虚高 2，把误差全盖掉了。
+    # 会被英文词正则各数成一个「字」，整站每篇正好虚高 2，把误差全盖掉了。
     i = html.index('>', html.index('itemprop="articleBody"')) + 1
     j = html.index('<footer class="post-footer"', i)      # 只数正文：页脚的分类、标签、上下篇不算
     t = ENT_RE.sub(' ', TAG_RE.sub(' ', html[i:j]))
@@ -854,7 +854,7 @@ check(not keep, '首页/分类/归档/标签页仍是「站点概览」，没被
 b2t = sorted(s for s, h in pages_full.items() if '<div class="back-to-top"' not in h)
 check(not b2t, f'{len(pages_full)} 篇文章页都挂了「一键到顶」那颗按钮', str(b2t[:3]))
 
-# ---------- 13. 分类页树状图（总览 + 每个分类点进去那一页） ----------
+# ---------- 13. 分类页三层「分组卡片墙」（总览 + 每个分类点进去那一页） ----------
 
 # 整棵树从 source 现算：节点顺序 = 分类链第一次出现的顺序（文章按 date 升序排），
 # 篇数是「含全部子孙」的那个数。和 scripts/cat-tree.js 用的是同一套口径，各算各的才对得上。
@@ -957,7 +957,7 @@ check(sum(1 for t in tops for c in t[4] if c[4]) == len([p for p in tree_order
                                                        if len(p) == 2 and not children_of.get(p)]),
       '没有子分类的二级卡（素描那种）写了一句「没有再分层」', '')
 check('class="cat-posts"' not in all_html,
-      '总览页只到三级芯片为止，不把 137 个标题全铺上来（要全文列表去归档页）')
+      '总览页只到三级芯片为止，不把全部文章标题铺上来（要全文列表去归档页）')
 lede = re.search(r'<p class="cat-lede">.*?class="cat-lede-strong">([^<]+)<', all_html, re.S).group(1)
 check(lede == f'{len(src)} 篇 · {len(tree_order)} 个分类', '卡顶那行统计 = 现算的篇数和分类数', lede)
 
