@@ -524,7 +524,12 @@ SEL_RAW = 'data/sel-raw/posts.jsonl'
 if os.path.exists(SEL_RAW):
     import json as _json
     raw_text = open(SEL_RAW, encoding='utf-8').read()
-    qids = {str(_json.loads(l).get('qid')) for l in raw_text.splitlines() if l.strip()}
+    sel_posts = {}
+    for l in raw_text.splitlines():
+        if l.strip():
+            r = _json.loads(l)
+            sel_posts[str(r['qid'])] = r
+    qids = set(sel_posts)
     cited = set()
     for s in sel_slugs:
         cited |= set(re.findall(r'帖(\d{4,6})', pages_full.get(s, '')))
@@ -534,6 +539,35 @@ if os.path.exists(SEL_RAW):
     fake = sorted(c for c in cited if c not in raw_text)
     check(not fake, '产物里的每个帖号都在母本里出现过（写手没编号；题主转链的别人帖也算在母本里）', str(fake[:6]))
     print(f'INFO 其中 {len(outside)} 个帖号不是这 231 帖本身，是帖文里引用的别人帖子')
+    # 票数与回数标记逐个回母本核。这一条是 2026-09-28 用户报「X赞读不通」后加的：
+    # 当时查出三处标记根本不成立（帖95862 的 32 赞、帖9505 的 24 赞该帖里没这个票档，
+    # 内容其实来自题主正文；帖113956 写成 126 赞，真值 128）——写手会顺手编一个看起来合理的票数，
+    # 只核帖号核不住。用源文件而不是渲染页，因为要按行取「这个赞左边最近的帖号」。
+    hui_seen, zan_seen, hui_bad, zan_bad = 0, 0, [], []
+    for md in sorted(glob.glob(os.path.join('source', '_posts', '亚马逊选品', 'am-sel-*.md'))):
+        for lineno, ln in enumerate(open(md, encoding='utf-8').read().split('\n'), 1):
+            tag = f'{os.path.basename(md)}:{lineno}'
+            for hm in re.finditer(r'帖\s*(\d{4,6})（(\d+)回', ln):
+                hui_seen += 1
+                q, n = hm.group(1), int(hm.group(2))
+                if q in sel_posts and n != sel_posts[q].get('claim_replies'):
+                    hui_bad.append(f'{tag} 帖{q} 标{n}回/站内声明{sel_posts[q].get("claim_replies")}')
+            for zm in re.finditer(r'(\d{1,4})\s*赞', ln):
+                left = re.findall(r'帖\s*(\d{4,6})', ln[:zm.start()])
+                if not left:
+                    continue   # 没挂帖号的"赞"是行文用语，不核
+                zan_seen += 1
+                q, v = left[-1], int(zm.group(1))
+                p = sel_posts.get(q)
+                if p is None:
+                    continue   # 帖号那条已经拦过
+                votes = {int(a.get('votes') or 0) for a in p.get('answers') or []}
+                if votes and v not in votes:
+                    zan_bad.append(f'{tag} 帖{q} 标{v}赞/该帖票档{sorted(votes, reverse=True)[:6]}')
+    check(hui_seen > 200, f'（N回）标记核到 {hui_seen} 处（应 250 上下）', str(hui_seen))
+    check(zan_seen > 50, f'带帖号的 X赞 标记核到 {zan_seen} 处（采样不为空）', str(zan_seen))
+    check(not hui_bad, '每一处（N回）都等于母本里站内声明的回答数', str(hui_bad[:4]))
+    check(not zan_bad, '每一处 X赞 都能在该帖的回答票数里找到（没有编出来的票数）', str(zan_bad[:4]))
 else:
     print(f'SKIP 帖号对账跳过：没有 {SEL_RAW}（母本不入库，干净克隆需自行放回）')
 
