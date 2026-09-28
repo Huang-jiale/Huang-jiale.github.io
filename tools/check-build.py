@@ -422,6 +422,20 @@ check(re.search(r'\.tag-cloud-tags a\s*\{[^}]*padding:\s*12px 8px', m767),
 check('grid-template-columns: minmax(0, 1fr)' in media_css(css, 'max-width: 991px'),
       'CSS：平板竖屏/手机（≤991）首页收成单列')
 
+# 深色实测（2026-09-28）钉住的几条。都是主题的「写死色」，不是我们的字：
+#   - 空格子只有底色可看，而 --heat-0 和卡片是同一级灰（深色下逐字节相等）→ 描一圈才看得出是日历；
+#   - 归档页年份那颗计数胶囊在主题 badge() 里写死 #e8e8ed，深色卡片上是一块亮斑；
+#   - 月份圆点带 1px 白描边，深色下是个白圈。
+dark_css = media_css(css, 'prefers-color-scheme: dark')
+check(css.count('--heat-track:') == 2 and dark_css.count('--heat-track:') == 1,
+      'CSS：空格子的描边色浅色/深色各一套', str(css.count('--heat-track:')))
+check(re.search(r'\.heat-l0,\s*\.heat-cell\.is-future\s*\{[^}]*box-shadow:[^}]*var\(--heat-track\)', css),
+      'CSS：空档和还没到的日子描一圈（五档实色不动，只描空档）')
+check(re.search(r'\.posts-collapse \.post-content \.collection-year \.collection-year-count\s*\{[^}]*var\(--hairline\)', dark_css),
+      'CSS 深色：归档页的计数胶囊没用主题那句 #e8e8ed')
+check(re.search(r'\.posts-collapse \.post-content \.collection-title::before\s*\{\s*border-color:\s*var\(--surface\)', dark_css),
+      'CSS 深色：月份圆点的描边跟着卡片色，不是白圈')
+
 # 模块卡的篇数是从 source 现算的，两边必须一致
 learn_card = dict(zip(card_names, mod_raw))['学习']
 learn_kicker = re.search(r'<p class="bento-kicker">(.*?)</p>', learn_card).group(1)
